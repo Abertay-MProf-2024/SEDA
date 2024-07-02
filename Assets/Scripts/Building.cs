@@ -32,8 +32,10 @@ public class Building : MonoBehaviour
         {
             RaycastHit hit;
             Physics.Raycast(transform.position, Vector3.down, out hit);
-            resourceData.tileUnder = hit.transform.gameObject.GetComponent<GridObject>();
+            SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
         }
+
+        
 
         resourceData.tileUnder.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
 
@@ -61,6 +63,20 @@ public class Building : MonoBehaviour
             Terrainsystem = hit.transform.gameObject.GetComponent<Terrainsystem>();
             Terrainsystem.owningGridObject.buildingInstance = this;
         }
+
+        if (resourceData.baseOutputEnergy)
+        {
+            Terrainsystem.Lenergy = true;
+            Terrainsystem.radius = resourceData.impactRadiusTiles;
+            Terrainsystem.TriggerEnergy();
+        }
+
+        if (resourceData.baseOutputWater)
+        {
+            Terrainsystem.Wenergy = true;
+            Terrainsystem.Wradius = resourceData.impactRadiusTiles;
+            Terrainsystem.TriggerEnergy();
+        }
     }
 
     public void PayConstructionCosts()
@@ -73,26 +89,29 @@ public class Building : MonoBehaviour
     public void UpdateResources()
     {
         IfDependsonSoilGrade();
-        if (!RequireWaterEnergy || (Inventory.isFlooding || resourceData.tileUnder.terrain.Wenergy))
-        {
-            Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * Inventory.cropOutput * Upkeepmet);
-            Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * Inventory.cropOutput * Upkeepmet);
 
-            if (gameObject.GetComponentInChildren<ResourceUpdatePopup>())
-            {
-                gameObject.GetComponentInChildren<ResourceUpdatePopup>().AnimatePopup();
-            }
+        Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * Inventory.cropOutput * Upkeepmet);
+        Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * Inventory.cropOutput * Upkeepmet);
+
+        if (gameObject.GetComponentInChildren<ResourceUpdatePopup>())
+        {
+            gameObject.GetComponentInChildren<ResourceUpdatePopup>().AnimatePopup();
         }
+
     }
     
     public void PayUpkeep()
     {
-        if (!resourceData.upKeepCostWater || (Inventory.isFlooding || resourceData.tileUnder.terrain.Wenergy))
+        if (!resourceData.upKeepCostEnergy || Terrainsystem.Lenergy)
         {
-            Upkeepmet = 1;
-            Inventory.SpendFood(resourceData.upKeepCostFood);
-            Inventory.SpendMaterials(resourceData.upKeepCostMaterial);
+            if (!resourceData.upKeepCostWater || (Inventory.isFlooding || resourceData.tileUnder.terrain.Wenergy))
+            {
+                Upkeepmet = 1;
+                Inventory.SpendFood(resourceData.upKeepCostFood);
+                Inventory.SpendMaterials(resourceData.upKeepCostMaterial);
+            }
         }
+
         else
         {
             Upkeepmet = 0;
@@ -115,7 +134,14 @@ public class Building : MonoBehaviour
 
     public void SetGridObject(GridObject gridObject)
     {
-        resourceData.tileUnder = gridObject;
+        if (resourceData)
+            resourceData.tileUnder = gridObject;
+
+        if (oldresourceData)
+            oldresourceData.tileUnder = gridObject;
+
+        if (newresourceData)
+            newresourceData.tileUnder = gridObject;
     }
 
     public void Impact()
@@ -182,6 +208,7 @@ public class Building : MonoBehaviour
         {
             resourceData = newresourceData;
             resourceData.inGameAsset = newresourceData.inGameAsset;
+
         }
         else
             gameObject.SetActive(false);
@@ -215,7 +242,9 @@ public class Building : MonoBehaviour
                     {
                         foreach(CollectorType collector in resourceData.collectorBuildings)
                         {
-                            if (collector.ToString() == objectInRadius.resourceData.structureType.ToString())
+                            if (collector.ToString() == objectInRadius.resourceData.structureType.ToString()
+                                && (!objectInRadius.resourceData.upKeepCostEnergy || objectInRadius.Terrainsystem.Lenergy)
+                                && (!objectInRadius.resourceData.upKeepCostWater || (Inventory.isFlooding || objectInRadius.Terrainsystem.Wenergy)))
                             {
                                 UpdateResources();
                                 return;

@@ -20,6 +20,9 @@ public class LevelManager : MonoBehaviour
     // time in months
     public int levelTimeStore;
 
+    [SerializeField] int startingFoodAmount;
+    [SerializeField] int startingConstructionMaterialAmount;
+
     [SerializeField] int successFoodAmount;
     [SerializeField] int successConstructionMaterialsAmount;
     [SerializeField] int successSoilHealth;
@@ -48,6 +51,9 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        Inventory.food = startingFoodAmount;
+        Inventory.constructionMaterials = startingConstructionMaterialAmount;
+
         tapAction = inputs.FindAction("PossessCamera");
         possessCamera = ctx => SelectTile();
         tapAction.performed += possessCamera;
