@@ -32,7 +32,7 @@ public class Building : MonoBehaviour
         {
             RaycastHit hit;
             Physics.Raycast(transform.position, Vector3.down, out hit);
-            resourceData.tileUnder = hit.transform.gameObject.GetComponent<GridObject>();
+            SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
         }
 
         
@@ -111,6 +111,7 @@ public class Building : MonoBehaviour
                 Inventory.SpendMaterials(resourceData.upKeepCostMaterial);
             }
         }
+
         else
         {
             Upkeepmet = 0;
@@ -133,7 +134,14 @@ public class Building : MonoBehaviour
 
     public void SetGridObject(GridObject gridObject)
     {
-        resourceData.tileUnder = gridObject;
+        if (resourceData)
+            resourceData.tileUnder = gridObject;
+
+        if (oldresourceData)
+            oldresourceData.tileUnder = gridObject;
+
+        if (newresourceData)
+            newresourceData.tileUnder = gridObject;
     }
 
     public void Impact()
@@ -200,6 +208,7 @@ public class Building : MonoBehaviour
         {
             resourceData = newresourceData;
             resourceData.inGameAsset = newresourceData.inGameAsset;
+
         }
         else
             gameObject.SetActive(false);

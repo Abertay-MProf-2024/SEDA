@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: Spring Barley
   icon: {fileID: 0}
-  inGameAsset: {fileID: 7543974964756465544, guid: 783f5a3789ea3554baa3fefb33fa9536,
+  inGameAsset: {fileID: 7543974964756465544, guid: 2af8a8ec0c0e81d46aea877daaff67fe,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1

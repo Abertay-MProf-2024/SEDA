@@ -23618,6 +23618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputs: {fileID: -944628639613478452, guid: 67f30afa779e22942afacb4ae4197719, type: 3}
   levelTimeStore: 5
+  startingFoodAmount: 10
+  startingConstructionMaterialAmount: 0
   successFoodAmount: 0
   successConstructionMaterialsAmount: 0
   successSoilHealth: 0
