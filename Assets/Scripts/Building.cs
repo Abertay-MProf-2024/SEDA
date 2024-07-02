@@ -78,7 +78,10 @@ public class Building : MonoBehaviour
             Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * Inventory.cropOutput * Upkeepmet);
             Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * Inventory.cropOutput * Upkeepmet);
 
-            gameObject.GetComponentInChildren<ResourceUpdatePopup>().AnimatePopup();
+            if (gameObject.GetComponentInChildren<ResourceUpdatePopup>())
+            {
+                gameObject.GetComponentInChildren<ResourceUpdatePopup>().AnimatePopup();
+            }
         }
     }
     
