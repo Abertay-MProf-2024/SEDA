@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8d61a477003644b914d1428c864ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceData: {fileID: 0}
+  resourceData: {fileID: 11400000, guid: 0e3fd8e10405f024fb39076448f691b6, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
   RequireWaterEnergy: 0
