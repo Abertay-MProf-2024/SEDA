@@ -45,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         gameIsPaused = true;
-        Time.timeScale = 0f;    // Pause the game when the pause menu is opened
+        TimeSystem.Pause();;    // Pause the game when the pause menu is opened
 
         possessCameraAction = action.FindAction("PossessCamera");
         cameraPanAction = action.FindAction("PanCamera");
@@ -94,7 +94,7 @@ public class PauseMenu : MonoBehaviour
         if (instance == this)
         {
             gameIsPaused = false;
-            Time.timeScale = 1f;    // Unpause when the pause menu is closed
+            TimeSystem.Unpause();    // Unpause when the pause menu is closed
 
             possessCameraAction.Enable();
             cameraPanAction.Enable();
