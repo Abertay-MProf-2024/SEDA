@@ -43,8 +43,8 @@ MonoBehaviour:
   buffAmount: 5
   nerfAmount: 0
   tileImpactBuff:
-  - {fileID: 11400000, guid: 2edb4031f871acd4b8c12141aab222d6, type: 2}
-  - {fileID: 11400000, guid: 441bdef6f5693c349895fd3f7be22f0f, type: 2}
+  - {fileID: 11400000, guid: d17b0d865e8ef534aa8a6c7ab4186127, type: 2}
+  - {fileID: 11400000, guid: bbf0432b9e6835a43ab451a0f7bcfd51, type: 2}
   tileImpactNerf: []
   isImpactSoilGrade: 1
   buffSoilGradeAmount: 0

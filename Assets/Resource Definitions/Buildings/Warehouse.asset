@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
   m_Name: Warehouse
   m_EditorClassIdentifier: 
-  tileName: warehouse
+  tileName: Warehouse
   icon: {fileID: 0}
   inGameAsset: {fileID: 679268389524347108, guid: 8c96c13045af6d843b686c866995f6f8,
     type: 3}
