@@ -10,42 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
-  m_Name: SheepPasture
+  m_Name: RuinedBuildings
   m_EditorClassIdentifier: 
-  tileName: Sheep pasture
+  tileName: Ruined Buildings
   icon: {fileID: 0}
-  inGameAsset: {fileID: 7543974964756465544, guid: ce9370c9d214ae1498c2ebda693e6169,
+  inGameAsset: {fileID: 7543974964756465544, guid: 77ec303b5caa18940af3643d8eb21693,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
-  structureType: 9
+  structureType: 23
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
-  tileTerrainTypes: 0100000003000000
+  tileTerrainTypes: 
   CreatureTile: 0
   bribeCostFood: 15
   bribeCostConstruction: 5
-  canBuild: 1
-  buildingCostFood: 2
-  buildingCostMaterial: 8
+  canBuild: 0
+  buildingCostFood: 0
+  buildingCostMaterial: 0
   upKeepCostEnergy: 0
-  upKeepCostWater: 1
+  upKeepCostWater: 0
   upKeepCostFood: 0
   upKeepCostMaterial: 0
-  isResourceTapped: 0
+  isResourceTapped: 1
   baseOutputEnergy: 0
   baseOutputWater: 0
-  baseOutputFood: 10
-  baseOutputMaterial: 0
+  baseOutputFood: 0
+  baseOutputMaterial: 15
   buildingOutputMulti: 2
-  impactSource: 1
-  impactRadiusTiles: 3
-  collectorBuildings: 01000000
-  buffAmount: 3
-  nerfAmount: 0.5
-  tileImpactBuff:
-  - {fileID: 11400000, guid: 24e9ec8887a10c9488dc222a1f307740, type: 2}
+  impactSource: 0
+  impactRadiusTiles: 0
+  buffAmount: 0
+  nerfAmount: 0
+  tileImpactBuff: []
   tileImpactNerf: []
-  isImpactSoilGrade: 1
-  buffSoilGradeAmount: 20
+  isImpactSoilGrade: 0
+  buffSoilGradeAmount: 0
   nerfSoilGradeAmount: 0

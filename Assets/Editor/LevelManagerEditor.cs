@@ -11,9 +11,6 @@ public class LevelManagerEditor : Editor
 
     SerializedProperty levelTime;
 
-    SerializedProperty startingFoodAmount;
-    SerializedProperty startingConstructionMaterialAmount;
-
     // Level Success Conditions
     SerializedProperty successFoodAmount;
     SerializedProperty successConstructionMaterialsAmount;
@@ -29,9 +26,6 @@ public class LevelManagerEditor : Editor
 
         levelTime = serializedObject.FindProperty("levelTimeStore");
 
-        startingFoodAmount = serializedObject.FindProperty("startingFoodAmount");
-        startingConstructionMaterialAmount = serializedObject.FindProperty("startingConstructionMaterialAmount");
-        
         successFoodAmount = serializedObject.FindProperty("successFoodAmount");
         successConstructionMaterialsAmount = serializedObject.FindProperty("successConstructionMaterialsAmount");
         successSoilHealth = serializedObject.FindProperty("successSoilHealth");
@@ -47,9 +41,6 @@ public class LevelManagerEditor : Editor
 
         EditorGUIUtility.labelWidth = 300;
         EditorGUILayout.PropertyField(levelTime, new GUIContent("Time Taken By Level (months)"));
-
-        EditorGUILayout.PropertyField(startingFoodAmount);
-        EditorGUILayout.PropertyField(startingConstructionMaterialAmount);
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Success Conditions", EditorStyles.boldLabel);

@@ -1,20 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
-using Unity.VisualScripting;
 using UnityEngine;
-
-public enum CollectorType
-{
-    None,
-    Barn,
-    [Description("Wind Turbine")]
-    WindTurbine,
-    [Description("Water Pump")]
-    WaterPump,
-    Warehouse,
-    [Description("Logging Camp")]
-    LoggingCamp
-}
 
 [CreateAssetMenu(fileName = "TileBase", menuName = "TileBase")]
 public class TileBase : ScriptableObject
@@ -28,39 +14,47 @@ public class TileBase : ScriptableObject
     [Tooltip("GameObject with 3D static Mesh (Drag and Drop) (Scale See Metrics & Scale (See Grid scale)")]
     public GameObject inGameAsset;
     [Tooltip("Number of Tiles on grid Width")]
-    public int sizeWidthTile = 1;
+    public int sizeWidthTile;
     [Tooltip("Number of Tiles on grid Length")]
-    public int sizeLengthTile = 1;
+    public int sizeLengthTile;
     [Tooltip("Structure Types")]
     public StructureTypes structureType;
     [Description("Structure Types")]
     public enum StructureTypes
     {
-        Barn,
-        [Description("Wind Turbine")]
-        WindTurbine,
-        [Description("Water Pump")]
-        WaterPump,
-        Warehouse,
-        [Description("Logging Camp")]
-        LoggingCamp,
-        Giant,
-        Kelpie,
-        Cailleach,
+        [Description("Stone Circle")]
+        StoneCircle,
         [Description("Cow Pasture")]
         CowPasture,
         [Description("Sheep Pasture")]
         SheepPasture,
-        [Description("Spring Barley")]
-        SpringBarley,
+        Oats,
+        Barley,
+        Wheat,
+        Blackcurrants,
         Forest,
-        [Description("Ruined Buildings")]
-        RuinedBuildings,
+        [Description("Wind Turbine")]
+        WindTurbine,
+        [Description("Solar Panels")]
+        SolarPanels,
+        Tidal,
+        River,
+        Loch,
+        [Description("Water Pump")]
+        WaterPump,
+        [Description("Natural Fertiliser")]
+        NaturalFertiliser,
         [Description("Artificial Fertiliser")]
         ArtificialFertiliser,
         [Description("Peas and Beans")]
         PeasAndBeans,
-        Compost
+        Giant,
+        Kelpie,
+        Cailleach,
+        Brownie,
+        LoggingCamp,
+        Mine,
+        Rock
     }
     [Tooltip("Grab reference and information of the tile under the structure/ the tile this structure is placed on top of.")]
     public GridObject tileUnder;
@@ -106,8 +100,6 @@ public class TileBase : ScriptableObject
     [Header("Resources")]
     [Tooltip("checks if the resource will be added to the monthly output (some structures need to be tapped to receive the base output")]
     public bool isResourceTapped;
-    [Tooltip("The type of Structure this collects resources from, if any.")]
-    public CollectorType[] collectorBuildings;
     //ResourceOutput
     [Tooltip("Whether a structure generates energy.")]
     public bool baseOutputEnergy;

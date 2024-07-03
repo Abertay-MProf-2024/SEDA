@@ -15,15 +15,15 @@ MonoBehaviour:
   tileName: Kelpie
   icon: {fileID: 0}
   inGameAsset: {fileID: 0}
-  sizeWidthTile: 1
-  sizeLengthTile: 1
-  structureType: 18
+  sizeWidthTile: 0
+  sizeLengthTile: 0
+  structureType: 0
   tileUnder: {fileID: 0}
   biomeTypes: 
   tileTerrainTypes: 
   CreatureTile: 1
-  bribeCostFood: 20
-  bribeCostConstruction: 0
+  bribeCostFood: 10
+  bribeCostConstruction: 20
   canBuild: 0
   buildingCostFood: 0
   buildingCostMaterial: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   baseOutputFood: 0
   baseOutputMaterial: 0
   buildingOutputMulti: 0
-  impactSource: 1
+  impactSource: 0
   impactRadiusTiles: 0
   buffAmount: 0
   nerfAmount: 0

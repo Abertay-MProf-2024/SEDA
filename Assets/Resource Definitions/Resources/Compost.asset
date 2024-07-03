@@ -10,41 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
-  m_Name: RuinedBuildings
+  m_Name: Compost
   m_EditorClassIdentifier: 
-  tileName: Ruined Buildings
+  tileName: Compost
   icon: {fileID: 0}
-  inGameAsset: {fileID: 7543974964756465544, guid: eef7f4220d79bae4399a826c9f5095c6,
+  inGameAsset: {fileID: 7543974964756465544, guid: 4e4d3707c9096ce4483b3045fe201ad2,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
-  structureType: 12
+  structureType: 5
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000
   CreatureTile: 0
   bribeCostFood: 15
   bribeCostConstruction: 5
-  canBuild: 0
-  buildingCostFood: 0
-  buildingCostMaterial: 0
+  canBuild: 1
+  buildingCostFood: 20
+  buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 0
-  upKeepCostFood: 0
+  upKeepCostFood: 10
   upKeepCostMaterial: 0
   isResourceTapped: 0
-  collectorBuildings: 04000000
   baseOutputEnergy: 0
   baseOutputWater: 0
-  baseOutputFood: 0
-  baseOutputMaterial: 15
-  buildingOutputMulti: 2
+  baseOutputFood: 10
+  baseOutputMaterial: 0
+  buildingOutputMulti: 1
   impactSource: 1
-  impactRadiusTiles: 3
+  impactRadiusTiles: 5
   buffAmount: 0
   nerfAmount: 0
-  tileImpactBuff: []
-  tileImpactNerf: []
+  tileImpactBuff:
+  - {fileID: 11400000, guid: cd1916fecfec7ba4ba50cdc08430342a, type: 2}
+  tileImpactNerf:
+  - {fileID: 11400000}
   isImpactSoilGrade: 0
   buffSoilGradeAmount: 0
   nerfSoilGradeAmount: 0

@@ -62,7 +62,7 @@ public class LevelSelect : MonoBehaviour
     {
         if (instance == this)
         {
-            TimeSystem.Unpause();   // Unpause when the level selection menu is closed
+            Time.timeScale = 1f;    // Unpause when the level selection menu is closed
         }
     }
 

@@ -46,7 +46,6 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] GameObject gameOverPrefab;
     [SerializeField] GameObject levelCompletePrefab;
     [SerializeField] GameObject winScreenPrefab;
-    public GameObject timeSystem;
 
     int day = 1;
     float timeElapsed = 0f;
@@ -56,8 +55,6 @@ public class TimeSystem : MonoBehaviour
     int numOfDaysInMonth = 31;
 
     int year = 1;
-
-    static int pauseMenus = 0;
 
 
     /** The time manager is a singleton
@@ -78,9 +75,6 @@ public class TimeSystem : MonoBehaviour
     /** Initialise displays and start the daily tick */
     private void Start()
     {
-        if (timeSystem)
-            Pause();
-
         SetDay();
         SetMonth();
         SetTimeRemainingDisplay();
@@ -247,16 +241,11 @@ public class TimeSystem : MonoBehaviour
     public static void Pause()
     {
         Time.timeScale = 0;
-
-        pauseMenus++;
     }
 
     public static void Unpause()
     {
-        pauseMenus--;
-
-        if (pauseMenus == 0)
-            Time.timeScale = 1f;
+        Time.timeScale = 1f;
     }
 
     private void OnDestroy()

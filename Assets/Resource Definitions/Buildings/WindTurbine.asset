@@ -18,29 +18,25 @@ MonoBehaviour:
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
-  structureType: 1
+  structureType: 8
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000
-  CreatureTile: 0
-  bribeCostFood: 15
-  bribeCostConstruction: 5
   canBuild: 1
   buildingCostFood: 0
   buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 0
-  upKeepCostFood: 0
-  upKeepCostMaterial: 0
-  isResourceTapped: 0
+  upKeepCostFood: 10
+  upKeepCostMaterial: 10
+  isResourceTapped: 1
   baseOutputEnergy: 1
   baseOutputWater: 0
   baseOutputFood: 0
   baseOutputMaterial: 0
-  buildingOutputMulti: 1
+  buildingOutputMulti: 0
   impactSource: 1
   impactRadiusTiles: 1
-  collectorBuildings: 
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []

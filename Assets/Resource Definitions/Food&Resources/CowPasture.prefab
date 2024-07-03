@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2958013600637180556}
   - component: {fileID: 938145542236971866}
   m_Layer: 0
-  m_Name: RuinedBuildings
+  m_Name: CowPasture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4f21b733ac2576f438aa2f6b0b135c3c, type: 2}
+  - {fileID: 2100000, guid: b135bf8c5fbfd794986459dbae9837e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,8 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8d61a477003644b914d1428c864ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceData: {fileID: 11400000, guid: 77a2bbd46695b7649b49ac3bc09a8953, type: 2}
-  oldresourceData: {fileID: 0}
-  newresourceData: {fileID: 0}
-  RequireWaterEnergy: 0
-  IsItBasedOnSoilGrade: 0
+  resourceData: {fileID: 11400000, guid: cd1916fecfec7ba4ba50cdc08430342a, type: 2}

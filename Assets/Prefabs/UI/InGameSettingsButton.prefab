@@ -146,11 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
-=======
-  ClickedSound: {fileID: 8300000, guid: a22fc64bdf14a0047900c7ee971eb45e, type: 3}
->>>>>>> main
 --- !u!1 &4351175934132562202
 GameObject:
   m_ObjectHideFlags: 0
