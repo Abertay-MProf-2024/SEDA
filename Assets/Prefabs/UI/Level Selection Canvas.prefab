@@ -987,6 +987,7 @@ GameObject:
   - component: {fileID: 5637721937425559378}
   - component: {fileID: 8119923554945144530}
   - component: {fileID: 1224524987812825167}
+  - component: {fileID: 6157588003385036469}
   m_Layer: 5
   m_Name: 'Second AC Button '
   m_TagString: Untagged
@@ -1108,6 +1109,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6157588003385036469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890127799089270862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
 --- !u!1 &2922132668411522153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,6 +2902,7 @@ GameObject:
   - component: {fileID: 6991457611550296834}
   - component: {fileID: 5752063965550280151}
   - component: {fileID: 4291163070559660667}
+  - component: {fileID: 3596160127458366066}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -3009,6 +3024,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3596160127458366066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6860795568244972334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
 --- !u!1 &7566580087666352178
 GameObject:
   m_ObjectHideFlags: 0
