@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: Ruined Buildings
   icon: {fileID: 0}
-  inGameAsset: {fileID: 7543974964756465544, guid: 0ab534e307d88364d97150c7deee9a6b,
+  inGameAsset: {fileID: 7543974964756465544, guid: eef7f4220d79bae4399a826c9f5095c6,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
   structureType: 12
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
-  tileTerrainTypes: 
+  tileTerrainTypes: 0100000003000000
   CreatureTile: 0
   bribeCostFood: 15
   bribeCostConstruction: 5
@@ -33,14 +33,14 @@ MonoBehaviour:
   upKeepCostFood: 0
   upKeepCostMaterial: 0
   isResourceTapped: 0
+  collectorBuildings: 04000000
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
   baseOutputMaterial: 15
   buildingOutputMulti: 2
   impactSource: 1
-  impactRadiusTiles: 0
-  collectorBuildings: 04000000
+  impactRadiusTiles: 3
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []

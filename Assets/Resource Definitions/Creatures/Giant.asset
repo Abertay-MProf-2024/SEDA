@@ -17,7 +17,7 @@ MonoBehaviour:
   inGameAsset: {fileID: 0}
   sizeWidthTile: 1
   sizeLengthTile: 2
-  structureType: 0
+  structureType: 17
   tileUnder: {fileID: 0}
   biomeTypes: 
   tileTerrainTypes: 

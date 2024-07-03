@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8d61a477003644b914d1428c864ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceData: {fileID: 11400000, guid: bd205cf0ebe380e4c8f12fdf501a6e42, type: 2}
+  resourceData: {fileID: 11400000, guid: ab0c161f87aa4144f872f1fda95c998f, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  RequireWaterEnergy: 0
+  IsItBasedOnSoilGrade: 0

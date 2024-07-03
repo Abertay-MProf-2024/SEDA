@@ -57,6 +57,8 @@ public class TimeSystem : MonoBehaviour
 
     int year = 1;
 
+    static int pauseMenus = 0;
+
 
     /** The time manager is a singleton
      *  There is only one time manager active at any given time
@@ -245,11 +247,16 @@ public class TimeSystem : MonoBehaviour
     public static void Pause()
     {
         Time.timeScale = 0;
+
+        pauseMenus++;
     }
 
     public static void Unpause()
     {
-        Time.timeScale = 1f;
+        pauseMenus--;
+
+        if (pauseMenus == 0)
+            Time.timeScale = 1f;
     }
 
     private void OnDestroy()
