@@ -2,13 +2,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using System.Collections;
+using UnityEngine.Audio;
 
 public class UIButtonSound : MonoBehaviour, IPointerEnterHandler
 {
 
     public AudioClip ClickedSound;
     AudioClip HoverSound;
+    [SerializeField] AudioMixerGroup mixerGroup;
 
     //get button component
     private Button button { get { return GetComponent<Button>(); } }
@@ -24,12 +25,12 @@ public class UIButtonSound : MonoBehaviour, IPointerEnterHandler
         //set default sound
         source.clip = HoverSound;
 
+        source.outputAudioMixerGroup = mixerGroup;
+
         source.playOnAwake = false;
 
         if(ClickedSound != null)
             button.onClick.AddListener(() => PlayClickSoud());
-
-
     }
 
     public void OnPointerEnter(PointerEventData eventData)
