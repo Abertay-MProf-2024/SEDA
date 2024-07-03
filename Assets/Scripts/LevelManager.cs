@@ -20,6 +20,9 @@ public class LevelManager : MonoBehaviour
     // time in months
     public int levelTimeStore;
 
+    [SerializeField] int startingFoodAmount;
+    [SerializeField] int startingConstructionMaterialAmount;
+
     [SerializeField] int successFoodAmount;
     [SerializeField] int successConstructionMaterialsAmount;
     [SerializeField] int successSoilHealth;
@@ -48,6 +51,9 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        Inventory.food = startingFoodAmount;
+        Inventory.constructionMaterials = startingConstructionMaterialAmount;
+
         tapAction = inputs.FindAction("PossessCamera");
         possessCamera = ctx => SelectTile();
         tapAction.performed += possessCamera;
@@ -73,11 +79,18 @@ public class LevelManager : MonoBehaviour
             GridObject gridTile;
             Terrainsystem terrainTile;
 
-            if ((building = hit.transform.gameObject.GetComponent<Building>()) && building.resourceData.impactSource)
+            if ((building = hit.transform.gameObject.GetComponent<Building>()) && building.resourceData.impactSource
+                && building.GetOwningGridObject())
             {
                 radius = building.resourceData.impactRadiusTiles;
 
-                GridPosition gridPos = building.transform.parent.gameObject.GetComponent<GridObject>().GetGridPosition();
+                GridPosition gridPos;
+                if (building.transform.parent)
+                     gridPos = building.transform.parent.gameObject.GetComponent<GridObject>().GetGridPosition();
+                else
+                {
+                    gridPos = building.GetOwningGridObject().GetGridPosition();
+                }
 
                 outlineParent = new GameObject();
                 outlineParent.name = "outlineParent";
@@ -113,7 +126,7 @@ public class LevelManager : MonoBehaviour
                 }
                 else if (terrainTile.Wenergy)
                 {
-                    radius = terrainTile.radius;
+                    radius = terrainTile.Wradius;
 
                     GridPosition gridPos = terrainTile.owningGridObject.GetGridPosition();
 

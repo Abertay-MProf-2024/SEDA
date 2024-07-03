@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Resource Definitions/Buildings/Barn.mat.meta
 guid: ac8017c955cc5324f96a9d9fe6bc0c2a
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 2100000
-========
-guid: 5a816dc513239d048a87e60b23bc878d
-NativeFormatImporter:
-  externalObjects: {}
   mainObjectFileID: 112000000
->>>>>>>> main:Assets/Scenes/Island_B/LightingData.asset.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

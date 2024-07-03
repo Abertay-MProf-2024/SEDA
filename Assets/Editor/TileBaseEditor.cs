@@ -31,6 +31,7 @@ public class TileBaseEditor : Editor
 
     //Building
     SerializedProperty isResourceTapped;
+    SerializedProperty collectorBuildings;
     SerializedProperty baseOutputEnergy;
     SerializedProperty baseOutputWater;
     SerializedProperty baseOutputFood;
@@ -79,6 +80,7 @@ public class TileBaseEditor : Editor
 
         //Building
         isResourceTapped = serializedObject.FindProperty("isResourceTapped");
+        collectorBuildings = serializedObject.FindProperty("collectorBuildings");
         baseOutputEnergy = serializedObject.FindProperty("baseOutputEnergy");
         baseOutputWater = serializedObject.FindProperty("baseOutputWater");
         baseOutputFood = serializedObject.FindProperty("baseOutputFood");
@@ -136,6 +138,7 @@ public class TileBaseEditor : Editor
 
         // Always visible properties
         EditorGUILayout.PropertyField(isResourceTapped, true);
+        EditorGUILayout.PropertyField(collectorBuildings, true);
         EditorGUILayout.PropertyField(baseOutputEnergy, true);
         EditorGUILayout.PropertyField(baseOutputWater, true);
         EditorGUILayout.PropertyField(baseOutputFood, true);

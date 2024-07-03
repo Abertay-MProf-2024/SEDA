@@ -16,30 +16,31 @@ MonoBehaviour:
   icon: {fileID: 0}
   inGameAsset: {fileID: 679268389524347108, guid: 19f1fd1822b8d2c46832eaa1b7b7310a,
     type: 3}
-  sizeWidthTile: 0
-  sizeLengthTile: 0
-  structureType: 21
+  sizeWidthTile: 1
+  sizeLengthTile: 1
+  structureType: 4
   tileUnder: {fileID: 0}
-  biomeTypes: 
+  biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000
   CreatureTile: 0
   bribeCostFood: 15
   bribeCostConstruction: 5
   canBuild: 1
-  buildingCostFood: 0
-  buildingCostMaterial: 0
+  buildingCostFood: 3
+  buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 0
-  upKeepCostFood: 10
-  upKeepCostMaterial: 10
+  upKeepCostFood: 0
+  upKeepCostMaterial: 0
   isResourceTapped: 0
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
-  baseOutputMaterial: 0
-  buildingOutputMulti: 0
-  impactSource: 0
-  impactRadiusTiles: 0
+  baseOutputMaterial: 15
+  buildingOutputMulti: 1
+  impactSource: 1
+  impactRadiusTiles: 3
+  collectorBuildings: 
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []

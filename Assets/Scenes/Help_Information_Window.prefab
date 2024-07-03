@@ -2519,7 +2519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
 --- !u!1 &7964684299142993573
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,41 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
-  m_Name: Forest
+  m_Name: CowPasture
   m_EditorClassIdentifier: 
-  tileName: Forest
+  tileName: Cow Pasture
   icon: {fileID: 0}
-  inGameAsset: {fileID: 7543974964756465544, guid: db1ca25da234f254d9830650a317f4f8,
+  inGameAsset: {fileID: 7543974964756465544, guid: 0ab534e307d88364d97150c7deee9a6b,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
-  structureType: 7
+  structureType: 8
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000
   CreatureTile: 0
   bribeCostFood: 15
   bribeCostConstruction: 5
-  canBuild: 0
-  buildingCostFood: 20
-  buildingCostMaterial: 0
+  canBuild: 1
+  buildingCostFood: 3
+  buildingCostMaterial: 10
   upKeepCostEnergy: 0
-  upKeepCostWater: 0
+  upKeepCostWater: 1
   upKeepCostFood: 0
   upKeepCostMaterial: 0
   isResourceTapped: 0
   baseOutputEnergy: 0
   baseOutputWater: 0
-  baseOutputFood: 0
-  baseOutputMaterial: 5
-  buildingOutputMulti: 5
+  baseOutputFood: 10
+  baseOutputMaterial: 0
+  buildingOutputMulti: 2
   impactSource: 1
   impactRadiusTiles: 3
-  buffAmount: 2
-  nerfAmount: 0
+  collectorBuildings: 01000000
+  buffAmount: 5
+  nerfAmount: 0.5
   tileImpactBuff:
-  - {fileID: 11400000, guid: cd1916fecfec7ba4ba50cdc08430342a, type: 2}
-  - {fileID: 11400000, guid: e434d313045e6a840a344c33db2e5784, type: 2}
+  - {fileID: 11400000, guid: 24e9ec8887a10c9488dc222a1f307740, type: 2}
   tileImpactNerf: []
   isImpactSoilGrade: 1
   buffSoilGradeAmount: 20

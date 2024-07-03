@@ -32,17 +32,19 @@ public class Building : MonoBehaviour
         {
             RaycastHit hit;
             Physics.Raycast(transform.position, Vector3.down, out hit);
-            resourceData.tileUnder = hit.transform.gameObject.GetComponent<GridObject>();
+            SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
         }
+
+        
 
         resourceData.tileUnder.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
 
         UpdateTotalBuildingCount(true);
-        //Impact();
+        TimeSystem.AddMonthlyEvent(Impact);
        
         if ( !resourceData.isResourceTapped )
         {
-            TimeSystem.AddMonthlyEvent(UpdateResources);
+            TimeSystem.AddMonthlyEvent(HarvestSurroundingResources);
         }
 
         TimeSystem.AddMonthlyEvent(PayUpkeep);
@@ -62,8 +64,19 @@ public class Building : MonoBehaviour
             Terrainsystem.owningGridObject.buildingInstance = this;
         }
 
-        
+        if (resourceData.baseOutputEnergy)
+        {
+            Terrainsystem.Lenergy = true;
+            Terrainsystem.radius = resourceData.impactRadiusTiles;
+            Terrainsystem.TriggerEnergy();
+        }
 
+        if (resourceData.baseOutputWater)
+        {
+            Terrainsystem.Wenergy = true;
+            Terrainsystem.Wradius = resourceData.impactRadiusTiles;
+            Terrainsystem.TriggerEnergy();
+        }
     }
 
     public void PayConstructionCosts()
@@ -76,21 +89,29 @@ public class Building : MonoBehaviour
     public void UpdateResources()
     {
         IfDependsonSoilGrade();
-        if (RequireWaterEnergy && (Inventory.isFlooding || resourceData.tileUnder.terrain.Wenergy))
+
+        Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * Inventory.cropOutput * Upkeepmet);
+        Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * Inventory.cropOutput * Upkeepmet);
+
+        if (gameObject.GetComponentInChildren<ResourceUpdatePopup>())
         {
-            Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * (1 + buff + nerf) * Inventory.cropOutput * Upkeepmet);
-            Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * (1 + buff + nerf) * Inventory.cropOutput * Upkeepmet);
+            gameObject.GetComponentInChildren<ResourceUpdatePopup>().AnimatePopup();
         }
+
     }
     
     public void PayUpkeep()
     {
-        if (resourceData.upKeepCostWater && (Inventory.isFlooding || resourceData.tileUnder.terrain.Wenergy))
+        if (!resourceData.upKeepCostEnergy || Terrainsystem.Lenergy)
         {
-            Upkeepmet = 1;
-            Inventory.SpendFood(resourceData.upKeepCostFood);
-            Inventory.SpendMaterials(resourceData.upKeepCostMaterial);
+            if (!resourceData.upKeepCostWater || (Inventory.isFlooding || resourceData.tileUnder.terrain.Wenergy))
+            {
+                Upkeepmet = 1;
+                Inventory.SpendFood(resourceData.upKeepCostFood);
+                Inventory.SpendMaterials(resourceData.upKeepCostMaterial);
+            }
         }
+
         else
         {
             Upkeepmet = 0;
@@ -113,7 +134,14 @@ public class Building : MonoBehaviour
 
     public void SetGridObject(GridObject gridObject)
     {
-        resourceData.tileUnder = gridObject;
+        if (resourceData)
+            resourceData.tileUnder = gridObject;
+
+        if (oldresourceData)
+            oldresourceData.tileUnder = gridObject;
+
+        if (newresourceData)
+            newresourceData.tileUnder = gridObject;
     }
 
     public void Impact()
@@ -121,9 +149,9 @@ public class Building : MonoBehaviour
         GridPosition pos = GetOwningGridObject().GetGridPosition();
         int radius = resourceData.impactRadiusTiles;
 
-        for (int x = pos.x - radius; x < pos.x + radius; x++)
+        for (int x = pos.x - radius; x <= pos.x + radius; x++)
         {
-            for (int z = pos.z - radius; z < pos.z + radius; z++)
+            for (int z = pos.z - radius; z <= pos.z + radius; z++)
             {
                 if (x >= 0 && z >= 0 && x < GetOwningGridObject().GetOwningGridSystem().GetGridLength() && z < GetOwningGridObject().GetOwningGridSystem().GetGridWidth())
                 {
@@ -140,6 +168,7 @@ public class Building : MonoBehaviour
 
     public void SetBuffs(Building resource)
     {
+        resource.buff = 0;
         resource.buff += resourceData.buffAmount;
         resource.buff -= resourceData.nerfAmount;
     }
@@ -165,12 +194,6 @@ public class Building : MonoBehaviour
             case TileBase.StructureTypes.Forest:
                 Inventory.numOfForests += changeAmount;
                 break;
-            case TileBase.StructureTypes.Rock:
-                Inventory.numOfRocks += changeAmount;
-                break;
-            case TileBase.StructureTypes.Mine:
-                Inventory.numOfMines += changeAmount;
-                break;
         }
     }
 
@@ -185,6 +208,7 @@ public class Building : MonoBehaviour
         {
             resourceData = newresourceData;
             resourceData.inGameAsset = newresourceData.inGameAsset;
+
         }
         else
             gameObject.SetActive(false);
@@ -199,5 +223,36 @@ public class Building : MonoBehaviour
         }
         else
             gameObject.SetActive(true);
+    }
+
+    public void HarvestSurroundingResources()
+    {
+        GridPosition pos = GetOwningGridObject().GetGridPosition();
+        int radius = resourceData.impactRadiusTiles;
+
+        for (int x = pos.x - radius; x <= pos.x + radius; x++)
+        {
+            for (int z = pos.z - radius; z <= pos.z + radius; z++)
+            {
+                if (x >= 0 && z >= 0 && x < GetOwningGridObject().GetOwningGridSystem().GetGridLength() && z < GetOwningGridObject().GetOwningGridSystem().GetGridWidth())
+                {
+                    // TODO: Filter by structure type
+                    Building objectInRadius;
+                    if ((objectInRadius = GetOwningGridObject().GetOwningGridSystem().GetGridObject(x, z).GetBuilding()) && (new GridPosition(x, z) != pos))
+                    {
+                        foreach(CollectorType collector in resourceData.collectorBuildings)
+                        {
+                            if (collector.ToString() == objectInRadius.resourceData.structureType.ToString()
+                                && (!objectInRadius.resourceData.upKeepCostEnergy || objectInRadius.Terrainsystem.Lenergy)
+                                && (!objectInRadius.resourceData.upKeepCostWater || (Inventory.isFlooding || objectInRadius.Terrainsystem.Wenergy)))
+                            {
+                                UpdateResources();
+                                return;
+                            }
+                        }    
+                    }
+                }
+            }
+        }
     }
 }

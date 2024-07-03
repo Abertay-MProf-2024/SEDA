@@ -8,6 +8,14 @@ public class WeatherUI : MonoBehaviour
 
     private void Update()
     {
-        currentWeatherButtonText.text = currentWeatherText.text = Inventory.GetCurrentWeather().ToString();
+        string weatherName = Inventory.GetCurrentWeather().ToString();
+        
+        // So the name can look nice in the UI
+        if (weatherName == "Fair")
+        {
+            weatherName = "Fair Weather";
+        }
+
+        currentWeatherButtonText.text = currentWeatherText.text = weatherName;
     }
 }

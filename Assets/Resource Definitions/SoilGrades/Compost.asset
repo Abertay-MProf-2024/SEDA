@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
+  m_Name: Compost
+  m_EditorClassIdentifier: 
+  tileName: Compost
+  icon: {fileID: 0}
+  inGameAsset: {fileID: 7543974964756465544, guid: 4e4d3707c9096ce4483b3045fe201ad2,
+    type: 3}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
+  structureType: 14
+  tileUnder: {fileID: 0}
+  biomeTypes: 00000000
+  tileTerrainTypes: 0100000003000000
+  CreatureTile: 0
+  bribeCostFood: 15
+  bribeCostConstruction: 5
+  canBuild: 1
+  buildingCostFood: 10
+  buildingCostMaterial: 10
+  upKeepCostEnergy: 0
+  upKeepCostWater: 0
+  upKeepCostFood: 10
+  upKeepCostMaterial: 0
+  isResourceTapped: 0
+  baseOutputEnergy: 0
+  baseOutputWater: 0
+  baseOutputFood: 0
+  baseOutputMaterial: 0
+  buildingOutputMulti: 1
+  impactSource: 1
+  impactRadiusTiles: 5
+  buffAmount: 0
+  nerfAmount: 0
+  tileImpactBuff: []
+  tileImpactNerf: []
+  isImpactSoilGrade: 1
+  buffSoilGradeAmount: 40
+  nerfSoilGradeAmount: 0

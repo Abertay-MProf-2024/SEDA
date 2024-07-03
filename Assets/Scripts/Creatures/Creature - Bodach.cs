@@ -18,10 +18,8 @@ public class Cailleach : Building
             //Debug.DrawLine(transform.position, transform.position + Vector3.down * 100, Color.red, 500);
             TSC1 = hit.transform.gameObject.GetComponent<Terrainsystem>();
         }
-
         TSC1.creaturetype = CreatureTypes.Cailleach;
         //cailleachcreature.SetActive(false);
-        
     }
 
     public void StandingStoneCailleachImpact()

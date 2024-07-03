@@ -7,9 +7,9 @@ public class StandingStone : MonoBehaviour
     [SerializeField]
     InputActionAsset actionAsset;
 
-    [SerializeField] Kelpie kelpie;
+    public Kelpie kelpie;
     
-    [SerializeField] Cailleach cailleach;
+    public Cailleach cailleach;
 
     InputAction placeAction;
     InputAction tapLocation;
@@ -25,8 +25,10 @@ public class StandingStone : MonoBehaviour
     {
         //kelpie = FindFirstObjectByType<Kelpie>();
         //cailleach = FindFirstObjectByType<Cailleach>();
-        kelpie.gameObject.SetActive(false);
-        cailleach.gameObject.SetActive(false);
+        if(kelpie)
+            kelpie.gameObject.SetActive(false);
+        if(cailleach)
+            cailleach.gameObject.SetActive(false);
 
         placeAction = actionAsset.FindAction("click");
         click = ctx => Interact();
@@ -65,24 +67,45 @@ public class StandingStone : MonoBehaviour
         foreach (Terrainsystem t in list)
         {
             if (t.terraintype == t.OldsoilType)
+            {
                 t.terraintype = t.NewSoilType;
+                t.ChangeinGrade(0,20,true);
+                t.SetTerrainMaterialProperties();
+            }
             else
+            {
                 t.terraintype = t.OldsoilType;
+                t.ChangeinGrade(0, 20, true);
+                t.SetTerrainMaterialProperties();
+            }
+
         }
 
         foreach (Terrainsystem t in list)
         {
             if (t.owningGridObject != null)
             {
+                
                 Building building = t.owningGridObject.GetBuilding();
                 if (building != null)
                 {
                     if (building.resourceData == building.oldresourceData)
+                    {
                         building.VeilChangeActivate();
+                        
+                    }
                     else
+                    {
                         building.VeilChangeDeactivate();
+                        
+                    }
                 }
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        placeAction.performed -= click;
     }
 }

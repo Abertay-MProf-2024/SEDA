@@ -91,7 +91,7 @@ public class GridObject : MonoBehaviour
             if (buildingInstance.resourceData.isImpactSoilGrade == true)
             {
                 terrain.ChangeinGrade(buildingInstance.resourceData.buffSoilGradeAmount, buildingInstance.resourceData.nerfSoilGradeAmount, buildingInstance.resourceData.isImpactSoilGrade);
-                buildingInstance.Impact();
+                //buildingInstance.Impact();
             }
             return true;
         }

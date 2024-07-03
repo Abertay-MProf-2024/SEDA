@@ -1,5 +1,6 @@
 // Remy Pijuan 2024
 
+using System.ComponentModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;

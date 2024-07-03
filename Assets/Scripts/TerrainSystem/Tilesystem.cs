@@ -149,7 +149,7 @@ public class Terrainsystem : MonoBehaviour
         Inventory.totalhealth += (int)CurrentsoilType;
         Inventory.HealthBarChange();
     }
-    void SetTerrainMaterialProperties()
+    public void SetTerrainMaterialProperties()
     {
         MeshRenderer renderer = gameObject.GetComponent<MeshRenderer>();
 

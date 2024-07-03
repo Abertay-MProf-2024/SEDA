@@ -4,6 +4,13 @@ using UnityEngine.InputSystem;
 
 public class BuildSystem : MonoBehaviour
 {
+
+ 
+    public GameObject Tutorial_Step_5;
+    public GameObject Tutorial_Step_4;
+    public bool Is_Set_Tutorial_Step_5=true;
+
+
     [SerializeField]
     InputActionAsset actionAsset;
 
@@ -36,7 +43,11 @@ public class BuildSystem : MonoBehaviour
             GridObject hitGridObject;
             if (hitGridObject = hit.collider.gameObject.GetComponent<GridObject>())
             {
+
                 hitGridObject.TryBuild(buildingTypeSelect.currentBuildingType);
+
+                //ShowTutorial();// Designer Tutorial test
+
             }
         }
     }
@@ -44,5 +55,14 @@ public class BuildSystem : MonoBehaviour
     private void OnDestroy()
     {
         placeAction.performed -= possessCamera;
+    }
+
+    public void ShowTutorial()// Designer Tutorial test
+    {
+        if (Is_Set_Tutorial_Step_5)
+        {
+            Tutorial_Step_5.SetActive(true);
+            Tutorial_Step_4.SetActive(false);
+        }
     }
 }
