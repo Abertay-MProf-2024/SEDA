@@ -1,6 +1,3 @@
-// Remy Pijuan 2024
-
-using System.ComponentModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,7 +30,6 @@ public class Inventory : MonoBehaviour
 
     // Weather events status
     static bool hasTornadoHappened = false;
-    static bool hasCailleachAppeared = false;
     static bool hasFloodHappened = false;
 
     public static float cropOutput = 1f;
@@ -82,7 +78,6 @@ public class Inventory : MonoBehaviour
         numOfRocks = 0;
 
         hasFloodHappened = false;
-        hasCailleachAppeared = false;
         hasTornadoHappened = false;
 
         currentWeather = WeatherTypes.Fair;
@@ -130,13 +125,6 @@ public class Inventory : MonoBehaviour
             cropOutput = 0.7f;
             hasTornadoHappened = true;
         }
-        else if (hasCailleachAppeared)
-        {
-            currentWeather = WeatherTypes.Thunderstorm;
-            cropOutput = 0.9f;
-            soilGradeWeatherEffect = -20;
-            hasCailleachAppeared = false;
-        }
         else if (!hasFloodHappened && healthBar < 60)
         {
             currentWeather = WeatherTypes.Flood;
@@ -156,7 +144,9 @@ public class Inventory : MonoBehaviour
 
     public static void CailleachAppeared()
     {
-        hasCailleachAppeared = true;
+        currentWeather = WeatherTypes.Thunderstorm;
+        cropOutput = 0.9f;
+        soilGradeWeatherEffect = -20;
     }
 
     public static WeatherTypes GetCurrentWeather()
