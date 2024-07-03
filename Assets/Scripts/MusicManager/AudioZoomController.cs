@@ -21,14 +21,8 @@ public class AudioZoomController : MonoBehaviour
     {
         // Initialize AudioSources
         audioSource1 = gameObject.AddComponent<AudioSource>();
-        audioSource1.clip = musicClip1;
-        audioSource1.loop = true;
-        audioSource1.Play();
 
         audioSource2 = gameObject.AddComponent<AudioSource>();
-        audioSource2.clip = musicClip2;
-        audioSource2.loop = true;
-        audioSource2.Play();
 
         if (orthoCam != null)
         {

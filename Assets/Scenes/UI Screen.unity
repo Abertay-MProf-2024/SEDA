@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -337,74 +337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &497118402
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1359.9606
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 719.19305
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.7805176
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740707266108113764, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4503817412161904975, guid: 90f7351e5f7a7a349a54a31be3cca45c,
-        type: 3}
-      propertyPath: m_Name
-      value: MusicManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 90f7351e5f7a7a349a54a31be3cca45c, type: 3}
 --- !u!223 &579900982 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 7453126377337880681, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
@@ -572,6 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
 --- !u!1 &851814587 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2720514787443877864, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
@@ -941,6 +874,12 @@ PrefabInstance:
       objectReference: {fileID: 55837928}
     - target: {fileID: 7900630879788941149, guid: a2ada996c5f6b3440aea834a0d945858,
         type: 3}
+      propertyPath: mixerGroup
+      value: 
+      objectReference: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+        type: 2}
+    - target: {fileID: 7900630879788941149, guid: a2ada996c5f6b3440aea834a0d945858,
+        type: 3}
       propertyPath: ClickedSound
       value: 
       objectReference: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
@@ -1280,6 +1219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
 --- !u!114 &8342209671794501791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,6 +1233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
 --- !u!114 &8342209671794501792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,6 +1247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
 --- !u!1001 &8885125732730403784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1443,5 +1385,4 @@ SceneRoots:
   - {fileID: 55837927}
   - {fileID: 616142527}
   - {fileID: 2129995925}
-  - {fileID: 497118402}
   - {fileID: 665720773}
