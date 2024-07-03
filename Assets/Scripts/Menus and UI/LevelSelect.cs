@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour
 {
+    [SerializeField] AudioClip levelMenuMusic;
+
     [SerializeField] TextMeshProUGUI timeDisplay;
     [SerializeField] TextMeshProUGUI levelProgressionDisplay;
     [SerializeField] GameObject infoDisplay;
@@ -34,6 +36,8 @@ public class LevelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SceneMusic.instance.ChangeMusicTrack(levelMenuMusic);
+
         TimeSystem.Pause();
 
         // Set level buttons based on number of levels completed

@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class LevelManagerEditor : Editor
 {
     SerializedProperty inputs;
+    SerializedProperty sceneMusic;
 
     SerializedProperty levelTime;
 
@@ -26,6 +27,7 @@ public class LevelManagerEditor : Editor
     private void OnEnable()
     {
         inputs = serializedObject.FindProperty("inputs");
+        sceneMusic = serializedObject.FindProperty("sceneMusic");
 
         levelTime = serializedObject.FindProperty("levelTimeStore");
 
@@ -44,6 +46,7 @@ public class LevelManagerEditor : Editor
     public override void OnInspectorGUI()
     {
         EditorGUILayout.PropertyField(inputs);
+        EditorGUILayout.PropertyField(sceneMusic);
 
         EditorGUIUtility.labelWidth = 300;
         EditorGUILayout.PropertyField(levelTime, new GUIContent("Time Taken By Level (months)"));

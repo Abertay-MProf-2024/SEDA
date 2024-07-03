@@ -2,11 +2,27 @@ using UnityEngine;
 
 public class SceneMusic : MonoBehaviour
 {
-    public AudioClip backgroundMusic;
+    public static SceneMusic instance;
+
     [SerializeField] AudioSource audioSource;
 
-    void Start()
+    private void Awake()
     {
-        audioSource.loop = true;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void ChangeMusicTrack(AudioClip newMusic)
+    {
+        audioSource.Stop();
+        audioSource.clip = newMusic;
+        audioSource.Play();
     }
 }
