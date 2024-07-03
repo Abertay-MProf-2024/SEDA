@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3783061543644844043}
   - component: {fileID: 7170844780395968921}
   m_Layer: 0
-  m_Name: AudioController
+  m_Name: AudioController_SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3857664619104186591}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7154462879860465773, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}

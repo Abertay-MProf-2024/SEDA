@@ -17,6 +17,8 @@ public class LevelManager : MonoBehaviour
     // This function reference is necessary for callback registering/deregistering to work properly
     Action<InputAction.CallbackContext> possessCamera;
 
+    [SerializeField] AudioClip sceneMusic;
+
     // time in months
     public int levelTimeStore;
 
@@ -51,14 +53,17 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        Inventory.food = startingFoodAmount;
-        Inventory.constructionMaterials = startingConstructionMaterialAmount;
-
         tapAction = inputs.FindAction("PossessCamera");
         possessCamera = ctx => SelectTile();
         tapAction.performed += possessCamera;
 
         tapLocation = inputs.FindAction("PanCamera");
+
+        SceneMusic.instance.ChangeMusicTrack(sceneMusic);
+
+        Inventory.food = startingFoodAmount;
+        Inventory.constructionMaterials = startingConstructionMaterialAmount;
+
     }
 
     void SelectTile()
