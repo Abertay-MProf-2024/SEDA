@@ -63,6 +63,7 @@ public class Cailleach : Building
     {
         Inventory.food -= resourceData.bribeCostFood;
         Inventory.constructionMaterials -= resourceData.bribeCostConstruction;
+        Inventory.FairWeather();
 
 
         // weather is normal

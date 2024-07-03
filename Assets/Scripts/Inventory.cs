@@ -1,3 +1,4 @@
+using Autodesk.Fbx;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -119,26 +120,26 @@ public class Inventory : MonoBehaviour
 
     public static void SetWeather()
     {
-        if (!hasTornadoHappened && numOfLoggingCamps >= 3)
+        if (currentWeather != WeatherTypes.Thunderstorm)
         {
-            currentWeather = WeatherTypes.Tornado;
-            cropOutput = 0.7f;
-            hasTornadoHappened = true;
-        }
-        else if (!hasFloodHappened && healthBar < 60)
-        {
-            currentWeather = WeatherTypes.Flood;
-            cropOutput = 0.5f;
-            soilGradeWeatherEffect = 20;
-            isFlooding = true;
-            hasFloodHappened = true;
-        }
-        else if (currentWeather != WeatherTypes.Fair)
-        {
-            currentWeather = WeatherTypes.Fair;
-            cropOutput = 1f;
-            soilGradeWeatherEffect = 0;
-            isFlooding = false;
+            if (!hasTornadoHappened && numOfLoggingCamps >= 3)
+            {
+                currentWeather = WeatherTypes.Tornado;
+                cropOutput = 0.7f;
+                hasTornadoHappened = true;
+            }
+            else if (!hasFloodHappened && healthBar < 60)
+            {
+                currentWeather = WeatherTypes.Flood;
+                cropOutput = 0.5f;
+                soilGradeWeatherEffect = 20;
+                isFlooding = true;
+                hasFloodHappened = true;
+            }
+            else if (currentWeather != WeatherTypes.Fair)
+            {
+                FairWeather();
+            }
         }
     }
 
@@ -147,6 +148,14 @@ public class Inventory : MonoBehaviour
         currentWeather = WeatherTypes.Thunderstorm;
         cropOutput = 0.9f;
         soilGradeWeatherEffect = -20;
+    }
+
+    public static void FairWeather()
+    {
+        currentWeather = WeatherTypes.Fair;
+        cropOutput = 1f;
+        soilGradeWeatherEffect = 0;
+        isFlooding = false;
     }
 
     public static WeatherTypes GetCurrentWeather()
