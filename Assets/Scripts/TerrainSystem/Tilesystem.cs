@@ -30,7 +30,7 @@ public enum CreatureTypes
 
 public class Terrainsystem : MonoBehaviour
 {
-   
+
     public SoilType CurrentsoilType;
     public enum SoilType
     {
@@ -80,7 +80,7 @@ public class Terrainsystem : MonoBehaviour
         OldsoilType = terraintype;
 
         health = (int)CurrentsoilType;
-        
+
 
         if (ResourceAffect)
         {
@@ -92,7 +92,7 @@ public class Terrainsystem : MonoBehaviour
         InitialTerrainList();
         HealthBar();
         SetTerrainMaterialProperties();
- 
+
         StartCoroutine(Stupidity());
         // ChangeinGrade();
     }
@@ -140,7 +140,7 @@ public class Terrainsystem : MonoBehaviour
         yield return new WaitForSeconds(10);
         TriggerEnergy();
         //ChangeinGrade();
-        
+
     }
 
     void HealthBar()
@@ -260,67 +260,5 @@ public class Terrainsystem : MonoBehaviour
         }
 
     }
-
-    /*public void Impact()
-    {
-        GridPosition pos = GetOwningGridObject().GetGridPosition();
-        int radius = resourceData.impactRadiusTiles;
-
-        for (int x = pos.x - radius; x < pos.x + radius; x++)
-        {
-            for (int z = pos.z - radius; z < pos.z + radius; z++)
-            {
-                if (x >= 0 && z >= 0 && x < GetOwningGridObject().GetOwningGridSystem().GetGridLength() && z < GetOwningGridObject().GetOwningGridSystem().GetGridWidth())
-                {
-                    // TODO: Filter by structure type
-                    Building objectInRadius;
-                    if ((objectInRadius = GetOwningGridObject().GetOwningGridSystem().GetGridObject(x, z).GetBuilding()) && (new GridPosition(x, z) != pos))
-                    {
-                        SetBuffs(objectInRadius);
-                    }
-                }
-
-            }*/
-
 }
-
-/*void TileHealth()
-{
-    health = (int)soilType;
-
-    //reference to Building, to reduce it by (health)
-    switch (health)
-    {
-        case int n when (n >= 105 && n <= 110):
-            Debug.Log("A grade soil");
-
-            break;
-        case int n when (n >= 100 && n <= 105):
-            Debug.Log("B grade soil");
-            break;
-        case int n when (n >= 95 && n <= 100):
-            Debug.Log("C grade soil");
-            break;
-        case int n when (n >= 90 && n <= 95):
-            Debug.Log("D grade soil");
-            break;
-        case int n when (n >= 85 && n <= 90):
-            Debug.Log("E grade soil");
-            break;
-    }
-
-}*/
-
-/*public override void SetGridObject(GridObject gridObject)
-{
-    base.SetGridObject(gridObject);
-    TerrainTile.tileUnder = gridObject;
-    gridObject.objectOnTile = this;
-    Debug.LogWarning(TerrainTile.tileUnder);
-}*/
-
-/*private void TerrainTileObject()
-{
-    //Terain_gridObject.
-}*/
 
