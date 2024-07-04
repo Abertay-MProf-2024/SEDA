@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 7118443488737640260}
   - component: {fileID: 6401025760489843346}
   - component: {fileID: 8083819906619503166}
+  - component: {fileID: 4903467928362923540}
   m_Layer: 5
   m_Name: Environment_Button
   m_TagString: Untagged
@@ -519,6 +520,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4903467928362923540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924393589498767313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &1172794868177110170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1391,7 @@ GameObject:
   - component: {fileID: 1361348649444073171}
   - component: {fileID: 3487783623727326335}
   - component: {fileID: 4053082711017964626}
+  - component: {fileID: 6760304989204216997}
   m_Layer: 5
   m_Name: Basic_gameplay_Button
   m_TagString: Untagged
@@ -1532,6 +1549,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6760304989204216997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921133144383038071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &6124257970244486833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
+  ClickedSound: {fileID: 8300000, guid: 1b2d902b4b5036741bb0fe94b0838a23, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &7433741568860376261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,6 +1858,7 @@ GameObject:
   - component: {fileID: 8573653552626293253}
   - component: {fileID: 1593657185342955071}
   - component: {fileID: 1238179163020315441}
+  - component: {fileID: 8256458634185355236}
   m_Layer: 5
   m_Name: Time_Button
   m_TagString: Untagged
@@ -1981,6 +2016,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8256458634185355236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7433741568860376261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &7539983167883464817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,6 +2926,7 @@ GameObject:
   - component: {fileID: 3964672401185581771}
   - component: {fileID: 1750041603502860989}
   - component: {fileID: 7723028945418320436}
+  - component: {fileID: 4147681672083583154}
   m_Layer: 5
   m_Name: Creature_Button
   m_TagString: Untagged
@@ -3033,3 +3084,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &4147681672083583154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179856371549725595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
