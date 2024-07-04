@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Textures/Tiles/RiverTiles/T_RocksMedium01b_C.png.meta
-guid: 3d0601ba5b25b70408794671618988f2
-========
-guid: 9ad5eaa3453ead04eabb3e24674f2c69
->>>>>>>> origin/VFX_Thunderstorm:Assets/Textures/VFX/T_FloodRainMist_AO.tga.meta
+guid: 435c8792bcc68ec409e1a23f3bb397a5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
