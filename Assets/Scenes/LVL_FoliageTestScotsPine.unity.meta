@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/LVL_FoliageTestScotsPine.unity.meta
 guid: bd7d915b791b1cd4a8b66c63f7d31611
+========
+guid: f20b7352a16b91049ada3d7b1825fd14
+folderAsset: yes
+>>>>>>>> 3DArt_Tiles&BuildingSetup.20.06.2024:Assets/Materials/Environment.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

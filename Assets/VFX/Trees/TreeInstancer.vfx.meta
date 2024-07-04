@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/VFX/Trees/TreeInstancer.vfx.meta
 guid: fb4154e8ff195d04aa123d5c3900671b
 VisualEffectImporter:
+========
+guid: 8ceb21d1bac32a043b09ef5b8964c5bc
+DefaultImporter:
+>>>>>>>> 3DArt_Tiles&BuildingSetup.20.06.2024:Assets/Scenes/AssetLayout/LVL_BuildingAssetLayout01.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
