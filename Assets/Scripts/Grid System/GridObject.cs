@@ -13,6 +13,7 @@ public class GridObject : MonoBehaviour
         gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
         // Check for the terrain type under this GridObject, and set references to it
         RaycastHit hit;
+
         if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
         {
             if (terrain = hit.transform.gameObject.GetComponent<Terrainsystem>())
@@ -21,12 +22,11 @@ public class GridObject : MonoBehaviour
                 terrainType = terrain.terraintype;
             }
         }
+
         else
         {
             terrainType = TerrainTypes.None;
         }
-
-        
     }
 
     public void ToggleBuildModePerTile(TileBase buildingType)
@@ -83,10 +83,11 @@ public class GridObject : MonoBehaviour
     {
         if (CanBuildOnTile(building))
         {
-            buildingInstance = Instantiate(building.inGameAsset, transform).GetComponent<Building>();
-            buildingInstance.resourceData = building;
             
-            buildingInstance.transform.localPosition = Vector3.zero;
+            buildingInstance = Instantiate(building.inGameAsset, transform.position, Quaternion.Euler(new Vector3(0, 90, 0))).GetComponent<Building>();
+            buildingInstance.resourceData = building; 
+            buildingInstance.transform.parent = transform;
+            //buildingInstance.transform.localPosition = Vector3.zero;
             buildingInstance.SetGridObject(this);
             if (buildingInstance.resourceData.isImpactSoilGrade == true)
             {

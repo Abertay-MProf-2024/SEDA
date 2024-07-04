@@ -19,6 +19,7 @@ public class BuildingTypeSelect : MonoBehaviour
         {
             activeButton.GetComponent<Image>().color = Color.red;
         }
+
         else if (activeButton.GetComponent<Image>().color == Color.red)
         {
             activeButton.GetComponent<Image>().color = Color.white;
@@ -39,6 +40,7 @@ public class BuildingTypeSelect : MonoBehaviour
         {
             currentBuildingType = null;
             gridSystem.ToggleBuildMode(currentBuildingType, false);
+
         }
         else
         {
@@ -62,4 +64,10 @@ public class BuildingTypeSelect : MonoBehaviour
         }
     }
 
+    public void CloseButton()
+    {
+        currentBuildingType = null;
+        gridSystem.ToggleBuildMode(currentBuildingType, false);
+
+    }
 }
