@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 2416116830468395490}
   - component: {fileID: 4116685893586680886}
   - component: {fileID: 5488690870762897762}
-  - component: {fileID: 8292129807701556152}
+  - component: {fileID: 1274587314579248133}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1831,7 +1831,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8292129807701556152
+--- !u!114 &1274587314579248133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
