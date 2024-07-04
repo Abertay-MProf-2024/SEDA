@@ -345,11 +345,17 @@ VisualEffect:
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
-  m_AllowInstancing: 1
+  m_AllowInstancing: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: NumberOfTiles
+        m_Overridden: 1
+      - m_Value: 10
+        m_Name: NumberOfTrees/Tile
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -369,7 +375,10 @@ VisualEffect:
     m_NamedObject:
       m_Array: []
     m_Bool:
-      m_Array: []
+      m_Array:
+      - m_Value: 0
+        m_Name: IsBatched
+        m_Overridden: 1
 --- !u!73398921 &8533987803802500097
 VFXRenderer:
   serializedVersion: 1
