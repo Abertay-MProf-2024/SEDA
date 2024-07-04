@@ -1,24 +1,50 @@
-// Remy Pijuan 2024
-
+using Autodesk.Fbx;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public enum WeatherTypes
+{
+    Fair,
+    Tornado,
+    Thunderstorm,
+    Flood
+}
 
 public class Inventory : MonoBehaviour
 {
     private static Inventory instance;
 
     public static int overworldTime;
-    public static int levelTime;
+    public static int levelTime = 36;
     public static int food = 100;
-    public static int constructionMaterials = 500;
+    public static int constructionMaterials = 100;
     public static int healthBar = 0;
     public static int totalhealth = 0;
     public static int count = 0;
 
+    // Building Types
+    public static int numOfLoggingCamps = 0;
+    public static int numOfForests = 0;
+    public static int numOfMines = 0;
+    public static int numOfRocks = 0;
+
+    // Weather events status
+    static bool hasTornadoHappened = false;
+    static bool hasFloodHappened = false;
+
+    public static float cropOutput = 1f;
+    public static int soilGradeWeatherEffect = 0;
+    public static bool isFlooding = false;
+
+    static WeatherTypes currentWeather;
 
     [SerializeField]
-    [InspectorName("Initial Overworld Time (years)")]
-    private int initialOverworldTime;
+    int initialOverworldTime;
+    [SerializeField]
+    int initialFood;
+    [SerializeField]
+    int initialConstructionMaterials;
 
     [SerializeField] TextMeshProUGUI foodDisplay;
     [SerializeField] TextMeshProUGUI constructionMaterialDisplay;
@@ -30,11 +56,32 @@ public class Inventory : MonoBehaviour
         {
             instance = this;
             overworldTime = initialOverworldTime;
+            food = initialFood;
+            constructionMaterials = initialConstructionMaterials;
+            SceneManager.sceneLoaded += ReassignInitialVariables;
+            DontDestroyOnLoad(this);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
+    }
+
+    void ReassignInitialVariables(Scene scene, LoadSceneMode mode)
+    {
+        overworldTime = initialOverworldTime;
+        food = initialFood;
+        constructionMaterials = initialConstructionMaterials;
+
+        numOfLoggingCamps = 0;
+        numOfForests = 0;
+        numOfMines = 0;
+        numOfRocks = 0;
+
+        hasFloodHappened = false;
+        hasTornadoHappened = false;
+
+        currentWeather = WeatherTypes.Fair;
     }
 
     public static void SpendFood(int foodSpent)
@@ -69,5 +116,50 @@ public class Inventory : MonoBehaviour
         Debug.Log("TotalHealth : " + totalhealth);
         Debug.Log("Count : " + count);
         Debug.Log("Healthbar : " + healthBar);
+    }
+
+    public static void SetWeather()
+    {
+        if (currentWeather != WeatherTypes.Thunderstorm)
+        {
+            if (!hasTornadoHappened && numOfLoggingCamps >= 3)
+            {
+                currentWeather = WeatherTypes.Tornado;
+                cropOutput = 0.7f;
+                hasTornadoHappened = true;
+            }
+            else if (!hasFloodHappened && healthBar < 60)
+            {
+                currentWeather = WeatherTypes.Flood;
+                cropOutput = 0.5f;
+                soilGradeWeatherEffect = 20;
+                isFlooding = true;
+                hasFloodHappened = true;
+            }
+            else if (currentWeather != WeatherTypes.Fair)
+            {
+                FairWeather();
+            }
+        }
+    }
+
+    public static void CailleachAppeared()
+    {
+        currentWeather = WeatherTypes.Thunderstorm;
+        cropOutput = 0.9f;
+        soilGradeWeatherEffect = -20;
+    }
+
+    public static void FairWeather()
+    {
+        currentWeather = WeatherTypes.Fair;
+        cropOutput = 1f;
+        soilGradeWeatherEffect = 0;
+        isFlooding = false;
+    }
+
+    public static WeatherTypes GetCurrentWeather()
+    {
+        return currentWeather;
     }
 }

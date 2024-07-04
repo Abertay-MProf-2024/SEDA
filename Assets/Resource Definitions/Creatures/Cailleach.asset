@@ -12,53 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
   m_Name: Cailleach
   m_EditorClassIdentifier: 
-  iD: 0
   tileName: The Cailleach
   icon: {fileID: 0}
-  mesh: {fileID: 0}
-  sizeWidth: 1
-  sizeLength: 1
-  structureTypes: 0
+  inGameAsset: {fileID: 0}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
+  structureType: 19
   tileUnder: {fileID: 0}
-  biomesTypes: 
+  biomeTypes: 
   tileTerrainTypes: 
-  canBuild: 1
-  buildTime: 2
-  buildingCostEnergy: 0
-  buildingCostFood: 2
-  buildingCostConstruction: 1
-  buildingUpgradeCostEnergy: 0
-  buildingUpgradeCostFood: 1
-  buildingUpgradeCostConstruction: 1
-  buildingUpgradeCostMulti: 2
-  buildingLevelIcon:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  buildingCurrentlevel: 1
-  buildingLevelMax: 3
-  hasResourceOutput: 1
+  CreatureTile: 1
+  bribeCostFood: 0
+  bribeCostConstruction: 20
+  canBuild: 0
+  buildingCostFood: 0
+  buildingCostMaterial: 0
+  upKeepCostEnergy: 0
+  upKeepCostWater: 0
+  upKeepCostFood: 0
+  upKeepCostMaterial: 0
   isResourceTapped: 0
   baseOutputEnergy: 0
-  baseOutputFood: 10
-  baseOutputConstruction: 0
-  buildingOutputMulti: 0.5
-  buildingLevelMulti: 1
-  buildingOutputStage: 1
-  upKeepCostEnergy: 0
-  upKeepCostFood: 0
-  upKeepCostConstruction: 0
-  hasTileImpact: 1
-  impactRadiusTiles: 4
-  transferFood: 5
-  transferConstruction: 0
-  structureOfTypeInRadius: {fileID: 0}
-  impactSource: 1
-  buffAmount: 2
-  nerfAmount: 0.5
-  tileImpactBuff:
-  - {fileID: 0}
-  tileImpactNerf:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  baseOutputWater: 0
+  baseOutputFood: 0
+  baseOutputMaterial: 0
+  buildingOutputMulti: 0
+  impactSource: 0
+  impactRadiusTiles: 0
+  buffAmount: 0
+  nerfAmount: 0
+  tileImpactBuff: []
+  tileImpactNerf: []
+  isImpactSoilGrade: 0
+  buffSoilGradeAmount: 0
+  nerfSoilGradeAmount: 0

@@ -60,7 +60,7 @@ public class GridSystem : MonoBehaviour
     public int GetGridLength() { return gridLength; }
     public int GetGridWidth() {  return gridWidth; }
 
-    public void ToggleBuildMode(Building buildingType, bool BuildModeOn)
+    public void ToggleBuildMode(TileBase buildingType, bool BuildModeOn)
     {
        
         BuildSystem.isInBuildMode = BuildModeOn;

@@ -9,106 +9,41 @@ using UnityEngine.UI;
 public class BuildingTypeSelect : MonoBehaviour
 {
     public GridSystem gridSystem;
-    [Header("Three Button")]
-    public GameObject building1Button;
-    public GameObject building2Button;
-    public GameObject building3Button;
-    [Header("Select type debug")]
-    public bool isSetB1;
-    public bool isSetB2;
-    public bool isSetB3;
-    public GameObject array;
-    public Transform[,] gridGameObjectsArray;
-    void Update()
+    [Header("Buttons")]
+    public GameObject[] buildingButtons;
+    public TileBase currentBuildingType;
+
+    public void ColorChange(GameObject activeButton)
     {
-        ColorChange(building1Button, building2Button, building3Button);
+        if (activeButton.GetComponent<Image>().color == Color.white)
+        {
+            activeButton.GetComponent<Image>().color = Color.red;
+        }
+        else if (activeButton.GetComponent<Image>().color == Color.red)
+        {
+            activeButton.GetComponent<Image>().color = Color.white;
+        }
+
+        foreach (GameObject button in buildingButtons)
+        {
+            if (button != activeButton)
+            {
+                button.GetComponent<Image>().color = Color.white;
+            }
+        }
     }
-    public void ColorChange(GameObject button1, GameObject button2,GameObject button3)
+
+    public void SelectBuilding(TileBase building)
     {
-        if(isSetB1)
+        if (currentBuildingType == building)
         {
-            button1.GetComponent<Image>().color = Color.red;
-        }
-        else 
-        {
-            button1.GetComponent<Image>().color = Color.white;
-        }
-        if(isSetB2)
-        {
-            button2.GetComponent<Image>().color = Color.red;
+            currentBuildingType = null;
+            gridSystem.ToggleBuildMode(currentBuildingType, false);
         }
         else
         {
-            button2.GetComponent<Image>().color = Color.white;
-        }
-        if (isSetB3)
-        {
-            button3.GetComponent<Image>().color = Color.red;
-        }
-        else
-        {
-            button3.GetComponent<Image>().color = Color.white;
-        }
-    }
-
-    public void SelectBuildingOne(Building buildingPrefab)
-    {
-        if (!isSetB1)
-        {
-            isSetB1 = true;
-            isSetB2 = false;
-            isSetB3 = false;
-
-            gridSystem.ToggleBuildMode(buildingPrefab, true);
-
-        }
-        else if(isSetB1 )
-        {
-            gridSystem.ToggleBuildMode(buildingPrefab, false);
-            isSetB1 = false;
-
-        }
-    }
-
-    public void SelectBuildingTwo(Building buildingPrefab)
-    {
-        if (!isSetB2 )
-        {
-            isSetB2 = true;
-            isSetB1 = false;
-            isSetB3 = false;
-
-            gridSystem.ToggleBuildMode(buildingPrefab, true);
-
-        }
-        else if (isSetB2 )
-        {
-            gridSystem.ToggleBuildMode(buildingPrefab, false);
-
-            isSetB2 = false;
-
-            
-
-        }
-    }
-
-    public void SelectBuildingThree(Building buildingPrefab)
-    {
-        if (!isSetB3)
-        {
-            isSetB3 = true;
-            isSetB1 = false;
-            isSetB2 = false;
-
-            gridSystem.ToggleBuildMode(buildingPrefab, true);
-
-        }
-        else if (isSetB3)
-        {
-            gridSystem.ToggleBuildMode(buildingPrefab, false);
-
-            isSetB3 = false;
-            
+            currentBuildingType = building;
+            gridSystem.ToggleBuildMode(building, true);
         }
     }
 

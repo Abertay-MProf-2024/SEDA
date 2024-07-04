@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static Terrainsystem;
 
 
 public enum TerrainTypes
@@ -17,9 +20,18 @@ public enum TerrainTypes
     Shore
 }
 
+public enum CreatureTypes
+{
+    None,
+    Giant,
+    Kelpie,
+    Cailleach
+}
+
 public class Terrainsystem : MonoBehaviour
 {
-    public SoilType soilType;
+
+    public SoilType CurrentsoilType;
     public enum SoilType
     {
         A = 100,
@@ -29,63 +41,66 @@ public class Terrainsystem : MonoBehaviour
         E = 20
     }
 
+    TileBase creaturetile;
     public List<SoilType> allowedSoilGrade;
 
- 
-    private SoilType soiltype = new SoilType();
-    public bool ResourceAffect;
-    
+    SoilType testsoil;
 
-    /*enum WaterType
-    {
-        A = 110,
-        B = 105,
-        C = 100,
-        D = 95,
-        E = 90
-    }
-    enum Grade
-    {
-        A = 110,
-        B = 105,
-        C = 100,
-        D = 95,
-        E = 90
-    }*/
+    public bool ResourceAffect;
 
     [SerializeField] public TerrainTypes terraintype;
+    [SerializeField] public CreatureTypes creaturetype;
 
-   
-    //if the tile has energy
-    public bool energy = false;
+
+    //if the tile gives/has land energy
+    public bool Lenergy = false;
+    //if the tile gives/has water energy
+    public bool Wenergy = false;
+
 
     public GridObject owningGridObject;
 
     //the radius in which it gives off energy
     public int radius;
+    //the radius in which it gives off energy
+    public int Wradius;
+
 
     //the total health of the soil (A to E grade)
-    int health;
+    public int health;
+
+    //VeilSwitch Details
+    public TerrainTypes OldsoilType;
+    public TerrainTypes NewSoilType;
 
 
     private void Start()
     {
 
+        OldsoilType = terraintype;
+
+        health = (int)CurrentsoilType;
+
+
         if (ResourceAffect)
         {
             TimeSystem.AddMonthlyEvent(HealthBar);
+            //TimeSystem.AddMonthlyEvent(ChangeinGrade);
+
         }
 
-
         InitialTerrainList();
+        HealthBar();
+        SetTerrainMaterialProperties();
 
         StartCoroutine(Stupidity());
+        // ChangeinGrade();
     }
 
-    private void TriggerEnergy()
+    public void TriggerEnergy()
     {
         //if the terrain has energy being emitted, then set all the terraintiles' energy bool true.
-        if (energy)
+        if (Lenergy && owningGridObject)
         {
             GridPosition pos = owningGridObject.GetGridPosition();
 
@@ -101,20 +116,54 @@ public class Terrainsystem : MonoBehaviour
                 }
             }
         }
+        if (Wenergy && owningGridObject)
+        {
+            GridPosition pos = owningGridObject.GetGridPosition();
+
+            for (int x = pos.x - Wradius; x <= pos.x + Wradius; x++)
+            {
+                for (int z = pos.z - Wradius; z <= pos.z + Wradius; z++)
+                {
+                    GridObject Energyobj = owningGridObject.GetOwningGridSystem().GetGridObject(x, z);
+                    if (Energyobj != null)
+                    {
+                        Energyobj.SetTerrainWaterEnergy(true);
+                    }
+                }
+            }
+        }
+
     }
 
     IEnumerator Stupidity()
     {
         yield return new WaitForSeconds(10);
         TriggerEnergy();
-        //HealthBar();
+        //ChangeinGrade();
+
     }
 
     void HealthBar()
     {
         Inventory.count++;
-        Inventory.totalhealth += (int)soilType; 
+        Inventory.totalhealth += (int)CurrentsoilType;
         Inventory.HealthBarChange();
+    }
+    public void SetTerrainMaterialProperties()
+    {
+        MeshRenderer renderer = gameObject.GetComponent<MeshRenderer>();
+
+        if (renderer == null)
+            return;
+
+        Material[] materialsArray = GetComponent<MeshRenderer>().materials;
+
+        float quality = health / 100f;
+
+        foreach (Material mat in materialsArray)
+        {
+            mat.SetFloat("_SoilQuality", quality);
+        }
     }
 
     void InitialTerrainList()
@@ -128,7 +177,6 @@ public class Terrainsystem : MonoBehaviour
                     allowedSoilGrade.Add(SoilType.C);
                     break;
                 }
-
             case TerrainTypes.Highland:
                 {
                     allowedSoilGrade.Add(SoilType.A);
@@ -161,88 +209,56 @@ public class Terrainsystem : MonoBehaviour
                     break;
                 }
         }
-
-        
     }
 
-    void ChangeinGrade()
+    public void ChangeinGrade(float buffamount, float nerfamount, bool impact)
     {
-        int i = 0;
-        do
+        float totalChangeInGrade = buffamount - nerfamount + Inventory.soilGradeWeatherEffect;
+        if (impact)
         {
-            if (ResourceAffect)
-            {
-                health = (int)soilType;
+            health = (int)CurrentsoilType + (int)totalChangeInGrade;
 
-                //reference to Resource, to reduce it by (health)
-                switch (health)
+            //reference to Building, to reduce it by (health)
+
+            if (health > 0)
+            {
+                if (health > 80)
                 {
-                    case int n when (n >= 105 && n <= 110):
-                        soiltype = SoilType.A;
-                        Debug.Log("A grade soil");
-                        break;
-                    case int n when (n >= 100 && n <= 105):
-                        soiltype = SoilType.B;
-                        Debug.Log("B grade soil");
-                        break;
-                    case int n when (n >= 95 && n <= 100):
-                        soiltype = SoilType.C;
-                        Debug.Log("C grade soil");
-                        break;
-                    case int n when (n >= 90 && n <= 95):
-                        soiltype = SoilType.D;
-                        Debug.Log("D grade soil");
-                        break;
-                    case int n when (n >= 85 && n <= 90):
-                        soiltype = SoilType.E;
-                        Debug.Log("E grade soil");
-                        break;
+                    testsoil = SoilType.A;
+                    if (allowedSoilGrade.Contains(testsoil))
+                        CurrentsoilType = SoilType.A;
+                }
+
+                else if (health > 60 && health <= 80)
+                {
+                    testsoil = SoilType.B;
+                    if (allowedSoilGrade.Contains(testsoil))
+                        CurrentsoilType = SoilType.B;
+
+                }
+                else if (health > 40 && health <= 60)
+                {
+                    testsoil = SoilType.C;
+                    if (allowedSoilGrade.Contains(testsoil))
+                        CurrentsoilType = SoilType.C;
+
+                }
+                else if (health > 20 && health <= 40)
+                {
+                    testsoil = SoilType.D;
+                    if (allowedSoilGrade.Contains(testsoil))
+                        CurrentsoilType = SoilType.D;
+
+                }
+                else if (health >= 0 && health <= 20)
+                {
+                    testsoil = SoilType.E;
+                    if (allowedSoilGrade.Contains(testsoil))
+                        CurrentsoilType = SoilType.E;
                 }
             }
-            i++;
         }
-        while (i < allowedSoilGrade.Count);
-    }
 
+    }
 }
-
-/*void TileHealth()
-{
-    health = (int)soilType;
-
-    //reference to Resource, to reduce it by (health)
-    switch (health)
-    {
-        case int n when (n >= 105 && n <= 110):
-            Debug.Log("A grade soil");
-
-            break;
-        case int n when (n >= 100 && n <= 105):
-            Debug.Log("B grade soil");
-            break;
-        case int n when (n >= 95 && n <= 100):
-            Debug.Log("C grade soil");
-            break;
-        case int n when (n >= 90 && n <= 95):
-            Debug.Log("D grade soil");
-            break;
-        case int n when (n >= 85 && n <= 90):
-            Debug.Log("E grade soil");
-            break;
-    }
-
-}*/
-
-/*public override void SetGridObject(GridObject gridObject)
-{
-    base.SetGridObject(gridObject);
-    TerrainTile.tileUnder = gridObject;
-    gridObject.objectOnTile = this;
-    Debug.LogWarning(TerrainTile.tileUnder);
-}*/
-
-/*private void TerrainTileObject()
-{
-    //Terain_gridObject.
-}*/
 

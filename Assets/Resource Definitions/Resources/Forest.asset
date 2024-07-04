@@ -12,47 +12,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
   m_Name: Forest
   m_EditorClassIdentifier: 
-  iD: 0
   tileName: Forest
   icon: {fileID: 0}
-  mesh: {fileID: 0}
-  sizeWidth: 1
-  sizeLength: 1
-  structureTypes: 2
+  inGameAsset: {fileID: 7543974964756465544, guid: bf23c31cc275890418b7c7ce2ee3f100,
+    type: 3}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
+  structureType: 7
   tileUnder: {fileID: 0}
-  biomesTypes: 02000000
-  tileTerrainTypes: 
-  canBuild: 1
-  buildTime: 0
-  buildingCostEnergy: 0
-  buildingCostFood: 20
-  buildingCostConstruction: 0
-  buildingUpgradeCostEnergy: 0
-  buildingUpgradeCostFood: 0
-  buildingUpgradeCostConstruction: 0
-  buildingUpgradeCostMulti: 0
-  buildingLevelIcon: []
-  buildingCurrentlevel: 0
-  buildingLevelMax: 0
-  hasResourceOutput: 1
-  isResourceTapped: 0
-  baseOutputEnergy: 0
-  baseOutputFood: 0
-  baseOutputConstruction: 5
-  buildingOutputMulti: 0
-  buildingLevelMulti: 1
-  buildingOutputStage: 1
+  biomeTypes: 00000000
+  tileTerrainTypes: 0100000003000000
+  CreatureTile: 0
+  bribeCostFood: 15
+  bribeCostConstruction: 5
+  canBuild: 0
+  buildingCostFood: 0
+  buildingCostMaterial: 0
   upKeepCostEnergy: 0
+  upKeepCostWater: 0
   upKeepCostFood: 0
-  upKeepCostConstruction: 0
-  hasTileImpact: 1
-  impactRadiusTiles: 5
-  transferFood: 0
-  transferConstruction: 5
-  structureOfTypeInRadius: {fileID: 0}
+  upKeepCostMaterial: 0
+  isResourceTapped: 0
+  collectorBuildings: 05000000
+  baseOutputEnergy: 0
+  baseOutputWater: 0
+  baseOutputFood: 0
+  baseOutputMaterial: 5
+  buildingOutputMulti: 5
   impactSource: 1
-  buffAmount: 0.5
+  impactRadiusTiles: 1
+  buffAmount: 0
   nerfAmount: 0
   tileImpactBuff:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: cd1916fecfec7ba4ba50cdc08430342a, type: 2}
+  - {fileID: 11400000, guid: e434d313045e6a840a344c33db2e5784, type: 2}
   tileImpactNerf: []
+  isImpactSoilGrade: 1
+  buffSoilGradeAmount: 20
+  nerfSoilGradeAmount: 0

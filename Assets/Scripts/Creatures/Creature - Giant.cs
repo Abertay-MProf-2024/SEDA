@@ -1,42 +1,65 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Giant : MonoBehaviour
+public class Giant : Building
 {
-    //Grid Reference
 
-    public GameObject GiantMonsterr;
+    [SerializeField] Button satisfybutton;
+    Terrainsystem ts1;
+    Terrainsystem ts2;
 
-    public int Giant_width;
-    public int Giant_length;
+    public GameObject giantcreature;
 
-    public int bribeCostFood = 15;
-    public int bribeCostConstruction = 5;
+    [SerializeField] GameObject endpoint1;
+    [SerializeField] GameObject endpoint2;
+
 
     private void Start()
     {
-        //Giant_width = Creature.sizeWidth;
-        //Giant_length = Creature.sizeLength;
-        GiantMonsterr.SetActive(true);
-    }
-
-    void GiantCreature()
-    {
-        /*if(gameObject.tag == "Giant")
+        RaycastHit hit;
+        if (Physics.Raycast(endpoint1.transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
         {
-            GridObject.canBuild = false;
-        }*/
-    }
-
-    public void GoawayGiant()
-    {
-        if( Inventory.food >= bribeCostFood && Inventory.constructionMaterials >= bribeCostConstruction)
-        {
-            Destroy(GiantMonsterr);
-            //GridObject.canBuild = true;
-
-            //Cue VFX effect..
+            
+            Debug.DrawLine(endpoint1.transform.position, endpoint1.transform.position + Vector3.down *100, Color.red, 500);
+            ts1 = hit.transform.gameObject.GetComponent<Terrainsystem>();
         }
+        
+        if (Physics.Raycast(endpoint2.transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
+        {
+            Debug.DrawLine(endpoint2.transform.position, endpoint2.transform.position + Vector3.down * 100, Color.yellow, 500);
+            ts2 = hit.transform.gameObject.GetComponent<Terrainsystem>();
+        }
+        ts1.creaturetype = CreatureTypes.Giant;
+        ts2.creaturetype = CreatureTypes.Giant;
+    }
+
+    public void Interact()
+    {
+        Debug.Log("click works");
+
+        if (Inventory.food >= resourceData.bribeCostFood && Inventory.constructionMaterials >= resourceData.bribeCostConstruction)
+        {
+            satisfybutton.gameObject.SetActive(true);
+            Debug.Log(" ENOUGH RESOURCES   " + Inventory.food + resourceData.bribeCostFood);
+            Debug.Log(" ENOUGH RESOURCES    " + Inventory.constructionMaterials + resourceData.bribeCostConstruction);
+        }
+        else
+        {
+            Debug.Log("NOT ENOUGH RESOURCES   " + Inventory.food + resourceData.bribeCostFood);
+            Debug.Log("NOT ENOUGH RESOURCES   " + Inventory.constructionMaterials + resourceData.bribeCostConstruction);
+
+            satisfybutton.gameObject.SetActive(false);
+        }
+    }
+
+    public void SetCreatureGone()
+    {
+        Inventory.food -= resourceData.bribeCostFood;
+        Inventory.constructionMaterials -=resourceData.bribeCostConstruction;
+        
+        Destroy(giantcreature);
+        satisfybutton.gameObject.SetActive(false);
+        ts1.creaturetype = CreatureTypes.None; 
+        ts2.creaturetype = CreatureTypes.None;
     }
 }
