@@ -42,8 +42,11 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] TextMeshProUGUI monthDisplay;
     [SerializeField] TextMeshProUGUI timeRemainingDisplay;
 
-    // Level select UI prefab
-    [SerializeField] GameObject LevelSelectPrefab;
+    // UI prefabs
+    [SerializeField] GameObject gameOverPrefab;
+    [SerializeField] GameObject levelCompletePrefab;
+    [SerializeField] GameObject winScreenPrefab;
+    public GameObject timeSystem;
 
     int day = 1;
     float timeElapsed = 0f;
@@ -53,6 +56,10 @@ public class TimeSystem : MonoBehaviour
     int numOfDaysInMonth = 31;
 
     int year = 1;
+
+    static int pauseMenus = 0;
+
+    bool isLevelOver = false;
 
 
     /** The time manager is a singleton
@@ -73,6 +80,9 @@ public class TimeSystem : MonoBehaviour
     /** Initialise displays and start the daily tick */
     private void Start()
     {
+        if (timeSystem)
+            Pause();
+
         SetDay();
         SetMonth();
         SetTimeRemainingDisplay();
@@ -170,6 +180,11 @@ public class TimeSystem : MonoBehaviour
         month++;
         RunEvents(monthlyEvents);
 
+        if (isLevelOver)
+        {
+            CheckSuccessConditions();
+        }
+
         if (month > Month.December)
         {
             year++;
@@ -208,13 +223,57 @@ public class TimeSystem : MonoBehaviour
 
         if (Inventory.levelTime < 1 )
         {
-            Instantiate(LevelSelectPrefab);
-            // TODO: Stop Countdown
+            isLevelOver = true;
         }
+    }
+
+    void CheckSuccessConditions()
+    {
+        if (LevelManager.AreSuccessConditionsMet())
+        {
+            // Win the level
+            GameManager.levelsCompleted++;
+
+            if (GameManager.levelsCompleted >= 3)
+            {
+                Instantiate(winScreenPrefab);
+            }
+            else
+            {
+                Instantiate(levelCompletePrefab);
+            }
+        }
+        else
+        {
+            // Lose the level
+            Instantiate(gameOverPrefab);
+        }
+        // TODO: Stop Countdown
     }
 
     void SetTimeRemainingDisplay()
     {
-        timeRemainingDisplay.text = "Time Remaining in Level: " + Inventory.levelTime + " months.";
+        timeRemainingDisplay.text = Inventory.levelTime + " months";
+    }
+
+    public static void Pause()
+    {
+        Time.timeScale = 0;
+
+        pauseMenus++;
+    }
+
+    public static void Unpause()
+    {
+        pauseMenus--;
+
+        if (pauseMenus == 0)
+            Time.timeScale = 1f;
+    }
+
+    private void OnDestroy()
+    {
+        dailyEvents = new List<TimedEvent>();
+        monthlyEvents = new List<TimedEvent>();
     }
 }

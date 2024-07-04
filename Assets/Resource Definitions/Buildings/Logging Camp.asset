@@ -12,46 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
   m_Name: Logging Camp
   m_EditorClassIdentifier: 
-  iD: 0
   tileName: Logging Camp
   icon: {fileID: 0}
-  mesh: {fileID: 6777488678298449921, guid: e061bc095a0932a48a67cf161c77740f, type: 3}
-  sizeWidth: 0
-  sizeLength: 0
-  structureTypes: 0
+  inGameAsset: {fileID: 679268389524347108, guid: 19f1fd1822b8d2c46832eaa1b7b7310a,
+    type: 3}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
+  structureType: 4
   tileUnder: {fileID: 0}
-  biomesTypes: 
-  tileTerrainTypes: 
+  biomeTypes: 00000000
+  tileTerrainTypes: 0100000003000000
+  CreatureTile: 0
+  bribeCostFood: 15
+  bribeCostConstruction: 5
   canBuild: 1
-  buildTime: 0
-  buildingCostEnergy: 0
-  buildingCostFood: 0
-  buildingCostConstruction: 0
-  buildingUpgradeCostEnergy: 0
-  buildingUpgradeCostFood: 0
-  buildingUpgradeCostConstruction: 0
-  buildingUpgradeCostMulti: 0
-  buildingLevelIcon: []
-  buildingCurrentlevel: 0
-  buildingLevelMax: 0
-  hasResourceOutput: 0
+  buildingCostFood: 3
+  buildingCostMaterial: 10
+  upKeepCostEnergy: 0
+  upKeepCostWater: 0
+  upKeepCostFood: 0
+  upKeepCostMaterial: 0
   isResourceTapped: 0
   baseOutputEnergy: 0
+  baseOutputWater: 0
   baseOutputFood: 0
-  baseOutputConstruction: 0
-  buildingOutputMulti: 0
-  buildingLevelMulti: 0
-  buildingOutputStage: 0
-  upKeepCostEnergy: 0
-  upKeepCostFood: 0
-  upKeepCostConstruction: 0
-  hasTileImpact: 0
-  impactRadiusTiles: 0
-  transferFood: 0
-  transferConstruction: 0
-  structureOfTypeInRadius: {fileID: 0}
-  impactSource: 0
+  baseOutputMaterial: 15
+  buildingOutputMulti: 1
+  impactSource: 1
+  impactRadiusTiles: 3
+  collectorBuildings: 
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []
   tileImpactNerf: []
+  isImpactSoilGrade: 0
+  buffSoilGradeAmount: 0
+  nerfSoilGradeAmount: 0

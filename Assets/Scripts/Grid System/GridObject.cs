@@ -4,9 +4,9 @@ public class GridObject : MonoBehaviour
 {
     GridSystem owningGridSystem;
 
-    Terrainsystem terrain;
+    public Terrainsystem terrain;
     TerrainTypes terrainType;
-    Resource buildingInstance;
+    public Building buildingInstance;
 
     private void Start()
     {
@@ -25,13 +25,18 @@ public class GridObject : MonoBehaviour
         {
             terrainType = TerrainTypes.None;
         }
+
+        
     }
 
     public void ToggleBuildModePerTile(TileBase buildingType)
     {
-        Color transparentWhite = new Color(1, 1, 1, 0f);
-        Color transparentGreen = new Color(0, 1, 0, 0.5f);
-        Color transparentRed = new Color(1, 0, 0, 0.5f);
+        float alpha = 0.75f;
+
+        Color transparentGreen = new Color(0, 0.3215686f, 0.07343697f, alpha);
+        Color transparentOrange = new Color(0.990566f, 0.5814224f, 0, alpha);
+        Color transparentBrown = new Color(0.3207547f, 0.1755072f, 0, .8f);
+        Color transparentRed = new Color(0.9921568f, 0, 0.02855804f, alpha);
 
         if (!BuildSystem.isInBuildMode)
         {
@@ -40,7 +45,21 @@ public class GridObject : MonoBehaviour
         else if (CanBuildOnTile(buildingType))
         {
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-            gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentGreen;
+
+            switch (terrain.CurrentsoilType)
+            {
+                case Terrainsystem.SoilType.A:
+                case Terrainsystem.SoilType.B:
+                    gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentGreen;
+                    break;
+                case Terrainsystem.SoilType.C:
+                case Terrainsystem.SoilType.D:
+                    gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentOrange;
+                    break;
+                case Terrainsystem.SoilType.E:
+                    gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentBrown;
+                    break;
+            }
         }
         else
         {
@@ -64,11 +83,16 @@ public class GridObject : MonoBehaviour
     {
         if (CanBuildOnTile(building))
         {
-            GameObject newBuilding = Instantiate(building.inGameAsset, transform);
-            buildingInstance = newBuilding.AddComponent<Resource>();
+            buildingInstance = Instantiate(building.inGameAsset, transform).GetComponent<Building>();
             buildingInstance.resourceData = building;
+            
             buildingInstance.transform.localPosition = Vector3.zero;
             buildingInstance.SetGridObject(this);
+            if (buildingInstance.resourceData.isImpactSoilGrade == true)
+            {
+                terrain.ChangeinGrade(buildingInstance.resourceData.buffSoilGradeAmount, buildingInstance.resourceData.nerfSoilGradeAmount, buildingInstance.resourceData.isImpactSoilGrade);
+                //buildingInstance.Impact();
+            }
             return true;
         }
         return false;
@@ -79,18 +103,9 @@ public class GridObject : MonoBehaviour
     {
         bool canBuild = false;
 
-        /*switch(terrainType)
-        {
-            case TerrainTypes.None:
-            case TerrainTypes.River:
-            case TerrainTypes.Loch:
-            case TerrainTypes.Glen:
-                canBuild = false;
-                break;
-        }*/
         if (building == null)
         { return false; }
-
+        
         for (int i = 0; i < building.tileTerrainTypes.Count; i++)
         {
             if (terrain && terrain.creaturetype == CreatureTypes.None)
@@ -99,8 +114,6 @@ public class GridObject : MonoBehaviour
                     canBuild = true;
             }
         }
-
-       
 
         if (buildingInstance != null)
         {
@@ -117,15 +130,10 @@ public class GridObject : MonoBehaviour
             canBuild = false;
         }
 
-        switch(terrainType)
+        /*if(buildingInstance.RequireWaterEnergy && terrain.Wenergy == false)
         {
-            case TerrainTypes.None:
-            case TerrainTypes.River:
-            case TerrainTypes.Loch:
-            case TerrainTypes.Glen:
-                canBuild = false;
-                break;
-        }
+           canBuild = false;
+        }*/
 
         return canBuild;
     }
@@ -135,17 +143,24 @@ public class GridObject : MonoBehaviour
         return new GridPosition(transform.localPosition.x / GetOwningGridSystem().GetCellSize(), transform.localPosition.z / GetOwningGridSystem().GetCellSize());
     }
 
-    public Resource GetBuilding()
+    public Terrainsystem GetTerrainType()
+    {
+        return terrain;
+    }
+
+    public Building GetBuilding()
     { return buildingInstance; }
 
     public void SetTerrainEnergy(bool hasEnergy)
     {
         if (terrain != null)
-            terrain.energy = hasEnergy;
+            terrain.Lenergy = hasEnergy;
     }
-    public void SetCreatureGone()
+    public void SetTerrainWaterEnergy(bool hasEnergy)
     {
-        terrain.creaturetype = CreatureTypes.None;
+        if (terrain != null)
+            terrain.Wenergy = hasEnergy;
     }
+
 
 }

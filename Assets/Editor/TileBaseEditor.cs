@@ -1,4 +1,5 @@
 using UnityEditor;
+using UnityEngine;
 
 [CustomEditor(typeof(TileBase))]
 public class TileBaseEditor : Editor
@@ -14,6 +15,11 @@ public class TileBaseEditor : Editor
     SerializedProperty biomeTypes;
     SerializedProperty tileTerrainTypes;
 
+    //creatureSection
+    SerializedProperty CreatureTile;
+    SerializedProperty bribeCostFood;
+    SerializedProperty bribeCostConstruction;
+
     //buildSection
     SerializedProperty canBuild;
     SerializedProperty buildingCostFood;
@@ -23,8 +29,9 @@ public class TileBaseEditor : Editor
     SerializedProperty upKeepCostFood;
     SerializedProperty upKeepCostMaterial;
 
-    //Resource
+    //Building
     SerializedProperty isResourceTapped;
+    SerializedProperty collectorBuildings;
     SerializedProperty baseOutputEnergy;
     SerializedProperty baseOutputWater;
     SerializedProperty baseOutputFood;
@@ -56,6 +63,12 @@ public class TileBaseEditor : Editor
         tileUnder = serializedObject.FindProperty("tileUnder");
         biomeTypes = serializedObject.FindProperty("biomeTypes");
         tileTerrainTypes = serializedObject.FindProperty("tileTerrainTypes");
+
+        //Creature
+        CreatureTile = serializedObject.FindProperty("CreatureTile");
+        bribeCostFood = serializedObject.FindProperty("bribeCostFood");
+        bribeCostConstruction = serializedObject.FindProperty("bribeCostConstruction");
+
         //Build
         canBuild = serializedObject.FindProperty("canBuild");
         buildingCostFood = serializedObject.FindProperty("buildingCostFood");
@@ -64,13 +77,16 @@ public class TileBaseEditor : Editor
         upKeepCostWater = serializedObject.FindProperty("upKeepCostWater");
         upKeepCostFood = serializedObject.FindProperty("upKeepCostFood");
         upKeepCostMaterial = serializedObject.FindProperty("upKeepCostMaterial");
-        //Resource
+
+        //Building
         isResourceTapped = serializedObject.FindProperty("isResourceTapped");
+        collectorBuildings = serializedObject.FindProperty("collectorBuildings");
         baseOutputEnergy = serializedObject.FindProperty("baseOutputEnergy");
         baseOutputWater = serializedObject.FindProperty("baseOutputWater");
         baseOutputFood = serializedObject.FindProperty("baseOutputFood");
         baseOutputMaterial = serializedObject.FindProperty("baseOutputMaterial");
         buildingOutputMulti = serializedObject.FindProperty("buildingOutputMulti");
+
         //Impact
         impactSource = serializedObject.FindProperty("impactSource");
         impactRadiusTiles = serializedObject.FindProperty("impactRadiusTiles");
@@ -97,6 +113,15 @@ public class TileBaseEditor : Editor
         EditorGUILayout.PropertyField(biomeTypes);
         EditorGUILayout.PropertyField(tileTerrainTypes);
 
+        EditorGUILayout.PropertyField(CreatureTile);
+        if(CreatureTile.boolValue)
+        {
+            //build
+            EditorGUILayout.PropertyField(bribeCostFood, true);
+            //build
+            EditorGUILayout.PropertyField(bribeCostConstruction, true);
+        }
+
         //BoolValue
         EditorGUILayout.PropertyField(canBuild);
         // Conditional visible properties
@@ -113,6 +138,7 @@ public class TileBaseEditor : Editor
 
         // Always visible properties
         EditorGUILayout.PropertyField(isResourceTapped, true);
+        EditorGUILayout.PropertyField(collectorBuildings, true);
         EditorGUILayout.PropertyField(baseOutputEnergy, true);
         EditorGUILayout.PropertyField(baseOutputWater, true);
         EditorGUILayout.PropertyField(baseOutputFood, true);

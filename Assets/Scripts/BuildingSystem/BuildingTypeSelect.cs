@@ -11,8 +11,6 @@ public class BuildingTypeSelect : MonoBehaviour
     public GridSystem gridSystem;
     [Header("Buttons")]
     public GameObject[] buildingButtons;
-    public GameObject array;
-    public Transform[,] gridGameObjectsArray;
     public TileBase currentBuildingType;
 
     public void ColorChange(GameObject activeButton)
@@ -40,7 +38,7 @@ public class BuildingTypeSelect : MonoBehaviour
         if (currentBuildingType == building)
         {
             currentBuildingType = null;
-            gridSystem.ToggleBuildMode(building, false);
+            gridSystem.ToggleBuildMode(currentBuildingType, false);
         }
         else
         {

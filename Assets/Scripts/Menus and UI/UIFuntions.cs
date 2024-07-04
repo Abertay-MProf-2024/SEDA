@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class UIFuntions : MonoBehaviour
 {
+    // Game Manager prefab
+    [SerializeField] GameObject gameManager;
+
     //Main Menu Canvases
     public Canvas MainMenuCanvas;
     public Canvas LoadMenuCanvas;
@@ -57,7 +60,8 @@ public class UIFuntions : MonoBehaviour
         Level1_Info.SetActive(false);
         ACInfo.SetActive(false);
 
-        
+        // Instantiate a new Game Manager (complete with Save Data!)
+        Instantiate(gameManager);
     }
 
     public void LoadLevel()
@@ -76,7 +80,7 @@ public class UIFuntions : MonoBehaviour
     public void PlayGame()
     {
         Inventory.overworldTime--;
-        Inventory.levelTime += 2;
+        Inventory.levelTime += 36;
         SceneManager.LoadSceneAsync(1);
     }
 

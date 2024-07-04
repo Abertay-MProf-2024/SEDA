@@ -63,7 +63,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 07256fc2d1ce64d42802cd27256670fa, type: 2}
+  - {fileID: 2100000, guid: 07256fc2d1ce64d42802cd27256670fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,4 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceData: {fileID: 11400000, guid: dfd08522d70fe834c885af0a8cca4b3e, type: 2}
-  building: 0
+  oldresourceData: {fileID: 0}
+  newresourceData: {fileID: 0}
+  RequireWaterEnergy: 0
+  IsItBasedOnSoilGrade: 0

@@ -1,14 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // GameManager is a singleton with only one instance
-    private GameManager instance;
+    private static GameManager instance;
 
     private SaveData dataManager;
     private GameData gameData;
+
+    public static int levelsCompleted = 0;
 
     public int aaa;
     public float bbb;
@@ -23,17 +22,22 @@ public class GameManager : MonoBehaviour
     public bool check;
     public bool isread;
     public bool issave;
+
+    /*
+     * There can only be one Game Manager.
+     * It persists throughout a single session of gameplay.
+     * When a new Game Manager is created, it always replaces the old one.
+     * This means that a New Game has been started.
+     */
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null)
         {
-            instance = this;
-            dataManager = GetComponent<SaveData>();
+            Destroy(instance.gameObject);
         }
-        else
-        {
-            Destroy(this);
-        }
+        instance = this;
+        dataManager = GetComponent<SaveData>();
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()

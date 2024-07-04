@@ -8,11 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI Screen.unity
     guid: b9dae5c0da38130498e583b1b3ad2396
-  - enabled: 0
-    path: Assets/Scenes/Blockout_Island_A_1.unity
-    guid: cb919f8193601d5469940e045c692215
   - enabled: 1
     path: Assets/Scenes/Island_A.unity
     guid: 6c5fc0571fc64054ca6774d6cdeaa70f
+  - enabled: 1
+    path: Assets/Scenes/Island_B.unity
+    guid: e60e7c0619ddf2242a2e2f87400614dd
+  - enabled: 1
+    path: Assets/Scenes/Island_C.unity
+    guid: b7bfbbc884a8f4f47888331f23dcf1f8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

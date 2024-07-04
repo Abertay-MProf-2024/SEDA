@@ -9,8 +9,8 @@ public class ResourceUIManager : MonoBehaviour
 
     private void Update()
     {
-        foodDisplay.text = "Food: " + Inventory.food.ToString();
-        materialsDisplay.text = "Construction Materials: " + Inventory.constructionMaterials.ToString();
-        healthBarDisplay.text = "Soil Health: " + Inventory.healthBar.ToString();
+        foodDisplay.text = Inventory.food.ToString();
+        materialsDisplay.text =  Inventory.constructionMaterials.ToString();
+        healthBarDisplay.text = Inventory.healthBar.ToString();
     }
 }
