@@ -1,5 +1,3 @@
-// Remy Pijuan 2024
-
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -37,6 +35,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject energyOutline;
     [SerializeField] GameObject extraOutline;
 
+    [SerializeField] GameObject musicPlayer;
+
 
     private void Awake()
     {
@@ -59,11 +59,11 @@ public class LevelManager : MonoBehaviour
 
         tapLocation = inputs.FindAction("PanCamera");
 
+        Instantiate(musicPlayer);
         SceneMusic.instance.ChangeMusicTrack(sceneMusic);
 
         Inventory.food = startingFoodAmount;
         Inventory.constructionMaterials = startingConstructionMaterialAmount;
-
     }
 
     void SelectTile()
