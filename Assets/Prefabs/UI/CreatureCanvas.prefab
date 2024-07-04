@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 3471791935086637376}
   - component: {fileID: 4470037159452090858}
   - component: {fileID: 8931441081404456230}
-  - component: {fileID: 8511595964749269033}
+  - component: {fileID: 3190840808183513574}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -740,7 +740,7 @@ MonoBehaviour:
   giantcreature: {fileID: 0}
   endpoint1: {fileID: 0}
   endpoint2: {fileID: 0}
---- !u!114 &8511595964749269033
+--- !u!114 &3190840808183513574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

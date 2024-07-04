@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3051620822874090339}
   - component: {fileID: 8779034572605466681}
   - component: {fileID: 6160353549052887638}
-  - component: {fileID: 7951438572071170246}
+  - component: {fileID: 8462754821197920718}
   m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7951438572071170246
+--- !u!114 &8462754821197920718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
