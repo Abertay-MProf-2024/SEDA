@@ -47,9 +47,9 @@ public class UIButtonSound : MonoBehaviour, IPointerEnterHandler
     void PlayClickSoud()
 
     {
-
         source.clip = ClickedSound;
-        source.PlayOneShot(ClickedSound);
-
+        
+        if (source.isActiveAndEnabled)
+            source.PlayOneShot(ClickedSound);
     }
 }

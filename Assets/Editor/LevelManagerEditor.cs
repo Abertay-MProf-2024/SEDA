@@ -1,8 +1,5 @@
-// Remy Pijuan, 2024
-
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [CustomEditor(typeof(LevelManager))]
 public class LevelManagerEditor : Editor
@@ -24,6 +21,8 @@ public class LevelManagerEditor : Editor
     SerializedProperty energyOutline;
     SerializedProperty extraOutline;
 
+    SerializedProperty musicPlayer;
+
     private void OnEnable()
     {
         inputs = serializedObject.FindProperty("inputs");
@@ -41,6 +40,8 @@ public class LevelManagerEditor : Editor
         waterOutline = serializedObject.FindProperty("waterOutline");
         energyOutline = serializedObject.FindProperty("energyOutline");
         extraOutline = serializedObject.FindProperty("extraOutline");
+
+        musicPlayer = serializedObject.FindProperty("musicPlayer");
     }
 
     public override void OnInspectorGUI()
@@ -48,7 +49,7 @@ public class LevelManagerEditor : Editor
         EditorGUILayout.PropertyField(inputs);
         EditorGUILayout.PropertyField(sceneMusic);
 
-        EditorGUIUtility.labelWidth = 300;
+        EditorGUIUtility.labelWidth = 250;
         EditorGUILayout.PropertyField(levelTime, new GUIContent("Time Taken By Level (months)"));
 
         EditorGUILayout.PropertyField(startingFoodAmount);
@@ -64,6 +65,9 @@ public class LevelManagerEditor : Editor
         EditorGUILayout.PropertyField(waterOutline);
         EditorGUILayout.PropertyField(energyOutline);
         EditorGUILayout.PropertyField(extraOutline);
+
+        EditorGUILayout.Space();
+        EditorGUILayout.PropertyField(musicPlayer);
 
         serializedObject.ApplyModifiedProperties();
     }

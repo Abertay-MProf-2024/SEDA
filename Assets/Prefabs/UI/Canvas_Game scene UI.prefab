@@ -24142,6 +24142,8 @@ MonoBehaviour:
     type: 3}
   extraOutline: {fileID: 4574647860216747112, guid: 52e3a6e181a0d204ca820053f349ce85,
     type: 3}
+  musicPlayer: {fileID: 255528497924722670, guid: bf639752963b4e84ebaeb70a2727c52f,
+    type: 3}
 --- !u!1 &8011452160306792367
 GameObject:
   m_ObjectHideFlags: 0

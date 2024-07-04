@@ -59,6 +59,8 @@ public class TimeSystem : MonoBehaviour
 
     static int pauseMenus = 0;
 
+    bool isLevelOver = false;
+
 
     /** The time manager is a singleton
      *  There is only one time manager active at any given time
@@ -178,6 +180,11 @@ public class TimeSystem : MonoBehaviour
         month++;
         RunEvents(monthlyEvents);
 
+        if (isLevelOver)
+        {
+            CheckSuccessConditions();
+        }
+
         if (month > Month.December)
         {
             year++;
@@ -216,27 +223,32 @@ public class TimeSystem : MonoBehaviour
 
         if (Inventory.levelTime < 1 )
         {
-            if (LevelManager.AreSuccessConditionsMet())
-            {
-                // Win the level
-                GameManager.levelsCompleted++;
+            isLevelOver = true;
+        }
+    }
 
-                if (GameManager.levelsCompleted >= 3)
-                {
-                    Instantiate(winScreenPrefab);
-                }
-                else
-                {
-                    Instantiate(levelCompletePrefab);
-                }
-            }    
+    void CheckSuccessConditions()
+    {
+        if (LevelManager.AreSuccessConditionsMet())
+        {
+            // Win the level
+            GameManager.levelsCompleted++;
+
+            if (GameManager.levelsCompleted >= 3)
+            {
+                Instantiate(winScreenPrefab);
+            }
             else
             {
-                // Lose the level
-                Instantiate(gameOverPrefab);
+                Instantiate(levelCompletePrefab);
             }
-            // TODO: Stop Countdown
         }
+        else
+        {
+            // Lose the level
+            Instantiate(gameOverPrefab);
+        }
+        // TODO: Stop Countdown
     }
 
     void SetTimeRemainingDisplay()
