@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1780063505782534220}
   - component: {fileID: 7197633735296258510}
   - component: {fileID: 7443828950371277256}
+  - component: {fileID: 714962080964574207}
   m_Layer: 5
   m_Name: BuildingType 2
   m_TagString: Untagged
@@ -146,6 +147,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &714962080964574207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273543341674641358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &1474141457475999884
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +461,7 @@ GameObject:
   - component: {fileID: 5691800519928888842}
   - component: {fileID: 7241262966212393467}
   - component: {fileID: 7939204986058839550}
+  - component: {fileID: 7435384708895044960}
   m_Layer: 5
   m_Name: BuildingType 6
   m_TagString: Untagged
@@ -579,6 +596,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7435384708895044960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3647457130910658137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &3978149025355833499
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +623,7 @@ GameObject:
   - component: {fileID: 834866087985054169}
   - component: {fileID: 5923301582268266527}
   - component: {fileID: 5720812388352092402}
+  - component: {fileID: 255393249306708603}
   m_Layer: 5
   m_Name: BuildingType 4
   m_TagString: Untagged
@@ -725,6 +758,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &255393249306708603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3978149025355833499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &4121416920988450259
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d368fb0980c7902449324f5226421692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tutorial_Step_5: {fileID: 0}
+  Tutorial_Step_4: {fileID: 0}
+  Is_Set_Tutorial_Step_5: 1
   actionAsset: {fileID: -944628639613478452, guid: 67f30afa779e22942afacb4ae4197719,
     type: 3}
   buildingTypeSelect: {fileID: 9071569237073904937}
@@ -1023,6 +1074,7 @@ GameObject:
   - component: {fileID: 4802177154905598287}
   - component: {fileID: 8502975274515781567}
   - component: {fileID: 5126302359982911468}
+  - component: {fileID: 5244822415607598696}
   m_Layer: 5
   m_Name: BuildingType 1
   m_TagString: Untagged
@@ -1157,6 +1209,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5244822415607598696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468223666268500909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &6638100991084620623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1269,7 @@ GameObject:
   - component: {fileID: 6140196713893751182}
   - component: {fileID: 5464232494939760150}
   - component: {fileID: 4086309417981351490}
+  - component: {fileID: 32393691909560206}
   m_Layer: 5
   m_Name: BuildingType 3
   m_TagString: Untagged
@@ -1336,6 +1404,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &32393691909560206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8332177878423990819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &8534163078668346920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1431,7 @@ GameObject:
   - component: {fileID: 9108726345546231066}
   - component: {fileID: 5422344362077087214}
   - component: {fileID: 6103494749250433298}
+  - component: {fileID: 446261483639734491}
   m_Layer: 5
   m_Name: BuildingType 5
   m_TagString: Untagged
@@ -1482,6 +1566,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &446261483639734491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8534163078668346920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &8782911287891220324
 GameObject:
   m_ObjectHideFlags: 0
