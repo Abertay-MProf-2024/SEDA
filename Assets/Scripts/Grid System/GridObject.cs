@@ -11,6 +11,12 @@ public class GridObject : MonoBehaviour
     private void Start()
     {
         gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+
+        SetTerrain();
+    }
+
+    public void SetTerrain()
+    {
         // Check for the terrain type under this GridObject, and set references to it
         RaycastHit hit;
 
