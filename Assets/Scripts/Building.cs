@@ -28,16 +28,14 @@ public class Building : MonoBehaviour
 
         PayConstructionCosts();
         
-        if (resourceData.tileUnder == null)
+        if (Terrainsystem == null)
         {
             RaycastHit hit;
             Physics.Raycast(transform.position, Vector3.down, out hit);
             SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
         }
 
-        
-
-        resourceData.tileUnder.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
+        Terrainsystem.owningGridObject.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
 
         UpdateTotalBuildingCount(true);
         TimeSystem.AddMonthlyEvent(Impact);
@@ -97,14 +95,13 @@ public class Building : MonoBehaviour
         {
             gameObject.GetComponentInChildren<ResourceUpdatePopup>().AnimatePopup();
         }
-
     }
     
     public void PayUpkeep()
     {
         if (!resourceData.upKeepCostEnergy || Terrainsystem.Lenergy)
         {
-            if (!resourceData.upKeepCostWater || (Inventory.isFlooding || resourceData.tileUnder.terrain.Wenergy))
+            if (!resourceData.upKeepCostWater || (Inventory.isFlooding || Terrainsystem.Wenergy))
             {
                 Upkeepmet = 1;
                 Inventory.SpendFood(resourceData.upKeepCostFood);
@@ -129,19 +126,18 @@ public class Building : MonoBehaviour
 
     public GridObject GetOwningGridObject()
     {
-        return resourceData.tileUnder;
+        return Terrainsystem.owningGridObject;
     }    
 
     public void SetGridObject(GridObject gridObject)
     {
-        if (resourceData)
-            resourceData.tileUnder = gridObject;
+        if (gridObject.terrain == null)
+        {
+            gridObject.SetTerrain();
+        }
 
-        if (oldresourceData)
-            oldresourceData.tileUnder = gridObject;
-
-        if (newresourceData)
-            newresourceData.tileUnder = gridObject;
+        Terrainsystem = gridObject.terrain;
+        Terrainsystem.owningGridObject = gridObject;
     }
 
     public void Impact()
