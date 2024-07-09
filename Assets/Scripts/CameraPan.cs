@@ -226,13 +226,7 @@ public class CameraPan : MonoBehaviour
     /** When the player lifts their finger from the screen, the camera stops moving */
     void UnpossessCamera()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-
-        }
-
-        else if (gameObject != null)
+        if (gameObject != null)
         {
             cameraPanAction.performed -= PanCamera;
             isCursorPosInitialised = false;

@@ -27,7 +27,7 @@ public class Cailleach : Building
         cailleachcreature.SetActive(true);
 
         // Weather conditions..
-        Inventory.CailleachAppeared();
+        FindAnyObjectByType<WeatherSystem>().CailleachAppeared();
 
         /*foreach (Terrainsystem kelpieTile in FindObjectsByType<Terrainsystem>(FindObjectsSortMode.None))
         {
@@ -63,7 +63,7 @@ public class Cailleach : Building
     {
         Inventory.food -= resourceData.bribeCostFood;
         Inventory.constructionMaterials -= resourceData.bribeCostConstruction;
-        Inventory.FairWeather();
+        WeatherSystem.FairWeather();
 
 
         // weather is normal

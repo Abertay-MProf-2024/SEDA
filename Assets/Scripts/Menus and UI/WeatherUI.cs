@@ -8,7 +8,7 @@ public class WeatherUI : MonoBehaviour
 
     private void Update()
     {
-        string weatherName = Inventory.GetCurrentWeather().ToString();
+        string weatherName = WeatherSystem.GetCurrentWeather().ToString();
         
         // So the name can look nice in the UI
         if (weatherName == "Fair")

@@ -23369,6 +23369,7 @@ GameObject:
   - component: {fileID: 5012821485854898472}
   - component: {fileID: 6927495408820687503}
   - component: {fileID: 4078956342853704000}
+  - component: {fileID: 4797899846312160927}
   m_Layer: 5
   m_Name: Canvas_Game scene UI
   m_TagString: Untagged
@@ -23507,6 +23508,24 @@ MonoBehaviour:
   extraOutline: {fileID: 4574647860216747112, guid: 52e3a6e181a0d204ca820053f349ce85,
     type: 3}
   musicPlayer: {fileID: 255528497924722670, guid: bf639752963b4e84ebaeb70a2727c52f,
+    type: 3}
+--- !u!114 &4797899846312160927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7971582688145391426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2df9bc723cccf14bb7daf5ab7056a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tornadoEffectPrefab: {fileID: 4984939674761892717, guid: 56b658d6c55a71243b4baa34869f787a,
+    type: 3}
+  thunderstormEffectPrefab: {fileID: 685542399055545165, guid: c6286b3ef533877499f5c8af32f61c72,
+    type: 3}
+  floodEffectPrefab: {fileID: 2929175920754660482, guid: 67d94e01c739a27489571de721005f30,
     type: 3}
 --- !u!1 &8011452160306792367
 GameObject:

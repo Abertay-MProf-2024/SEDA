@@ -145,6 +145,8 @@ public class Terrainsystem : MonoBehaviour
 
     void HealthBar()
     {
+        
+
         Inventory.count++;
         Inventory.totalhealth += (int)CurrentsoilType;
         Inventory.HealthBarChange();
@@ -213,7 +215,7 @@ public class Terrainsystem : MonoBehaviour
 
     public void ChangeinGrade(float buffamount, float nerfamount, bool impact)
     {
-        float totalChangeInGrade = buffamount - nerfamount + Inventory.soilGradeWeatherEffect;
+        float totalChangeInGrade = buffamount - nerfamount + WeatherSystem.soilGradeWeatherEffect;
         if (impact)
         {
             health = (int)CurrentsoilType + (int)totalChangeInGrade;
