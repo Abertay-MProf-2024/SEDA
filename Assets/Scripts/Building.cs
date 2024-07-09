@@ -202,8 +202,9 @@ public class Building : MonoBehaviour
     {
         if (newresourceData != null)
         {
-            resourceData = newresourceData;
             resourceData.inGameAsset = newresourceData.inGameAsset;
+            resourceData = newresourceData;
+            gameObject.GetComponent<MeshRenderer>().sharedMaterial = newresourceData.inGameAsset.GetComponent<MeshRenderer>().sharedMaterial;
 
         }
         else

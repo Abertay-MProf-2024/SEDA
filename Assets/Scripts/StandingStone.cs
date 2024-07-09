@@ -92,6 +92,9 @@ public class StandingStone : MonoBehaviour
                     if (building.resourceData == building.oldresourceData)
                     {
                         building.VeilChangeActivate();
+/*                        newResourceData = 
+                            Destroy
+                            Instantiate*/
                         
                     }
                     else
