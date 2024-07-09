@@ -33,6 +33,15 @@ public class BuildingTypeSelect : MonoBehaviour
             }
         }
     }
+    public void GridOff()
+    {
+        foreach (GameObject button in buildingButtons)
+        {
+           
+                button.GetComponent<Image>().color = Color.white;
+            
+        }
+    }
 
     public void SelectBuilding(TileBase building)
     {

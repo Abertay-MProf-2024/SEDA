@@ -7426,7 +7426,8 @@ MonoBehaviour:
   - {fileID: 3949470590133582353}
   - {fileID: 6089407783307558582}
   - {fileID: 8449860655363060025}
-  - {fileID: 8449860655363060025}
+  - {fileID: 1962145535859519219}
+  - {fileID: 7691685578562066733}
   currentBuildingType: {fileID: 0}
 --- !u!114 &4370162998761522142
 MonoBehaviour:
@@ -26639,6 +26640,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6546463509190114180}
         m_TargetAssemblyTypeName: BuildingTypeSelect, Assembly-CSharp
         m_MethodName: CloseButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6546463509190114180}
+        m_TargetAssemblyTypeName: BuildingTypeSelect, Assembly-CSharp
+        m_MethodName: GridOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
