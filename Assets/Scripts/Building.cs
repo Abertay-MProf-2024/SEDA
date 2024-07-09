@@ -88,8 +88,8 @@ public class Building : MonoBehaviour
     {
         IfDependsonSoilGrade();
 
-        Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * Inventory.cropOutput * Upkeepmet);
-        Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * Inventory.cropOutput * Upkeepmet);
+        Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * WeatherSystem.cropOutput * Upkeepmet);
+        Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * WeatherSystem.cropOutput * Upkeepmet);
 
         if (gameObject.GetComponentInChildren<ResourceUpdatePopup>())
         {
@@ -101,7 +101,7 @@ public class Building : MonoBehaviour
     {
         if (!resourceData.upKeepCostEnergy || Terrainsystem.Lenergy)
         {
-            if (!resourceData.upKeepCostWater || (Inventory.isFlooding || Terrainsystem.Wenergy))
+            if (!resourceData.upKeepCostWater || (WeatherSystem.isFlooding || Terrainsystem.Wenergy))
             {
                 Upkeepmet = 1;
                 Inventory.SpendFood(resourceData.upKeepCostFood);
@@ -240,7 +240,7 @@ public class Building : MonoBehaviour
                         {
                             if (collector.ToString() == objectInRadius.resourceData.structureType.ToString()
                                 && (!objectInRadius.resourceData.upKeepCostEnergy || objectInRadius.Terrainsystem.Lenergy)
-                                && (!objectInRadius.resourceData.upKeepCostWater || (Inventory.isFlooding || objectInRadius.Terrainsystem.Wenergy)))
+                                && (!objectInRadius.resourceData.upKeepCostWater || (WeatherSystem.isFlooding || objectInRadius.Terrainsystem.Wenergy)))
                             {
                                 UpdateResources();
                                 return;
