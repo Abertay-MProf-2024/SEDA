@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_floodrain
-  m_Shader: {fileID: -6465566751694194690, guid: 5e829c9ecd0cacd4399d151f9130905a,
+  m_Shader: {fileID: -6465566751694194690, guid: 84645be4489f31745adf4f5a94278e3a,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -40,8 +40,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_69374be588554612932b8548f2ac5ccf_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 9ad5eaa3453ead04eabb3e24674f2c69, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_95219bc36d03496bb553993e00eac37f_Texture_1_Texture2D:

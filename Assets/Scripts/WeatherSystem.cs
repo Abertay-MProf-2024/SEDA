@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public enum WeatherTypes
 {
     Fair,
@@ -79,7 +80,14 @@ public class WeatherSystem : MonoBehaviour
         Destroy(currentWeatherEffect);
 
         if (weatherPrefab)
+        {
             currentWeatherEffect = Instantiate(weatherPrefab);
+
+            if (currentWeatherEffect.GetComponent<Canvas>() != null)
+            {
+                currentWeatherEffect.GetComponent<Canvas>().worldCamera = FindAnyObjectByType<Camera>();
+            }
+        }
     }
 
     public static WeatherTypes GetCurrentWeather()

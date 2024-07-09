@@ -145,6 +145,8 @@ public class Terrainsystem : MonoBehaviour
 
     void HealthBar()
     {
+        
+
         Inventory.count++;
         Inventory.totalhealth += (int)CurrentsoilType;
         Inventory.HealthBarChange();

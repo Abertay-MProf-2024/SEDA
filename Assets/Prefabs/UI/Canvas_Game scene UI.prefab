@@ -23523,7 +23523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tornadoEffectPrefab: {fileID: 4984939674761892717, guid: 56b658d6c55a71243b4baa34869f787a,
     type: 3}
-  thunderstormEffectPrefab: {fileID: 689943266240924529, guid: 2b6dd0d4d88b74941b7633b0883178bd,
+  thunderstormEffectPrefab: {fileID: 685542399055545165, guid: c6286b3ef533877499f5c8af32f61c72,
     type: 3}
   floodEffectPrefab: {fileID: 2929175920754660482, guid: 67d94e01c739a27489571de721005f30,
     type: 3}
