@@ -66,7 +66,7 @@ public class Terrainsystem : MonoBehaviour
     public int health;
 
     //VeilSwitch Details
-    public TerrainTypes OldsoilType;
+    [HideInInspector] public TerrainTypes OldsoilType;
     public TerrainTypes NewSoilType;
 
 
@@ -164,7 +164,7 @@ public class Terrainsystem : MonoBehaviour
         }
     }
 
-    void InitialTerrainList()
+    public void InitialTerrainList()
     {
         switch (terraintype)
         {
