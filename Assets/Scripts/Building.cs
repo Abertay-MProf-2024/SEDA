@@ -208,18 +208,21 @@ public class Building : MonoBehaviour
 
         }
         else
-            gameObject.SetActive(false);
+            Destroy(gameObject);
+            //gameObject.SetActive(false);
     }
 
     public void VeilChangeDeactivate()
     {
-        if (newresourceData != null)
+        if (oldresourceData != null)
         {
             resourceData = oldresourceData;
             resourceData.inGameAsset = oldresourceData.inGameAsset;
+            gameObject.GetComponent<MeshRenderer>().sharedMaterial = oldresourceData.inGameAsset.GetComponent<MeshRenderer>().sharedMaterial;
         }
         else
-            gameObject.SetActive(true);
+            Destroy(gameObject);
+        //gameObject.SetActive(true);
     }
 
     public void HarvestSurroundingResources()

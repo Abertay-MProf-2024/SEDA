@@ -50,7 +50,8 @@ public class StandingStone : MonoBehaviour
     {
         if (StandingStonePrefab)
         {
-            Instantiate(StandingStonePrefab.gameObject);
+            StandingStonPrefabPopUp standingStoneUI = Instantiate(StandingStonePrefab.gameObject).GetComponent<StandingStonPrefabPopUp>();
+            standingStoneUI.SetStandingStoneReference(this);
         }
     }
 
@@ -60,18 +61,17 @@ public class StandingStone : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
         {
-            Debug.Log("Standngstone");
-            VeilSwitch();
+            OpenStandingStone();
         }
     }
 
-    void VeilSwitch()
+    public void VeilSwitch()
     {
         if(kelpie != null)
             kelpie.StandingStoneKelpieImpact();
         if (cailleach != null)
             cailleach.StandingStoneCailleachImpact();
-        OpenStandingStone();
+        
         Terrainsystem[] list = IslandToChange.GetComponentsInChildren<Terrainsystem>();
 
         foreach (Terrainsystem t in list)
