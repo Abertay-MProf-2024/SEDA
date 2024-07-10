@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +27,15 @@ public class BuildingTypeSelect : MonoBehaviour
             {
                 button.GetComponent<Image>().color = Color.white;
             }
+        }
+    }
+    public void GridOff()
+    {
+        foreach (GameObject button in buildingButtons)
+        {
+           
+                button.GetComponent<Image>().color = Color.white;
+            
         }
     }
 

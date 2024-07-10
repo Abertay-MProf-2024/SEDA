@@ -125,3 +125,5 @@ MonoBehaviour:
   kelpie: {fileID: 0}
   cailleach: {fileID: 0}
   IslandToChange: {fileID: 0}
+  StandingStonePrefab: {fileID: -7868653969694002676, guid: 45cb29f366a60094386d862bdaa1613b,
+    type: 3}
