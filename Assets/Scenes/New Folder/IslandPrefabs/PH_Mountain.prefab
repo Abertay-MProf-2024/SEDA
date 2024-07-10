@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4569629501622341121}
   - component: {fileID: 3472901627774145896}
   - component: {fileID: 4356491931056875421}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PH_Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
