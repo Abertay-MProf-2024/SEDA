@@ -4,7 +4,7 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     public TileBase resourceData;
-    public TileBase oldresourceData;
+    [HideInInspector] public TileBase oldresourceData;
     public TileBase newresourceData;
 
     float buff;

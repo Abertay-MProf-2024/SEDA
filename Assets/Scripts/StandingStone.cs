@@ -69,12 +69,14 @@ public class StandingStone : MonoBehaviour
             if (t.terraintype == t.OldsoilType)
             {
                 t.terraintype = t.NewSoilType;
+                t.InitialTerrainList();
                 t.ChangeinGrade(0,20,true);
                 t.SetTerrainMaterialProperties();
             }
             else
             {
                 t.terraintype = t.OldsoilType;
+                t.InitialTerrainList();
                 t.ChangeinGrade(0, 20, true);
                 t.SetTerrainMaterialProperties();
             }
@@ -85,7 +87,6 @@ public class StandingStone : MonoBehaviour
         {
             if (t.owningGridObject != null)
             {
-                
                 Building building = t.owningGridObject.GetBuilding();
                 if (building != null)
                 {
