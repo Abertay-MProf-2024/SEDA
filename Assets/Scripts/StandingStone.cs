@@ -38,16 +38,6 @@ public class StandingStone : MonoBehaviour
         }
     }
 
-    void Interact()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<UnityEngine.Vector2>());
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
-        {
-            OpenStandingStone();
-        }
-    }
-
     public void VeilSwitch()
     {
         if(kelpie != null)

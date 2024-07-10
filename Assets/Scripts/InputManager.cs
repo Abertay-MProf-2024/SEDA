@@ -143,7 +143,6 @@ public class InputManager : MonoBehaviour
         else if (gameObject != null)
         {
             tapLocation = tapLocationInput.ReadValue<Vector2>();
-            print("Tap Location: " + tapLocation);
             tapLocationInput.performed += PanCamera;
         }
     }
@@ -152,7 +151,6 @@ public class InputManager : MonoBehaviour
     void PanCamera(InputAction.CallbackContext context)
     {
         Vector2 currentPos = releaseLocation = context.ReadValue<Vector2>();
-        print("Release Location" + releaseLocation);
 
         if (isCursorPosInitialised)
         {
@@ -252,9 +250,9 @@ public class InputManager : MonoBehaviour
 
             if (standingStone && Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
             {
-                standingStone.VeilSwitch();
+                standingStone.OpenStandingStone();
             }
-            if (buildingSystem && BuildSystem.isInBuildMode)
+            else if (buildingSystem && BuildSystem.isInBuildMode)
             {
                 buildingSystem.PlaceBuilding(ray);
             }
