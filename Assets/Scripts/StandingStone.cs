@@ -10,6 +10,8 @@ public class StandingStone : MonoBehaviour
 
     [SerializeField] GameObject IslandToChange;
 
+    [SerializeField] StandingStonPrefabPopUp StandingStonePrefab;
+
     private void Start()
     {
         //kelpie = FindFirstObjectByType<Kelpie>();
@@ -27,13 +29,32 @@ public class StandingStone : MonoBehaviour
         }
     }
 
+    public void OpenStandingStone()
+    {
+        if (StandingStonePrefab)
+        {
+            StandingStonPrefabPopUp standingStoneUI = Instantiate(StandingStonePrefab.gameObject).GetComponent<StandingStonPrefabPopUp>();
+            standingStoneUI.SetStandingStoneReference(this);
+        }
+    }
+
+    void Interact()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<UnityEngine.Vector2>());
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
+        {
+            OpenStandingStone();
+        }
+    }
+
     public void VeilSwitch()
     {
         if(kelpie != null)
             kelpie.StandingStoneKelpieImpact();
         if (cailleach != null)
             cailleach.StandingStoneCailleachImpact();
-
+        
         Terrainsystem[] list = IslandToChange.GetComponentsInChildren<Terrainsystem>();
 
         foreach (Terrainsystem t in list)

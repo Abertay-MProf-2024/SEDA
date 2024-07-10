@@ -18,6 +18,8 @@ public class LevelSelect : MonoBehaviour
 
     private LevelSelect instance;
 
+    int levelToLoad = 1;
+
     /** The level select menu is a singleton
      *  There is only one level selection menu active at any given time
      */
@@ -75,11 +77,16 @@ public class LevelSelect : MonoBehaviour
         infoDisplay.SetActive(true);
     }
 
+    public void SetLevelToLoad(int level)
+    {
+        levelToLoad = level;
+    }
+
     public void LoadLevel()
     {
         Inventory.overworldTime--;
         Inventory.levelTime += 12;
         Inventory.ClearResources();
-        SceneManager.LoadSceneAsync(GameManager.levelsCompleted + 1);
+        SceneManager.LoadSceneAsync(levelToLoad);
     }
 }
