@@ -31,20 +31,12 @@ public class AudioSlider : MonoBehaviour
 
     /* 
      * Get the decibel level from a float with a range of 0 to 1
-     * These equations remap the volume value so that from 0 to 0.5 maps to a decibel level of -80 to 0
-     * and a volume from 0.5 to 1 maps to decibel level from 0 to 20
-     * This results in a more even change in sound when moving the volume slider
+     * This equation remaps the volume value so that from 0 to 1 maps to a decibel level of -80 to -20
+     * Equation: output = output_start + ((output_end - output_start) / (input_end - input_start)) * (input - input_start)
      */
     public float GetDecibelLevel(float volume)
     {
-        if (volume >= 0.5)
-        {
-            return 0 + (20 / (1 - 0.5f)) * (volume - 0.5f);
-        }
-        else
-        {
-            return -80 + (80 / 0.5f) * volume;
-        }
+        return -80 + ((-20 + 80) / 1) * volume;
     }
 
     void Load()
