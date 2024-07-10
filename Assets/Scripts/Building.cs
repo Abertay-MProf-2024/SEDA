@@ -4,7 +4,7 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     public TileBase resourceData;
-    public TileBase oldresourceData;
+    [HideInInspector] public TileBase oldresourceData;
     public TileBase newresourceData;
 
     float buff;
@@ -28,16 +28,14 @@ public class Building : MonoBehaviour
 
         PayConstructionCosts();
         
-        if (resourceData.tileUnder == null)
+        if (Terrainsystem == null)
         {
             RaycastHit hit;
             Physics.Raycast(transform.position, Vector3.down, out hit);
             SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
         }
 
-        
-
-        resourceData.tileUnder.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
+        Terrainsystem.owningGridObject.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
 
         UpdateTotalBuildingCount(true);
         TimeSystem.AddMonthlyEvent(Impact);
@@ -90,21 +88,20 @@ public class Building : MonoBehaviour
     {
         IfDependsonSoilGrade();
 
-        Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * Inventory.cropOutput * Upkeepmet);
-        Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * Inventory.cropOutput * Upkeepmet);
+        Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * WeatherSystem.cropOutput * Upkeepmet);
+        Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * WeatherSystem.cropOutput * Upkeepmet);
 
         if (gameObject.GetComponentInChildren<ResourceUpdatePopup>())
         {
             gameObject.GetComponentInChildren<ResourceUpdatePopup>().AnimatePopup();
         }
-
     }
     
     public void PayUpkeep()
     {
         if (!resourceData.upKeepCostEnergy || Terrainsystem.Lenergy)
         {
-            if (!resourceData.upKeepCostWater || (Inventory.isFlooding || resourceData.tileUnder.terrain.Wenergy))
+            if (!resourceData.upKeepCostWater || (WeatherSystem.isFlooding || Terrainsystem.Wenergy))
             {
                 Upkeepmet = 1;
                 Inventory.SpendFood(resourceData.upKeepCostFood);
@@ -129,19 +126,18 @@ public class Building : MonoBehaviour
 
     public GridObject GetOwningGridObject()
     {
-        return resourceData.tileUnder;
+        return Terrainsystem.owningGridObject;
     }    
 
     public void SetGridObject(GridObject gridObject)
     {
-        if (resourceData)
-            resourceData.tileUnder = gridObject;
+        if (gridObject.terrain == null)
+        {
+            gridObject.SetTerrain();
+        }
 
-        if (oldresourceData)
-            oldresourceData.tileUnder = gridObject;
-
-        if (newresourceData)
-            newresourceData.tileUnder = gridObject;
+        Terrainsystem = gridObject.terrain;
+        Terrainsystem.owningGridObject = gridObject;
     }
 
     public void Impact()
@@ -206,8 +202,9 @@ public class Building : MonoBehaviour
     {
         if (newresourceData != null)
         {
-            resourceData = newresourceData;
             resourceData.inGameAsset = newresourceData.inGameAsset;
+            resourceData = newresourceData;
+            gameObject.GetComponent<MeshRenderer>().sharedMaterial = newresourceData.inGameAsset.GetComponent<MeshRenderer>().sharedMaterial;
 
         }
         else
@@ -244,7 +241,7 @@ public class Building : MonoBehaviour
                         {
                             if (collector.ToString() == objectInRadius.resourceData.structureType.ToString()
                                 && (!objectInRadius.resourceData.upKeepCostEnergy || objectInRadius.Terrainsystem.Lenergy)
-                                && (!objectInRadius.resourceData.upKeepCostWater || (Inventory.isFlooding || objectInRadius.Terrainsystem.Wenergy)))
+                                && (!objectInRadius.resourceData.upKeepCostWater || (WeatherSystem.isFlooding || objectInRadius.Terrainsystem.Wenergy)))
                             {
                                 UpdateResources();
                                 return;

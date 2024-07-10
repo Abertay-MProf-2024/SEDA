@@ -11,6 +11,12 @@ public class GridObject : MonoBehaviour
     private void Start()
     {
         gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+
+        SetTerrain();
+    }
+
+    public void SetTerrain()
+    {
         // Check for the terrain type under this GridObject, and set references to it
         RaycastHit hit;
 
@@ -102,6 +108,8 @@ public class GridObject : MonoBehaviour
     // Returns whether an object can be built on this GridObject
     public bool CanBuildOnTile(TileBase building)
     {
+        SetTerrain();
+
         bool canBuild = false;
 
         if (building == null)
@@ -111,8 +119,10 @@ public class GridObject : MonoBehaviour
         {
             if (terrain && terrain.creaturetype == CreatureTypes.None)
             {
-                if (terrainType == building.tileTerrainTypes[i])
-                    canBuild = true;
+               
+                    if (terrainType == building.tileTerrainTypes[i])
+                        canBuild = true;
+                
             }
         }
 

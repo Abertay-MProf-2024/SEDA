@@ -111,39 +111,45 @@ public class LevelManager : MonoBehaviour
             }
             else if ((gridTile = hit.transform.gameObject.GetComponent<GridObject>()) && (terrainTile = gridTile.terrain) && gridTile.terrain.owningGridObject)
             {
-                if (terrainTile.Lenergy)
+                if (terrainTile.radius != 0)
                 {
-                    radius = terrainTile.radius;
-
-                    GridPosition gridPos = terrainTile.owningGridObject.GetGridPosition();
-
-                    outlineParent = new GameObject();
-                    outlineParent.name = "outlineParent";
-
-                    for (int x = gridPos.x - radius; x <= gridPos.x + radius; x++)
+                    if (terrainTile.Lenergy)
                     {
-                        for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
+                        radius = terrainTile.radius;
+
+                        GridPosition gridPos = terrainTile.owningGridObject.GetGridPosition();
+
+                        outlineParent = new GameObject();
+                        outlineParent.name = "outlineParent";
+
+                        for (int x = gridPos.x - radius; x <= gridPos.x + radius; x++)
                         {
-                            Vector3 worldPosition = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z).transform.position;
-                            Instantiate(energyOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                            for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
+                            {
+                                Vector3 worldPosition = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z).transform.position;
+                                Instantiate(energyOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                            }
                         }
                     }
                 }
-                else if (terrainTile.Wenergy)
+                if (terrainTile.Wradius != 0)
                 {
-                    radius = terrainTile.Wradius;
-
-                    GridPosition gridPos = terrainTile.owningGridObject.GetGridPosition();
-
-                    outlineParent = new GameObject();
-                    outlineParent.name = "outlineParent";
-
-                    for (int x = gridPos.x - radius; x <= gridPos.x + radius; x++)
+                    if (terrainTile.Wenergy)
                     {
-                        for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
+                        radius = terrainTile.Wradius;
+
+                        GridPosition gridPos = terrainTile.owningGridObject.GetGridPosition();
+
+                        outlineParent = new GameObject();
+                        outlineParent.name = "outlineParent";
+
+                        for (int x = gridPos.x - radius; x <= gridPos.x + radius; x++)
                         {
-                            Vector3 worldPosition = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z).transform.position;
-                            Instantiate(waterOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                            for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
+                            {
+                                Vector3 worldPosition = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z).transform.position;
+                                Instantiate(waterOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                            }
                         }
                     }
                 }
