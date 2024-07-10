@@ -1,19 +1,17 @@
-// Remy Pijuan
-
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class CameraPan : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     // The input action asset containing all actions related to camera movement
-    [SerializeField] InputActionAsset cameraActions;
+    [SerializeField] InputActionAsset actions;
 
     // Camera pan actions
-    InputAction possessAction;
-    InputAction cameraPanAction;
-    InputAction unpossessAction;
+    InputAction tapInput;
+    InputAction tapLocationInput;
+    InputAction releaseInput;
     
     // Camera zoom actions
     InputAction mouseWheelAction;
@@ -71,34 +69,34 @@ public class CameraPan : MonoBehaviour
     public float maxZoomDistance = 10f;
 
     // These function references are necessary for callback registering/deregistering to work properly
-    Action<InputAction.CallbackContext> possessCamera;
-    Action<InputAction.CallbackContext> unpossessCamera;
+    Action<InputAction.CallbackContext> tapAction;
+    Action<InputAction.CallbackContext> releaseAction;
     Action<InputAction.CallbackContext> startPinchZoom;
     Action<InputAction.CallbackContext> stopPinchZoom;
 
     /** Set all initial variables and required callbacks */
     void Awake()
     {
-        if (cameraActions)
+        if (actions)
         {
-            possessAction = cameraActions.FindAction("PossessCamera");
-            cameraPanAction = cameraActions.FindAction("PanCamera");
-            unpossessAction = cameraActions.FindAction("UnpossessCamera");
-            mouseWheelAction = cameraActions.FindAction("MouseWheelZoom");
-            touchContactAction = cameraActions.FindAction("SecondaryTouchContact");
-            primaryFingerPosAction = cameraActions.FindAction("PrimaryFingerPosition");
-            secondaryFingerPosAction = cameraActions.FindAction("SecondaryFingerPosition");
+            tapInput = actions.FindAction("Tap");
+            tapLocationInput = actions.FindAction("TapLocation");
+            releaseInput = actions.FindAction("TapRelease");
+            mouseWheelAction = actions.FindAction("MouseWheelZoom");
+            touchContactAction = actions.FindAction("SecondaryTouchContact");
+            primaryFingerPosAction = actions.FindAction("PrimaryFingerPosition");
+            secondaryFingerPosAction = actions.FindAction("SecondaryFingerPosition");
         }
 
         if (gameObject != null)
         {
-            possessCamera = ctx => PossessCamera();
-            unpossessCamera = ctx => UnpossessCamera();
+            tapAction = ctx => PossessCamera();
+            releaseAction = ctx => UnpossessCamera();
             startPinchZoom = ctx => StartPinchZoom();
             stopPinchZoom = ctx => StopPinchZoom();
 
-            possessAction.performed += possessCamera;
-            unpossessAction.performed += unpossessCamera;
+            tapInput.performed += tapAction;
+            releaseInput.performed += releaseAction;
             mouseWheelAction.performed += MouseWheelZoom;
             touchContactAction.performed += startPinchZoom;
             touchContactAction.canceled += stopPinchZoom;
@@ -131,7 +129,7 @@ public class CameraPan : MonoBehaviour
 
         else if (gameObject != null)
         {
-            cameraPanAction.performed += PanCamera;
+            tapLocationInput.performed += PanCamera;
         }
     }
 
@@ -228,7 +226,7 @@ public class CameraPan : MonoBehaviour
     {
         if (gameObject != null)
         {
-            cameraPanAction.performed -= PanCamera;
+            tapLocationInput.performed -= PanCamera;
             isCursorPosInitialised = false;
         }
     }
@@ -335,14 +333,14 @@ public class CameraPan : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (possessAction != null)
+        if (tapInput != null)
         {
-            possessAction.performed -= possessCamera;
+            tapInput.performed -= tapAction;
         }
 
-        if (unpossessAction != null)
+        if (releaseInput != null)
         {
-            unpossessAction.performed -= unpossessCamera;
+            releaseInput.performed -= releaseAction;
         }
 
         if (mouseWheelAction != null)
