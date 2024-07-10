@@ -18,6 +18,8 @@ public class StandingStone : MonoBehaviour
 
     [SerializeField] GameObject IslandToChange;
 
+    [SerializeField] StandingStonPrefabPopUp StandingStonePrefab;
+
     // This function reference is necessary for callback registering/deregistering to work properly
     Action<InputAction.CallbackContext> click;
 
@@ -44,6 +46,14 @@ public class StandingStone : MonoBehaviour
         }
     }
 
+    public void OpenStandingStone()
+    {
+        if (StandingStonePrefab)
+        {
+            Instantiate(StandingStonePrefab.gameObject);
+        }
+    }
+
     void Interact()
     {
         Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<UnityEngine.Vector2>());
@@ -61,7 +71,7 @@ public class StandingStone : MonoBehaviour
             kelpie.StandingStoneKelpieImpact();
         if (cailleach != null)
             cailleach.StandingStoneCailleachImpact();
-
+        OpenStandingStone();
         Terrainsystem[] list = IslandToChange.GetComponentsInChildren<Terrainsystem>();
 
         foreach (Terrainsystem t in list)
