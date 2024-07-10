@@ -1,25 +1,14 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class StandingStone : MonoBehaviour
 {
-    [SerializeField]
-    InputActionAsset actionAsset;
-
     public Kelpie kelpie;
     
     public Cailleach cailleach;
 
-    InputAction placeAction;
-    InputAction tapLocation;
-
     Terrainsystem TS1;
 
     [SerializeField] GameObject IslandToChange;
-
-    // This function reference is necessary for callback registering/deregistering to work properly
-    Action<InputAction.CallbackContext> click;
 
     private void Start()
     {
@@ -30,12 +19,6 @@ public class StandingStone : MonoBehaviour
         if(cailleach)
             cailleach.gameObject.SetActive(false);
 
-        placeAction = actionAsset.FindAction("click");
-        click = ctx => Interact();
-        placeAction.performed += click;
-
-        tapLocation = actionAsset.FindAction("PanCamera");
-
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
         {
@@ -44,18 +27,7 @@ public class StandingStone : MonoBehaviour
         }
     }
 
-    void Interact()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<UnityEngine.Vector2>());
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
-        {
-            Debug.Log("Standngstone");
-            VeilSwitch();
-        }
-    }
-
-    void VeilSwitch()
+    public void VeilSwitch()
     {
         if(kelpie != null)
             kelpie.StandingStoneKelpieImpact();
@@ -105,10 +77,5 @@ public class StandingStone : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void OnDestroy()
-    {
-        placeAction.performed -= click;
     }
 }

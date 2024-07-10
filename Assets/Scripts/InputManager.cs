@@ -77,6 +77,7 @@ public class InputManager : MonoBehaviour
     // References to scripts that use input
     BuildSystem buildingSystem;
     LevelManager levelManager;
+    StandingStone standingStone;
 
     /** Set all initial variables and required callbacks */
     void Awake()
@@ -117,6 +118,7 @@ public class InputManager : MonoBehaviour
     void Start()
     {
         levelManager = FindAnyObjectByType<LevelManager>();
+        standingStone = FindAnyObjectByType<StandingStone>();
 
         if (orthoCam = FindAnyObjectByType<Camera>())
         {
@@ -237,7 +239,12 @@ public class InputManager : MonoBehaviour
         if (Camera.main != null)
         {
             Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
+            RaycastHit hit;
 
+            if (standingStone && Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
+            {
+                standingStone.VeilSwitch();
+            }
             if (buildingSystem && BuildSystem.isInBuildMode)
             {
                 buildingSystem.PlaceBuilding(ray);
