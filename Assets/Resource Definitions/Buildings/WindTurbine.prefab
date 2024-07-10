@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3692431891003340576}
-  - component: {fileID: 8270101440066245858}
   - component: {fileID: 6724467558982403004}
   m_Layer: 0
   m_Name: WindTurbine
@@ -34,14 +33,6 @@ Transform:
   - {fileID: 2960008437954531609}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8270101440066245858
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50886030656341932}
-  m_Mesh: {fileID: -3664147988471144390, guid: 9a41eec0be3c0e64aba9a85d0f48532f, type: 3}
 --- !u!114 &6724467558982403004
 MonoBehaviour:
   m_ObjectHideFlags: 0

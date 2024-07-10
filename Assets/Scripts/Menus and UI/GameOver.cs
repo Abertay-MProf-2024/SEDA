@@ -1,5 +1,3 @@
-// Remy Pijuan, 2024
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
