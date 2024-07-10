@@ -74,6 +74,10 @@ public class InputManager : MonoBehaviour
     Action<InputAction.CallbackContext> startPinchZoom;
     Action<InputAction.CallbackContext> stopPinchZoom;
 
+    // References to scripts that use input
+    BuildSystem buildingSystem;
+    LevelManager levelManager;
+
     /** Set all initial variables and required callbacks */
     void Awake()
     {
@@ -90,8 +94,8 @@ public class InputManager : MonoBehaviour
 
         if (gameObject != null)
         {
-            tapAction = ctx => PossessCamera();
-            releaseAction = ctx => UnpossessCamera();
+            tapAction = ctx => Tap();
+            releaseAction = ctx => Release();
             startPinchZoom = ctx => StartPinchZoom();
             stopPinchZoom = ctx => StopPinchZoom();
 
@@ -112,6 +116,8 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
+        levelManager = FindAnyObjectByType<LevelManager>();
+
         if (orthoCam = FindAnyObjectByType<Camera>())
         {
             initialOrthoSize = orthoCam.orthographicSize;
@@ -119,12 +125,11 @@ public class InputManager : MonoBehaviour
     }
 
     /** While the player is touching the screen, they can rotate the camera */
-    void PossessCamera()
+    void Tap()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
-
         }
 
         else if (gameObject != null)
@@ -222,12 +227,25 @@ public class InputManager : MonoBehaviour
     }
 
     /** When the player lifts their finger from the screen, the camera stops moving */
-    void UnpossessCamera()
+    void Release()
     {
-        if (gameObject != null)
+        tapLocationInput.performed -= PanCamera;
+        isCursorPosInitialised = false;
+
+        buildingSystem = FindAnyObjectByType<BuildSystem>();
+
+        if (tapLocationInput != null)
         {
-            tapLocationInput.performed -= PanCamera;
-            isCursorPosInitialised = false;
+            Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
+
+            if (buildingSystem && BuildSystem.isInBuildMode)
+            {
+                buildingSystem.PlaceBuilding(ray);
+            }
+            else if (levelManager)
+            {
+                levelManager.SelectTile(ray);
+            }
         }
     }
 
@@ -249,7 +267,7 @@ public class InputManager : MonoBehaviour
     void StartPinchZoom()
     {
         // Disable Camera Pan
-        UnpossessCamera();
+        Release();
 
         // Enable Pinch Zoom
         if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
@@ -354,7 +372,7 @@ public class InputManager : MonoBehaviour
             touchContactAction.canceled -= stopPinchZoom;
         }
 
-        UnpossessCamera();
+        Release();
         StopPinchZoom();
     }
 }
