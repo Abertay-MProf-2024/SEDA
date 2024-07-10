@@ -48,6 +48,10 @@ public class InputManager : MonoBehaviour
     float panSpeedTouch;
     float panSpeedMouse;
 
+    // The locations on the screen where the player has tapped and released
+    Vector2 tapLocation;
+    Vector2 releaseLocation;
+
     [SerializeField]
     [Tooltip("Controls the camera's zoom speed.")]
     float zoomSpeed = 1f;
@@ -78,6 +82,8 @@ public class InputManager : MonoBehaviour
     BuildSystem buildingSystem;
     LevelManager levelManager;
     StandingStone standingStone;
+
+
 
     /** Set all initial variables and required callbacks */
     void Awake()
@@ -136,6 +142,8 @@ public class InputManager : MonoBehaviour
 
         else if (gameObject != null)
         {
+            tapLocation = tapLocationInput.ReadValue<Vector2>();
+            print("Tap Location: " + tapLocation);
             tapLocationInput.performed += PanCamera;
         }
     }
@@ -143,7 +151,8 @@ public class InputManager : MonoBehaviour
     /** Pan the camera when the player taps and drags the screen */
     void PanCamera(InputAction.CallbackContext context)
     {
-        Vector2 currentPos = context.ReadValue<Vector2>();
+        Vector2 currentPos = releaseLocation = context.ReadValue<Vector2>();
+        print("Release Location" + releaseLocation);
 
         if (isCursorPosInitialised)
         {
@@ -236,7 +245,7 @@ public class InputManager : MonoBehaviour
 
         buildingSystem = FindAnyObjectByType<BuildSystem>();
 
-        if (Camera.main != null)
+        if (Camera.main != null && (tapLocation == Vector2.zero || releaseLocation == Vector2.zero || (Vector2.Distance(tapLocation, releaseLocation) < 5)))
         {
             Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
             RaycastHit hit;
@@ -254,6 +263,8 @@ public class InputManager : MonoBehaviour
                 levelManager.SelectTile(ray);
             }
         }
+
+        tapLocation = releaseLocation = Vector2.zero;
     }
 
     /** Applies camera zoom based on input from the mouse wheel */
