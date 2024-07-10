@@ -234,7 +234,7 @@ public class InputManager : MonoBehaviour
 
         buildingSystem = FindAnyObjectByType<BuildSystem>();
 
-        if (tapLocationInput != null)
+        if (Camera.main != null)
         {
             Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
 
