@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class BuildSystem : MonoBehaviour
@@ -38,16 +39,26 @@ public class BuildSystem : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<UnityEngine.Vector2>());
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Grid")
+
+        if(EventSystem.current.IsPointerOverGameObject())
         {
-            GridObject hitGridObject;
-            if (hitGridObject = hit.collider.gameObject.GetComponent<GridObject>())
+            return;
+
+        }
+
+        else if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.layer != 5)
+        {
+            if (hit.collider.gameObject.tag == "Grid")
             {
+                GridObject hitGridObject;
+                if (hitGridObject = hit.collider.gameObject.GetComponent<GridObject>())
+                {
 
-                hitGridObject.TryBuild(buildingTypeSelect.currentBuildingType);
+                    hitGridObject.TryBuild(buildingTypeSelect.currentBuildingType);
 
-                //ShowTutorial();// Designer Tutorial test
+                    //ShowTutorial();// Designer Tutorial test
 
+                }
             }
         }
     }

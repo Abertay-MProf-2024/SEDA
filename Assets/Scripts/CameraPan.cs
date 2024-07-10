@@ -1,7 +1,6 @@
-// Remy Pijuan
-
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class CameraPan : MonoBehaviour
@@ -122,7 +121,13 @@ public class CameraPan : MonoBehaviour
     /** While the player is touching the screen, they can rotate the camera */
     void PossessCamera()
     {
-        if (gameObject != null)
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+
+        }
+
+        else if (gameObject != null)
         {
             cameraPanAction.performed += PanCamera;
         }
