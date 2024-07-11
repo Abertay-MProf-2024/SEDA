@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3692431891003340576}
   - component: {fileID: 6724467558982403004}
+  - component: {fileID: 2902156163167931218}
   m_Layer: 0
   m_Name: WindTurbine
   m_TagString: Untagged
@@ -50,6 +51,27 @@ MonoBehaviour:
   newresourceData: {fileID: 0}
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+--- !u!65 &2902156163167931218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50886030656341932}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8, y: 1.5074842, z: 1.8}
+  m_Center: {x: 0, y: 0.7537421, z: 0}
 --- !u!1 &1986917491958043614
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +166,6 @@ GameObject:
   - component: {fileID: 2960008437954531609}
   - component: {fileID: 3143813777808176753}
   - component: {fileID: 7269170385071078266}
-  - component: {fileID: 6555801294771033332}
   m_Layer: 0
   m_Name: WindTurbineBase
   m_TagString: Untagged
@@ -218,24 +239,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6555801294771033332
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4048581823944267440}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 93.447426, y: 94.10066, z: 353.09576}
-  m_Center: {x: 0, y: -1.022932, z: -176.66751}
