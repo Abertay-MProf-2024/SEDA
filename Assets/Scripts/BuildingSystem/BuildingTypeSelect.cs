@@ -29,7 +29,7 @@ public class BuildingTypeSelect : MonoBehaviour
             }
         }
     }
-
+    //ResetButtonColour
     public void GridOff()
     {
         foreach (GameObject button in buildingButtons)
