@@ -408,7 +408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Season_Autumn
+  m_text: Autumn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1848,6 +1848,7 @@ GameObject:
   - component: {fileID: 2328882586844092075}
   - component: {fileID: 248852245280774774}
   - component: {fileID: 6893169601295268459}
+  - component: {fileID: 1680084070480796207}
   m_Layer: 5
   m_Name: Season_Icon
   m_TagString: Untagged
@@ -1904,14 +1905,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!114 &6893169601295268459
 MonoBehaviour:
@@ -1969,6 +1970,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1680084070480796207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491026269343377112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74178d03551738549a02d457af5dd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seasonIcon: {fileID: 248852245280774774}
+  seasonText: {fileID: 7143184464978902524}
+  winterIcon: {fileID: 21300000, guid: 4a10371d6497f354d99d601e4c1e8d00, type: 3}
+  springIcon: {fileID: 21300000, guid: 5d5248dabb2d8f34ca61ae72963f1387, type: 3}
+  summerIcon: {fileID: 21300000, guid: da082e4843289144d9f86ff04e1a3697, type: 3}
+  autumnIcon: {fileID: 21300000, guid: fde2fc2179356ca41b5a8d43f1394780, type: 3}
 --- !u!1 &535743767474306740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4038,8 +4057,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5354,7 +5373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Season_Winter
+  m_text: Winter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7456,8 +7475,6 @@ MonoBehaviour:
   Tutorial_Step_5: {fileID: 0}
   Tutorial_Step_4: {fileID: 0}
   Is_Set_Tutorial_Step_5: 1
-  actionAsset: {fileID: -944628639613478452, guid: 67f30afa779e22942afacb4ae4197719,
-    type: 3}
   buildingTypeSelect: {fileID: 6546463509190114180}
 --- !u!1 &2347752966101913253
 GameObject:
@@ -10455,7 +10472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4a10371d6497f354d99d601e4c1e8d00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12414,7 +12431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Season_Summer
+  m_text: Summer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12550,7 +12567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5d5248dabb2d8f34ca61ae72963f1387, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17575,7 +17592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Season_Spring
+  m_text: Spring
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19995,6 +20012,7 @@ GameObject:
   - component: {fileID: 786045963931682590}
   - component: {fileID: 307928768282910832}
   - component: {fileID: 2252863484326665318}
+  - component: {fileID: 8653787010820638209}
   m_Layer: 5
   m_Name: Season_Current_Background
   m_TagString: Untagged
@@ -20061,6 +20079,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8653787010820638209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6799428798554966998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74178d03551738549a02d457af5dd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seasonIcon: {fileID: 1634663307037425678}
+  seasonText: {fileID: 6362939249062895135}
+  winterIcon: {fileID: 21300000, guid: 4a10371d6497f354d99d601e4c1e8d00, type: 3}
+  springIcon: {fileID: 21300000, guid: 5d5248dabb2d8f34ca61ae72963f1387, type: 3}
+  summerIcon: {fileID: 21300000, guid: da082e4843289144d9f86ff04e1a3697, type: 3}
+  autumnIcon: {fileID: 21300000, guid: fde2fc2179356ca41b5a8d43f1394780, type: 3}
 --- !u!1 &6841822534041132740
 GameObject:
   m_ObjectHideFlags: 0
@@ -23506,7 +23542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0785df23a47d4b45bb8a15082329e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputs: {fileID: -944628639613478452, guid: 67f30afa779e22942afacb4ae4197719, type: 3}
   sceneMusic: {fileID: 8300000, guid: d7d4c261b7e7d8140ad924b9413d542e, type: 3}
   levelTimeStore: 5
   startingFoodAmount: 10
@@ -26195,7 +26230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fde2fc2179356ca41b5a8d43f1394780, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26352,7 +26387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: da082e4843289144d9f86ff04e1a3697, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
