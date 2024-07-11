@@ -26,7 +26,7 @@ public class AudioZoomController : MonoBehaviour
 
         if (orthoCam != null)
         {
-            CameraPan cameraPan = orthoCam.GetComponent<CameraPan>();
+            InputManager cameraPan = orthoCam.GetComponent<InputManager>();
             minZoom = cameraPan.minZoomDistance;
             maxZoom = cameraPan.maxZoomDistance;
         }
