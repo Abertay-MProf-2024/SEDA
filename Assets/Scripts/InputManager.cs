@@ -1,19 +1,17 @@
-// Remy Pijuan
-
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class CameraPan : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     // The input action asset containing all actions related to camera movement
-    [SerializeField] InputActionAsset cameraActions;
+    [SerializeField] InputActionAsset actions;
 
     // Camera pan actions
-    InputAction possessAction;
-    InputAction cameraPanAction;
-    InputAction unpossessAction;
+    InputAction tapInput;
+    InputAction tapLocationInput;
+    InputAction releaseInput;
     
     // Camera zoom actions
     InputAction mouseWheelAction;
@@ -50,6 +48,10 @@ public class CameraPan : MonoBehaviour
     float panSpeedTouch;
     float panSpeedMouse;
 
+    // The locations on the screen where the player has tapped and released
+    Vector2 tapLocation;
+    Vector2 releaseLocation;
+
     [SerializeField]
     [Tooltip("Controls the camera's zoom speed.")]
     float zoomSpeed = 1f;
@@ -71,34 +73,41 @@ public class CameraPan : MonoBehaviour
     public float maxZoomDistance = 10f;
 
     // These function references are necessary for callback registering/deregistering to work properly
-    Action<InputAction.CallbackContext> possessCamera;
-    Action<InputAction.CallbackContext> unpossessCamera;
+    Action<InputAction.CallbackContext> tapAction;
+    Action<InputAction.CallbackContext> releaseAction;
     Action<InputAction.CallbackContext> startPinchZoom;
     Action<InputAction.CallbackContext> stopPinchZoom;
+
+    // References to scripts that use input
+    BuildSystem buildingSystem;
+    LevelManager levelManager;
+    StandingStone standingStone;
+
+
 
     /** Set all initial variables and required callbacks */
     void Awake()
     {
-        if (cameraActions)
+        if (actions)
         {
-            possessAction = cameraActions.FindAction("PossessCamera");
-            cameraPanAction = cameraActions.FindAction("PanCamera");
-            unpossessAction = cameraActions.FindAction("UnpossessCamera");
-            mouseWheelAction = cameraActions.FindAction("MouseWheelZoom");
-            touchContactAction = cameraActions.FindAction("SecondaryTouchContact");
-            primaryFingerPosAction = cameraActions.FindAction("PrimaryFingerPosition");
-            secondaryFingerPosAction = cameraActions.FindAction("SecondaryFingerPosition");
+            tapInput = actions.FindAction("Tap");
+            tapLocationInput = actions.FindAction("TapLocation");
+            releaseInput = actions.FindAction("TapRelease");
+            mouseWheelAction = actions.FindAction("MouseWheelZoom");
+            touchContactAction = actions.FindAction("SecondaryTouchContact");
+            primaryFingerPosAction = actions.FindAction("PrimaryFingerPosition");
+            secondaryFingerPosAction = actions.FindAction("SecondaryFingerPosition");
         }
 
         if (gameObject != null)
         {
-            possessCamera = ctx => PossessCamera();
-            unpossessCamera = ctx => UnpossessCamera();
+            tapAction = ctx => Tap();
+            releaseAction = ctx => Release();
             startPinchZoom = ctx => StartPinchZoom();
             stopPinchZoom = ctx => StopPinchZoom();
 
-            possessAction.performed += possessCamera;
-            unpossessAction.performed += unpossessCamera;
+            tapInput.performed += tapAction;
+            releaseInput.performed += releaseAction;
             mouseWheelAction.performed += MouseWheelZoom;
             touchContactAction.performed += startPinchZoom;
             touchContactAction.canceled += stopPinchZoom;
@@ -114,6 +123,9 @@ public class CameraPan : MonoBehaviour
 
     void Start()
     {
+        levelManager = FindAnyObjectByType<LevelManager>();
+        standingStone = FindAnyObjectByType<StandingStone>();
+
         if (orthoCam = FindAnyObjectByType<Camera>())
         {
             initialOrthoSize = orthoCam.orthographicSize;
@@ -121,24 +133,24 @@ public class CameraPan : MonoBehaviour
     }
 
     /** While the player is touching the screen, they can rotate the camera */
-    void PossessCamera()
+    void Tap()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
-
         }
 
         else if (gameObject != null)
         {
-            cameraPanAction.performed += PanCamera;
+            tapLocation = tapLocationInput.ReadValue<Vector2>();
+            tapLocationInput.performed += PanCamera;
         }
     }
 
     /** Pan the camera when the player taps and drags the screen */
     void PanCamera(InputAction.CallbackContext context)
     {
-        Vector2 currentPos = context.ReadValue<Vector2>();
+        Vector2 currentPos = releaseLocation = context.ReadValue<Vector2>();
 
         if (isCursorPosInitialised)
         {
@@ -224,13 +236,33 @@ public class CameraPan : MonoBehaviour
     }
 
     /** When the player lifts their finger from the screen, the camera stops moving */
-    void UnpossessCamera()
+    void Release()
     {
-        if (gameObject != null)
+        tapLocationInput.performed -= PanCamera;
+        isCursorPosInitialised = false;
+
+        buildingSystem = FindAnyObjectByType<BuildSystem>();
+
+        if (Camera.main != null && (tapLocation == Vector2.zero || releaseLocation == Vector2.zero || (Vector2.Distance(tapLocation, releaseLocation) < 5)))
         {
-            cameraPanAction.performed -= PanCamera;
-            isCursorPosInitialised = false;
+            Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
+            RaycastHit hit;
+
+            if (standingStone && Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
+            {
+                standingStone.OpenStandingStone();
+            }
+            else if (buildingSystem && BuildSystem.isInBuildMode)
+            {
+                buildingSystem.PlaceBuilding(ray);
+            }
+            else if (levelManager)
+            {
+                levelManager.SelectTile(ray);
+            }
         }
+
+        tapLocation = releaseLocation = Vector2.zero;
     }
 
     /** Applies camera zoom based on input from the mouse wheel */
@@ -251,7 +283,7 @@ public class CameraPan : MonoBehaviour
     void StartPinchZoom()
     {
         // Disable Camera Pan
-        UnpossessCamera();
+        Release();
 
         // Enable Pinch Zoom
         if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
@@ -335,14 +367,14 @@ public class CameraPan : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (possessAction != null)
+        if (tapInput != null)
         {
-            possessAction.performed -= possessCamera;
+            tapInput.performed -= tapAction;
         }
 
-        if (unpossessAction != null)
+        if (releaseInput != null)
         {
-            unpossessAction.performed -= unpossessCamera;
+            releaseInput.performed -= releaseAction;
         }
 
         if (mouseWheelAction != null)
@@ -356,7 +388,7 @@ public class CameraPan : MonoBehaviour
             touchContactAction.canceled -= stopPinchZoom;
         }
 
-        UnpossessCamera();
+        Release();
         StopPinchZoom();
     }
 }

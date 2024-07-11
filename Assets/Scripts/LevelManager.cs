@@ -7,14 +7,6 @@ public class LevelManager : MonoBehaviour
     // Level Settings is a singleton
     private static LevelManager instance;
 
-    [SerializeField] InputActionAsset inputs;
-
-    InputAction tapAction;
-    InputAction tapLocation;
-
-    // This function reference is necessary for callback registering/deregistering to work properly
-    Action<InputAction.CallbackContext> possessCamera;
-
     [SerializeField] AudioClip sceneMusic;
 
     // time in months
@@ -53,12 +45,6 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        tapAction = inputs.FindAction("PossessCamera");
-        possessCamera = ctx => SelectTile();
-        tapAction.performed += possessCamera;
-
-        tapLocation = inputs.FindAction("PanCamera");
-
         Instantiate(musicPlayer);
         SceneMusic.instance.ChangeMusicTrack(sceneMusic);
 
@@ -66,7 +52,7 @@ public class LevelManager : MonoBehaviour
         Inventory.constructionMaterials = startingConstructionMaterialAmount;
     }
 
-    void SelectTile()
+    public void SelectTile(Ray ray)
     {
         if (outlineParent)
         {
@@ -76,7 +62,6 @@ public class LevelManager : MonoBehaviour
 
         int radius = 0;
 
-        Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<Vector2>());
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
@@ -177,10 +162,5 @@ public class LevelManager : MonoBehaviour
         }    
 
         return success;
-    }
-
-    private void OnDestroy()
-    {
-        tapAction.performed -= possessCamera;
     }
 }

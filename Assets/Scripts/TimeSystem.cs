@@ -109,6 +109,11 @@ public class TimeSystem : MonoBehaviour
         monthlyEvents.Add(new TimedEvent { action = action, timeToRun = months, isRepeating = repeat, timeLeft = months });
     }
 
+    public void SkipMonth()
+    {
+        month++;
+    }
+
     /** Runs the countdowns for every daily event in the list
      *  Runs each event when the countdown is finished
      */
@@ -174,7 +179,7 @@ public class TimeSystem : MonoBehaviour
     }
 
     /** Increment month (and year, rolling over from December to January) */
-    void IncrementMonth()
+    public void IncrementMonth()
     {
         month++;
         RunEvents(monthlyEvents);
