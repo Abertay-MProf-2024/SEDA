@@ -135,12 +135,7 @@ public class InputManager : MonoBehaviour
     /** While the player is touching the screen, they can rotate the camera */
     void Tap()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-
-        else if (gameObject != null)
+        if (gameObject != null)
         {
             tapLocation = tapLocationInput.ReadValue<Vector2>();
             tapLocationInput.performed += PanCamera;
@@ -240,6 +235,11 @@ public class InputManager : MonoBehaviour
     {
         tapLocationInput.performed -= PanCamera;
         isCursorPosInitialised = false;
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
 
         buildingSystem = FindAnyObjectByType<BuildSystem>();
 
