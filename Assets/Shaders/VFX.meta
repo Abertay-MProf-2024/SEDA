@@ -1,6 +1,10 @@
 fileFormatVersion: 2
-guid: 71a2bcf958b1d6a4195961df3c51a30d
+<<<<<<<< HEAD:Assets/Scenes/Designer_UI.unity.meta
+guid: 1c675f787ef91984b8935928cf497ad5
+========
+guid: 7dacc3eb8b4256248b09c143ec22c85f
 folderAsset: yes
+>>>>>>>> VFX-Water:Assets/Shaders/VFX.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

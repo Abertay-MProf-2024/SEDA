@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: fc38489357be26747aa50cdeb62a740f
+<<<<<<<< HEAD:Assets/Resource Prefabs.meta
+guid: 788f7d2dc5a75304c992c361286e3ee0
+========
+guid: 4a1c0d62c764d7048bd1b41e54bfe59e
+>>>>>>>> origin/VFX_Thunderstorm:Assets/Textures/VFX.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
