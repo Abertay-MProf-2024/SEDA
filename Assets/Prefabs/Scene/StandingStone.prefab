@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8516197788508663327}
   - component: {fileID: 256485519260521873}
   - component: {fileID: 237971528444756472}
+  - component: {fileID: 110413420075161802}
   m_Layer: 0
   m_Name: StandingStone
   m_TagString: StandingStone
@@ -125,3 +126,22 @@ MonoBehaviour:
   kelpie: {fileID: 0}
   cailleach: {fileID: 0}
   IslandToChange: {fileID: 0}
+  StandingStonePrefab: {fileID: -7868653969694002676, guid: 45cb29f366a60094386d862bdaa1613b,
+    type: 3}
+--- !u!114 &110413420075161802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546108733566870136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8d61a477003644b914d1428c864ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceData: {fileID: 11400000, guid: c1e07045faaa69c468eab3d7999890b3, type: 2}
+  oldresourceData: {fileID: 0}
+  newresourceData: {fileID: 11400000, guid: c1e07045faaa69c468eab3d7999890b3, type: 2}
+  RequireWaterEnergy: 0
+  IsItBasedOnSoilGrade: 0

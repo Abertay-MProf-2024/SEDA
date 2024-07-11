@@ -400,3 +400,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuPrefab: {fileID: 2684725245545600986, guid: 40643a7db418baa4d9fe7a8a542be7da,
     type: 3}
+  MainSettingsMenuPrefab: {fileID: 2684725245545600986, guid: 563abfcd150a5d846bd3ba92adf98f38,
+    type: 3}

@@ -735,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 2650624639957663615, guid: a2ada996c5f6b3440aea834a0d945858,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenPauseMenu
+      value: OpenMainSettingsMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2650624639957663615, guid: a2ada996c5f6b3440aea834a0d945858,
         type: 3}

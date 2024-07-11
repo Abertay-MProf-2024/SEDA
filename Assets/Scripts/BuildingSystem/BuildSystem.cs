@@ -1,52 +1,22 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 public class BuildSystem : MonoBehaviour
 {
-
- 
     public GameObject Tutorial_Step_5;
     public GameObject Tutorial_Step_4;
     public bool Is_Set_Tutorial_Step_5=true;
 
-
-    [SerializeField]
-    InputActionAsset actionAsset;
-
     [SerializeField]
     BuildingTypeSelect buildingTypeSelect;
 
-    InputAction placeAction;
-    InputAction tapLocation;
+    public static bool isInBuildMode;
 
-    public static bool isInBuildMode = false;
-
-    // This function reference is necessary for callback registering/deregistering to work properly
-    Action<InputAction.CallbackContext> possessCamera;
-
-    private void Start()
+    public void PlaceBuilding(Ray ray)
     {
-        placeAction = actionAsset.FindAction("PossessCamera");
-        possessCamera = ctx => PlaceBuilding();
-        placeAction.performed += possessCamera;
-
-        tapLocation = actionAsset.FindAction("PanCamera");
-    }
-
-    void PlaceBuilding()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<UnityEngine.Vector2>());
         RaycastHit hit;
 
-        if(EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-
-        }
-
-        else if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.layer != 5)
+        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.layer != 5)
         {
             if (hit.collider.gameObject.tag == "Grid")
             {
@@ -61,11 +31,6 @@ public class BuildSystem : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void OnDestroy()
-    {
-        placeAction.performed -= possessCamera;
     }
 
     public void ShowTutorial()// Designer Tutorial test

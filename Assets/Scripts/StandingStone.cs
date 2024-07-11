@@ -1,25 +1,16 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class StandingStone : MonoBehaviour
 {
-    [SerializeField]
-    InputActionAsset actionAsset;
-
     public Kelpie kelpie;
     
     public Cailleach cailleach;
-
-    InputAction placeAction;
-    InputAction tapLocation;
 
     Terrainsystem TS1;
 
     [SerializeField] GameObject IslandToChange;
 
-    // This function reference is necessary for callback registering/deregistering to work properly
-    Action<InputAction.CallbackContext> click;
+    [SerializeField] StandingStonPrefabPopUp StandingStonePrefab;
 
     private void Start()
     {
@@ -30,12 +21,6 @@ public class StandingStone : MonoBehaviour
         if(cailleach)
             cailleach.gameObject.SetActive(false);
 
-        placeAction = actionAsset.FindAction("click");
-        click = ctx => Interact();
-        placeAction.performed += click;
-
-        tapLocation = actionAsset.FindAction("PanCamera");
-
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
         {
@@ -44,24 +29,22 @@ public class StandingStone : MonoBehaviour
         }
     }
 
-    void Interact()
+    public void OpenStandingStone()
     {
-        Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<UnityEngine.Vector2>());
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
+        if (StandingStonePrefab)
         {
-            Debug.Log("Standngstone");
-            VeilSwitch();
+            StandingStonPrefabPopUp standingStoneUI = Instantiate(StandingStonePrefab.gameObject).GetComponent<StandingStonPrefabPopUp>();
+            standingStoneUI.SetStandingStoneReference(this);
         }
     }
 
-    void VeilSwitch()
+    public void VeilSwitch()
     {
         if(kelpie != null)
             kelpie.StandingStoneKelpieImpact();
         if (cailleach != null)
             cailleach.StandingStoneCailleachImpact();
-
+        
         Terrainsystem[] list = IslandToChange.GetComponentsInChildren<Terrainsystem>();
 
         foreach (Terrainsystem t in list)
@@ -69,12 +52,14 @@ public class StandingStone : MonoBehaviour
             if (t.terraintype == t.OldsoilType)
             {
                 t.terraintype = t.NewSoilType;
+                t.InitialTerrainList();
                 t.ChangeinGrade(0,20,true);
                 t.SetTerrainMaterialProperties();
             }
             else
             {
                 t.terraintype = t.OldsoilType;
+                t.InitialTerrainList();
                 t.ChangeinGrade(0, 20, true);
                 t.SetTerrainMaterialProperties();
             }
@@ -85,30 +70,19 @@ public class StandingStone : MonoBehaviour
         {
             if (t.owningGridObject != null)
             {
-                
                 Building building = t.owningGridObject.GetBuilding();
                 if (building != null)
                 {
                     if (building.resourceData == building.oldresourceData)
                     {
-                        building.VeilChangeActivate();
-/*                        newResourceData = 
-                            Destroy
-                            Instantiate*/
-                        
+                        building.VeilChangeActivate(); 
                     }
                     else
                     {
                         building.VeilChangeDeactivate();
-                        
                     }
                 }
             }
         }
-    }
-
-    private void OnDestroy()
-    {
-        placeAction.performed -= click;
     }
 }
