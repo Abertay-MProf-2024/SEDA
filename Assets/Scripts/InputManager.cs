@@ -236,14 +236,10 @@ public class InputManager : MonoBehaviour
         tapLocationInput.performed -= PanCamera;
         isCursorPosInitialised = false;
 
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-
         buildingSystem = FindAnyObjectByType<BuildSystem>();
 
-        if (Camera.main != null && (tapLocation == Vector2.zero || releaseLocation == Vector2.zero || (Vector2.Distance(tapLocation, releaseLocation) < 5)))
+        if (Camera.main != null && !EventSystem.current.IsPointerOverGameObject() && 
+            (tapLocation == Vector2.zero || releaseLocation == Vector2.zero || (Vector2.Distance(tapLocation, releaseLocation) < 5)))
         {
             Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
             RaycastHit hit;
