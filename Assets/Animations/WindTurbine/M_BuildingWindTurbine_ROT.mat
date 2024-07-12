@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WindTurbine_ROT
+  m_Name: M_BuildingWindTurbine_ROT
   m_Shader: {fileID: -6465566751694194690, guid: db336ac08fd5be542bdacc15b258bf12,
     type: 3}
   m_Parent: {fileID: 0}
