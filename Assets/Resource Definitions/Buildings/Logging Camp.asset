@@ -27,7 +27,7 @@ MonoBehaviour:
   bribeCostConstruction: 5
   canBuild: 1
   buildingCostFood: 3
-  buildingCostMaterial: 10
+  buildingCostMaterial: 5
   upKeepCostEnergy: 0
   upKeepCostWater: 0
   upKeepCostFood: 0
