@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 331009746334493139}
   - component: {fileID: 1459700591255368131}
   - component: {fileID: 1136147090688802008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PH_Inland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1005616974851408377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0398407, y: 0.09599894, z: 0.6240883}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
