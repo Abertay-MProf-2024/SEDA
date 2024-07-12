@@ -14,34 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: Forest
   icon: {fileID: 0}
-  inGameAsset: {fileID: 6777488678298449921, guid: e061bc095a0932a48a67cf161c77740f,
+  inGameAsset: {fileID: 7543974964756465544, guid: bf23c31cc275890418b7c7ce2ee3f100,
     type: 3}
-  sizeWidthTile: 0
-  sizeLengthTile: 0
+  sizeWidthTile: 1
+  sizeLengthTile: 1
   structureType: 7
   tileUnder: {fileID: 0}
-  biomeTypes: 
-  tileTerrainTypes: 
-  canBuild: 1
-  buildingCostFood: 20
+  biomeTypes: 00000000
+  tileTerrainTypes: 0100000003000000
+  CreatureTile: 0
+  bribeCostFood: 15
+  bribeCostConstruction: 5
+  canBuild: 0
+  buildingCostFood: 0
   buildingCostMaterial: 0
   upKeepCostEnergy: 0
   upKeepCostWater: 0
   upKeepCostFood: 0
   upKeepCostMaterial: 0
   isResourceTapped: 0
+  collectorBuildings: 05000000
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
-  baseOutputMaterial: 0
-  buildingOutputMulti: 0
+  baseOutputMaterial: 5
+  buildingOutputMulti: 5
   impactSource: 1
-  impactRadiusTiles: 5
-  buffAmount: 0.5
+  impactRadiusTiles: 1
+  buffAmount: 0
   nerfAmount: 0
   tileImpactBuff:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: cd1916fecfec7ba4ba50cdc08430342a, type: 2}
+  - {fileID: 11400000, guid: e434d313045e6a840a344c33db2e5784, type: 2}
   tileImpactNerf: []
-  isImpactSoilGrade: 0
-  buffSoilGradeAmount: 0
+  isImpactSoilGrade: 1
+  buffSoilGradeAmount: 20
   nerfSoilGradeAmount: 0

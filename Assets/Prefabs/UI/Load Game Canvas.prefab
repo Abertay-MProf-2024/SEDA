@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 8795267439137051872}
   - component: {fileID: 5116345894510449427}
   - component: {fileID: 4924207879818536260}
+  - component: {fileID: 4601010750917490174}
   m_Layer: 5
   m_Name: Save Slot 1
   m_TagString: Untagged
@@ -363,6 +364,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4601010750917490174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2495998327960226568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: e0db540de2d5c80479f5b7f7833933a2, type: 3}
+  HoverSound: {fileID: 0}
 --- !u!1 &3725971069442532866
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +390,7 @@ GameObject:
   - component: {fileID: 4828732738874803587}
   - component: {fileID: 5727492480825496898}
   - component: {fileID: 1035116108919875144}
+  - component: {fileID: 5187942872505444196}
   m_Layer: 5
   m_Name: Save Slot 2
   m_TagString: Untagged
@@ -465,7 +481,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -484,6 +500,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5187942872505444196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3725971069442532866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: e0db540de2d5c80479f5b7f7833933a2, type: 3}
+  HoverSound: {fileID: 0}
 --- !u!1 &4498354093575871653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1194,7 @@ GameObject:
   - component: {fileID: 7994263287436848022}
   - component: {fileID: 4551074718329583584}
   - component: {fileID: 1801015401560778597}
+  - component: {fileID: 480393979500071002}
   m_Layer: 5
   m_Name: Save Slot 3
   m_TagString: Untagged
@@ -1273,6 +1304,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &480393979500071002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555735576248990561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: e0db540de2d5c80479f5b7f7833933a2, type: 3}
+  HoverSound: {fileID: 0}
 --- !u!1 &8496714449659391015
 GameObject:
   m_ObjectHideFlags: 0

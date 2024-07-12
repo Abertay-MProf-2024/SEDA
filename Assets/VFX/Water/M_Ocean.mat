@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-593643888016353715
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -33,10 +20,14 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: _FoamColor _Wave_speed
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_454942caedcd4796be0c79fe73f94805_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 02de99f53a219864098f53dbec76c7b5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -51,31 +42,30 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float: 0
-    - _Foam_amount: 0
-    - _Foam_cutoff: 1.1
-    - _Foam_scroll_speed: 0.002
-    - _Foam_speed: 1.07
-    - _Foamscale: 117
-    - _Gradient_Noise_Scale: -2.6
-    - _Gradient_Noise_scale: 0.299
+    - _Distorortion_speed: 0.003
+    - _Distort_amount: 0.985
+    - _Distortion_scale: 200
+    - _Foam_amount: 1.87
+    - _Foam_scroll_speed: 0.004
+    - _Foamscale: 123
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Ripple_Density: 1
-    - _Ripple_Speed: 1
-    - _Texture_Turbulence: 1.6
-    - _Voronoi_Scale: 0.075
-    - _Water_Texture_Scale: 2.3
-    - _Wave_Speed2: 0.28
-    - _Wave_intensity: 1
-    - _Wave_scale: 3.22
-    - _Wave_smoothing: 8
-    - _Wave_speed: 0
-    - _Wave_speed1: 1
-    - _Wave_speed_1: 1.06
-    - _Wave_speed_2: 0.1
+    - _Water_texture_tiling: 1.4
     m_Colors:
-    - _FoamColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+    - _FoamColor: {r: 0.94509804, g: 0.98039216, b: 0.93333334, a: 1}
     - _Water_Color1: {r: 0.11372549, g: 0.20784314, b: 0.34117648, a: 1}
-    - _Water_color2: {r: 0.27058825, g: 0.48235294, b: 0.6156863, a: 1}
+    - _Water_color2: {r: 0.65882355, g: 0.85490197, b: 0.8627451, a: 1}
   m_BuildTextureStacks: []
+--- !u!114 &6724412755476645023
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

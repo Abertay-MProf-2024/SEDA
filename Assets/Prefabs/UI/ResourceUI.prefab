@@ -289,12 +289,6 @@ MonoBehaviour:
   energy: 0
   owningGridObject: {fileID: 0}
   radius: 0
-  GiantbribeCostFood: 15
-  GiantbribeCostConstruction: 5
-  KelpiebribeCostFood: 20
-  KelpiebribeCostConstruction: 0
-  CailleachbribeCostFood: 0
-  CailleachbribeCostConstruction: 20
 --- !u!1 &3730613795538579621
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,12 +444,6 @@ MonoBehaviour:
   energy: 0
   owningGridObject: {fileID: 0}
   radius: 0
-  GiantbribeCostFood: 15
-  GiantbribeCostConstruction: 5
-  KelpiebribeCostFood: 20
-  KelpiebribeCostConstruction: 0
-  CailleachbribeCostFood: 0
-  CailleachbribeCostConstruction: 20
 --- !u!1 &3746918501935664759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,12 +1005,6 @@ MonoBehaviour:
   energy: 0
   owningGridObject: {fileID: 0}
   radius: 0
-  GiantbribeCostFood: 15
-  GiantbribeCostConstruction: 5
-  KelpiebribeCostFood: 20
-  KelpiebribeCostConstruction: 0
-  CailleachbribeCostFood: 0
-  CailleachbribeCostConstruction: 20
 --- !u!1 &8030787996982556111
 GameObject:
   m_ObjectHideFlags: 0

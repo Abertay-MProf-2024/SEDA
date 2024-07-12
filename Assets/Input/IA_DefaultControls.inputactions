@@ -6,7 +6,7 @@
             "id": "ffec93ad-7047-4be7-a1e5-b7c0020bd4fd",
             "actions": [
                 {
-                    "name": "PossessCamera",
+                    "name": "Tap",
                     "type": "Button",
                     "id": "c73837c7-0746-4ad4-b49f-ca2e7eca4a1b",
                     "expectedControlType": "Button",
@@ -15,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PanCamera",
+                    "name": "TapLocation",
                     "type": "Value",
                     "id": "5e2e0fec-2d88-44f8-80e1-310969f32187",
                     "expectedControlType": "Vector2",
@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "UnpossessCamera",
+                    "name": "TapRelease",
                     "type": "Button",
                     "id": "e39ed77b-6300-4a70-87b4-ee4839757354",
                     "expectedControlType": "Button",
@@ -77,7 +77,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse",
-                    "action": "PanCamera",
+                    "action": "TapLocation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -88,7 +88,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Touchscreen",
-                    "action": "PanCamera",
+                    "action": "TapLocation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -99,7 +99,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mouse",
-                    "action": "PossessCamera",
+                    "action": "Tap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -110,7 +110,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Touchscreen",
-                    "action": "PossessCamera",
+                    "action": "Tap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -121,7 +121,7 @@
                     "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "Mouse",
-                    "action": "UnpossessCamera",
+                    "action": "TapRelease",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -132,7 +132,7 @@
                     "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "Touchscreen",
-                    "action": "UnpossessCamera",
+                    "action": "TapRelease",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

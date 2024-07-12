@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: Kelpie
   icon: {fileID: 0}
-  inGameAsset: {fileID: 6777488678298449921, guid: e061bc095a0932a48a67cf161c77740f,
-    type: 3}
-  sizeWidthTile: 0
-  sizeLengthTile: 0
+  inGameAsset: {fileID: 0}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
   structureType: 18
   tileUnder: {fileID: 0}
   biomeTypes: 
   tileTerrainTypes: 
+  CreatureTile: 1
+  bribeCostFood: 20
+  bribeCostConstruction: 0
   canBuild: 0
   buildingCostFood: 0
   buildingCostMaterial: 0
@@ -40,8 +42,7 @@ MonoBehaviour:
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []
-  tileImpactNerf:
-  - {fileID: 0}
+  tileImpactNerf: []
   isImpactSoilGrade: 0
   buffSoilGradeAmount: 0
   nerfSoilGradeAmount: 0

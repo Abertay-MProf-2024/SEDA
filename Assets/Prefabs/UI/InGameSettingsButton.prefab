@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 161634640821574269}
   - component: {fileID: 5593804561185091006}
   - component: {fileID: 524253872072123961}
+  - component: {fileID: 6862483423703424941}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -133,6 +134,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6862483423703424941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21684750408376156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &4351175934132562202
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,4 +399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuPrefab: {fileID: 2684725245545600986, guid: 40643a7db418baa4d9fe7a8a542be7da,
+    type: 3}
+  MainSettingsMenuPrefab: {fileID: 2684725245545600986, guid: 563abfcd150a5d846bd3ba92adf98f38,
     type: 3}

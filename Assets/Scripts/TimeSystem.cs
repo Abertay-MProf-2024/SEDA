@@ -20,6 +20,14 @@ enum Month
     December
 }
 
+public enum Season
+{
+    Winter,
+    Spring,
+    Summer,
+    Autumn
+}
+
 class TimedEvent
 {
     public Action action;
@@ -42,8 +50,11 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] TextMeshProUGUI monthDisplay;
     [SerializeField] TextMeshProUGUI timeRemainingDisplay;
 
-    // Level select UI prefab
-    [SerializeField] GameObject LevelSelectPrefab;
+    // UI prefabs
+    [SerializeField] GameObject gameOverPrefab;
+    [SerializeField] GameObject levelCompletePrefab;
+    [SerializeField] GameObject winScreenPrefab;
+    public GameObject timeSystem;
 
     int day = 1;
     float timeElapsed = 0f;
@@ -52,7 +63,13 @@ public class TimeSystem : MonoBehaviour
     Month month = Month.January;
     int numOfDaysInMonth = 31;
 
+    static Season season = Season.Winter;
+
     int year = 1;
+
+    static int pauseMenus = 0;
+
+    bool isLevelOver = false;
 
 
     /** The time manager is a singleton
@@ -73,11 +90,13 @@ public class TimeSystem : MonoBehaviour
     /** Initialise displays and start the daily tick */
     private void Start()
     {
+        if (timeSystem)
+            Pause();
+
         SetDay();
         SetMonth();
         SetTimeRemainingDisplay();
         AddMonthlyEvent(CountDownLevelTime);
-        AddMonthlyEvent(Inventory.SetWeather);
         StartCoroutine(DailyTick());
     }
 
@@ -98,6 +117,11 @@ public class TimeSystem : MonoBehaviour
     public static void AddMonthlyEvent(Action action, int months=1, bool repeat=true)
     {
         monthlyEvents.Add(new TimedEvent { action = action, timeToRun = months, isRepeating = repeat, timeLeft = months });
+    }
+
+    public void SkipMonth()
+    {
+        month++;
     }
 
     /** Runs the countdowns for every daily event in the list
@@ -165,10 +189,15 @@ public class TimeSystem : MonoBehaviour
     }
 
     /** Increment month (and year, rolling over from December to January) */
-    void IncrementMonth()
+    public void IncrementMonth()
     {
         month++;
         RunEvents(monthlyEvents);
+
+        if (isLevelOver)
+        {
+            CheckSuccessConditions();
+        }
 
         if (month > Month.December)
         {
@@ -179,6 +208,7 @@ public class TimeSystem : MonoBehaviour
         monthDisplay.text = month.ToString();
 
         AssignDaysInMonth();
+        SetSeason();
     }
 
 
@@ -201,6 +231,30 @@ public class TimeSystem : MonoBehaviour
         }
     }
 
+    /**
+     *  Set season, and update UI icon and text
+     *  Season is set at the end of each month, so the function checks for the month before the season begins
+     */
+    void SetSeason()
+    {
+        if (month == Month.February)
+        {
+            season = Season.Spring;
+        }
+        else if (month == Month.May)
+        {
+            season = Season.Summer;
+        }
+        else if (month == Month.August)
+        {
+            season = Season.Autumn;
+        }
+        else if (month == Month.November)
+        {
+            season = Season.Winter;
+        }
+    }
+
     void CountDownLevelTime()
     {
         Inventory.levelTime--;
@@ -208,14 +262,57 @@ public class TimeSystem : MonoBehaviour
 
         if (Inventory.levelTime < 1 )
         {
-            Instantiate(LevelSelectPrefab);
-            // TODO: Stop Countdown
+            isLevelOver = true;
         }
+    }
+
+    void CheckSuccessConditions()
+    {
+        if (LevelManager.AreSuccessConditionsMet())
+        {
+            // Win the level
+            GameManager.levelsCompleted++;
+
+            if (GameManager.levelsCompleted >= 3)
+            {
+                Instantiate(winScreenPrefab);
+            }
+            else
+            {
+                Instantiate(levelCompletePrefab);
+            }
+        }
+        else
+        {
+            // Lose the level
+            Instantiate(gameOverPrefab);
+        }
+        // TODO: Stop Countdown
     }
 
     void SetTimeRemainingDisplay()
     {
-        timeRemainingDisplay.text = "Time Remaining in Level: " + Inventory.levelTime + " months.";
+        timeRemainingDisplay.text = Inventory.levelTime + " months";
+    }
+
+    public static void Pause()
+    {
+        Time.timeScale = 0;
+
+        pauseMenus++;
+    }
+
+    public static void Unpause()
+    {
+        pauseMenus--;
+
+        if (pauseMenus == 0)
+            Time.timeScale = 1f;
+    }
+
+    public static Season GetCurrentSeason()
+    {
+        return season;
     }
 
     private void OnDestroy()

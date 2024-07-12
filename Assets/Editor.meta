@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Editor.meta
 guid: cfcc9911bf61b1a43b585284ce447308
+========
+guid: 7dacc3eb8b4256248b09c143ec22c85f
+>>>>>>>> origin/VFX_Thunderstorm:Assets/Shaders/VFX.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

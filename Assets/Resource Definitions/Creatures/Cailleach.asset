@@ -14,16 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: The Cailleach
   icon: {fileID: 0}
-  inGameAsset: {fileID: 6777488678298449921, guid: e061bc095a0932a48a67cf161c77740f,
-    type: 3}
-  sizeWidthTile: 0
-  sizeLengthTile: 0
+  inGameAsset: {fileID: 0}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
   structureType: 19
   tileUnder: {fileID: 0}
   biomeTypes: 
   tileTerrainTypes: 
-  canBuild: 1
-  buildingCostFood: 2
+  CreatureTile: 1
+  bribeCostFood: 0
+  bribeCostConstruction: 20
+  canBuild: 0
+  buildingCostFood: 0
   buildingCostMaterial: 0
   upKeepCostEnergy: 0
   upKeepCostWater: 0
@@ -32,19 +34,15 @@ MonoBehaviour:
   isResourceTapped: 0
   baseOutputEnergy: 0
   baseOutputWater: 0
-  baseOutputFood: 10
+  baseOutputFood: 0
   baseOutputMaterial: 0
-  buildingOutputMulti: 0.5
-  impactSource: 1
-  impactRadiusTiles: 4
-  buffAmount: 2
-  nerfAmount: 0.5
-  tileImpactBuff:
-  - {fileID: 0}
-  tileImpactNerf:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  buildingOutputMulti: 0
+  impactSource: 0
+  impactRadiusTiles: 0
+  buffAmount: 0
+  nerfAmount: 0
+  tileImpactBuff: []
+  tileImpactNerf: []
   isImpactSoilGrade: 0
   buffSoilGradeAmount: 0
   nerfSoilGradeAmount: 0

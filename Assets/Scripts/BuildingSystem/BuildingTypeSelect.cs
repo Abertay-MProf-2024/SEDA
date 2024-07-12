@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +15,7 @@ public class BuildingTypeSelect : MonoBehaviour
         {
             activeButton.GetComponent<Image>().color = Color.red;
         }
+
         else if (activeButton.GetComponent<Image>().color == Color.red)
         {
             activeButton.GetComponent<Image>().color = Color.white;
@@ -30,6 +27,16 @@ public class BuildingTypeSelect : MonoBehaviour
             {
                 button.GetComponent<Image>().color = Color.white;
             }
+        }
+    }
+    //ResetButtonColour
+    public void GridOff()
+    {
+        foreach (GameObject button in buildingButtons)
+        {
+           
+                button.GetComponent<Image>().color = Color.white;
+            
         }
     }
 
@@ -54,6 +61,7 @@ public class BuildingTypeSelect : MonoBehaviour
             element.gameObject.GetComponent<GirdStatus>().Buildmode = true;
         }
     }
+
     void BuildingCantPlace(int buildingType, GirdStatus[,] girdArray)
     {
         foreach (GirdStatus element in girdArray)
@@ -62,4 +70,10 @@ public class BuildingTypeSelect : MonoBehaviour
         }
     }
 
+    public void CloseButton()
+    {
+        currentBuildingType = null;
+        gridSystem.ToggleBuildMode(currentBuildingType, false);
+
+    }
 }

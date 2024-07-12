@@ -254,7 +254,11 @@ MonoBehaviour:
   dayDisplay: {fileID: 308509051910046984}
   monthDisplay: {fileID: 4153656629280287200}
   timeRemainingDisplay: {fileID: 6556105636049188400}
-  LevelSelectPrefab: {fileID: 4173627645841210842, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
+  gameOverPrefab: {fileID: 3060831499554861669, guid: f2885dfed962a7a4ca04654144e818ae,
+    type: 3}
+  levelCompletePrefab: {fileID: 3973516421776257299, guid: 4d9652c152dcf6c47999c22da6d6ede8,
+    type: 3}
+  winScreenPrefab: {fileID: 1331393866929807002, guid: f888e36a12e3a31409b651f765a5f6b2,
     type: 3}
 --- !u!1 &5522185489252415911
 GameObject:

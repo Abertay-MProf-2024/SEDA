@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
   m_Name: Giant
   m_EditorClassIdentifier: 
-  tileName: Giant
-  icon: {fileID: 0}
-  inGameAsset: {fileID: 6777488678298449921, guid: e061bc095a0932a48a67cf161c77740f,
-    type: 3}
-  sizeWidthTile: 0
-  sizeLengthTile: 0
+  tileName: Magnus the Giant
+  icon: {fileID: 21300000, guid: 169ee5614e4666f469b795ba1c9eaf32, type: 3}
+  inGameAsset: {fileID: 0}
+  sizeWidthTile: 1
+  sizeLengthTile: 2
   structureType: 17
   tileUnder: {fileID: 0}
   biomeTypes: 
   tileTerrainTypes: 
+  CreatureTile: 1
+  bribeCostFood: 15
+  bribeCostConstruction: 5
   canBuild: 0
   buildingCostFood: 0
   buildingCostMaterial: 0
@@ -36,7 +38,7 @@ MonoBehaviour:
   baseOutputMaterial: 0
   buildingOutputMulti: 0
   impactSource: 0
-  impactRadiusTiles: 2
+  impactRadiusTiles: 0
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []

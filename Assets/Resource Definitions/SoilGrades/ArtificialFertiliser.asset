@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
+  m_Name: ArtificialFertiliser
+  m_EditorClassIdentifier: 
+  tileName: Artificial Fertiliser
+  icon: {fileID: 0}
+  inGameAsset: {fileID: 7543974964756465544, guid: 6b761ce4b81bc65438a1dc6b234da9c9,
+    type: 3}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
+  structureType: 15
+  tileUnder: {fileID: 0}
+  biomeTypes: 00000000
+  tileTerrainTypes: 010000000300000005000000
+  CreatureTile: 0
+  bribeCostFood: 15
+  bribeCostConstruction: 5
+  canBuild: 1
+  buildingCostFood: 2
+  buildingCostMaterial: 5
+  upKeepCostEnergy: 0
+  upKeepCostWater: 0
+  upKeepCostFood: 3
+  upKeepCostMaterial: 2
+  isResourceTapped: 0
+  baseOutputEnergy: 0
+  baseOutputWater: 0
+  baseOutputFood: 0
+  baseOutputMaterial: 0
+  buildingOutputMulti: 0
+  impactSource: 1
+  impactRadiusTiles: 5
+  buffAmount: 5
+  nerfAmount: 0
+  tileImpactBuff:
+  - {fileID: 11400000, guid: d17b0d865e8ef534aa8a6c7ab4186127, type: 2}
+  - {fileID: 11400000, guid: bbf0432b9e6835a43ab451a0f7bcfd51, type: 2}
+  tileImpactNerf: []
+  isImpactSoilGrade: 1
+  buffSoilGradeAmount: 0
+  nerfSoilGradeAmount: 40

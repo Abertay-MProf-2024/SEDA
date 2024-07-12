@@ -1,49 +1,44 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BuildSystem : MonoBehaviour
 {
-    [SerializeField]
-    InputActionAsset actionAsset;
+    public GameObject Tutorial_Step_5;
+    public GameObject Tutorial_Step_4;
+    public bool Is_Set_Tutorial_Step_5=true;
 
     [SerializeField]
     BuildingTypeSelect buildingTypeSelect;
 
-    InputAction placeAction;
-    InputAction tapLocation;
+    public static bool isInBuildMode;
 
-    public static bool isInBuildMode = false;
-
-    // This function reference is necessary for callback registering/deregistering to work properly
-    Action<InputAction.CallbackContext> possessCamera;
-
-    private void Start()
+    public void PlaceBuilding(Ray ray)
     {
-        placeAction = actionAsset.FindAction("PossessCamera");
-        possessCamera = ctx => PlaceBuilding();
-        placeAction.performed += possessCamera;
-
-        tapLocation = actionAsset.FindAction("PanCamera");
-    }
-
-
-    void PlaceBuilding()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(tapLocation.ReadValue<UnityEngine.Vector2>());
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Grid")
+
+        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.layer != 5)
         {
-            GridObject hitGridObject;
-            if (hitGridObject = hit.collider.gameObject.GetComponent<GridObject>())
+            if (hit.collider.gameObject.tag == "Grid")
             {
-                hitGridObject.TryBuild(buildingTypeSelect.currentBuildingType);
+                GridObject hitGridObject;
+                if (hitGridObject = hit.collider.gameObject.GetComponent<GridObject>())
+                {
+
+                    hitGridObject.TryBuild(buildingTypeSelect.currentBuildingType);
+
+                    //ShowTutorial();// Designer Tutorial test
+
+                }
             }
         }
     }
 
-    private void OnDestroy()
+    public void ShowTutorial()// Designer Tutorial test
     {
-        placeAction.performed -= possessCamera;
+        if (Is_Set_Tutorial_Step_5)
+        {
+            Tutorial_Step_5.SetActive(true);
+            Tutorial_Step_4.SetActive(false);
+        }
     }
 }

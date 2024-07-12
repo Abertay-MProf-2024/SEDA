@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
+  m_Name: PeasAndBeans
+  m_EditorClassIdentifier: 
+  tileName: PeasAndBeans
+  icon: {fileID: 0}
+  inGameAsset: {fileID: 7543974964756465544, guid: db1ca25da234f254d9830650a317f4f8,
+    type: 3}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
+  structureType: 7
+  tileUnder: {fileID: 0}
+  biomeTypes: 00000000
+  tileTerrainTypes: 0100000003000000
+  canBuild: 1
+  buildingCostFood: 20
+  buildingCostMaterial: 0
+  upKeepCostEnergy: 0
+  upKeepCostWater: 1
+  upKeepCostFood: 0
+  upKeepCostMaterial: 0
+  isResourceTapped: 0
+  baseOutputEnergy: 0
+  baseOutputWater: 0
+  baseOutputFood: 0
+  baseOutputMaterial: 5
+  buildingOutputMulti: 5
+  impactSource: 1
+  impactRadiusTiles: 3
+  buffAmount: 2
+  nerfAmount: 0
+  tileImpactBuff:
+  - {fileID: 11400000, guid: cd1916fecfec7ba4ba50cdc08430342a, type: 2}
+  - {fileID: 11400000, guid: e434d313045e6a840a344c33db2e5784, type: 2}
+  tileImpactNerf: []
+  isImpactSoilGrade: 1
+  buffSoilGradeAmount: 20
+  nerfSoilGradeAmount: 0
