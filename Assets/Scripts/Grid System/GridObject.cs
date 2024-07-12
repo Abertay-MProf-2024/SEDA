@@ -8,6 +8,8 @@ public class GridObject : MonoBehaviour
     TerrainTypes terrainType;
     public Building buildingInstance;
 
+    bool soilgradeGrid = false;
+
     private void Start()
     {
         gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
@@ -56,14 +58,10 @@ public class GridObject : MonoBehaviour
             {
                 case Terrainsystem.SoilType.A:
                 case Terrainsystem.SoilType.B:
-                    gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentGreen;
-                    break;
                 case Terrainsystem.SoilType.C:
                 case Terrainsystem.SoilType.D:
-                    gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentOrange;
-                    break;
                 case Terrainsystem.SoilType.E:
-                    gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentBrown;
+                    gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentGreen;
                     break;
             }
         }
@@ -73,8 +71,10 @@ public class GridObject : MonoBehaviour
             gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentRed;
         }
     }
+    public void SetSoilGradeToggleOn()
+    { soilgradeGrid = true; }
 
-    public void SoilGradeDisplay(TileBase buildingType)
+    public void ToggleSoilGradeDisplay(TileBase buildingType)
     {
         float alpha = 0.75f;
 
@@ -83,11 +83,7 @@ public class GridObject : MonoBehaviour
         Color transparentBrown = new Color(0.3207547f, 0.1755072f, 0, .8f);
         Color transparentRed = new Color(0.9921568f, 0, 0.02855804f, alpha);
 
-        if (!BuildSystem.isInBuildMode)
-        {
-            gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-        }
-        else if (CanBuildOnTile(buildingType))
+        if (soilgradeGrid)
         {
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
 
@@ -105,6 +101,12 @@ public class GridObject : MonoBehaviour
                     gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentBrown;
                     break;
             }
+        }
+        else
+        {
+
+            gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+            gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentRed;
         }
     }
 

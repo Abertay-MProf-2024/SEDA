@@ -54,6 +54,11 @@ public class BuildingTypeSelect : MonoBehaviour
         }
     }
 
+    public void GridDisplay()
+    {
+        //gridSystem.
+    }
+
     void BuildingCanPlace(int buildingType, GirdStatus[,] girdArray)
     {
         foreach (GirdStatus element in girdArray )

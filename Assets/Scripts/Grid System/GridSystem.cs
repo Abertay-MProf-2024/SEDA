@@ -70,7 +70,7 @@ public class GridSystem : MonoBehaviour
             for (int y = 0; y < gridWidth; y++)
             {
                 gridTiles[x, y].ToggleBuildModePerTile(buildingType);
-                gridTiles[x, y].SoilGradeDisplay(buildingType);
+                //gridTiles[x, y].SoilGradeDisplay(buildingType);
             }
         }
     }
