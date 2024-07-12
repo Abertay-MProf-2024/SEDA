@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class BuildingCostUI : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI BuildingNameDisplay;
-    [SerializeField] TextMeshProUGUI ReqFoodDisplay;
-    [SerializeField] TextMeshProUGUI ReqConstMatDisplay;
+    [SerializeField] public TextMeshProUGUI BuildingNameDisplay;
+    [SerializeField] public TextMeshProUGUI ReqFoodDisplay;
+    [SerializeField] public TextMeshProUGUI ReqConstMatDisplay;
 
     [SerializeField] BuildingTypeSelect buildingTypeSelect;
 

@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] GameObject musicPlayer;
 
+    [SerializeField] BuildingCostUI buildingCostUI;
 
     private void Awake()
     {
@@ -93,6 +94,13 @@ public class LevelManager : MonoBehaviour
                         Instantiate(extraOutline, worldPosition, Quaternion.identity, outlineParent.transform);
                     }
                 }
+
+                //to pop up the building details when clicked on a building
+                buildingCostUI.gameObject.SetActive(true);
+                buildingCostUI.BuildingNameDisplay.text = building.name.ToString();
+                buildingCostUI.ReqFoodDisplay.text = building.resourceData.buildingCostFood.ToString();
+                buildingCostUI.ReqConstMatDisplay.text = building.resourceData.buildingCostMaterial.ToString();
+
             }
             else if ((gridTile = hit.transform.gameObject.GetComponent<GridObject>()) && (terrainTile = gridTile.terrain) && gridTile.terrain.owningGridObject)
             {

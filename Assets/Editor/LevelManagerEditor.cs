@@ -21,6 +21,8 @@ public class LevelManagerEditor : Editor
     SerializedProperty extraOutline;
 
     SerializedProperty musicPlayer;
+    SerializedProperty buildingCostUI;
+
 
     private void OnEnable()
     {
@@ -40,6 +42,8 @@ public class LevelManagerEditor : Editor
         extraOutline = serializedObject.FindProperty("extraOutline");
 
         musicPlayer = serializedObject.FindProperty("musicPlayer");
+
+        buildingCostUI = serializedObject.FindProperty("buildingCostUI");
     }
 
     public override void OnInspectorGUI()
@@ -65,6 +69,7 @@ public class LevelManagerEditor : Editor
 
         EditorGUILayout.Space();
         EditorGUILayout.PropertyField(musicPlayer);
+        EditorGUILayout.PropertyField(buildingCostUI);
 
         serializedObject.ApplyModifiedProperties();
     }
