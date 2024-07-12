@@ -336,7 +336,7 @@ public class InputManager : MonoBehaviour
      */
     void Zoom(bool isZoomIn, float zoomSpeed)
     {
-        if (orthoCam)
+        if (orthoCam && !EventSystem.current.IsPointerOverGameObject())
         {
             if (isZoomIn)
             {

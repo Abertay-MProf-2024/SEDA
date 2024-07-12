@@ -29,6 +29,7 @@ public class BuildingTypeSelect : MonoBehaviour
             }
         }
     }
+    //ResetButtonColour
     public void GridOff()
     {
         foreach (GameObject button in buildingButtons)
@@ -45,7 +46,6 @@ public class BuildingTypeSelect : MonoBehaviour
         {
             currentBuildingType = null;
             gridSystem.ToggleBuildMode(currentBuildingType, false);
-
         }
         else
         {
@@ -61,6 +61,7 @@ public class BuildingTypeSelect : MonoBehaviour
             element.gameObject.GetComponent<GirdStatus>().Buildmode = true;
         }
     }
+
     void BuildingCantPlace(int buildingType, GirdStatus[,] girdArray)
     {
         foreach (GirdStatus element in girdArray)
