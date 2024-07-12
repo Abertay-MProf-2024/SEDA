@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1958262272652960674}
   - component: {fileID: 1918333111599311473}
   - component: {fileID: 8019011541662348474}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PH_Coast_10_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}

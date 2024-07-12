@@ -27,20 +27,20 @@ MonoBehaviour:
   bribeCostConstruction: 5
   canBuild: 1
   buildingCostFood: 3
-  buildingCostMaterial: 5
+  buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 0
   upKeepCostFood: 0
   upKeepCostMaterial: 0
   isResourceTapped: 0
-  collectorBuildings: 
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
   baseOutputMaterial: 15
   buildingOutputMulti: 1
   impactSource: 1
-  impactRadiusTiles: 1
+  impactRadiusTiles: 3
+  collectorBuildings: 
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []
