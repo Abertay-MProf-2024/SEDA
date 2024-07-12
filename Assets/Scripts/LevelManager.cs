@@ -24,14 +24,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int successConstructionMaterialsAmount;
     [SerializeField] int successSoilHealth;
 
-
     GameObject outlineParent;
 
     // radius highlight prefabs
     [SerializeField] GameObject waterOutline;
     [SerializeField] GameObject energyOutline;
     [SerializeField] GameObject extraOutline;
-
 
     private void Awake()
     {
@@ -75,6 +73,13 @@ public class LevelManager : MonoBehaviour
 
             if ((building = hit.transform.gameObject.GetComponent<Building>()) && building.resourceData.impactSource)
             {
+                // Check BuildingClickSound function and play click sound
+                BuildingClickSound clickSound = building.GetComponent<BuildingClickSound>();
+                if (clickSound != null)
+                {
+                    clickSound.PlayClickSound();
+                }
+
                 radius = building.resourceData.impactRadiusTiles;
 
                 GridPosition gridPos = building.transform.parent.gameObject.GetComponent<GridObject>().GetGridPosition();
@@ -150,7 +155,7 @@ public class LevelManager : MonoBehaviour
         if (Inventory.healthBar < instance.successSoilHealth)
         {
             success = false;
-        }    
+        }
 
         return success;
     }

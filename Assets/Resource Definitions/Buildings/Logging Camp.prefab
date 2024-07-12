@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3939148624180556249}
   - component: {fileID: -4721392640977397246}
   - component: {fileID: 7268560470206662471}
+  - component: {fileID: 1650149810886583211}
   m_Layer: 0
   m_Name: Logging Camp
   m_TagString: Untagged
@@ -234,3 +235,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1650149810886583211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679268389524347108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: ebc36cad96aa3b94bb6d8b5846966f4b, type: 3}
