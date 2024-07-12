@@ -84,7 +84,6 @@ public class InputManager : MonoBehaviour
     StandingStone standingStone;
 
 
-
     /** Set all initial variables and required callbacks */
     void Awake()
     {
@@ -107,6 +106,7 @@ public class InputManager : MonoBehaviour
             stopPinchZoom = ctx => StopPinchZoom();
 
             tapInput.performed += tapAction;
+            tapLocationInput.performed += UpdateReleaseLocation;
             releaseInput.performed += releaseAction;
             mouseWheelAction.performed += MouseWheelZoom;
             touchContactAction.performed += startPinchZoom;
@@ -138,14 +138,21 @@ public class InputManager : MonoBehaviour
         if (gameObject != null)
         {
             tapLocation = tapLocationInput.ReadValue<Vector2>();
-            tapLocationInput.performed += PanCamera;
+
+            if (!EventSystem.current.IsPointerOverGameObject())
+                tapLocationInput.performed += PanCamera;
         }
+    }
+
+    void UpdateReleaseLocation(InputAction.CallbackContext context)
+    {
+        releaseLocation = context.ReadValue<Vector2>();
     }
 
     /** Pan the camera when the player taps and drags the screen */
     void PanCamera(InputAction.CallbackContext context)
     {
-        Vector2 currentPos = releaseLocation = context.ReadValue<Vector2>();
+        Vector2 currentPos = context.ReadValue<Vector2>();
 
         if (isCursorPosInitialised)
         {
