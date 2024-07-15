@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Stonegroundglow
-  m_Shader: {fileID: -6465566751694194690, guid: b189686cb3fe7b3449c7dc52eb4ad481,
+  m_Shader: {fileID: -6465566751694194690, guid: 10d9eb0abc8c6754b9f550a90a7b2bbd,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
