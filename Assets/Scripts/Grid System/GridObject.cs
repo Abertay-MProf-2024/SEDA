@@ -68,6 +68,9 @@ public class GridObject : MonoBehaviour
         else
         {
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+            if(terrain == null)
+                gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+
             gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentRed;
         }
     }
@@ -83,7 +86,9 @@ public class GridObject : MonoBehaviour
         Color transparentBrown = new Color(0.3207547f, 0.1755072f, 0, .8f);
         Color transparentRed = new Color(0.9921568f, 0, 0.02855804f, alpha);
 
-        if (soilgradeGrid)
+        soilgradeGrid = !soilgradeGrid;
+
+        if (soilgradeGrid && terrain)
         {
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
 
@@ -104,8 +109,7 @@ public class GridObject : MonoBehaviour
         }
         else
         {
-
-            gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+            gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
             gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentRed;
         }
     }

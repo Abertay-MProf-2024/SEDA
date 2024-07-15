@@ -54,9 +54,9 @@ public class BuildingTypeSelect : MonoBehaviour
         }
     }
 
-    public void GridDisplay()
+    public void GridDisplay(TileBase building)
     {
-        //gridSystem.
+        gridSystem.ToggleBuildMode(building, false, true);
     }
 
     void BuildingCanPlace(int buildingType, GirdStatus[,] girdArray)

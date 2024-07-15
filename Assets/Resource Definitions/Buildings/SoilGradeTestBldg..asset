@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
+  m_Name: SoilGradeTestBldg.
+  m_EditorClassIdentifier: 
+  tileName: 
+  icon: {fileID: 0}
+  inGameAsset: {fileID: 0}
+  sizeWidthTile: 1
+  sizeLengthTile: 1
+  structureType: 0
+  tileUnder: {fileID: 0}
+  biomeTypes: 
+  tileTerrainTypes: 01000000020000000300000005000000
+  CreatureTile: 0
+  bribeCostFood: 15
+  bribeCostConstruction: 5
+  canBuild: 0
+  buildingCostFood: 0
+  buildingCostMaterial: 0
+  upKeepCostEnergy: 0
+  upKeepCostWater: 0
+  upKeepCostFood: 0
+  upKeepCostMaterial: 0
+  isResourceTapped: 0
+  collectorBuildings: 
+  baseOutputEnergy: 0
+  baseOutputWater: 0
+  baseOutputFood: 0
+  baseOutputMaterial: 0
+  buildingOutputMulti: 0
+  impactSource: 0
+  impactRadiusTiles: 0
+  buffAmount: 0
+  nerfAmount: 0
+  tileImpactBuff: []
+  tileImpactNerf: []
+  isImpactSoilGrade: 0
+  buffSoilGradeAmount: 0
+  nerfSoilGradeAmount: 0

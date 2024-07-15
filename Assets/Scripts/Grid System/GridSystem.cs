@@ -60,7 +60,7 @@ public class GridSystem : MonoBehaviour
     public int GetGridLength() { return gridLength; }
     public int GetGridWidth() {  return gridWidth; }
 
-    public void ToggleBuildMode(TileBase buildingType, bool BuildModeOn)
+    public void ToggleBuildMode(TileBase buildingType, bool BuildModeOn, bool IsSoilGradeDisplay=false)
     {
        
         BuildSystem.isInBuildMode = BuildModeOn;
@@ -70,7 +70,8 @@ public class GridSystem : MonoBehaviour
             for (int y = 0; y < gridWidth; y++)
             {
                 gridTiles[x, y].ToggleBuildModePerTile(buildingType);
-                //gridTiles[x, y].SoilGradeDisplay(buildingType);
+                if (IsSoilGradeDisplay && !BuildModeOn)
+                    gridTiles[x, y].ToggleSoilGradeDisplay(buildingType);
             }
         }
     }
