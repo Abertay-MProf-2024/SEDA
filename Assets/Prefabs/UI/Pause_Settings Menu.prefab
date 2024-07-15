@@ -407,7 +407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneName: UI Screen
-  action: {fileID: -944628639613478452, guid: 67f30afa779e22942afacb4ae4197719, type: 3}
 --- !u!1 &306895729923237173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +1634,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1780,7 +1779,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 1000}
+  m_SizeDelta: {x: 1000, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5862252492312328903
 CanvasRenderer:
@@ -1810,7 +1809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 468619407, guid: 3e14418a48b7eac4dab7f761d30b673b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
