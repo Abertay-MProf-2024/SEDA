@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_EngagedStone
-  m_Shader: {fileID: -6465566751694194690, guid: b189686cb3fe7b3449c7dc52eb4ad481,
+  m_Shader: {fileID: -6465566751694194690, guid: 10d9eb0abc8c6754b9f550a90a7b2bbd,
     type: 3}
-  m_Parent: {fileID: 2100000, guid: 40cf587e02617e2438192adc417c9bbe, type: 2}
+  m_Parent: {fileID: 2100000, guid: 141792ed6da4ea34b8384cd3744e464b, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
