@@ -84,7 +84,6 @@ public class InputManager : MonoBehaviour
     StandingStone standingStone;
 
 
-
     /** Set all initial variables and required callbacks */
     void Awake()
     {
@@ -107,6 +106,7 @@ public class InputManager : MonoBehaviour
             stopPinchZoom = ctx => StopPinchZoom();
 
             tapInput.performed += tapAction;
+            tapLocationInput.performed += UpdateReleaseLocation;
             releaseInput.performed += releaseAction;
             mouseWheelAction.performed += MouseWheelZoom;
             touchContactAction.performed += startPinchZoom;
@@ -135,22 +135,24 @@ public class InputManager : MonoBehaviour
     /** While the player is touching the screen, they can rotate the camera */
     void Tap()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-
-        else if (gameObject != null)
+        if (gameObject != null)
         {
             tapLocation = tapLocationInput.ReadValue<Vector2>();
-            tapLocationInput.performed += PanCamera;
+
+            if (!EventSystem.current.IsPointerOverGameObject())
+                tapLocationInput.performed += PanCamera;
         }
+    }
+
+    void UpdateReleaseLocation(InputAction.CallbackContext context)
+    {
+        releaseLocation = context.ReadValue<Vector2>();
     }
 
     /** Pan the camera when the player taps and drags the screen */
     void PanCamera(InputAction.CallbackContext context)
     {
-        Vector2 currentPos = releaseLocation = context.ReadValue<Vector2>();
+        Vector2 currentPos = context.ReadValue<Vector2>();
 
         if (isCursorPosInitialised)
         {
@@ -243,7 +245,8 @@ public class InputManager : MonoBehaviour
 
         buildingSystem = FindAnyObjectByType<BuildSystem>();
 
-        if (Camera.main != null && (tapLocation == Vector2.zero || releaseLocation == Vector2.zero || (Vector2.Distance(tapLocation, releaseLocation) < 5)))
+        if (Camera.main != null && !EventSystem.current.IsPointerOverGameObject() && 
+            (tapLocation == Vector2.zero || releaseLocation == Vector2.zero || (Vector2.Distance(tapLocation, releaseLocation) < 5)))
         {
             Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
             RaycastHit hit;
@@ -340,7 +343,7 @@ public class InputManager : MonoBehaviour
      */
     void Zoom(bool isZoomIn, float zoomSpeed)
     {
-        if (orthoCam)
+        if (orthoCam && !EventSystem.current.IsPointerOverGameObject())
         {
             if (isZoomIn)
             {

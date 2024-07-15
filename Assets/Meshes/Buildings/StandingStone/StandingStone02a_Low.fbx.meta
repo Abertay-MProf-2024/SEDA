@@ -1,9 +1,18 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Meshes/Buildings/StandingStone/StandingStone02a_Low.fbx.meta
 guid: 55867d19305ec6943a4b0f4235bdfec5
+========
+guid: 03627ecfb05362b4d80f9cb40e2a4bfe
+>>>>>>>> VFX_PictstoneSizeAdjustment:Assets/VFX/Pictish Stone/Stone_Engaged/Standing stone glow ground.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 1aabe9271669b7144a0ce0f1cae6b4af, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

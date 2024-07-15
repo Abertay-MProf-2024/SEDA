@@ -26,8 +26,8 @@ MonoBehaviour:
   bribeCostFood: 15
   bribeCostConstruction: 5
   canBuild: 1
-  buildingCostFood: 3
-  buildingCostMaterial: 7
+  buildingCostFood: 5
+  buildingCostMaterial: 5
   upKeepCostEnergy: 0
   upKeepCostWater: 1
   upKeepCostFood: 0
@@ -36,9 +36,9 @@ MonoBehaviour:
   collectorBuildings: 01000000
   baseOutputEnergy: 0
   baseOutputWater: 0
-  baseOutputFood: 10
+  baseOutputFood: 15
   baseOutputMaterial: 0
-  buildingOutputMulti: 2
+  buildingOutputMulti: 1
   impactSource: 1
   impactRadiusTiles: 3
   buffAmount: 5

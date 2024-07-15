@@ -75,13 +75,6 @@ public class UIFuntions : MonoBehaviour
         LoadMenuCanvas.enabled = false;
     }
 
-    public void PlayGame()
-    {
-        Inventory.overworldTime--;
-        Inventory.levelTime += 36;
-        SceneManager.LoadSceneAsync(1);
-    }
-
     public void QuitGame()
     {
     #if UNITY_EDITOR
