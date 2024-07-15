@@ -12,5 +12,6 @@ public class ResourceUIManager : MonoBehaviour
         foodDisplay.text = Inventory.food.ToString();
         materialsDisplay.text =  Inventory.constructionMaterials.ToString();
         healthBarDisplay.text = Inventory.healthBar.ToString();
+
     }
 }

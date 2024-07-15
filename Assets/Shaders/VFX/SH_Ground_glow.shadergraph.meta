@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Shaders/VFX/SH_Kelpie_ripples.shadergraph.meta
+guid: 10d9eb0abc8c6754b9f550a90a7b2bbd
+========
+guid: b189686cb3fe7b3449c7dc52eb4ad481
+>>>>>>>> VFX_PictstoneSizeAdjustment:Assets/Shaders/VFX/SH_Ground_glow.shadergraph.meta
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
