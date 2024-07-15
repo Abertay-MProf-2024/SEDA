@@ -36,6 +36,7 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -45,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_69374be588554612932b8548f2ac5ccf_Texture_1_Texture2D:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: db5999a0dd31d0648ad3e6cbd52a1542, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_95219bc36d03496bb553993e00eac37f_Texture_1_Texture2D:
@@ -53,6 +54,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_e2aa806e4a284908a9d72df3db1f21c6_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: db5999a0dd31d0648ad3e6cbd52a1542, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _rainmisttexture:
+        m_Texture: {fileID: 2800000, guid: bdd37894cadca194db21d09ad4f76242, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _raintexture:
         m_Texture: {fileID: 2800000, guid: db5999a0dd31d0648ad3e6cbd52a1542, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -72,19 +81,20 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _Blend: 2
+    - _Blend: 1
     - _BlendModePreserveSpecular: 1
-    - _CastShadows: 1
+    - _CastShadows: 0
     - _Cull: 2
-    - _DstBlend: 1
+    - _DstBlend: 10
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _Surface: 1
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    m_Colors: []
+    m_Colors:
+    - _Color: {r: 0.47076362, g: 0.59056085, b: 0.6698113, a: 1}
   m_BuildTextureStacks: []
