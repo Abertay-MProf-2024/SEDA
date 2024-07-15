@@ -16,6 +16,6 @@ public class WeatherUI : MonoBehaviour
             weatherName = "Fair Weather";
         }
 
-        currentWeatherButtonText.text = currentWeatherText.text = weatherName;
+        currentWeatherText.text = weatherName;
     }
 }

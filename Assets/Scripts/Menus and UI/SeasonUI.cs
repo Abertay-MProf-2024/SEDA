@@ -28,19 +28,19 @@ public class SeasonUI : MonoBehaviour
         {
             case Season.Winter:
                 seasonIcon.sprite = winterIcon;
-                seasonText.text = "Winter";
+                //seasonText.text = "Winter";
                 break;
             case Season.Spring:
                 seasonIcon.sprite = springIcon;
-                seasonText.text = "Spring";
+                //seasonText.text = "Spring";
                 break;
             case Season.Summer:
                 seasonIcon.sprite = summerIcon;
-                seasonText.text = "Summer";
+                //seasonText.text = "Summer";
                 break;
             case Season.Autumn:
                 seasonIcon.sprite = autumnIcon;
-                seasonText.text = "Autumn";
+                //seasonText.text = "Autumn";
                 break;
         }
     }
