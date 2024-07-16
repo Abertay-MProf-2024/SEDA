@@ -20631,6 +20631,7 @@ MonoBehaviour:
   BuildingNameDisplay: {fileID: 776987366296430582}
   ReqFoodDisplay: {fileID: 8859728794016709228}
   ReqConstMatDisplay: {fileID: 8153992458125043731}
+  DescriptionDisplay: {fileID: 2476149019864577868}
   buildingTypeSelect: {fileID: 6546463509190114180}
 --- !u!1 &8347872730639019449
 GameObject:

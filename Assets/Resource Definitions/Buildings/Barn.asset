@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Barn
   m_EditorClassIdentifier: 
   tileName: Barn
+  tileDescription: Hello, welcome to ooty!
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: db32af21706196a44a38946adf54b9a8,
     type: 3}
