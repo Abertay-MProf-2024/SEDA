@@ -12,7 +12,7 @@ public class AudioZoomController : MonoBehaviour
     public float fadeDuration = 1.0f;
 
     [SerializeField] AudioSource musicSource;
-    private AudioSource audioSource2;
+    private AudioSource sfxSource;
 
     private float minZoom;
     private float maxZoom;
@@ -23,18 +23,18 @@ public class AudioZoomController : MonoBehaviour
     private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-    }
 
-    void Start()
-    {
         // Initialize AudioSources
-        audioSource2 = gameObject.AddComponent<AudioSource>();
-        audioSource2.outputAudioMixerGroup = mixerGroupSFX;
+        sfxSource = gameObject.AddComponent<AudioSource>();
+        sfxSource.clip = windSound;
+        sfxSource.playOnAwake = false;
+        sfxSource.loop = true;
+        sfxSource.outputAudioMixerGroup = mixerGroupSFX;
     }
 
     void Update()
     {
-        if (orthoCam != null)
+        if (orthoCam != null && orthoCam.orthographic)
         {
             float zoomLevel = orthoCam.orthographicSize;
 
@@ -51,7 +51,7 @@ public class AudioZoomController : MonoBehaviour
                 {
                     StopCoroutine(music2FadeCoroutine);
                 }
-                music2FadeCoroutine = StartCoroutine(WaitAndLowerVolume(audioSource2, 5.0f, volume2 * 0.4f));
+                music2FadeCoroutine = StartCoroutine(WaitAndLowerVolume(sfxSource, 5.0f, volume2 * 0.4f));
             }
             else if (volume2 < 0.95f)
             {
@@ -60,7 +60,7 @@ public class AudioZoomController : MonoBehaviour
                 {
                     StopCoroutine(music2FadeCoroutine);
                 }
-                StartCoroutine(FadeAudioSource.StartFade(audioSource2, fadeDuration, volume2));
+                StartCoroutine(FadeAudioSource.StartFade(sfxSource, fadeDuration, volume2));
             }
         }
     }
@@ -73,11 +73,13 @@ public class AudioZoomController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        sfxSource.Play();
+
         orthoCam = FindAnyObjectByType<Camera>();
 
-        if (orthoCam != null)
+        InputManager cameraPan;
+        if (orthoCam != null && (cameraPan = orthoCam.GetComponent<InputManager>()))
         {
-            InputManager cameraPan = orthoCam.GetComponent<InputManager>();
             minZoom = cameraPan.minZoomDistance;
             maxZoom = cameraPan.maxZoomDistance;
         }
