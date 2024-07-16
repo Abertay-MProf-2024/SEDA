@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6077579044690510486}
   - component: {fileID: -3939148624180556249}
   - component: {fileID: 2620668629428851521}
+  - component: {fileID: 4452242908252387299}
+  - component: {fileID: 6614959419840486320}
   m_Layer: 0
   m_Name: WaterWell
   m_TagString: Untagged
@@ -123,3 +125,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6956491, y: 0.9723337, z: 1.2265913}
   m_Center: {x: 0.016967356, y: 0.4862279, z: 0.09266314}
+--- !u!114 &4452242908252387299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679268389524347108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: fbbec21324c044f4ea25169902fb821c, type: 3}
+--- !u!114 &6614959419840486320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679268389524347108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeBuildingSound: {fileID: 8300000, guid: 74425750c26339546ac58419344e9a49, type: 3}
