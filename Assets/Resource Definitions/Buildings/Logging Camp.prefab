@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3030028463501469768}
   - component: {fileID: -3939148624180556249}
   - component: {fileID: 3893785301311206332}
+  - component: {fileID: -8778454961128191400}
+  - component: {fileID: 4911923455934456787}
   m_Layer: 0
   m_Name: Logging Camp
   m_TagString: Untagged
@@ -89,6 +91,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 0, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8778454961128191400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679268389524347108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeBuildingSound: {fileID: 8300000, guid: a4bee129f6e8eb7499f70448b238b122, type: 3}
+--- !u!114 &4911923455934456787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679268389524347108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: d1b2ef54dcfc25c439a7043d204078ba, type: 3}
 --- !u!1 &845164094143905002
 GameObject:
   m_ObjectHideFlags: 0

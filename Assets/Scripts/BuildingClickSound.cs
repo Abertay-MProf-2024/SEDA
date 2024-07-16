@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class BuildingClickSound : MonoBehaviour, IPointerClickHandler
+public class BuildingClickSound : MonoBehaviour
 {
     public AudioClip clickSound;
     private AudioSource audioSource;
@@ -15,11 +14,6 @@ public class BuildingClickSound : MonoBehaviour, IPointerClickHandler
         {
             Debug.LogWarning("ClickSound is not assigned in " + gameObject.name);
         }
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        PlayClickSound();
     }
 
     public void PlayClickSound()  
