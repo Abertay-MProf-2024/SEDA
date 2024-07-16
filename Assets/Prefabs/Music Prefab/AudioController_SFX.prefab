@@ -41,15 +41,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3857664619104186591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03e49ade8256e774196e3e4d673ab1c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicClip1: {fileID: 8300000, guid: d7d4c261b7e7d8140ad924b9413d542e, type: 3}
-  musicClip2: {fileID: 8300000, guid: 3be405e204ab9ca46975240e05b2c14f, type: 3}
+  windSound: {fileID: 0}
+  mixerGroupSFX: {fileID: 0}
   orthoCam: {fileID: 0}
   fadeDuration: 1
+  musicSource: {fileID: 0}
 --- !u!82 &3783061543644844043
 AudioSource:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3857664619104186591}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
