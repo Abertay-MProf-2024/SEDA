@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 473675339623529538}
   - component: {fileID: 2970481844622658911}
   - component: {fileID: 4558080579388183123}
+  - component: {fileID: 6595988419028788567}
   m_Layer: 0
   m_Name: SceneMusic
   m_TagString: Untagged
@@ -143,3 +144,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2970481844622658911}
+--- !u!114 &6595988419028788567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255528497924722670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e49ade8256e774196e3e4d673ab1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSound: {fileID: 8300000, guid: 3be405e204ab9ca46975240e05b2c14f, type: 3}
+  mixerGroupSFX: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
+  orthoCam: {fileID: 0}
+  fadeDuration: 1
+  musicSource: {fileID: 2970481844622658911}

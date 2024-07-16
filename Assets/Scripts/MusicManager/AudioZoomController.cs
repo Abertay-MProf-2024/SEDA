@@ -1,14 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioZoomController : MonoBehaviour
 {
-    public AudioClip musicClip1;
-    public AudioClip musicClip2;
+    [SerializeField] AudioClip windSound;
+    [SerializeField] AudioMixerGroup mixerGroupSFX;
+
     public Camera orthoCam;
     public float fadeDuration = 1.0f;
 
-    private AudioSource audioSource1;
+    [SerializeField] AudioSource musicSource;
     private AudioSource audioSource2;
 
     private float minZoom;
@@ -17,19 +20,16 @@ public class AudioZoomController : MonoBehaviour
     private Coroutine music2FadeCoroutine;
     private float music2OriginalVolume;
 
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
     void Start()
     {
         // Initialize AudioSources
-        audioSource1 = gameObject.AddComponent<AudioSource>();
-
         audioSource2 = gameObject.AddComponent<AudioSource>();
-
-        if (orthoCam != null)
-        {
-            InputManager cameraPan = orthoCam.GetComponent<InputManager>();
-            minZoom = cameraPan.minZoomDistance;
-            maxZoom = cameraPan.maxZoomDistance;
-        }
+        audioSource2.outputAudioMixerGroup = mixerGroupSFX;
     }
 
     void Update()
@@ -41,7 +41,7 @@ public class AudioZoomController : MonoBehaviour
             float volume1 = Mathf.InverseLerp(maxZoom - 1, minZoom, zoomLevel);  // »º³åÇø¼ä
             float volume2 = Mathf.InverseLerp(minZoom + 3, maxZoom, zoomLevel);
 
-            StartCoroutine(FadeAudioSource.StartFade(audioSource1, fadeDuration, volume1));
+            StartCoroutine(FadeAudioSource.StartFade(musicSource, fadeDuration, volume1));
 
             if (volume2 >= 0.95f && !isMusic2AtMaxVolume)
             {
@@ -69,6 +69,18 @@ public class AudioZoomController : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         StartCoroutine(FadeAudioSource.StartFade(audioSource, fadeDuration, targetVolume));
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        orthoCam = FindAnyObjectByType<Camera>();
+
+        if (orthoCam != null)
+        {
+            InputManager cameraPan = orthoCam.GetComponent<InputManager>();
+            minZoom = cameraPan.minZoomDistance;
+            maxZoom = cameraPan.maxZoomDistance;
+        }
     }
 }
 
