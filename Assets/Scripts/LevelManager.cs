@@ -73,6 +73,13 @@ public class LevelManager : MonoBehaviour
             if ((building = hit.transform.gameObject.GetComponent<Building>()) && building.resourceData.impactSource
                 && building.GetOwningGridObject())
             {
+                // Check BuildingClickSound function and play click sound
+                BuildingClickSound clickSound = building.GetComponent<BuildingClickSound>();
+                if (clickSound != null)
+                {
+                    clickSound.PlayClickSound();
+                }
+
                 radius = building.resourceData.impactRadiusTiles;
 
                 GridPosition gridPos;

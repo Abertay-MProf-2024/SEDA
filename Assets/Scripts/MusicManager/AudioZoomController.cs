@@ -71,6 +71,11 @@ public class AudioZoomController : MonoBehaviour
         StartCoroutine(FadeAudioSource.StartFade(audioSource, fadeDuration, targetVolume));
     }
 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         sfxSource.Play();

@@ -133,6 +133,13 @@ public class GridObject : MonoBehaviour
             buildingInstance = Instantiate(building.inGameAsset, transform.position, Quaternion.Euler(new Vector3(0, 90, 0))).GetComponent<Building>();
             buildingInstance.resourceData = building; 
             buildingInstance.transform.parent = transform;
+
+            BuildingPlacementSound buildSound;
+            if (buildSound = buildingInstance.GetComponent<BuildingPlacementSound>())
+            {
+                buildSound.PlayPlaceBuildingSound();
+            }
+
             //buildingInstance.transform.localPosition = Vector3.zero;
             buildingInstance.SetGridObject(this);
             if (buildingInstance.resourceData.isImpactSoilGrade == true)
