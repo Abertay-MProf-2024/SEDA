@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Audio;
-using UnityEditor.SceneManagement;
 
 public class UIButtonSound : MonoBehaviour, IPointerEnterHandler
 {
