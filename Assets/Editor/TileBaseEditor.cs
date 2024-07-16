@@ -1,5 +1,5 @@
 using UnityEditor;
-using UnityEditor.MemoryProfiler;
+using UnityEngine;
 
 [CustomEditor(typeof(TileBase))]
 public class TileBaseEditor : Editor
@@ -106,7 +106,7 @@ public class TileBaseEditor : Editor
         serializedObject.Update();
         // Always visible properties
         EditorGUILayout.PropertyField(tileName);
-        EditorGUILayout.PropertyField(tileDescription);
+        EditorGUILayout.PropertyField(tileDescription, GUILayout.Height(100));
         EditorGUILayout.PropertyField(icon);
         EditorGUILayout.PropertyField(inGameAsset);
         EditorGUILayout.PropertyField(sizeWidth);
