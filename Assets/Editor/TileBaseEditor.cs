@@ -1,11 +1,12 @@
 using UnityEditor;
-using UnityEngine;
+using UnityEditor.MemoryProfiler;
 
 [CustomEditor(typeof(TileBase))]
 public class TileBaseEditor : Editor
 {
     //general
     SerializedProperty tileName;
+    SerializedProperty tileDescription;
     SerializedProperty icon;
     SerializedProperty inGameAsset;
     SerializedProperty sizeWidth;
@@ -55,6 +56,7 @@ public class TileBaseEditor : Editor
         //pre-loading the properties
         //General
         tileName = serializedObject.FindProperty("tileName");
+        tileDescription = serializedObject.FindProperty("tileDescription");
         icon = serializedObject.FindProperty("icon");
         inGameAsset = serializedObject.FindProperty("inGameAsset");
         sizeWidth = serializedObject.FindProperty("sizeWidthTile");
@@ -104,6 +106,7 @@ public class TileBaseEditor : Editor
         serializedObject.Update();
         // Always visible properties
         EditorGUILayout.PropertyField(tileName);
+        EditorGUILayout.PropertyField(tileDescription);
         EditorGUILayout.PropertyField(icon);
         EditorGUILayout.PropertyField(inGameAsset);
         EditorGUILayout.PropertyField(sizeWidth);
