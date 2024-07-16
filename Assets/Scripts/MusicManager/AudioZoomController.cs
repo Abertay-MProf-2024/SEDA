@@ -1,15 +1,18 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioZoomController : MonoBehaviour
 {
-    public AudioClip musicClip1;
-    public AudioClip musicClip2;
+    [SerializeField] AudioClip windSound;
+    [SerializeField] AudioMixerGroup mixerGroupSFX;
+
     public Camera orthoCam;
     public float fadeDuration = 1.0f;
 
-    private AudioSource audioSource1;
-    private AudioSource audioSource2;
+    [SerializeField] AudioSource musicSource;
+    private AudioSource sfxSource;
 
     private float minZoom;
     private float maxZoom;
@@ -17,31 +20,28 @@ public class AudioZoomController : MonoBehaviour
     private Coroutine music2FadeCoroutine;
     private float music2OriginalVolume;
 
-    void Start()
+    private void Awake()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
         // Initialize AudioSources
-        audioSource1 = gameObject.AddComponent<AudioSource>();
-
-        audioSource2 = gameObject.AddComponent<AudioSource>();
-
-        if (orthoCam != null)
-        {
-            InputManager cameraPan = orthoCam.GetComponent<InputManager>();
-            minZoom = cameraPan.minZoomDistance;
-            maxZoom = cameraPan.maxZoomDistance;
-        }
+        sfxSource = gameObject.AddComponent<AudioSource>();
+        sfxSource.clip = windSound;
+        sfxSource.playOnAwake = false;
+        sfxSource.loop = true;
+        sfxSource.outputAudioMixerGroup = mixerGroupSFX;
     }
 
     void Update()
     {
-        if (orthoCam != null)
+        if (orthoCam != null && orthoCam.orthographic)
         {
             float zoomLevel = orthoCam.orthographicSize;
 
             float volume1 = Mathf.InverseLerp(maxZoom - 1, minZoom, zoomLevel);  // »º³åÇø¼ä
             float volume2 = Mathf.InverseLerp(minZoom + 3, maxZoom, zoomLevel);
 
-            StartCoroutine(FadeAudioSource.StartFade(audioSource1, fadeDuration, volume1));
+            StartCoroutine(FadeAudioSource.StartFade(musicSource, fadeDuration, volume1));
 
             if (volume2 >= 0.95f && !isMusic2AtMaxVolume)
             {
@@ -51,7 +51,7 @@ public class AudioZoomController : MonoBehaviour
                 {
                     StopCoroutine(music2FadeCoroutine);
                 }
-                music2FadeCoroutine = StartCoroutine(WaitAndLowerVolume(audioSource2, 5.0f, volume2 * 0.4f));
+                music2FadeCoroutine = StartCoroutine(WaitAndLowerVolume(sfxSource, 5.0f, volume2 * 0.4f));
             }
             else if (volume2 < 0.95f)
             {
@@ -60,7 +60,7 @@ public class AudioZoomController : MonoBehaviour
                 {
                     StopCoroutine(music2FadeCoroutine);
                 }
-                StartCoroutine(FadeAudioSource.StartFade(audioSource2, fadeDuration, volume2));
+                StartCoroutine(FadeAudioSource.StartFade(sfxSource, fadeDuration, volume2));
             }
         }
     }
@@ -69,6 +69,20 @@ public class AudioZoomController : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         StartCoroutine(FadeAudioSource.StartFade(audioSource, fadeDuration, targetVolume));
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        sfxSource.Play();
+
+        orthoCam = FindAnyObjectByType<Camera>();
+
+        InputManager cameraPan;
+        if (orthoCam != null && (cameraPan = orthoCam.GetComponent<InputManager>()))
+        {
+            minZoom = cameraPan.minZoomDistance;
+            maxZoom = cameraPan.maxZoomDistance;
+        }
     }
 }
 
