@@ -23,6 +23,8 @@ public class TileBase : ScriptableObject
     [Header("General")]
     [Tooltip("Name of the object that will be displayed in-game e.g. on hover over via UI.")]
     public string tileName;
+    [Tooltip("Description of the tile.")]
+    public string tileDescription;
     [Tooltip("Image (drag and drop to here) (Resolution of Images in UI Spec Sheet")]
     public Sprite icon;
     [Tooltip("GameObject with 3D static Mesh (Drag and Drop) (Scale See Metrics & Scale (See Grid scale)")]
