@@ -23198,6 +23198,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.000061035156
       objectReference: {fileID: 0}
+    - target: {fileID: 6559478770730822548, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
         type: 3}
       propertyPath: m_Pivot.x

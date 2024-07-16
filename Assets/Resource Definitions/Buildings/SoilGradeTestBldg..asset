@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SoilGradeTestBldg.
   m_EditorClassIdentifier: 
   tileName: 
+  tileDescription: hf
   icon: {fileID: 0}
   inGameAsset: {fileID: 0}
   sizeWidthTile: 1
