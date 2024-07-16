@@ -15,6 +15,7 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         TimeSystem.Unpause();
+        //BuildingTypeSelect.GridOff();
     }
 
     private void OnDestroy()

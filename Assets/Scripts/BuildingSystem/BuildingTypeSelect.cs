@@ -8,6 +8,7 @@ public class BuildingTypeSelect : MonoBehaviour
     [Header("Buttons")]
     public GameObject[] buildingButtons;
     public TileBase currentBuildingType;
+   
 
     public void ColorChange(GameObject activeButton)
     {
