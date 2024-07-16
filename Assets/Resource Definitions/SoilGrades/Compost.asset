@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Compost
   m_EditorClassIdentifier: 
   tileName: Compost
+  tileDescription: 
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: 4e4d3707c9096ce4483b3045fe201ad2,
     type: 3}
@@ -30,7 +31,7 @@ MonoBehaviour:
   buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 0
-  upKeepCostFood: 30
+  upKeepCostFood: 20
   upKeepCostMaterial: 10
   isResourceTapped: 0
   collectorBuildings: 

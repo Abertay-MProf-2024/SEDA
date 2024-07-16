@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ArtificialFertiliser
   m_EditorClassIdentifier: 
   tileName: Artificial Fertiliser
+  tileDescription: 
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: 6b761ce4b81bc65438a1dc6b234da9c9,
     type: 3}
@@ -30,8 +31,8 @@ MonoBehaviour:
   buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 0
-  upKeepCostFood: 10
-  upKeepCostMaterial: 10
+  upKeepCostFood: 5
+  upKeepCostMaterial: 15
   isResourceTapped: 0
   collectorBuildings: 
   baseOutputEnergy: 0
