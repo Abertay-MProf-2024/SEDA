@@ -26,6 +26,10 @@ public class WeatherSystem : MonoBehaviour
 
     static GameObject currentWeatherEffect;
 
+    public GridSystem owningGridSystem;
+    int gridLength =1;
+    int gridWidth =1;
+
     private void Start()
     {
         TimeSystem.AddMonthlyEvent(SetWeather);
@@ -45,6 +49,7 @@ public class WeatherSystem : MonoBehaviour
             else if (!hasFloodHappened && Inventory.healthBar < 60)
             {
                 currentWeather = WeatherTypes.Flood;
+                //SetFloodEffect();
                 SetWeatherEffect(floodEffectPrefab);
                 cropOutput = 0.5f;
                 soilGradeWeatherEffect = 20;
@@ -54,6 +59,24 @@ public class WeatherSystem : MonoBehaviour
             else if (currentWeather != WeatherTypes.Fair)
             {
                 FairWeather();
+            }
+        }
+    }
+
+    void SetFloodEffect()
+    {
+        gridLength = owningGridSystem.GetGridLength();
+        gridWidth = owningGridSystem.GetGridWidth();
+        
+        for (int x = 0; x < gridLength; x++)
+        {
+            for (int z = 0; z < gridWidth; z++)
+            {
+                GridObject Energyobj = owningGridSystem.GetGridObject(x, z);
+                if (Energyobj != null)
+                {
+                    Energyobj.SetTerrainWaterEnergy(true);
+                }
             }
         }
     }
@@ -73,6 +96,7 @@ public class WeatherSystem : MonoBehaviour
         cropOutput = 1f;
         soilGradeWeatherEffect = 0;
         isFlooding = false;
+
     }
 
     static void SetWeatherEffect(GameObject weatherPrefab)

@@ -89,8 +89,7 @@ public class Terrainsystem : MonoBehaviour
         HealthBar();
         SetTerrainMaterialProperties();
 
-        StartCoroutine(Stupidity());
-        // ChangeinGrade();
+        StartCoroutine(SetEnergyTiles()); 
     }
 
     public void TriggerEnergy()
@@ -131,18 +130,15 @@ public class Terrainsystem : MonoBehaviour
 
     }
 
-    IEnumerator Stupidity()
+    IEnumerator SetEnergyTiles()
     {
         yield return new WaitForSeconds(10);
         TriggerEnergy();
-        //ChangeinGrade();
 
     }
 
     void HealthBar()
     {
-        
-
         Inventory.count++;
         Inventory.totalhealth += (int)CurrentsoilType;
         Inventory.HealthBarChange();
