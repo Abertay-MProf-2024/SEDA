@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (construction materials Req number text)
+  m_text: 'Consturuction Materials: 20'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1578,6 +1578,7 @@ GameObject:
   - component: {fileID: 6893169601295268459}
   - component: {fileID: 1680084070480796207}
   - component: {fileID: 5159309112828749083}
+  - component: {fileID: 1448895815114889436}
   m_Layer: 5
   m_Name: Season_Icon
   m_TagString: Untagged
@@ -1706,7 +1707,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491026269343377112}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74178d03551738549a02d457af5dd650, type: 3}
   m_Name: 
@@ -1718,6 +1719,20 @@ MonoBehaviour:
   summerIcon: {fileID: -1109535336, guid: a315427735ac01a4aa35911ae3f1f1f6, type: 3}
   autumnIcon: {fileID: 356536566, guid: 089e21fbfe95bc045911445720015783, type: 3}
 --- !u!114 &5159309112828749083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491026269343377112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &1448895815114889436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2489,6 +2504,7 @@ GameObject:
   - component: {fileID: 1135944462155865324}
   - component: {fileID: 786465528587423852}
   - component: {fileID: 6461676662717604656}
+  - component: {fileID: 3084029133430684794}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2625,6 +2641,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &6461676662717604656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912998018056225332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &3084029133430684794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2778,7 +2808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (name of the item)
+  m_text: Barn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2861,6 +2891,7 @@ GameObject:
   - component: {fileID: 1662528672570300221}
   - component: {fileID: 8007654444832096946}
   - component: {fileID: 1964542015063309238}
+  - component: {fileID: 7706925735093781911}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3010,6 +3041,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
   mixerGroup: {fileID: 0}
+--- !u!114 &7706925735093781911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954377202076182369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
 --- !u!1 &955260585816918439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,6 +3069,7 @@ GameObject:
   - component: {fileID: 4124151722703093950}
   - component: {fileID: 6464126737439792492}
   - component: {fileID: 3135569947153878003}
+  - component: {fileID: 5579662195340287829}
   m_Layer: 5
   m_Name: Soil Health
   m_TagString: Untagged
@@ -3133,7 +3179,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2028891682487220769}
+      - m_Target: {fileID: 6546463509190114180}
+        m_TargetAssemblyTypeName: BuildingTypeSelect, Assembly-CSharp
+        m_MethodName: GridDisplay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: c08dd2b885b529543a248482f6821526,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TileBase, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2319220550197962800}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3143,19 +3202,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &6464126737439792492
 MonoBehaviour:
@@ -3173,6 +3220,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &3135569947153878003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955260585816918439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &5579662195340287829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4021,6 +4082,7 @@ GameObject:
   - component: {fileID: 7565301717869879289}
   - component: {fileID: 3542991345707785124}
   - component: {fileID: 8374209892830674183}
+  - component: {fileID: 2615092677005681832}
   m_Layer: 5
   m_Name: Construction Materials
   m_TagString: Untagged
@@ -4158,6 +4220,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &8374209892830674183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666764042259445542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &2615092677005681832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5126,6 +5202,7 @@ GameObject:
   - component: {fileID: 6365478605086900269}
   - component: {fileID: 4538141316476920859}
   - component: {fileID: 5975507503204582887}
+  - component: {fileID: 4243037806971508089}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5262,6 +5339,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &5975507503204582887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008191746143227533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &4243037806971508089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5453,6 +5544,7 @@ GameObject:
   - component: {fileID: 6212587961894477690}
   - component: {fileID: 7485472068874407028}
   - component: {fileID: 7123421982789698764}
+  - component: {fileID: 6250221499766244837}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5589,6 +5681,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &7123421982789698764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068985925776060563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &6250221499766244837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7005,6 +7111,7 @@ GameObject:
   - component: {fileID: 2479032053311149061}
   - component: {fileID: 9210747733358606212}
   - component: {fileID: 5498057705849458165}
+  - component: {fileID: 9028879055868550439}
   m_Layer: 5
   m_Name: Building Menu button
   m_TagString: Untagged
@@ -7125,6 +7232,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 6546463509190114180}
+        m_TargetAssemblyTypeName: BuildingTypeSelect, Assembly-CSharp
+        m_MethodName: GridOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &9210747733358606212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7141,6 +7260,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 7154462879860465773, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &5498057705849458165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2752578854571548594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &9028879055868550439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7853,6 +7986,7 @@ GameObject:
   - component: {fileID: 4688329461099862770}
   - component: {fileID: 7398046302788675371}
   - component: {fileID: 3934199307252241863}
+  - component: {fileID: 190463684303522560}
   m_Layer: 5
   m_Name: Season_Icon_BG
   m_TagString: Untagged
@@ -7917,6 +8051,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &190463684303522560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124226524224666856}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74178d03551738549a02d457af5dd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seasonIcon: {fileID: 248852245280774774}
+  seasonText: {fileID: 0}
+  winterIcon: {fileID: -427044918, guid: 5df1015c33833b3458c3219f505d3ced, type: 3}
+  springIcon: {fileID: -709965285, guid: 18091f8f82854f043878a03334c7cffe, type: 3}
+  summerIcon: {fileID: -1109535336, guid: a315427735ac01a4aa35911ae3f1f1f6, type: 3}
+  autumnIcon: {fileID: 356536566, guid: 089e21fbfe95bc045911445720015783, type: 3}
 --- !u!1 &3161429440261549425
 GameObject:
   m_ObjectHideFlags: 0
@@ -8432,6 +8584,7 @@ GameObject:
   - component: {fileID: 3861063582626394471}
   - component: {fileID: 2295874073703663519}
   - component: {fileID: 5009260566586557692}
+  - component: {fileID: 840221636023666111}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -8580,6 +8733,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &5009260566586557692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3425383625800462113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &840221636023666111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12273,6 +12440,7 @@ GameObject:
   - component: {fileID: 9222409287947912617}
   - component: {fileID: 5973363923267438411}
   - component: {fileID: 8968912421190478849}
+  - component: {fileID: 196788957922598809}
   m_Layer: 5
   m_Name: Time Left
   m_TagString: Untagged
@@ -12410,6 +12578,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &8968912421190478849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5103615996305890506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &196788957922598809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15237,7 +15419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (food Req number text)
+  m_text: Cost to build Barn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19376,7 +19558,6 @@ GameObject:
   - component: {fileID: 2153148120910806534}
   - component: {fileID: 5744840922129789870}
   - component: {fileID: 2251330818456899999}
-  - component: {fileID: 4171447097926418708}
   m_Layer: 5
   m_Name: Weather_Button
   m_TagString: Untagged
@@ -19528,20 +19709,6 @@ MonoBehaviour:
   ClickedSound: {fileID: 8300000, guid: 8f51910f06ae56849b4088fbef2f6fe2, type: 3}
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
---- !u!114 &4171447097926418708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7703884218921381290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  mixerGroup: {fileID: 0}
 --- !u!1 &7731771806613349477
 GameObject:
   m_ObjectHideFlags: 0
@@ -20177,6 +20344,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8485074273405197436}
   - {fileID: 5339026856374582825}
   - {fileID: 1784089734575266747}
   - {fileID: 2559706561052898271}
@@ -20278,8 +20446,8 @@ MonoBehaviour:
   levelTimeStore: 5
   startingFoodAmount: 10
   startingConstructionMaterialAmount: 55
-  successFoodAmount: 0
-  successConstructionMaterialsAmount: 10
+  successFoodAmount: 10
+  successConstructionMaterialsAmount: 50
   successSoilHealth: 0
   waterOutline: {fileID: 3200403397222149912, guid: 90500a2c4abf239448889ede4c709d35,
     type: 3}
@@ -20552,7 +20720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5799476931960809330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21231,6 +21399,7 @@ GameObject:
   - component: {fileID: 8151495371409159717}
   - component: {fileID: 5266543535430562315}
   - component: {fileID: 5514685274615081309}
+  - component: {fileID: 7497144223291253335}
   m_Layer: 5
   m_Name: Food
   m_TagString: Untagged
@@ -21368,6 +21537,20 @@ MonoBehaviour:
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!114 &5514685274615081309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627142181503576080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
+  mixerGroup: {fileID: 0}
+--- !u!114 &7497144223291253335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23081,6 +23264,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4999568062026504546, guid: bdb22ecd811eeba48a2ca5fe2860ee5b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6428721586684255856}
     - target: {fileID: 5553046282211269063, guid: bdb22ecd811eeba48a2ca5fe2860ee5b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -23137,6 +23325,190 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7886687461116422816, guid: bdb22ecd811eeba48a2ca5fe2860ee5b,
     type: 3}
   m_PrefabInstance: {fileID: 859862593644379175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1760363785788988014
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2486878154245804725}
+    m_Modifications:
+    - target: {fileID: 3715877750616782560, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715877750616782560, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715877750616782560, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.095825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715877750616782560, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -166.73108
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487520761991163729, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_Name
+      value: InGameSettingsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487520761991163729, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697816993258870690, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_text
+      value: Pause Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697816993258870690, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697816993258870690, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266237525969296285, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2428.6294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1517.8933
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0540925
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0540925
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0540925
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1274.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 797.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 95d5840097b068945818e1bcd3b9036f, type: 3}
+--- !u!224 &8485074273405197436 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7903566184005846546, guid: 95d5840097b068945818e1bcd3b9036f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1760363785788988014}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9204350804937456037
 PrefabInstance:
