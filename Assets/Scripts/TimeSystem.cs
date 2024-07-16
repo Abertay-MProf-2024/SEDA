@@ -20,6 +20,14 @@ enum Month
     December
 }
 
+public enum Season
+{
+    Winter,
+    Spring,
+    Summer,
+    Autumn
+}
+
 class TimedEvent
 {
     public Action action;
@@ -54,6 +62,8 @@ public class TimeSystem : MonoBehaviour
 
     Month month = Month.January;
     int numOfDaysInMonth = 31;
+
+    static Season season = Season.Winter;
 
     int year = 1;
 
@@ -107,6 +117,11 @@ public class TimeSystem : MonoBehaviour
     public static void AddMonthlyEvent(Action action, int months=1, bool repeat=true)
     {
         monthlyEvents.Add(new TimedEvent { action = action, timeToRun = months, isRepeating = repeat, timeLeft = months });
+    }
+
+    public void SkipMonth()
+    {
+        month++;
     }
 
     /** Runs the countdowns for every daily event in the list
@@ -174,7 +189,7 @@ public class TimeSystem : MonoBehaviour
     }
 
     /** Increment month (and year, rolling over from December to January) */
-    void IncrementMonth()
+    public void IncrementMonth()
     {
         month++;
         RunEvents(monthlyEvents);
@@ -193,6 +208,7 @@ public class TimeSystem : MonoBehaviour
         monthDisplay.text = month.ToString();
 
         AssignDaysInMonth();
+        SetSeason();
     }
 
 
@@ -212,6 +228,30 @@ public class TimeSystem : MonoBehaviour
         else
         {
             numOfDaysInMonth = 31;
+        }
+    }
+
+    /**
+     *  Set season, and update UI icon and text
+     *  Season is set at the end of each month, so the function checks for the month before the season begins
+     */
+    void SetSeason()
+    {
+        if (month == Month.February)
+        {
+            season = Season.Spring;
+        }
+        else if (month == Month.May)
+        {
+            season = Season.Summer;
+        }
+        else if (month == Month.August)
+        {
+            season = Season.Autumn;
+        }
+        else if (month == Month.November)
+        {
+            season = Season.Winter;
         }
     }
 
@@ -268,6 +308,11 @@ public class TimeSystem : MonoBehaviour
 
         if (pauseMenus == 0)
             Time.timeScale = 1f;
+    }
+
+    public static Season GetCurrentSeason()
+    {
+        return season;
     }
 
     private void OnDestroy()

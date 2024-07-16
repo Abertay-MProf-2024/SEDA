@@ -4,7 +4,6 @@ using UnityEngine;
 [CustomEditor(typeof(LevelManager))]
 public class LevelManagerEditor : Editor
 {
-    SerializedProperty inputs;
     SerializedProperty sceneMusic;
 
     SerializedProperty levelTime;
@@ -22,10 +21,11 @@ public class LevelManagerEditor : Editor
     SerializedProperty extraOutline;
 
     SerializedProperty musicPlayer;
+    SerializedProperty buildingCostUI;
+
 
     private void OnEnable()
     {
-        inputs = serializedObject.FindProperty("inputs");
         sceneMusic = serializedObject.FindProperty("sceneMusic");
 
         levelTime = serializedObject.FindProperty("levelTimeStore");
@@ -42,11 +42,12 @@ public class LevelManagerEditor : Editor
         extraOutline = serializedObject.FindProperty("extraOutline");
 
         musicPlayer = serializedObject.FindProperty("musicPlayer");
+
+        buildingCostUI = serializedObject.FindProperty("buildingCostUI");
     }
 
     public override void OnInspectorGUI()
     {
-        EditorGUILayout.PropertyField(inputs);
         EditorGUILayout.PropertyField(sceneMusic);
 
         EditorGUIUtility.labelWidth = 250;
@@ -68,6 +69,7 @@ public class LevelManagerEditor : Editor
 
         EditorGUILayout.Space();
         EditorGUILayout.PropertyField(musicPlayer);
+        EditorGUILayout.PropertyField(buildingCostUI);
 
         serializedObject.ApplyModifiedProperties();
     }

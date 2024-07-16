@@ -15,15 +15,6 @@ public class PauseMenu : MonoBehaviour
     [Tooltip("The name of the Main Menu scene.")]
     public string mainMenuSceneName = "UI Screen";
 
-    //[SerializeField]
-    //PlayerInput PlayerInput;
-
-    InputAction possessCameraAction;
-    InputAction cameraPanAction;
-    InputAction unpossessCameraAction;
-    InputAction zoomAction;
-    
-    public InputActionAsset action;
 
     /** The pause menu is a singleton
      *  There is only one pause menu active at any given time
@@ -43,23 +34,7 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         gameIsPaused = true;
-        TimeSystem.Pause();;    // Pause the game when the pause menu is opened
-
-        possessCameraAction = action.FindAction("PossessCamera");
-        cameraPanAction = action.FindAction("PanCamera");
-        unpossessCameraAction = action.FindAction("UnpossessCamera");
-        zoomAction = action.FindAction("MouseWheelZoom");
-
-        if(possessCameraAction != null)
-            possessCameraAction.Disable();
-        if(cameraPanAction != null)
-            cameraPanAction.Disable();
-        if(unpossessCameraAction != null)
-            unpossessCameraAction.Disable();
-        if(zoomAction != null)
-            zoomAction.Disable();
-
-        //PlayerInput.SwitchCurrentActionMap("Pause Menu");
+        TimeSystem.Pause();    // Pause the game when the pause menu is opened
     }
 
     /** Destroy the pause menu object */
@@ -93,12 +68,6 @@ public class PauseMenu : MonoBehaviour
         {
             gameIsPaused = false;
             TimeSystem.Unpause();    // Unpause when the pause menu is closed
-
-            possessCameraAction.Enable();
-            cameraPanAction.Enable();
-            unpossessCameraAction.Enable();
-            zoomAction.Enable();
-            //PlayerInput.SwitchCurrentActionMap("Camera");
         }
     }
 }

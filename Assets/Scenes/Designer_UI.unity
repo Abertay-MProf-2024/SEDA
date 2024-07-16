@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &51708016
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &63227618
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,7 +978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &81907970
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,7 +4019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &469808972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4166,7 +4166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &473338933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,7 +4436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &485236463
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,7 +4584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &515579215
 GameObject:
   m_ObjectHideFlags: 0
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &583590525
 GameObject:
   m_ObjectHideFlags: 0
@@ -5544,7 +5544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &665457878
 GameObject:
   m_ObjectHideFlags: 0
@@ -6487,7 +6487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &772516655
 GameObject:
   m_ObjectHideFlags: 0
@@ -6634,7 +6634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &809188603
 GameObject:
   m_ObjectHideFlags: 0
@@ -6782,7 +6782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &810464853
 GameObject:
   m_ObjectHideFlags: 0
@@ -8593,7 +8593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &967415660
 GameObject:
   m_ObjectHideFlags: 0
@@ -8777,7 +8777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &981051883
 GameObject:
   m_ObjectHideFlags: 0
@@ -9612,7 +9612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1080789900
 GameObject:
   m_ObjectHideFlags: 0
@@ -9748,7 +9748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1100640508
 GameObject:
   m_ObjectHideFlags: 0
@@ -10891,7 +10891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1220449550
 GameObject:
   m_ObjectHideFlags: 0
@@ -11039,7 +11039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1225273404
 GameObject:
   m_ObjectHideFlags: 0
@@ -11445,7 +11445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1267977413
 GameObject:
   m_ObjectHideFlags: 0
@@ -11794,7 +11794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1313637092
 GameObject:
   m_ObjectHideFlags: 0
@@ -12227,7 +12227,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1413674965}
   - {fileID: 1137435933}
   - {fileID: 553450769}
   - {fileID: 1786756134}
@@ -12924,7 +12923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 4819dc2d5094bff4587259d96e975e35, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1446803904
 GameObject:
   m_ObjectHideFlags: 0
@@ -13269,7 +13268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 4819dc2d5094bff4587259d96e975e35, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1508897795
 GameObject:
   m_ObjectHideFlags: 0
@@ -14146,7 +14145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1582304517
 GameObject:
   m_ObjectHideFlags: 0
@@ -15015,7 +15014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1686419680
 GameObject:
   m_ObjectHideFlags: 0
@@ -16046,7 +16045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1815320911
 GameObject:
   m_ObjectHideFlags: 0
@@ -16404,7 +16403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1836283676
 GameObject:
   m_ObjectHideFlags: 0
@@ -16627,7 +16626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1872412311
 GameObject:
   m_ObjectHideFlags: 0
@@ -17333,7 +17332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 5bedab4e41df3c140b4aa04385dece7a, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1934758107
 GameObject:
   m_ObjectHideFlags: 0
@@ -17903,7 +17902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1988185382
 GameObject:
   m_ObjectHideFlags: 0
@@ -18050,7 +18049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &1997827024
 GameObject:
   m_ObjectHideFlags: 0
@@ -18314,15 +18313,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 1096820239, guid: e096933708a15164aa494c1b60938ef0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -18742,7 +18741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 4819dc2d5094bff4587259d96e975e35, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &2050781626
 GameObject:
   m_ObjectHideFlags: 0
@@ -19562,7 +19561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 8300000, guid: 74bcec12bf3ff1b43940befa11ca35c9, type: 3}
-  HoverSound: {fileID: 0}
+  mixerGroup: {fileID: 0}
 --- !u!1 &2131654197
 GameObject:
   m_ObjectHideFlags: 0

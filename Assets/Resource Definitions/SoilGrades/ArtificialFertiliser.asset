@@ -26,13 +26,14 @@ MonoBehaviour:
   bribeCostFood: 15
   bribeCostConstruction: 5
   canBuild: 1
-  buildingCostFood: 2
-  buildingCostMaterial: 5
+  buildingCostFood: 20
+  buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 0
-  upKeepCostFood: 3
-  upKeepCostMaterial: 2
+  upKeepCostFood: 10
+  upKeepCostMaterial: 10
   isResourceTapped: 0
+  collectorBuildings: 
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
