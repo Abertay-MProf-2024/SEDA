@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SheepPasture
   m_EditorClassIdentifier: 
   tileName: Sheep pasture
+  tileDescription: 
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: ce9370c9d214ae1498c2ebda693e6169,
     type: 3}
@@ -26,7 +27,7 @@ MonoBehaviour:
   bribeCostFood: 15
   bribeCostConstruction: 5
   canBuild: 1
-  buildingCostFood: 30
+  buildingCostFood: 20
   buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 1
