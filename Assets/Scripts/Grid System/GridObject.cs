@@ -133,7 +133,7 @@ public class GridObject : MonoBehaviour
             buildingInstance = Instantiate(building.inGameAsset, transform.position, Quaternion.Euler(new Vector3(0, 90, 0))).GetComponent<Building>();
             buildingInstance.resourceData = building; 
             buildingInstance.transform.parent = transform;
-            GetOwningGridSystem().ToggleBuildMode(building, true);
+            buildingInstance.isBuilt = true;
 
 
             BuildingPlacementSound buildSound;

@@ -13,6 +13,7 @@ public class Building : MonoBehaviour
     Terrainsystem Terrainsystem;
 
     int Upkeepmet = 1;
+    public bool isBuilt = false;
 
     //does the building required water energy to be able to be built on.
     public bool RequireWaterEnergy;
@@ -35,7 +36,8 @@ public class Building : MonoBehaviour
             SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
         }
 
-//        Terrainsystem.owningGridObject.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
+        if(isBuilt)
+            Terrainsystem.owningGridObject.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
 
         UpdateTotalBuildingCount(true);
         TimeSystem.AddMonthlyEvent(Impact, 1, true, 1);
