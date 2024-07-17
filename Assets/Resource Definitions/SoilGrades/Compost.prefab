@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5918334348238235545}
   - component: {fileID: 938145542236971866}
   - component: {fileID: 6898061723606172577}
+  - component: {fileID: 3209254416034342011}
+  - component: {fileID: 5974561219226443601}
   m_Layer: 0
   m_Name: Compost
   m_TagString: Untagged
@@ -72,6 +74,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 2}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &3209254416034342011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 419745496bc5b7a4a9c9aec5d6c3641e, type: 3}
+--- !u!114 &5974561219226443601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeBuildingSound: {fileID: 8300000, guid: 68c8d622c237a744f90e32a140905b25, type: 3}
 --- !u!1001 &1197592257114722378
 PrefabInstance:
   m_ObjectHideFlags: 0
