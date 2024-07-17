@@ -85,13 +85,23 @@ public class Building : MonoBehaviour
         Inventory.SpendMaterials(resourceData.buildingCostMaterial);
     }
 
+    public int GetFoodGenerated()
+    {
+        return Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * WeatherSystem.cropOutput * Upkeepmet);
+    }
+
+    public int GetMaterialsGenerated()
+    {
+        return Mathf.FloorToInt(resourceData.baseOutputMaterial * WeatherSystem.cropOutput * Upkeepmet);
+    }
+
     /** Generate resources according to the following equation: Base Output * buffs/nerfs * total crop output level */
     public void UpdateResources()
     {
         IfDependsonSoilGrade();
 
-        Inventory.food += Mathf.FloorToInt(resourceData.baseOutputFood * soilGradeModifier * WeatherSystem.cropOutput * Upkeepmet);
-        Inventory.constructionMaterials += Mathf.FloorToInt(resourceData.baseOutputMaterial * WeatherSystem.cropOutput * Upkeepmet);
+        Inventory.food += GetFoodGenerated();
+        Inventory.constructionMaterials += GetMaterialsGenerated();
 
         if (gameObject.GetComponentInChildren<ResourceUpdatePopup>())
         {
