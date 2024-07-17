@@ -65,6 +65,11 @@ public class Terrainsystem : MonoBehaviour
     //the total health of the soil (A to E grade)
     public int health;
 
+    //to calculate the avg soilHealth
+    public static int totalHealth;
+    //to count the number of tiles
+    public static int tilecount;
+
     //VeilSwitch Details
     [HideInInspector] public TerrainTypes OldsoilType;
     public TerrainTypes NewSoilType;
@@ -77,13 +82,12 @@ public class Terrainsystem : MonoBehaviour
 
         health = (int)CurrentsoilType;
 
+        tilecount++;
 
-        if (ResourceAffect)
-        {
-            TimeSystem.AddMonthlyEvent(HealthBar, 1, true, 2);
-            //TimeSystem.AddMonthlyEvent(ChangeinGrade, 1, true, 2);
+        TimeSystem.AddMonthlyEvent(HealthBar, 1, true, 2);
+        //TimeSystem.AddMonthlyEvent(ResetValuesSoilGrade, 1, true, 2);
 
-        }
+        //TimeSystem.AddMonthlyEvent(ChangeinGrade, 1, true, 2);
 
         InitialTerrainList();
         HealthBar();
@@ -134,15 +138,19 @@ public class Terrainsystem : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
         TriggerEnergy();
+        
+    }
 
+    public static void ResetValuesSoilGrade()
+    {
+        totalHealth = 0;
     }
 
     void HealthBar()
     {
-        Inventory.count++;
-        Inventory.totalhealth += (int)CurrentsoilType;
-        Inventory.HealthBarChange();
+        totalHealth = totalHealth + (int)CurrentsoilType;
     }
+
     public void SetTerrainMaterialProperties()
     {
         MeshRenderer renderer = gameObject.GetComponent<MeshRenderer>();
