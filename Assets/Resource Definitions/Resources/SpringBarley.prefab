@@ -180,11 +180,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5918334348238235545}
-  - component: {fileID: 5531594938430075358}
-  - component: {fileID: 3582012995276321559}
-  - component: {fileID: 2958013600637180556}
   - component: {fileID: 938145542236971866}
   - component: {fileID: 996601336350201600}
+  - component: {fileID: 1162558666057515032}
   m_Layer: 0
   m_Name: SpringBarley
   m_TagString: Untagged
@@ -201,65 +199,46 @@ Transform:
   m_GameObject: {fileID: 7543974964756465544}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 359.25494, y: 764.9907, z: -29.312016}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1568877873905424726}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5531594938430075358
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543974964756465544}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3582012995276321559
-MeshRenderer:
+--- !u!114 &938145542236971866
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7543974964756465544}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 48233e229e40f314fb0d7d74d84886c8, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2958013600637180556
-SphereCollider:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8d61a477003644b914d1428c864ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceData: {fileID: 11400000, guid: 0e3fd8e10405f024fb39076448f691b6, type: 2}
+  oldresourceData: {fileID: 0}
+  newresourceData: {fileID: 0}
+  isBuilt: 0
+  RequireWaterEnergy: 0
+  IsItBasedOnSoilGrade: 0
+--- !u!114 &996601336350201600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1834d05cca1ffc49a4d939f769b1867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6738161588700901452}
+--- !u!65 &1162558666057515032
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -277,35 +256,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &938145542236971866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543974964756465544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8d61a477003644b914d1428c864ba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourceData: {fileID: 11400000, guid: 0e3fd8e10405f024fb39076448f691b6, type: 2}
-  oldresourceData: {fileID: 0}
-  newresourceData: {fileID: 0}
-  RequireWaterEnergy: 0
-  IsItBasedOnSoilGrade: 0
---- !u!114 &996601336350201600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543974964756465544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1834d05cca1ffc49a4d939f769b1867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 6738161588700901452}
+  m_Size: {x: 2, y: 1, z: 2}
+  m_Center: {x: 0, y: 0.5, z: 0}
