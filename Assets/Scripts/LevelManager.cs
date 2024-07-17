@@ -134,7 +134,7 @@ public class LevelManager : MonoBehaviour
                 }
                 if (terrainTile.Wradius != 0)
                 {
-                    if (terrainTile.Wenergy)
+                    if (terrainTile.GetWaterEnergy())
                     {
                         radius = terrainTile.Wradius;
 
