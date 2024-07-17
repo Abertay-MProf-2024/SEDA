@@ -52,6 +52,11 @@ MonoBehaviour:
   IslandToChange: {fileID: 0}
   StandingStonePrefab: {fileID: -7868653969694002676, guid: 45cb29f366a60094386d862bdaa1613b,
     type: 3}
+  vfxIdle: {fileID: 8417487460243993300, guid: 61a68c81e12030e4685c14e576ffbc56, type: 3}
+  vfxEngaged: {fileID: 6106790687948789986, guid: dfac043de38b60e498d77cf7810678c8,
+    type: 3}
+  vfxActivate: {fileID: 1308031498507452829, guid: 8d96ab08773f8154f858d9a0604ce951,
+    type: 3}
 --- !u!114 &110413420075161802
 MonoBehaviour:
   m_ObjectHideFlags: 0
