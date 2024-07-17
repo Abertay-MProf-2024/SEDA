@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7862847786385782504}
-  - component: {fileID: 256485519260521873}
   - component: {fileID: 237971528444756472}
   - component: {fileID: 110413420075161802}
+  - component: {fileID: 3040026450997285251}
   m_Layer: 0
   m_Name: StandingStone
   m_TagString: StandingStone
@@ -29,35 +29,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6592133561126515397}
+  - {fileID: 8485542833401288216}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &256485519260521873
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4546108733566870136}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &237971528444756472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +75,28 @@ MonoBehaviour:
   isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
---- !u!1001 &2162082149891168735
+--- !u!65 &3040026450997285251
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546108733566870136}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 2}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!1001 &3510556945270930690
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -106,21 +104,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7862847786385782504}
     m_Modifications:
-    - target: {fileID: -4216859302048453862, guid: 55867d19305ec6943a4b0f4235bdfec5,
+    - target: {fileID: -8857575853942997517, guid: 55867d19305ec6943a4b0f4235bdfec5,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 55867d19305ec6943a4b0f4235bdfec5,
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e65f61bdfc180149a527091db700e4b, type: 2}
+    - target: {fileID: -8079754424647772389, guid: 55867d19305ec6943a4b0f4235bdfec5,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 55867d19305ec6943a4b0f4235bdfec5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.02
-      objectReference: {fileID: 0}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e65f61bdfc180149a527091db700e4b, type: 2}
     - target: {fileID: -4216859302048453862, guid: 55867d19305ec6943a4b0f4235bdfec5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -129,7 +122,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 55867d19305ec6943a4b0f4235bdfec5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 55867d19305ec6943a4b0f4235bdfec5,
         type: 3}
@@ -171,24 +164,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 55867d19305ec6943a4b0f4235bdfec5,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 55867d19305ec6943a4b0f4235bdfec5,
         type: 3}
       propertyPath: m_Name
       value: StandingStone02a_Low
       objectReference: {fileID: 0}
+    - target: {fileID: 165499541240688915, guid: 55867d19305ec6943a4b0f4235bdfec5,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e65f61bdfc180149a527091db700e4b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55867d19305ec6943a4b0f4235bdfec5, type: 3}
---- !u!4 &6592133561126515397 stripped
+--- !u!4 &8485542833401288216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 55867d19305ec6943a4b0f4235bdfec5,
     type: 3}
-  m_PrefabInstance: {fileID: 2162082149891168735}
+  m_PrefabInstance: {fileID: 3510556945270930690}
   m_PrefabAsset: {fileID: 0}
