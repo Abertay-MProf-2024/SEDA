@@ -34,6 +34,7 @@ class TimedEvent
     public int timeToRun = 1;
     public bool isRepeating = false;
     public int timeLeft = 1;
+    public int priority = 0;
 }
 
 public class TimeSystem : MonoBehaviour
@@ -96,7 +97,7 @@ public class TimeSystem : MonoBehaviour
         SetDay();
         SetMonth();
         SetTimeRemainingDisplay();
-        AddMonthlyEvent(CountDownLevelTime);
+        AddMonthlyEvent(CountDownLevelTime, 1, true, 3);
         StartCoroutine(DailyTick());
     }
 
@@ -113,10 +114,16 @@ public class TimeSystem : MonoBehaviour
         dailyEvents.Add(new TimedEvent{ action = action, timeToRun = days, isRepeating = repeat, timeLeft = days });
     }
 
-    /** Call this method to add an event to the Time Manager's monthly tick queue */
-    public static void AddMonthlyEvent(Action action, int months=1, bool repeat=true)
+    /** Call this method to add an event to the Time Manager's monthly tick queue
+     *  Priority for monthly events:
+     *      1- Resource Collection, Building Upkeep
+     *      2- SoilGradeChange
+     *      3- Level End/Win Conditions
+     *      4- Weather for the following month
+    */
+    public static void AddMonthlyEvent(Action action, int months=1, bool repeat=true, int eventPriority=0)
     {
-        monthlyEvents.Add(new TimedEvent { action = action, timeToRun = months, isRepeating = repeat, timeLeft = months });
+        monthlyEvents.Add(new TimedEvent { action = action, timeToRun = months, isRepeating = repeat, timeLeft = months, priority = eventPriority });
     }
 
     public void SkipMonth()
@@ -129,6 +136,8 @@ public class TimeSystem : MonoBehaviour
      */
     void RunEvents(List<TimedEvent> events)
     {
+        events.Sort((x, y) => x.priority.CompareTo(y.priority));
+
         for (int i = 0; i < events.Count; i++)
         {
             if (events[i].timeLeft > 1)
@@ -138,6 +147,7 @@ public class TimeSystem : MonoBehaviour
             else
             {
                 events[i].action();
+                print("Called action: " + events[i].action.Method.Name);
 
                 if (!events[i].isRepeating)
                 {

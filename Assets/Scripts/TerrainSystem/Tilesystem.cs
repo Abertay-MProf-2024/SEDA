@@ -80,8 +80,8 @@ public class Terrainsystem : MonoBehaviour
 
         if (ResourceAffect)
         {
-            TimeSystem.AddMonthlyEvent(HealthBar);
-            //TimeSystem.AddMonthlyEvent(ChangeinGrade);
+            TimeSystem.AddMonthlyEvent(HealthBar, 1, true, 2);
+            //TimeSystem.AddMonthlyEvent(ChangeinGrade, 1, true, 2);
 
         }
 
