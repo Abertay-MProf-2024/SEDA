@@ -4,11 +4,40 @@ using UnityEngine;
 
 public class ResourceUpdatePopup : MonoBehaviour
 {
-    [SerializeField] TextMeshPro text;
+    [SerializeField] TextMeshPro textBox;
+    [SerializeField] SpriteRenderer icon;
+
+    [Space(10)]
+    [Header("Sprites")]
+    [SerializeField] Sprite foodSprite;
+    [SerializeField] Sprite materialSprite;
+
+    Building buildingRef;
+
+    private void Start()
+    {
+        buildingRef = gameObject.GetComponentInParent<Building>();
+        SetVisibility(false);
+
+        Camera cam = FindAnyObjectByType<Camera>();
+        Quaternion lookAtCamRotation = Quaternion.LookRotation(transform.position - cam.transform.position);
+        transform.rotation = lookAtCamRotation;
+    }
 
     public void AnimatePopup()
     {
-        text.gameObject.SetActive(true);
+        if (buildingRef.GetFoodGenerated() > 0)
+        {
+            textBox.text = "+" + buildingRef.GetFoodGenerated();
+            icon.sprite = foodSprite;
+        }
+        else
+        {
+            textBox.text = "+" + buildingRef.GetMaterialsGenerated();
+            icon.sprite = materialSprite;
+        }
+
+        SetVisibility(true);
         StartCoroutine(MoveUp());
     }
 
@@ -19,10 +48,15 @@ public class ResourceUpdatePopup : MonoBehaviour
         while (count < 60)
         {
             yield return new WaitForSeconds(0.01f);
-            text.transform.position += new Vector3(0, (0.01f), 0);
+            textBox.transform.position += new Vector3(0, (0.01f), 0);
             count++;
         }
 
-        text.gameObject.SetActive(false);
+        SetVisibility(false);
+    }
+
+    void SetVisibility(bool isVisible)
+    {
+        GetComponent<MeshRenderer>().enabled = icon.enabled = isVisible;
     }
 }
