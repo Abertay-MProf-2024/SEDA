@@ -32,11 +32,7 @@ public class WeatherSystem : MonoBehaviour
 
     private void Start()
     {
-        // Reset weather
-        hasTornadoHappened = false;
-        hasFloodHappened = false;
-
-        TimeSystem.AddMonthlyEvent(SetWeather, 1, true, 4);
+        TimeSystem.AddMonthlyEvent(SetWeather, 1, true, 6);
     }
 
     public void SetWeather()

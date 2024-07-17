@@ -74,14 +74,14 @@ public class StandingStone : MonoBehaviour
             if (t.terraintype == t.OldsoilType)
             {
                 t.terraintype = t.NewSoilType;
-                t.InitialTerrainList();
+                //t.InitialTerrainList();
                 t.ChangeinGrade(0,20,true);
                 t.SetTerrainMaterialProperties();
             }
             else
             {
                 t.terraintype = t.OldsoilType;
-                t.InitialTerrainList();
+                //t.InitialTerrainList();
                 t.ChangeinGrade(0, 20, true);
                 t.SetTerrainMaterialProperties();
             }
