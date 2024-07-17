@@ -45,6 +45,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _CliffTexture:
+        m_Texture: {fileID: 2800000, guid: 3d0601ba5b25b70408794671618988f2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -67,6 +71,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MountainTexture:
+        m_Texture: {fileID: 2800000, guid: f365b17489ecdad43814ffff0bbb367c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -116,9 +124,11 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GroundHeight: 1
     - _Hydration: 1
     - _ManualSliders_ForDemo: 1
     - _Metallic: 0
+    - _MountainHeight: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
