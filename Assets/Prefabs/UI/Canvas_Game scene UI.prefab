@@ -19294,7 +19294,8 @@ MonoBehaviour:
     type: 3}
   winScreenPrefab: {fileID: 1331393866929807002, guid: f888e36a12e3a31409b651f765a5f6b2,
     type: 3}
-  timeSystem: {fileID: 0}
+  tutorialSystem: {fileID: 0}
+  buildingtypeselect: {fileID: 6546463509190114180}
 --- !u!1 &7690994272511527334
 GameObject:
   m_ObjectHideFlags: 0

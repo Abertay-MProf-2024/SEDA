@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Cailleach
   m_EditorClassIdentifier: 
   tileName: The Cailleach
+  tileDescription: dwrffdr
   icon: {fileID: 0}
   inGameAsset: {fileID: 0}
   sizeWidthTile: 1
@@ -32,6 +33,7 @@ MonoBehaviour:
   upKeepCostFood: 0
   upKeepCostMaterial: 0
   isResourceTapped: 0
+  collectorBuildings: 
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
