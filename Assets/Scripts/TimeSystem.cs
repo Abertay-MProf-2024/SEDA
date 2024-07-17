@@ -54,7 +54,8 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] GameObject gameOverPrefab;
     [SerializeField] GameObject levelCompletePrefab;
     [SerializeField] GameObject winScreenPrefab;
-    public GameObject timeSystem;
+    public GameObject tutorialSystem;
+    [SerializeField] BuildingTypeSelect buildingtypeselect;
 
     int day = 1;
     float timeElapsed = 0f;
@@ -90,7 +91,9 @@ public class TimeSystem : MonoBehaviour
     /** Initialise displays and start the daily tick */
     private void Start()
     {
-        if (timeSystem)
+        buildingtypeselect.CloseButton();
+
+        if (tutorialSystem)
             Pause();
 
         SetDay();
@@ -235,6 +238,7 @@ public class TimeSystem : MonoBehaviour
      *  Set season, and update UI icon and text
      *  Season is set at the end of each month, so the function checks for the month before the season begins
      */
+    
     void SetSeason()
     {
         if (month == Month.February)
@@ -306,7 +310,7 @@ public class TimeSystem : MonoBehaviour
     {
         pauseMenus--;
 
-        if (pauseMenus == 0)
+        if (pauseMenus <= 0)
             Time.timeScale = 1f;
     }
 

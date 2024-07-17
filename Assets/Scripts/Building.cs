@@ -35,7 +35,7 @@ public class Building : MonoBehaviour
             SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
         }
 
-        Terrainsystem.owningGridObject.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
+//        Terrainsystem.owningGridObject.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
 
         UpdateTotalBuildingCount(true);
         TimeSystem.AddMonthlyEvent(Impact);
