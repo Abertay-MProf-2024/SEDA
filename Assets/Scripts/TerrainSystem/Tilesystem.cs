@@ -51,7 +51,7 @@ public class Terrainsystem : MonoBehaviour
     //if the tile gives/has land energy
     public bool Lenergy = false;
     //if the tile gives/has water energy
-    public bool Wenergy = false;
+    bool Wenergy = false;
 
 
     public GridObject owningGridObject;
@@ -157,6 +157,11 @@ public class Terrainsystem : MonoBehaviour
         foreach (Material mat in materialsArray)
         {
             mat.SetFloat("_SoilQuality", quality);
+
+            if (Wenergy)
+                mat.SetFloat("_Hydration", 1);
+            else
+                mat.SetFloat("_Hydration", 0);
         }
     }
 
@@ -253,6 +258,17 @@ public class Terrainsystem : MonoBehaviour
             }
         }
 
+    }
+
+    public bool GetWaterEnergy()
+    {
+        return Wenergy;
+    }
+
+    public void SetWaterEnergy(bool hasWater)
+    {
+        Wenergy = hasWater;
+        SetTerrainMaterialProperties();
     }
 }
 

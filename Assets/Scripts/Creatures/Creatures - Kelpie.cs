@@ -32,8 +32,9 @@ public class Kelpie : Building
         {
             if (kelpieTile.terraintype == TerrainTypes.River)
             {
-                
-                kelpieTile.Wenergy = false;
+
+                kelpieTile.SetWaterEnergy(false);
+                kelpieTile.SetTerrainMaterialProperties();
             }
         }
     }
@@ -69,7 +70,7 @@ public class Kelpie : Building
             {
                 /* GridPosition pos = giantTile.owningGridObject.GetGridPosition();
                  GridObject CreatureObj = giantTile.owningGridObject.GetOwningGridSystem().GetGridObject(pos.x, pos.z);*/
-                kelpieTile.Wenergy = true;
+                kelpieTile.SetWaterEnergy(true);
                 kelpieTile.TriggerEnergy();
             }
         }

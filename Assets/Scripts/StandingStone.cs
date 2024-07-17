@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class StandingStone : MonoBehaviour
@@ -11,6 +12,14 @@ public class StandingStone : MonoBehaviour
     [SerializeField] GameObject IslandToChange;
 
     [SerializeField] StandingStonPrefabPopUp StandingStonePrefab;
+
+    GameObject standingStoneVFX;
+
+    [SerializeField] GameObject vfxIdle;
+    [SerializeField] GameObject vfxEngaged;
+    [SerializeField] GameObject vfxActivate;
+
+    bool isIdle = true;
 
     private void Start()
     {
@@ -27,6 +36,8 @@ public class StandingStone : MonoBehaviour
             //Debug.DrawLine(transform.position, transform.position + Vector3.down * 100, Color.red, 500);
             TS1 = hit.transform.gameObject.GetComponent<Terrainsystem>();
         }
+
+        standingStoneVFX = Instantiate(vfxIdle, transform, false);
     }
 
     public void OpenStandingStone()
@@ -40,6 +51,17 @@ public class StandingStone : MonoBehaviour
 
     public void VeilSwitch()
     {
+        isIdle = !isIdle;
+        
+        if (isIdle)
+        {
+            StartCoroutine(SwapVFX(vfxIdle));
+        }
+        else
+        {
+            StartCoroutine(SwapVFX(vfxEngaged));
+        }
+
         if(kelpie != null)
             kelpie.StandingStoneKelpieImpact();
         if (cailleach != null)
@@ -84,5 +106,15 @@ public class StandingStone : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator SwapVFX(GameObject newEffect)
+    {
+        Destroy(standingStoneVFX);
+        standingStoneVFX = Instantiate(vfxActivate, transform, false);
+        yield return new WaitForSeconds(2f);
+
+        Destroy(standingStoneVFX);
+        standingStoneVFX = Instantiate(newEffect, transform, false);
     }
 }
