@@ -151,7 +151,7 @@ public class Terrainsystem : MonoBehaviour
         totalHealth = totalHealth + (int)CurrentsoilType;
     }
 
-    public void SetTerrainMaterialProperties()
+    public void SetTerrainMaterialProperties(bool flood=false)
     {
         MeshRenderer renderer = gameObject.GetComponent<MeshRenderer>();
 
@@ -160,7 +160,11 @@ public class Terrainsystem : MonoBehaviour
 
         Material[] materialsArray = GetComponent<MeshRenderer>().materials;
 
-        float quality = health / 100f;
+        float quality;
+        if (flood)
+            quality = 1;
+        else
+            quality = health / 100f;
 
         foreach (Material mat in materialsArray)
         {
