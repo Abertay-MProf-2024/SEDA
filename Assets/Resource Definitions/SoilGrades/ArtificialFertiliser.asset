@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ArtificialFertiliser
   m_EditorClassIdentifier: 
   tileName: Artificial Fertiliser
-  tileDescription: 
+  tileDescription: sfdfdxrgdr
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: 6b761ce4b81bc65438a1dc6b234da9c9,
     type: 3}
