@@ -9,7 +9,6 @@ public class UIFuntions : MonoBehaviour
 
     //Main Menu Canvases
     public Canvas MainMenuCanvas;
-    public Canvas LoadMenuCanvas;
     //public Canvas PauseMenuCanvas;
 
     //Level Selection Canvases
@@ -27,7 +26,6 @@ public class UIFuntions : MonoBehaviour
     void Start()
     {
         MainMenuCanvas.enabled = true;
-        LoadMenuCanvas.enabled = false;
         //PauseMenuCanvas.enabled = false;
 
         LevelSelection.enabled = false;
@@ -37,7 +35,6 @@ public class UIFuntions : MonoBehaviour
     public void Load_clickhere()
     {
         MainMenuCanvas.enabled = true;
-        LoadMenuCanvas.enabled = false;
         //PauseMenuCanvas.enabled = false;
 
         LevelSelection.enabled = false;
@@ -65,14 +62,12 @@ public class UIFuntions : MonoBehaviour
     public void LoadLevel()
     {
         MainMenuCanvas.enabled = false ;
-        LoadMenuCanvas.enabled = true ;
         //PauseMenuCanvas.enabled = false ;
     }
     public void Settings()
     {
        // PauseMenuCanvas.enabled = true;
         //MainMenuCanvas.enabled = false;
-        LoadMenuCanvas.enabled = false;
     }
 
     public void QuitGame()

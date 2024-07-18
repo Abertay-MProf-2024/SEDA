@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 094cdd5c88292b746a84b39cd0752fb6
+guid: 723edfb59c5194140b2f1a2b1f4e905b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -155,13 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weather_Main_Icon_WeatherTornado_Small_0
+      name: 001_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 350
-        height: 350
+        width: 1191
+        height: 754
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +169,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7839231c2265754a99bd21d528d7293
-      internalID: 1463579465
+      spriteID: da12333b462606149b713a2d99c280f2
+      internalID: -598857687
       vertices: []
       indices: 
       edges: []
@@ -178,7 +178,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f88fffe48f2d16f42a6b2d14cdd248e5
+    spriteID: c45bde3fe6e0eb441a3fb7ec902041a1
     internalID: 0
     vertices: []
     indices: 
@@ -186,7 +186,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Weather_Main_Icon_WeatherTornado_Small_0: 1463579465
+      001_0: -598857687
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

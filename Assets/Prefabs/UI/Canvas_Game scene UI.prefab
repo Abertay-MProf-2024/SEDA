@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &71401473917865880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5613547668088956002}
+  - component: {fileID: 6043873956433206844}
+  - component: {fileID: 531805594681042916}
+  m_Layer: 5
+  m_Name: Weather_Icon_Flood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5613547668088956002
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71401473917865880}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 6734195618747140841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 350, y: 350}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6043873956433206844
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71401473917865880}
+  m_CullTransparentMesh: 1
+--- !u!114 &531805594681042916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71401473917865880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1228454237, guid: 081fc7b720e896549b3b642614266b1b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &97837178872348588
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +803,7 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: bdaf8c545b368b640bfdfc65a9daae98, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
   satisfybutton: {fileID: 4294266589071040044}
@@ -7701,7 +7777,7 @@ GameObject:
   - component: {fileID: 990127275629863015}
   - component: {fileID: 152662127746158699}
   m_Layer: 5
-  m_Name: Weather_Icon
+  m_Name: Weather_Icon_sunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8428,6 +8504,7 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: 8ab010336f35a07468c394c1c207ccf4, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
   satisfybutton: {fileID: 5679598185520242614}
@@ -10019,6 +10096,7 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: 68cc7a81767359e458514a6d1a991c46, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
   satisfybutton: {fileID: 1328298363562232214}
@@ -14171,6 +14249,7 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: 8ab010336f35a07468c394c1c207ccf4, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
   satisfybutton: {fileID: 5679598185520242614}
@@ -14342,10 +14421,10 @@ RectTransform:
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 3796885461880810595}
   - {fileID: 3190273447007499929}
   - {fileID: 7821561411355693882}
   - {fileID: 3240083964056218078}
+  - {fileID: 3796885461880810595}
   - {fileID: 374714120999243165}
   m_Father: {fileID: 6229286188986208668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19578,7 +19657,10 @@ RectTransform:
   m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 4372169631342585199}
+  - {fileID: 5613547668088956002}
   - {fileID: 4101380959798638749}
+  - {fileID: 7995381304881157042}
   - {fileID: 3642647647855048320}
   m_Father: {fileID: 5339026856374582825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20202,6 +20284,7 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: bdaf8c545b368b640bfdfc65a9daae98, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
   satisfybutton: {fileID: 4294266589071040044}
@@ -20307,11 +20390,162 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: 68cc7a81767359e458514a6d1a991c46, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
   satisfybutton: {fileID: 1328298363562232214}
   kelpiecreature: {fileID: 0}
   endpoint2: {fileID: 0}
+--- !u!1 &7928465554612879156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4372169631342585199}
+  - component: {fileID: 4589912909561629412}
+  - component: {fileID: 6383667259157124716}
+  m_Layer: 5
+  m_Name: Weather_Icon_Thunderstorm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4372169631342585199
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7928465554612879156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 6734195618747140841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 350, y: 350}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4589912909561629412
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7928465554612879156}
+  m_CullTransparentMesh: 1
+--- !u!114 &6383667259157124716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7928465554612879156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2053796717, guid: fb30a8c51c1e6ea42985a19cc528b9e2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7933671718403818715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7995381304881157042}
+  - component: {fileID: 5123466630569595621}
+  - component: {fileID: 1296401772042522373}
+  m_Layer: 5
+  m_Name: Weather_Icon_Tornado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7995381304881157042
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933671718403818715}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 6734195618747140841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 350, y: 350}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5123466630569595621
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933671718403818715}
+  m_CullTransparentMesh: 1
+--- !u!114 &1296401772042522373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933671718403818715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 614268390, guid: 65007218f2128974f8194d3e9ad21963, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7971582688145391426
 GameObject:
   m_ObjectHideFlags: 0
@@ -21375,7 +21609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1463579465, guid: 094cdd5c88292b746a84b39cd0752fb6, type: 3}
+  m_Sprite: {fileID: 614268390, guid: 65007218f2128974f8194d3e9ad21963, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
