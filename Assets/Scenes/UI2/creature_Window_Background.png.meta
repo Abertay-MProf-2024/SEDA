@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 094cdd5c88292b746a84b39cd0752fb6
+guid: 8ee520b0a84aa944a9a9aee52b22bacc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -155,13 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weather_Main_Icon_WeatherTornado_Small_0
+      name: creature_Window_Background_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 350
-        height: 350
+        width: 699
+        height: 918
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +169,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7839231c2265754a99bd21d528d7293
-      internalID: 1463579465
+      spriteID: 93ceaab39cab502478fdeb1e0059e4e5
+      internalID: 971660159
       vertices: []
       indices: 
       edges: []
@@ -178,7 +178,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f88fffe48f2d16f42a6b2d14cdd248e5
+    spriteID: 972647a08679e34418a4616d8083cfc4
     internalID: 0
     vertices: []
     indices: 
@@ -186,7 +186,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Weather_Main_Icon_WeatherTornado_Small_0: 1463579465
+      creature_Window_Background_0: 971660159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
