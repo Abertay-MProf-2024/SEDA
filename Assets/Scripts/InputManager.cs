@@ -291,6 +291,7 @@ public class InputManager : MonoBehaviour
         // Enable Pinch Zoom
         if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
         {
+            FindAnyObjectByType<AudioZoomController>().PlayWindSound();
             primaryFingerPosAction.performed += ReadPrimaryFingerPosition;
             secondaryFingerPosAction.performed += ReadSecondaryFingerPosition;
         }
@@ -301,6 +302,7 @@ public class InputManager : MonoBehaviour
         // Disable Pinch Zoom
         if (primaryFingerPosAction !=null && secondaryFingerPosAction != null)
         {
+            FindAnyObjectByType<AudioZoomController>().StopWindSound();
             primaryFingerPosAction.performed -= ReadPrimaryFingerPosition;
             secondaryFingerPosAction.performed -= ReadSecondaryFingerPosition;
         }
