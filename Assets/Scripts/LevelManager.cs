@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -48,9 +49,19 @@ public class LevelManager : MonoBehaviour
     {
         Instantiate(musicPlayer);
         SceneMusic.instance.ChangeMusicTrack(sceneMusic);
-
+       
         Inventory.food = startingFoodAmount;
         Inventory.constructionMaterials = startingConstructionMaterialAmount;
+        StartCoroutine(FindSoilHealth());
+        TimeSystem.AddMonthlyEvent(Inventory.HealthBarChange, 1, true, 3);
+        TimeSystem.AddMonthlyEvent(Terrainsystem.ResetValuesSoilGrade, 1, true, 4);
+    }
+
+    IEnumerator FindSoilHealth()
+    {
+        yield return new WaitForSeconds(1);
+        Inventory.HealthBarChange();
+        Terrainsystem.ResetValuesSoilGrade();
     }
 
     public void SelectTile(Ray ray)
@@ -134,7 +145,7 @@ public class LevelManager : MonoBehaviour
                 }
                 if (terrainTile.Wradius != 0)
                 {
-                    if (terrainTile.Wenergy)
+                    if (terrainTile.GetWaterEnergy())
                     {
                         radius = terrainTile.Wradius;
 

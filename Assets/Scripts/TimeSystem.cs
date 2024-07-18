@@ -55,7 +55,8 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] GameObject gameOverPrefab;
     [SerializeField] GameObject levelCompletePrefab;
     [SerializeField] GameObject winScreenPrefab;
-    public GameObject timeSystem;
+    public GameObject tutorialSystem;
+    [SerializeField] BuildingTypeSelect buildingtypeselect;
 
     int day = 1;
     float timeElapsed = 0f;
@@ -91,13 +92,15 @@ public class TimeSystem : MonoBehaviour
     /** Initialise displays and start the daily tick */
     private void Start()
     {
-        if (timeSystem)
+        buildingtypeselect.CloseButton();
+
+        if (tutorialSystem)
             Pause();
 
         SetDay();
         SetMonth();
         SetTimeRemainingDisplay();
-        AddMonthlyEvent(CountDownLevelTime, 1, true, 3);
+        AddMonthlyEvent(CountDownLevelTime, 1, true, 5);
         StartCoroutine(DailyTick());
     }
 
@@ -118,9 +121,13 @@ public class TimeSystem : MonoBehaviour
      *  Priority for monthly events:
      *      1- Resource Collection, Building Upkeep
      *      2- SoilGradeChange
-     *      3- Level End/Win Conditions
-     *      4- Weather for the following month
+     *      3- HealthBar Update Change
+     *      4- Reset Soil Grade Change
+     *      5- Level End/Win Conditions
+     *      6- Weather for the following month
+     *      
     */
+
     public static void AddMonthlyEvent(Action action, int months=1, bool repeat=true, int eventPriority=0)
     {
         monthlyEvents.Add(new TimedEvent { action = action, timeToRun = months, isRepeating = repeat, timeLeft = months, priority = eventPriority });
@@ -147,7 +154,6 @@ public class TimeSystem : MonoBehaviour
             else
             {
                 events[i].action();
-                print("Called action: " + events[i].action.Method.Name);
 
                 if (!events[i].isRepeating)
                 {
@@ -245,6 +251,7 @@ public class TimeSystem : MonoBehaviour
      *  Set season, and update UI icon and text
      *  Season is set at the end of each month, so the function checks for the month before the season begins
      */
+    
     void SetSeason()
     {
         if (month == Month.February)
@@ -316,7 +323,7 @@ public class TimeSystem : MonoBehaviour
     {
         pauseMenus--;
 
-        if (pauseMenus == 0)
+        if (pauseMenus <= 0)
             Time.timeScale = 1f;
     }
 
