@@ -38,9 +38,6 @@ public class Terrainsystem : MonoBehaviour
     }
 
     TileBase creaturetile;
-    public List<SoilType> allowedSoilGrade;
-
-    SoilType testsoil;
 
     public bool ResourceAffect;
 
@@ -89,7 +86,6 @@ public class Terrainsystem : MonoBehaviour
 
         //TimeSystem.AddMonthlyEvent(ChangeinGrade, 1, true, 2);
 
-        InitialTerrainList();
         HealthBar();
         SetTerrainMaterialProperties();
 
@@ -178,51 +174,6 @@ public class Terrainsystem : MonoBehaviour
         }
     }
 
-    public void InitialTerrainList()
-    {
-        switch (terraintype)
-        {
-            case TerrainTypes.Grassland:
-                {
-                    allowedSoilGrade.Add(SoilType.A);
-                    allowedSoilGrade.Add(SoilType.B);
-                    allowedSoilGrade.Add(SoilType.C);
-                    break;
-                }
-            case TerrainTypes.Highland:
-                {
-                    allowedSoilGrade.Add(SoilType.A);
-                    allowedSoilGrade.Add(SoilType.B);
-                    allowedSoilGrade.Add(SoilType.C);
-                    break;
-                }
-            case TerrainTypes.Wetland:
-                {
-                    allowedSoilGrade.Add(SoilType.D);
-                    allowedSoilGrade.Add(SoilType.E);
-                    break;
-                }
-            case TerrainTypes.River:
-                {
-                    allowedSoilGrade.Add(SoilType.B);
-                    allowedSoilGrade.Add(SoilType.C);
-                    allowedSoilGrade.Add(SoilType.D);
-                    break;
-                }
-            case TerrainTypes.Barren:
-                {
-                    allowedSoilGrade.Add(SoilType.E);
-                    break;
-                }
-            case TerrainTypes.Mountain:
-                {
-                    allowedSoilGrade.Add(SoilType.C);
-                    allowedSoilGrade.Add(SoilType.D);
-                    break;
-                }
-        }
-    }
-
     public void ChangeinGrade(float buffamount, float nerfamount, bool impact)
     {
         float totalChangeInGrade = buffamount - nerfamount + WeatherSystem.soilGradeWeatherEffect;
@@ -236,41 +187,27 @@ public class Terrainsystem : MonoBehaviour
             {
                 if (health > 80)
                 {
-                    testsoil = SoilType.A;
-                    if (allowedSoilGrade.Contains(testsoil))
-                        CurrentsoilType = SoilType.A;
+                    CurrentsoilType = SoilType.A;
                 }
 
                 else if (health > 60 && health <= 80)
                 {
-                    testsoil = SoilType.B;
-                    if (allowedSoilGrade.Contains(testsoil))
-                        CurrentsoilType = SoilType.B;
-
+                    CurrentsoilType = SoilType.B;
                 }
                 else if (health > 40 && health <= 60)
                 {
-                    testsoil = SoilType.C;
-                    if (allowedSoilGrade.Contains(testsoil))
-                        CurrentsoilType = SoilType.C;
-
+                    CurrentsoilType = SoilType.C;
                 }
                 else if (health > 20 && health <= 40)
                 {
-                    testsoil = SoilType.D;
-                    if (allowedSoilGrade.Contains(testsoil))
-                        CurrentsoilType = SoilType.D;
-
+                    CurrentsoilType = SoilType.D;
                 }
                 else if (health >= 0 && health <= 20)
                 {
-                    testsoil = SoilType.E;
-                    if (allowedSoilGrade.Contains(testsoil))
-                        CurrentsoilType = SoilType.E;
+                    CurrentsoilType = SoilType.E;
                 }
             }
         }
-
     }
 
     public bool GetWaterEnergy()
