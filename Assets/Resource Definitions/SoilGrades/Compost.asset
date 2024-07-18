@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Compost
   m_EditorClassIdentifier: 
   tileName: Compost
-  tileDescription: 
+  tileDescription: gfikjdrkhbfdr
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: 4e4d3707c9096ce4483b3045fe201ad2,
     type: 3}

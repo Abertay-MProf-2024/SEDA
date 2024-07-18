@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: WindTurbine
   m_EditorClassIdentifier: 
   tileName: Wind Turbine
+  tileDescription: xdvvd
   icon: {fileID: 0}
   inGameAsset: {fileID: 50886030656341932, guid: 1916460652a694643b8a69466725290a,
     type: 3}
@@ -33,6 +34,7 @@ MonoBehaviour:
   upKeepCostFood: 0
   upKeepCostMaterial: 0
   isResourceTapped: 0
+  collectorBuildings: 
   baseOutputEnergy: 1
   baseOutputWater: 0
   baseOutputFood: 0
@@ -40,7 +42,6 @@ MonoBehaviour:
   buildingOutputMulti: 1
   impactSource: 1
   impactRadiusTiles: 1
-  collectorBuildings: 
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []
