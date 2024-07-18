@@ -51,7 +51,7 @@ public class Terrainsystem : MonoBehaviour
     //if the tile gives/has land energy
     public bool Lenergy = false;
     //if the tile gives/has water energy
-    bool Wenergy = false;
+    [SerializeField] bool Wenergy = false;
 
 
     public GridObject owningGridObject;
