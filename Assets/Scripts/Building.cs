@@ -32,7 +32,8 @@ public class Building : MonoBehaviour
         if (Terrainsystem == null)
         {
             RaycastHit hit;
-            Physics.Raycast(transform.position, Vector3.down, out hit);
+            Vector3 raycastOrigin = transform.position + new Vector3(0, 2, 0);
+            Physics.Raycast(raycastOrigin, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Grid"));
             SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
         }
 
