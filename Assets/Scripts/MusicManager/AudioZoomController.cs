@@ -14,7 +14,6 @@ public class AudioZoomController : MonoBehaviour
 
     private float minZoom;
     private float maxZoom;
-    private bool isMusic2AtMaxVolume = false;
     private Coroutine music2FadeCoroutine;
     private float music2OriginalVolume;
 
