@@ -302,7 +302,11 @@ public class InputManager : MonoBehaviour
         // Disable Pinch Zoom
         if (primaryFingerPosAction !=null && secondaryFingerPosAction != null)
         {
-            FindAnyObjectByType<AudioZoomController>().StopWindSound();
+            AudioZoomController zoomController = FindAnyObjectByType<AudioZoomController>();
+            
+            if (zoomController)
+                zoomController.StopWindSound();
+
             primaryFingerPosAction.performed -= ReadPrimaryFingerPosition;
             secondaryFingerPosAction.performed -= ReadSecondaryFingerPosition;
         }
