@@ -169,11 +169,12 @@ public class Terrainsystem : MonoBehaviour
         foreach (Material mat in materialsArray)
         {
             mat.SetFloat("_SoilQuality", quality);
+            mat.SetFloat("_Hydration", quality);
 
-            if (Wenergy)
+/*            if (Wenergy)
                 mat.SetFloat("_Hydration", 1);
             else
-                mat.SetFloat("_Hydration", 0);
+                mat.SetFloat("_Hydration", .8f);*/
         }
     }
 
