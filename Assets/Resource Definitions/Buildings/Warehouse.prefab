@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3030028463501469768}
   - component: {fileID: -3939148624180556249}
   - component: {fileID: 3801773793226540099}
+  - component: {fileID: -4871048905562305687}
+  - component: {fileID: -5959919288315916013}
   m_Layer: 0
   m_Name: Warehouse
   m_TagString: Untagged
@@ -81,6 +83,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 2}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &-4871048905562305687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679268389524347108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 6d48f08d6e68aee4da10054d8be445c4, type: 3}
+--- !u!114 &-5959919288315916013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679268389524347108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeBuildingSound: {fileID: 8300000, guid: 1252427f247ceba45ae4a2f2ac8aa12a, type: 3}
 --- !u!1001 &1764785552331246829
 PrefabInstance:
   m_ObjectHideFlags: 0
