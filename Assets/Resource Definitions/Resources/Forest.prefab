@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3582012995276321559}
   - component: {fileID: 2958013600637180556}
   - component: {fileID: 938145542236971866}
+  - component: {fileID: 4550783286984544132}
   m_Layer: 0
   m_Name: Forest
   m_TagString: Untagged
@@ -122,8 +123,22 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: 24e9ec8887a10c9488dc222a1f307740, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 11400000, guid: dfd08522d70fe834c885af0a8cca4b3e, type: 2}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+--- !u!114 &4550783286984544132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 2956760f44e4f014a910f0af4a4e5400, type: 3}
 --- !u!1001 &123835664744493266
 PrefabInstance:
   m_ObjectHideFlags: 0
