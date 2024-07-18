@@ -71,5 +71,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b340db69f59bac44b9dc0c093d40999,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1672562435097055978}
   m_SourcePrefab: {fileID: 100100000, guid: 7b340db69f59bac44b9dc0c093d40999, type: 3}
+--- !u!1 &2960052873381489086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b340db69f59bac44b9dc0c093d40999,
+    type: 3}
+  m_PrefabInstance: {fileID: 2726174992210990319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1672562435097055978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960052873381489086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20734eb64323aa94da8bac38e0324d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentsoilType: 60
+  allowedSoilGrade: 
+  ResourceAffect: 0
+  terraintype: 6
+  creaturetype: 0
+  Lenergy: 0
+  owningGridObject: {fileID: 0}
+  radius: 0
+  Wradius: 0
+  health: 0
+  OldsoilType: 0
+  NewSoilType: 0
