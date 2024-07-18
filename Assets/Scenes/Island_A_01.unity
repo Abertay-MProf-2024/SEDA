@@ -89587,6 +89587,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1962145535859519219, guid: 4f9ff33323792d64c923aaaa93759f3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2486878154245804725, guid: 4f9ff33323792d64c923aaaa93759f3f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -89742,15 +89747,30 @@ PrefabInstance:
       propertyPath: gridSystem
       value: 
       objectReference: {fileID: 278392595}
+    - target: {fileID: 7206821455317278330, guid: 4f9ff33323792d64c923aaaa93759f3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7394343295969564295, guid: 4f9ff33323792d64c923aaaa93759f3f,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7691685578562066733, guid: 4f9ff33323792d64c923aaaa93759f3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7971582688145391426, guid: 4f9ff33323792d64c923aaaa93759f3f,
         type: 3}
       propertyPath: m_Name
       value: Canvas_Game scene UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856324660614690851, guid: 4f9ff33323792d64c923aaaa93759f3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

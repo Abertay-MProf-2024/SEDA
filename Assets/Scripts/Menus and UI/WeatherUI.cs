@@ -3,19 +3,33 @@ using UnityEngine;
 
 public class WeatherUI : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI currentWeatherButtonText;
-    [SerializeField] TextMeshProUGUI currentWeatherText;
+    [SerializeField] Sprite currentWeatherIcon;
+
+    [SerializeField] Sprite fairWeatherIcon;
+    [SerializeField] Sprite tornadoIcon;
+    [SerializeField] Sprite thunderstormIcon;
+    [SerializeField] Sprite floodIcon;
 
     private void Update()
     {
-        string weatherName = WeatherSystem.GetCurrentWeather().ToString();
+        WeatherTypes weatherName = WeatherSystem.GetCurrentWeather();
         
         // So the name can look nice in the UI
-        if (weatherName == "Fair")
+        switch(weatherName)
         {
-            weatherName = "Fair Weather";
-        }
+            case WeatherTypes.Fair:
+                currentWeatherIcon = fairWeatherIcon;
+                break;
+            case WeatherTypes.Tornado:
+                currentWeatherIcon = tornadoIcon;
+                break;
+            case WeatherTypes.Thunderstorm:
+                currentWeatherIcon = thunderstormIcon;
+                break;
+            case WeatherTypes.Flood:
+                currentWeatherIcon = floodIcon;
+                break;
 
-        currentWeatherText.text = weatherName;
+        }
     }
 }
