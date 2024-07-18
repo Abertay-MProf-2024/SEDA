@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 723edfb59c5194140b2f1a2b1f4e905b
+guid: 7d95c24f03874004dbfef22a40d6bc94
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -155,13 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 001_0
+      name: creature_Window_Background _02_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1191
-        height: 754
+        width: 700
+        height: 920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +169,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da12333b462606149b713a2d99c280f2
-      internalID: -598857687
+      spriteID: 16c2c39b02314e149b954ef06d784a42
+      internalID: -561562554
       vertices: []
       indices: 
       edges: []
@@ -178,7 +178,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c45bde3fe6e0eb441a3fb7ec902041a1
+    spriteID: d6c61b5123cfbb545845619bec8ca48a
     internalID: 0
     vertices: []
     indices: 
@@ -186,7 +186,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      001_0: -598857687
+      creature_Window_Background _02_0: -561562554
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
