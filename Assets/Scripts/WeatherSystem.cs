@@ -76,6 +76,7 @@ public class WeatherSystem : MonoBehaviour
                 if (Energyobj != null)
                 {
                     Energyobj.SetTerrainWaterEnergy(true);
+                    Energyobj.terrain.SetTerrainMaterialProperties(true);
                 }
             }
         }
