@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7543974964756465544}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.13052596, z: -0, w: 0.99144495}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.352, y: 0, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42,7 +42,7 @@ Transform:
   - {fileID: 859500789392284740}
   - {fileID: 7269900501457099590}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &5531594938430075358
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: dfd08522d70fe834c885af0a8cca4b3e, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
 --- !u!65 &1547019497823693072
@@ -143,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: ebc36cad96aa3b94bb6d8b5846966f4b, type: 3}
+  clickSound: {fileID: 8300000, guid: e4d88daa33ddb9a429b018103442869f, type: 3}
 --- !u!114 &-3626189160748943334
 MonoBehaviour:
   m_ObjectHideFlags: 0

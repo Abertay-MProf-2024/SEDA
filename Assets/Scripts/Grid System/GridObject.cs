@@ -130,7 +130,7 @@ public class GridObject : MonoBehaviour
         if (CanBuildOnTile(building))
         {
             
-            buildingInstance = Instantiate(building.inGameAsset, transform.position, Quaternion.Euler(new Vector3(0, 90, 0))).GetComponent<Building>();
+            buildingInstance = Instantiate(building.inGameAsset, transform.position, building.inGameAsset.transform.rotation).GetComponent<Building>();
             buildingInstance.resourceData = building; 
             buildingInstance.transform.parent = transform;
             buildingInstance.isBuilt = true;
@@ -220,7 +220,7 @@ public class GridObject : MonoBehaviour
     public void SetTerrainWaterEnergy(bool hasEnergy)
     {
         if (terrain != null)
-            terrain.Wenergy = hasEnergy;
+            terrain.SetWaterEnergy(hasEnergy);
     }
 
 

@@ -15,7 +15,7 @@ MonoBehaviour:
   tileName: PeasAndBeans
   tileDescription: 
   icon: {fileID: 0}
-  inGameAsset: {fileID: 7543974964756465544, guid: db1ca25da234f254d9830650a317f4f8,
+  inGameAsset: {fileID: 7543974964756465544, guid: d533b7c6555063943b4e1e2708dc3e42,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
   collectorBuildings: 
   baseOutputEnergy: 0
   baseOutputWater: 0
-  baseOutputFood: 5
+  baseOutputFood: 10
   baseOutputMaterial: 0
   buildingOutputMulti: 5
   impactSource: 1

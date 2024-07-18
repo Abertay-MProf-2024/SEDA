@@ -88,10 +88,8 @@ public class Inventory : MonoBehaviour
 
     public static void HealthBarChange()
     {
-        healthBar =  totalhealth  / count;
-
-        Debug.Log("TotalHealth : " + totalhealth);
-        Debug.Log("Count : " + count);
-        Debug.Log("Healthbar : " + healthBar);
+        healthBar =  Terrainsystem.totalHealth  / Terrainsystem.tilecount;
+        Debug.Log(healthBar);
     }
+
 }

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5531594938430075358}
   - component: {fileID: 938145542236971866}
   - component: {fileID: 6677762662299985550}
+  - component: {fileID: -478642849300959580}
+  - component: {fileID: 652768087615892877}
   m_Layer: 0
   m_Name: ArtificialFertiliser
   m_TagString: Untagged
@@ -81,6 +83,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 2}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &-478642849300959580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 808701726dbaca64eb310a0f75d1cfbf, type: 3}
+--- !u!114 &652768087615892877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeBuildingSound: {fileID: 8300000, guid: 76a6fa9f1c8fc10498a5220f44e270ac, type: 3}
 --- !u!1001 &8266045013225229630
 PrefabInstance:
   m_ObjectHideFlags: 0

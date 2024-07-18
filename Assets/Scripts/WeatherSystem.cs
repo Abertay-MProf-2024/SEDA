@@ -32,7 +32,7 @@ public class WeatherSystem : MonoBehaviour
 
     private void Start()
     {
-        TimeSystem.AddMonthlyEvent(SetWeather, 1, true, 4);
+        TimeSystem.AddMonthlyEvent(SetWeather, 1, true, 6);
     }
 
     public void SetWeather()
@@ -76,6 +76,7 @@ public class WeatherSystem : MonoBehaviour
                 if (Energyobj != null)
                 {
                     Energyobj.SetTerrainWaterEnergy(true);
+                    Energyobj.terrain.SetTerrainMaterialProperties(true);
                 }
             }
         }

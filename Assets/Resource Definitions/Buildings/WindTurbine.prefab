@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3692431891003340576}
   - component: {fileID: 6724467558982403004}
   - component: {fileID: 2902156163167931218}
+  - component: {fileID: 4505324752129522904}
+  - component: {fileID: 4740147241066025157}
   m_Layer: 0
   m_Name: WindTurbine
   m_TagString: Untagged
@@ -49,6 +51,7 @@ MonoBehaviour:
   resourceData: {fileID: 11400000, guid: 8d611b304079c844896e2c81e3c3aada, type: 2}
   oldresourceData: {fileID: 0}
   newresourceData: {fileID: 0}
+  isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
 --- !u!65 &2902156163167931218
@@ -72,6 +75,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.8, y: 1.5074842, z: 1.8}
   m_Center: {x: 0, y: 0.7537421, z: 0}
+--- !u!114 &4505324752129522904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50886030656341932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 4346a831aefcdaf40ae8002025f9c587, type: 3}
+--- !u!114 &4740147241066025157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50886030656341932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeBuildingSound: {fileID: 8300000, guid: 1bf1c2296d84b2d4cb75e13110dec1d1, type: 3}
 --- !u!1 &1986917491958043614
 GameObject:
   m_ObjectHideFlags: 0

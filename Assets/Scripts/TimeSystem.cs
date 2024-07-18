@@ -100,7 +100,7 @@ public class TimeSystem : MonoBehaviour
         SetDay();
         SetMonth();
         SetTimeRemainingDisplay();
-        AddMonthlyEvent(CountDownLevelTime, 1, true, 3);
+        AddMonthlyEvent(CountDownLevelTime, 1, true, 5);
         StartCoroutine(DailyTick());
     }
 
@@ -121,9 +121,13 @@ public class TimeSystem : MonoBehaviour
      *  Priority for monthly events:
      *      1- Resource Collection, Building Upkeep
      *      2- SoilGradeChange
-     *      3- Level End/Win Conditions
-     *      4- Weather for the following month
+     *      3- HealthBar Update Change
+     *      4- Reset Soil Grade Change
+     *      5- Level End/Win Conditions
+     *      6- Weather for the following month
+     *      
     */
+
     public static void AddMonthlyEvent(Action action, int months=1, bool repeat=true, int eventPriority=0)
     {
         monthlyEvents.Add(new TimedEvent { action = action, timeToRun = months, isRepeating = repeat, timeLeft = months, priority = eventPriority });
@@ -150,7 +154,6 @@ public class TimeSystem : MonoBehaviour
             else
             {
                 events[i].action();
-                print("Called action: " + events[i].action.Method.Name);
 
                 if (!events[i].isRepeating)
                 {
