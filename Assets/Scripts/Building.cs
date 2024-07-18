@@ -1,10 +1,11 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Building : MonoBehaviour
 {
     public TileBase resourceData;
-    [HideInInspector] public TileBase oldresourceData;
+    [HideInInspector] public TileBase oldResourceData;
     public TileBase newresourceData;
 
     float buff;
@@ -25,7 +26,7 @@ public class Building : MonoBehaviour
     
     private void Start()
     {
-        oldresourceData =  resourceData;
+        oldResourceData = resourceData;
 
         PayConstructionCosts();
         
@@ -215,27 +216,22 @@ public class Building : MonoBehaviour
     {
         if (newresourceData != null)
         {
-            resourceData.inGameAsset = newresourceData.inGameAsset;
-            resourceData = newresourceData;
-            //gameObject.GetComponent<MeshRenderer>().sharedMaterial = newresourceData.inGameAsset.GetComponent<MeshRenderer>().sharedMaterial;
-
+            Building newObject = Instantiate(newresourceData.inGameAsset, transform.position, transform.rotation).GetComponent<Building>();
+            newObject.oldResourceData = resourceData;
         }
-        else
-            Destroy(gameObject);
-            //gameObject.SetActive(false);
+        
+        Destroy(gameObject);
     }
 
     public void VeilChangeDeactivate()
     {
-        if (oldresourceData != null)
+        if (oldResourceData != null)
         {
-            resourceData = oldresourceData;
-            resourceData.inGameAsset = oldresourceData.inGameAsset;
-            gameObject.GetComponent<MeshRenderer>().sharedMaterial = oldresourceData.inGameAsset.GetComponent<MeshRenderer>().sharedMaterial;
+            Building oldObject = Instantiate(oldResourceData.inGameAsset, transform.position, transform.rotation).GetComponent<Building>();
+            oldObject.newresourceData = resourceData;
         }
-        else
-            Destroy(gameObject);
-        //gameObject.SetActive(true);
+        
+        Destroy(gameObject);
     }
 
     public void HarvestSurroundingResources()

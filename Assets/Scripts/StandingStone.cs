@@ -95,7 +95,7 @@ public class StandingStone : MonoBehaviour
                 Building building = t.owningGridObject.GetBuilding();
                 if (building != null)
                 {
-                    if (building.resourceData == building.oldresourceData)
+                    if (building.resourceData == building.oldResourceData)
                     {
                         building.VeilChangeActivate(); 
                     }

@@ -23,11 +23,7 @@ public class BuildSystem : MonoBehaviour
                 GridObject hitGridObject;
                 if (hitGridObject = hit.collider.gameObject.GetComponent<GridObject>())
                 {
-
                     hitGridObject.TryBuild(buildingTypeSelect.currentBuildingType);
-
-                    //ShowTutorial();// Designer Tutorial test
-
                 }
             }
         }
