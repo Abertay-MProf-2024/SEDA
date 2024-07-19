@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceData: {fileID: 11400000, guid: bdaf8c545b368b640bfdfc65a9daae98, type: 2}
-  oldresourceData: {fileID: 0}
+  oldResourceData: {fileID: 0}
   newresourceData: {fileID: 0}
   isBuilt: 0
   RequireWaterEnergy: 0
@@ -8637,7 +8637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceData: {fileID: 11400000, guid: 8ab010336f35a07468c394c1c207ccf4, type: 2}
-  oldresourceData: {fileID: 0}
+  oldResourceData: {fileID: 0}
   newresourceData: {fileID: 0}
   isBuilt: 0
   RequireWaterEnergy: 0
@@ -10229,7 +10229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceData: {fileID: 11400000, guid: 68cc7a81767359e458514a6d1a991c46, type: 2}
-  oldresourceData: {fileID: 0}
+  oldResourceData: {fileID: 0}
   newresourceData: {fileID: 0}
   isBuilt: 0
   RequireWaterEnergy: 0
@@ -15167,7 +15167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceData: {fileID: 11400000, guid: 8ab010336f35a07468c394c1c207ccf4, type: 2}
-  oldresourceData: {fileID: 0}
+  oldResourceData: {fileID: 0}
   newresourceData: {fileID: 0}
   isBuilt: 0
   RequireWaterEnergy: 0
@@ -18597,8 +18597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1326, y: -124}
-  m_SizeDelta: {x: 80, y: 50}
+  m_AnchoredPosition: {x: 1321.2, y: -113.6}
+  m_SizeDelta: {x: 57.2112, y: 49.2648}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &512414852170592147
 CanvasRenderer:
@@ -18628,8 +18628,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -443790928, guid: 20ea2754e41e3c94da050f8e8c739fa7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -20701,8 +20701,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60ca225c0aa05f43aebe3a13987aa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeatherButtonText: {fileID: 0}
-  currentWeatherText: {fileID: 6088622656642225544}
+  currentWeatherIcon: {fileID: 0}
+  fairWeatherIcon: {fileID: 0}
+  tornadoIcon: {fileID: 0}
+  thunderstormIcon: {fileID: 0}
+  floodIcon: {fileID: 0}
 --- !u!114 &2251330818456899999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21133,7 +21136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceData: {fileID: 11400000, guid: bdaf8c545b368b640bfdfc65a9daae98, type: 2}
-  oldresourceData: {fileID: 0}
+  oldResourceData: {fileID: 0}
   newresourceData: {fileID: 0}
   isBuilt: 0
   RequireWaterEnergy: 0
@@ -21235,7 +21238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceData: {fileID: 11400000, guid: 68cc7a81767359e458514a6d1a991c46, type: 2}
-  oldresourceData: {fileID: 0}
+  oldResourceData: {fileID: 0}
   newresourceData: {fileID: 0}
   isBuilt: 0
   RequireWaterEnergy: 0
