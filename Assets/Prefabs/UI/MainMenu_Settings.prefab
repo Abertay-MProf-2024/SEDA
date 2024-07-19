@@ -256,7 +256,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneName: UI Screen
-  action: {fileID: -944628639613478452, guid: 67f30afa779e22942afacb4ae4197719, type: 3}
 --- !u!1 &306895729923237173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,7 +1052,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6076166121558641416}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2637,6 +2636,12 @@ PrefabInstance:
 --- !u!224 &3538514718496822305 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7255516728901601566, guid: 15e1c883ef8a2ad48ba018910d159f7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6173188678683925823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6076166121558641416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 142270759261115959, guid: 15e1c883ef8a2ad48ba018910d159f7d,
     type: 3}
   m_PrefabInstance: {fileID: 6173188678683925823}
   m_PrefabAsset: {fileID: 0}

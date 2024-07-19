@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeatherUI : MonoBehaviour
 {
-    [SerializeField] Sprite currentWeatherIcon;
+    [SerializeField] Image currentWeatherIcon;
+    [SerializeField] TextMeshProUGUI weatherText;
 
     [SerializeField] Sprite fairWeatherIcon;
     [SerializeField] Sprite tornadoIcon;
@@ -18,16 +20,20 @@ public class WeatherUI : MonoBehaviour
         switch(weatherName)
         {
             case WeatherTypes.Fair:
-                currentWeatherIcon = fairWeatherIcon;
+                currentWeatherIcon.sprite = fairWeatherIcon;
+                weatherText.text = "Fair Weather";
                 break;
             case WeatherTypes.Tornado:
-                currentWeatherIcon = tornadoIcon;
+                currentWeatherIcon.sprite = tornadoIcon;
+                weatherText.text = "Tornado";
                 break;
             case WeatherTypes.Thunderstorm:
-                currentWeatherIcon = thunderstormIcon;
+                currentWeatherIcon.sprite = thunderstormIcon;
+                weatherText.text = "Thunderstorm";
                 break;
             case WeatherTypes.Flood:
-                currentWeatherIcon = floodIcon;
+                currentWeatherIcon.sprite = floodIcon;
+                weatherText.text = "Flood";
                 break;
 
         }
