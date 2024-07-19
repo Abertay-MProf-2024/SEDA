@@ -24,6 +24,7 @@ public class TileBase : ScriptableObject
     [Tooltip("Name of the object that will be displayed in-game e.g. on hover over via UI.")]
     public string tileName;
     [Tooltip("Description of the tile.")]
+    [TextArea]
     public string tileDescription;
     [Tooltip("Image (drag and drop to here) (Resolution of Images in UI Spec Sheet")]
     public Sprite icon;
