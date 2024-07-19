@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8cb92b1c6dbc78c42bae357f8b26f8af
+guid: 43c1bb1c7220eb8499caf8d0298c052d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -159,18 +159,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 518
-        height: 139
+        y: 0
+        width: 700
+        height: 250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b65d810604b4dc44956f2dffa0c8545
-      internalID: 761096310
+      spriteID: 28a0fca1fa6e7684c94a738b46c7e274
+      internalID: -455883987
       vertices: []
       indices: 
       edges: []
@@ -178,7 +178,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0fc1907268366dc4e9b171a887c94515
+    spriteID: a258ae43260abc447b46eeb21a0af9eb
     internalID: 0
     vertices: []
     indices: 
@@ -186,7 +186,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Timer_background_Image_0: 761096310
+      Timer_background_Image_0: -455883987
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
