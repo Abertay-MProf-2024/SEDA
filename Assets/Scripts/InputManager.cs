@@ -57,6 +57,8 @@ public class InputManager : MonoBehaviour
     float zoomSpeed = 1f;
     float zoomSpeedTouch;
     float zoomSpeedMouse;
+    bool isSecondFingerDown = false;
+    bool isSecondFingerBlockingInput = false;
 
 
     [Header("Camera Limits")]
@@ -237,15 +239,21 @@ public class InputManager : MonoBehaviour
         return PlaneVectorXZ;
     }
 
-    /** When the player lifts their finger from the screen, the camera stops moving */
-    void Release()
+    /** 
+     *  When the player lifts their finger from the screen, the camera stops moving.
+     *  Several other things may happen when the player lifts their finger from the screen:
+        1) The Standing Stone might activate/deactivate
+        2) A building might be placed
+        3) You might display a radius outline
+    */
+    void Release(bool isInjectedInput=false)
     {
         tapLocationInput.performed -= PanCamera;
         isCursorPosInitialised = false;
 
         buildingSystem = FindAnyObjectByType<BuildSystem>();
 
-        if (Camera.main != null && !EventSystem.current.IsPointerOverGameObject() && 
+        if (Camera.main != null && !EventSystem.current.IsPointerOverGameObject() && !isInjectedInput && !isSecondFingerBlockingInput &&
             (tapLocation == Vector2.zero || releaseLocation == Vector2.zero || (Vector2.Distance(tapLocation, releaseLocation) < 5)))
         {
             Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
@@ -266,6 +274,11 @@ public class InputManager : MonoBehaviour
         }
 
         tapLocation = releaseLocation = Vector2.zero;
+
+        if (!isInjectedInput && !isSecondFingerDown)
+        {
+            isSecondFingerBlockingInput = false;
+        }
     }
 
     /** Applies camera zoom based on input from the mouse wheel */
@@ -292,6 +305,7 @@ public class InputManager : MonoBehaviour
         if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
         {
             FindAnyObjectByType<AudioZoomController>().PlayWindSound();
+            isSecondFingerBlockingInput = isSecondFingerDown = true;
             primaryFingerPosAction.performed += ReadPrimaryFingerPosition;
             secondaryFingerPosAction.performed += ReadSecondaryFingerPosition;
         }
@@ -300,12 +314,14 @@ public class InputManager : MonoBehaviour
     void StopPinchZoom()
     {
         // Disable Pinch Zoom
-        if (primaryFingerPosAction !=null && secondaryFingerPosAction != null)
+        if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
         {
             AudioZoomController zoomController = FindAnyObjectByType<AudioZoomController>();
             
             if (zoomController)
                 zoomController.StopWindSound();
+
+            isSecondFingerDown = false;
 
             primaryFingerPosAction.performed -= ReadPrimaryFingerPosition;
             secondaryFingerPosAction.performed -= ReadSecondaryFingerPosition;
