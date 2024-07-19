@@ -12,6 +12,8 @@ public class GridSystem : MonoBehaviour
 
     GridObject[,] gridTiles;
 
+    bool isGridVisible;
+
     private void OnEnable()
     {
         GenerateGrid();
@@ -42,7 +44,8 @@ public class GridSystem : MonoBehaviour
         {
             for (int y = 0;  y < gridWidth; y++)
             {
-                gridTiles[x, y] = Instantiate(gridObjectPrefab, new Vector3(gameObject.transform.position.x + x * cellSize, gridHeight, gameObject.transform.position.z + y * cellSize), Quaternion.Euler(tileRotation));
+                gridTiles[x, y] = Instantiate(gridObjectPrefab, new Vector3(gameObject.transform.position.x + x * cellSize, 
+                    gridHeight, gameObject.transform.position.z + y * cellSize), Quaternion.Euler(tileRotation));
                 gridTiles[x, y].transform.localScale = new Vector3(cellSize, cellSize, cellSize);
                 gridTiles[x, y].transform.parent = gameObject.transform;
                 gridTiles[x, y].SetOwningGridSystem(this);
@@ -78,4 +81,18 @@ public class GridSystem : MonoBehaviour
 
     public int GetCellSize()
     { return cellSize; }
+
+    public void ToggleVisibility()
+    {
+        isGridVisible = !isGridVisible;
+        SetVisibility();
+    }
+
+    public void SetVisibility()
+    {
+        foreach(GridObject gridTile in gridTiles)
+        {
+            gridTile.gameObject.SetActive(isGridVisible);
+        }
+    }
 }

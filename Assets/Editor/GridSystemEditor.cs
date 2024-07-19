@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.TerrainTools;
 using UnityEngine;
 
 [CustomEditor(typeof(GridSystem))]
@@ -29,11 +27,19 @@ public class GridSystemEditor : Editor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-        
-        if(GUILayout.Button("Generate Grid"))
+
+        if (GUILayout.Button("Generate Grid"))
         {
             _target.GenerateGrid();
         }
 
+        if (!Application.isPlaying)
+        {
+            GUILayout.Space(30);
+            if (GUILayout.Button("Toggle Visibility In Editor"))
+            {
+                _target.ToggleVisibility();
+            }
+        }
     }
 }
