@@ -299,7 +299,7 @@ public class InputManager : MonoBehaviour
     void StartPinchZoom()
     {
         // Disable Camera Pan
-        Release();
+        Release(true);
 
         // Enable Pinch Zoom
         if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
