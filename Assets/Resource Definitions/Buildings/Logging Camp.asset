@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Logging Camp
   m_EditorClassIdentifier: 
   tileName: Logging Camp
-  tileDescription: ytdghhvjhg
+  tileDescription: "Cost Food: 0\nCost Material: 5\n \nMaintain Food: 5\nMaintain
+    Material: 0\n\nRadius: 1\nDescription: \nCollect materials from forest"
   icon: {fileID: 0}
   inGameAsset: {fileID: 679268389524347108, guid: 19f1fd1822b8d2c46832eaa1b7b7310a,
     type: 3}

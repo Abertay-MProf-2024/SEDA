@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: PeasAndBeans
   m_EditorClassIdentifier: 
   tileName: PeasAndBeans
-  tileDescription: fjdrngff
+  tileDescription: "Cost Food: 5\nCost Material: 5 \n\nMaintain Food: 0\nMaintain
+    Material: 0\n\nOutput Food: 10\nOutput Material: 0\n\nDescription: \nCollect
+    building (Barn) required\nBuff soil grade"
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: d533b7c6555063943b4e1e2708dc3e42,
     type: 3}

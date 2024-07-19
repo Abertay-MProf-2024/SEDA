@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: SpringBarley
   m_EditorClassIdentifier: 
   tileName: Spring Barley
-  tileDescription: sfscc
+  tileDescription: "Cost Food: 5\nCost Material: 5 \n\nMaintain Food: 0\nMaintain
+    Material: 0\n\nOutput Food: 15\nOutput Material: 0\n\nDescription: \nCollect
+    building (Barn) required\nProvide basic food\nNerf soil grade"
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: 2af8a8ec0c0e81d46aea877daaff67fe,
     type: 3}

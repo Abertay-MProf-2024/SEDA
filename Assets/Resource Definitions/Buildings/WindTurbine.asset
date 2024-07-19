@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: WindTurbine
   m_EditorClassIdentifier: 
   tileName: Wind Turbine
-  tileDescription: xdvvd
+  tileDescription: "Cost Food: 0\nCost Material: 10\n\nRadius: 1\nDescription: \nProvide
+    energy in radius"
   icon: {fileID: 0}
   inGameAsset: {fileID: 50886030656341932, guid: 1916460652a694643b8a69466725290a,
     type: 3}

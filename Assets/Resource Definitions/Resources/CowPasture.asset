@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: CowPasture
   m_EditorClassIdentifier: 
   tileName: Cow Pasture
-  tileDescription: iuhihlk
+  tileDescription: "Cost Food: 30\nCost Material: 10\n \nMaintain Food: 20\nMaintain
+    Material: 0\n\nOutput Food: 60\nOutput Material: 0\n\nDescription: \nCollect
+    building (Barn) required\nProvide more food than Sheep and Barley\nBuff soil
+    grade"
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: 0ab534e307d88364d97150c7deee9a6b,
     type: 3}
@@ -37,7 +40,7 @@ MonoBehaviour:
   collectorBuildings: 01000000
   baseOutputEnergy: 0
   baseOutputWater: 0
-  baseOutputFood: 40
+  baseOutputFood: 60
   baseOutputMaterial: 0
   buildingOutputMulti: 1
   impactSource: 1
