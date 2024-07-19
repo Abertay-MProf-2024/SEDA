@@ -13,6 +13,8 @@ public class FPS_Counter : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
+
         if (refreshTime <= 0f)
         {
             refreshTime = 0.5f;
@@ -34,10 +36,10 @@ public class FPS_Counter : MonoBehaviour
             timeCounter = 0f;
         }
 
-        print("Frame Counter: " + frameCounter);
+/*        print("Frame Counter: " + frameCounter);
         print("Time Counter" + timeCounter);
         print("Last Framerate: " + lastFramerate);
-
+*/
         FPS.text = "FPS: " + Mathf.RoundToInt(lastFramerate);
     }
 }
