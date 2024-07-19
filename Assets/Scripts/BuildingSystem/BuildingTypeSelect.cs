@@ -46,7 +46,9 @@ public class BuildingTypeSelect : MonoBehaviour
         if (currentBuildingType == building)
         {
             currentBuildingType = null;
+           
             gridSystem.ToggleBuildMode(currentBuildingType, false);
+            
         }
         else
         {
