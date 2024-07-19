@@ -146,8 +146,23 @@ public class GridObject : MonoBehaviour
             buildingInstance.SetGridObject(this);
             if (buildingInstance.resourceData.isImpactSoilGrade == true)
             {
-                terrain.ChangeinGrade(buildingInstance.resourceData.buffSoilGradeAmount, buildingInstance.resourceData.nerfSoilGradeAmount, buildingInstance.resourceData.isImpactSoilGrade);
-                //buildingInstance.Impact();
+                GridPosition pos = GetGridPosition();
+                int radius = buildingInstance.resourceData.impactRadiusTiles;
+
+                for (int x = pos.x - radius; x <= pos.x + radius; x++)
+                {
+                    for (int z = pos.z - radius; z <= pos.z + radius; z++)
+                    {
+                        if (x >= 0 && z >= 0 && x < GetOwningGridSystem().GetGridLength() && z < GetOwningGridSystem().GetGridWidth())
+                        {
+                            Terrainsystem terrainInRadius;
+                            if ((terrainInRadius = GetOwningGridSystem().GetGridObject(x, z).terrain))
+                            {
+                                terrainInRadius.ChangeinGrade(buildingInstance.resourceData.buffSoilGradeAmount, buildingInstance.resourceData.nerfSoilGradeAmount, true);
+                            }
+                        }
+                    }
+                }
             }
             return true;
         }
