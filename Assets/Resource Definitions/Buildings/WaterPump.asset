@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: WaterPump
   m_EditorClassIdentifier: 
   tileName: Water Pump
-  tileDescription: fdgdrdgvd
+  tileDescription: "Cost Food: 0\nCost Material: 5\n \nRadius: 1\nDescription: \nProvide
+    water in radius"
   icon: {fileID: 0}
   inGameAsset: {fileID: 679268389524347108, guid: 0af38f364f1be8744b08a99f025b1f72,
     type: 3}

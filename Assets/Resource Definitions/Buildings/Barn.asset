@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Barn
   m_EditorClassIdentifier: 
   tileName: Barn
-  tileDescription: Hello, welcome to ooty!/n
+  tileDescription: "Cost Food: 0\nCost Material: 15\n \nMaintain Food: 5\nMaintain
+    Material: 0\n\nRadius: 1\nDescription: \nCollect food in radius from crops or
+    animals\nEnergy & water required"
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: db32af21706196a44a38946adf54b9a8,
     type: 3}
