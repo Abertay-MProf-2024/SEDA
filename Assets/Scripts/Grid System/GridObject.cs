@@ -148,6 +148,11 @@ public class GridObject : MonoBehaviour
     // Instantiates a building on top of this tile.
     public bool TryBuild(TileBase building)
     {
+        if(TutorialChecks.TutorialMode)
+        {
+
+        }
+
         if (CanBuildOnTile(building))
         {
             
