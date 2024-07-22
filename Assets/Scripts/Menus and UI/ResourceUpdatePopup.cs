@@ -13,6 +13,7 @@ public class ResourceUpdatePopup : MonoBehaviour
     [SerializeField] Sprite materialSprite;
 
     Building buildingRef;
+    Vector3 initialPopupLocation;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class ResourceUpdatePopup : MonoBehaviour
         Camera cam = FindAnyObjectByType<Camera>();
         Quaternion lookAtCamRotation = Quaternion.LookRotation(transform.position - cam.transform.position);
         transform.rotation = lookAtCamRotation;
+
+        initialPopupLocation = transform.position;
     }
 
     public void AnimatePopup()
@@ -53,6 +56,7 @@ public class ResourceUpdatePopup : MonoBehaviour
         }
 
         SetVisibility(false);
+        transform.position = initialPopupLocation;
     }
 
     void SetVisibility(bool isVisible)
