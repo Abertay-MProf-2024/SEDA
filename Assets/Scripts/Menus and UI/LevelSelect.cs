@@ -9,8 +9,10 @@ public class LevelSelect : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI timeDisplay;
     [SerializeField] TextMeshProUGUI levelProgressionDisplay;
-    [SerializeField] GameObject infoDisplay;
-    
+    [SerializeField] GameObject infoDisplay1;
+    [SerializeField] GameObject infoDisplay2;
+    [SerializeField] GameObject infoDisplay3;
+
     // Buttons
     [SerializeField] Button level1Button;
     [SerializeField] Button level2Button;
@@ -72,9 +74,19 @@ public class LevelSelect : MonoBehaviour
         }
     }
 
-    public void DisplayInfo()
+    public void DisplayInfo1()
     {
-        infoDisplay.SetActive(true);
+        infoDisplay1.SetActive(true);
+    }
+
+    public void DisplayInfo2()
+    {
+        infoDisplay2.SetActive(true);
+    }
+
+    public void DisplayInfo3()
+    {
+        infoDisplay3.SetActive(true);
     }
 
     public void SetLevelToLoad(int level)

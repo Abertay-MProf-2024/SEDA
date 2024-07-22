@@ -333,10 +333,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIFuntions, Assembly-CSharp
-        m_MethodName: Level1_clickhere
-        m_Mode: 1
+      - m_Target: {fileID: 2720514787443877864}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4617,7 +4617,9 @@ MonoBehaviour:
   levelMenuMusic: {fileID: 8300000, guid: 3faa9fd45abc48f4bbd4a9173fced4b7, type: 3}
   timeDisplay: {fileID: 3386675876517587542}
   levelProgressionDisplay: {fileID: 7744390620660133501}
-  infoDisplay: {fileID: 2720514787443877864}
+  infoDisplay1: {fileID: 2720514787443877864}
+  infoDisplay2: {fileID: 4247283753814410241}
+  infoDisplay3: {fileID: 4421251480449899218}
   level1Button: {fileID: 3637331440749907168}
   level2Button: {fileID: 4177271377027480333}
   level3Button: {fileID: 1486615311207333682}
@@ -5515,7 +5517,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 798955350709911060}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: DisplayInfo
+        m_MethodName: DisplayInfo2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5523,7 +5525,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 798955350709911060}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
@@ -6075,10 +6077,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIFuntions, Assembly-CSharp
-        m_MethodName: Level1_clickhere
-        m_Mode: 1
+      - m_Target: {fileID: 4247283753814410241}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6211,7 +6213,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 798955350709911060}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: DisplayInfo
+        m_MethodName: DisplayInfo3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6219,7 +6221,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 798955350709911060}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
@@ -7445,7 +7447,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 798955350709911060}
         m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: DisplayInfo
+        m_MethodName: DisplayInfo1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9724,10 +9726,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIFuntions, Assembly-CSharp
-        m_MethodName: Level1_clickhere
-        m_Mode: 1
+      - m_Target: {fileID: 4421251480449899218}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

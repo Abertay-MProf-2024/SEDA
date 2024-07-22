@@ -36,6 +36,7 @@ public class TutorialChecks : MonoBehaviour
         TutorialMode = false;
     }
 
+   
 
     public void check()
     {
