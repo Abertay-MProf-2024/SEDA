@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class LevelManager : MonoBehaviour
 {
@@ -81,44 +79,9 @@ public class LevelManager : MonoBehaviour
             GridObject gridTile;
             Terrainsystem terrainTile;
 
-            if ((building = hit.transform.gameObject.GetComponent<Building>()) && building.resourceData.impactSource
-                && building.GetOwningGridObject())
+            if (building = hit.transform.gameObject.GetComponent<Building>())
             {
-                // Check BuildingClickSound function and play click sound
-                BuildingClickSound clickSound = building.GetComponent<BuildingClickSound>();
-                if (clickSound != null)
-                {
-                    clickSound.PlayClickSound();
-                }
-
-                radius = building.resourceData.impactRadiusTiles;
-
-                GridPosition gridPos;
-                if (building.transform.parent)
-                     gridPos = building.transform.parent.gameObject.GetComponent<GridObject>().GetGridPosition();
-                else
-                {
-                    gridPos = building.GetOwningGridObject().GetGridPosition();
-                }
-
-                outlineParent = new GameObject();
-                outlineParent.name = "outlineParent";
-
-                for (int x = gridPos.x - radius; x <= gridPos.x + radius; x++)
-                {
-                    for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
-                    {
-                        Vector3 worldPosition = building.GetOwningGridObject().GetOwningGridSystem().GetGridObject(x, z).transform.position;
-                        Instantiate(extraOutline, worldPosition, Quaternion.identity, outlineParent.transform);
-                    }
-                }
-
-                //to pop up the building details when clicked on a building
-                buildingCostUI.gameObject.SetActive(true);
-                buildingCostUI.BuildingNameDisplay.text = building.name.ToString();
-                buildingCostUI.ReqFoodDisplay.text = building.resourceData.buildingCostFood.ToString();
-                buildingCostUI.ReqConstMatDisplay.text = building.resourceData.buildingCostMaterial.ToString();
-
+                SelectBuilding(building);
             }
             else if ((gridTile = hit.transform.gameObject.GetComponent<GridObject>()) && (terrainTile = gridTile.terrain) && gridTile.terrain.owningGridObject)
             {
@@ -166,6 +129,50 @@ public class LevelManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool SelectBuilding(Building building)
+    {
+        if (outlineParent)
+        {
+            Destroy(outlineParent);
+        }
+
+
+        if (building != null && building.resourceData.impactSource
+            && building.GetOwningGridObject())
+        {
+            int radius = building.resourceData.impactRadiusTiles;
+
+            GridPosition gridPos;
+            if (building.transform.parent)
+                gridPos = building.transform.parent.gameObject.GetComponent<GridObject>().GetGridPosition();
+            else
+            {
+                gridPos = building.GetOwningGridObject().GetGridPosition();
+            }
+
+            outlineParent = new GameObject();
+            outlineParent.name = "outlineParent";
+
+            for (int x = gridPos.x - radius; x <= gridPos.x + radius; x++)
+            {
+                for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
+                {
+                    Vector3 worldPosition = building.GetOwningGridObject().GetOwningGridSystem().GetGridObject(x, z).transform.position;
+                    Instantiate(extraOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                }
+            }
+
+            //to pop up the building details when clicked on a building
+            buildingCostUI.gameObject.SetActive(true);
+            buildingCostUI.BuildingNameDisplay.text = building.name.ToString();
+            buildingCostUI.ReqFoodDisplay.text = building.resourceData.buildingCostFood.ToString();
+            buildingCostUI.ReqConstMatDisplay.text = building.resourceData.buildingCostMaterial.ToString();
+
+            return true;
+        }
+        return false;
     }
 
     public static bool AreSuccessConditionsMet()
