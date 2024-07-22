@@ -37,6 +37,27 @@ public class GridObject : MonoBehaviour
         }
     }
 
+    //Tutorial GridON
+    public void TutorialBuildOn(TileBase buildingType)
+    {
+        float alpha = 0.75f;
+
+        Color transparentGreen = new Color(0, 0.3215686f, 0.07343697f, alpha);
+        /* Color transparentOrange = new Color(0.990566f, 0.5814224f, 0, alpha);
+         Color transparentBrown = new Color(0.3207547f, 0.1755072f, 0, .8f);*/
+        Color transparentRed = new Color(0.9921568f, 0, 0.02855804f, alpha);
+
+            
+        if(terrain == null)
+            gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        else if(terrain.gameObject.tag == "Tutorial Tile")
+            gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+
+        gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentGreen;
+        //gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentRed;
+
+    }
+
     public void ToggleBuildModePerTile(TileBase buildingType)
     {
         float alpha = 0.75f;
@@ -127,6 +148,16 @@ public class GridObject : MonoBehaviour
     // Instantiates a building on top of this tile.
     public bool TryBuild(TileBase building)
     {
+        if(TutorialChecks.TutorialMode)
+        {
+            TutorialChecks tutorialChecksObject = FindAnyObjectByType<TutorialChecks>();
+
+            if (tutorialChecksObject != null)
+            {
+                tutorialChecksObject.TryBuildLoggingCamp();
+            }
+        }
+
         if (CanBuildOnTile(building))
         {
             

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grid
   - StandingStone
+  - Tutorial Tile
   layers:
   - Default
   - TransparentFX

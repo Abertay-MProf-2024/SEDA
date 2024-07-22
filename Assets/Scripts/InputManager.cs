@@ -186,6 +186,11 @@ public class InputManager : MonoBehaviour
             // Movement along the X direction in screen space translates directly to movement along the X axis in local space
             transform.Translate(new Vector2(deltaPos.x, 0));
             
+            if(deltaPos.x>0 || deltaPos.y>0)
+            {
+                TutorialChecks.TapandDrag = true;
+            }
+
             // Apply screen space Y translate
             transform.Translate(GetMovementAlongPlaneXZ(deltaPos.y), Space.World);
         }
@@ -284,6 +289,8 @@ public class InputManager : MonoBehaviour
     /** Applies camera zoom based on input from the mouse wheel */
     void MouseWheelZoom(InputAction.CallbackContext context)
     {
+        TutorialChecks.ZoomInZoomOut = true;
+
         float mouseWheelDirection = context.ReadValue<float>();
 
         if (mouseWheelDirection > 0)
@@ -298,6 +305,7 @@ public class InputManager : MonoBehaviour
 
     void StartPinchZoom()
     {
+        TutorialChecks.ZoomInZoomOut = false;
         // Disable Camera Pan
         Release(true);
 
@@ -313,6 +321,8 @@ public class InputManager : MonoBehaviour
 
     void StopPinchZoom()
     {
+        TutorialChecks.ZoomInZoomOut = true;
+
         // Disable Pinch Zoom
         if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
         {

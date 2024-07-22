@@ -35,6 +35,19 @@ public class Giant : Building
 
     public void Interact()
     {
+        if(TutorialChecks.TutorialMode)
+        {
+            if (TutorialChecks.TutorialMode)
+            {
+                TutorialChecks tutorialChecksObject = FindAnyObjectByType<TutorialChecks>();
+
+                if (tutorialChecksObject != null)
+                {
+                    tutorialChecksObject.GiantInteracted();
+                }
+            }
+        }
+
         Debug.Log("click works");
 
         if (Inventory.food >= resourceData.bribeCostFood && Inventory.constructionMaterials >= resourceData.bribeCostConstruction)
