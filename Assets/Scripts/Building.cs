@@ -141,7 +141,16 @@ public class Building : MonoBehaviour
 
     public GridObject GetOwningGridObject()
     {
-        return Terrainsystem.owningGridObject;
+        if (Terrainsystem != null)
+            return Terrainsystem.owningGridObject;
+        else
+        {
+            RaycastHit hit;
+            Vector3 raycastOrigin = transform.position + new Vector3(0, 2, 0);
+            Physics.Raycast(raycastOrigin, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Grid"));
+            SetGridObject(hit.transform.gameObject.GetComponent<GridObject>());
+            return Terrainsystem.owningGridObject;
+        }
     }    
 
     public void SetGridObject(GridObject gridObject)

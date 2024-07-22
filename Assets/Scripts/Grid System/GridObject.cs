@@ -142,8 +142,16 @@ public class GridObject : MonoBehaviour
                 buildSound.PlayPlaceBuildingSound();
             }
 
-            //buildingInstance.transform.localPosition = Vector3.zero;
+            // Display the building's impact radius
+            LevelManager levelManager = FindAnyObjectByType<LevelManager>();
+            if (levelManager != null)
+            {
+                levelManager.SelectBuilding(buildingInstance);
+            }
+            
             buildingInstance.SetGridObject(this);
+
+            // Change soil grade in the radius
             if (buildingInstance.resourceData.isImpactSoilGrade == true)
             {
                 GridPosition pos = GetGridPosition();
