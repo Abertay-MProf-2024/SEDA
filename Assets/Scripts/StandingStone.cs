@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StandingStone : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class StandingStone : MonoBehaviour
         {
             StandingStonPrefabPopUp standingStoneUI = Instantiate(StandingStonePrefab.gameObject).GetComponent<StandingStonPrefabPopUp>();
             standingStoneUI.SetStandingStoneReference(this);
+
         }
     }
 

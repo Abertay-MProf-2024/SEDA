@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.Interactions;
 
 public class TutorialChecks : MonoBehaviour
 {
@@ -10,9 +7,12 @@ public class TutorialChecks : MonoBehaviour
     //[SerializeField]  GameObject Tutorial3BUTTON;
     //[SerializeField]  GameObject Tutorial4BUTTON;
     //[SerializeField]  GameObject Tutorial5BUTTON;
+    [SerializeField] GameObject Tutorial5BUTTON;
     [SerializeField] GameObject Tutorial6BUTTON;
-    [SerializeField] GameObject Tutorial7BUTTON;
-    //[SerializeField]  GameObject Tutorial8;
+    [SerializeField]  GameObject Tutorial7;
+
+    [SerializeField] GameObject BuildMODE;
+    
 
     public static bool TapandDrag = false;
     public static bool ZoomInZoomOut = false;
@@ -50,6 +50,19 @@ public class TutorialChecks : MonoBehaviour
         }
     }
 
+    public  void TryBuildLoggingCamp()
+    {
+        BuildMODE.gameObject.SetActive(false);
+        Tutorial5BUTTON.SetActive(true);
+    }
 
+    public void StandingStoneBlur()
+    {
+        Tutorial6BUTTON.SetActive(true);
+    }
 
+    public void GiantInteracted()
+    {
+        Tutorial7.SetActive(false);
+    }
 }

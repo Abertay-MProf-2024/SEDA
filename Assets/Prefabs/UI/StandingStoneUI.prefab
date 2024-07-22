@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: switch!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -385,6 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61db9b82876a9f94eb45a0991e11c66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standingStoneBlur: {fileID: 4474113171628837302}
 --- !u!1 &4474113171628837302
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8547813, y: 0.5}
   m_AnchorMax: {x: 0.8547813, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: 0}
+  m_AnchoredPosition: {x: -295.24023, y: -129.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5268200023604658286
@@ -554,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 806.48, y: 453.198}
+  m_AnchoredPosition: {x: 293.47998, y: 315.698}
   m_SizeDelta: {x: 71.937, y: 61.6039}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2663738183117091462
@@ -651,6 +652,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -7868653969694002676}
+        m_TargetAssemblyTypeName: StandingStonPrefabPopUp, Assembly-CSharp
+        m_MethodName: BlurTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8914774209954667471
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,8 +698,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.71240634, y: 0.5}
-  m_AnchoredPosition: {x: 697.40576, y: 224.4148}
-  m_SizeDelta: {x: -146.2045, y: 519.1705}
+  m_AnchoredPosition: {x: 340.74744, y: 86.914795}
+  m_SizeDelta: {x: 166.4789, y: 519.1705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6829623746256403880
 CanvasRenderer:

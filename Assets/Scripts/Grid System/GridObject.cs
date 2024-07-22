@@ -52,10 +52,10 @@ public class GridObject : MonoBehaviour
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
         else if(terrain.gameObject.tag == "Tutorial Tile")
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-            
 
-            //gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentRed;
-        
+        gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentGreen;
+        //gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentRed;
+
     }
 
     public void ToggleBuildModePerTile(TileBase buildingType)
@@ -150,7 +150,12 @@ public class GridObject : MonoBehaviour
     {
         if(TutorialChecks.TutorialMode)
         {
+            TutorialChecks tutorialChecksObject = FindAnyObjectByType<TutorialChecks>();
 
+            if (tutorialChecksObject != null)
+            {
+                tutorialChecksObject.TryBuildLoggingCamp();
+            }
         }
 
         if (CanBuildOnTile(building))
