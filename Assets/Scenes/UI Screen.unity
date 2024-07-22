@@ -883,6 +883,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Selection Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4173627645841210842, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9177180200511796428, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
         type: 3}
       propertyPath: m_Pivot.x
