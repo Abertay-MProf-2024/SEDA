@@ -42,14 +42,14 @@ public class Building : MonoBehaviour
             Terrainsystem.owningGridObject.GetOwningGridSystem().ToggleBuildMode(resourceData, true);
 
         UpdateTotalBuildingCount(true);
-        TimeSystem.AddMonthlyEvent(Impact, 1, true, 1);
+        TimeSystem.AddMonthlyEvent(this,Impact, 1, true, 1);
        
         if ( !resourceData.isResourceTapped )
         {
-            TimeSystem.AddMonthlyEvent(HarvestSurroundingResources, 1, true, 1);
+            TimeSystem.AddMonthlyEvent(this,HarvestSurroundingResources, 1, true, 1);
         }
 
-        TimeSystem.AddMonthlyEvent(PayUpkeep, 1, true, 1);
+        TimeSystem.AddMonthlyEvent(this,PayUpkeep, 1, true, 1);
         StartCoroutine(FindGridObject());
         
     }

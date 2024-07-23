@@ -51,8 +51,8 @@ public class LevelManager : MonoBehaviour
         Inventory.food = startingFoodAmount;
         Inventory.constructionMaterials = startingConstructionMaterialAmount;
         StartCoroutine(FindSoilHealth());
-        TimeSystem.AddMonthlyEvent(Inventory.HealthBarChange, 1, true, 3);
-        TimeSystem.AddMonthlyEvent(Terrainsystem.ResetValuesSoilGrade, 1, true, 4);
+        TimeSystem.AddMonthlyEvent(this, Inventory.HealthBarChange, 1, true, 3);
+        TimeSystem.AddMonthlyEvent(this, Terrainsystem.ResetValuesSoilGrade, 1, true, 4);
     }
 
     IEnumerator FindSoilHealth()
