@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7862847786385782504}
   - component: {fileID: 237971528444756472}
-  - component: {fileID: 110413420075161802}
   - component: {fileID: 3040026450997285251}
   m_Layer: 0
   m_Name: StandingStone
@@ -57,24 +56,6 @@ MonoBehaviour:
     type: 3}
   vfxActivate: {fileID: 1308031498507452829, guid: 8d96ab08773f8154f858d9a0604ce951,
     type: 3}
---- !u!114 &110413420075161802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4546108733566870136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8d61a477003644b914d1428c864ba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourceData: {fileID: 11400000, guid: c1e07045faaa69c468eab3d7999890b3, type: 2}
-  oldresourceData: {fileID: 0}
-  newresourceData: {fileID: 11400000, guid: c1e07045faaa69c468eab3d7999890b3, type: 2}
-  isBuilt: 0
-  RequireWaterEnergy: 0
-  IsItBasedOnSoilGrade: 0
 --- !u!65 &3040026450997285251
 BoxCollider:
   m_ObjectHideFlags: 0
