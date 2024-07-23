@@ -30,6 +30,7 @@ public enum Season
 
 class TimedEvent
 {
+    public MonoBehaviour script;
     public Action action;
     public int timeToRun = 1;
     public bool isRepeating = false;
@@ -100,7 +101,7 @@ public class TimeSystem : MonoBehaviour
         SetDay();
         SetMonth();
         SetTimeRemainingDisplay();
-        AddMonthlyEvent(CountDownLevelTime, 1, true, 5);
+        AddMonthlyEvent(this, CountDownLevelTime, 1, true, 5);
         StartCoroutine(DailyTick());
     }
 
@@ -128,9 +129,9 @@ public class TimeSystem : MonoBehaviour
      *      
     */
 
-    public static void AddMonthlyEvent(Action action, int months=1, bool repeat=true, int eventPriority=0)
+    public static void AddMonthlyEvent(MonoBehaviour script, Action action, int months=1, bool repeat=true, int eventPriority=0)
     {
-        monthlyEvents.Add(new TimedEvent { action = action, timeToRun = months, isRepeating = repeat, timeLeft = months, priority = eventPriority });
+        monthlyEvents.Add(new TimedEvent { script = script, action = action, timeToRun = months, isRepeating = repeat, timeLeft = months, priority = eventPriority });
     }
 
     public void SkipMonth()
@@ -143,10 +144,20 @@ public class TimeSystem : MonoBehaviour
      */
     void RunEvents(List<TimedEvent> events)
     {
+        List<int> indexesToRemove = new List<int>();
+
         events.Sort((x, y) => x.priority.CompareTo(y.priority));
 
         for (int i = 0; i < events.Count; i++)
         {
+            // Check to see if an event's script has been deleted
+            // If it has, mark the index for removal from the queue
+            if (events[i].script == null)
+            {
+                indexesToRemove.Add(i);
+                continue;
+            }
+
             if (events[i].timeLeft > 1)
             {
                 events[i].timeLeft--;
@@ -157,14 +168,24 @@ public class TimeSystem : MonoBehaviour
 
                 if (!events[i].isRepeating)
                 {
-                    events.RemoveAt(i);
+                    indexesToRemove.Add(i);
+                    continue;
                 }
                 else
                 {
                     events[i].timeLeft = events[i].timeToRun;
                 }
+            }
+        }
 
-                continue;
+        for (int i = events.Count - 1; i > 0; i--)
+        {
+            foreach (int index in indexesToRemove)
+            {
+                if (i == index)
+                {
+                    events.RemoveAt(i);
+                }
             }
         }
     }

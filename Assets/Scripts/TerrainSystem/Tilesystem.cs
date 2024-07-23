@@ -81,7 +81,7 @@ public class Terrainsystem : MonoBehaviour
 
         tilecount++;
 
-        TimeSystem.AddMonthlyEvent(HealthBar, 1, true, 2);
+        TimeSystem.AddMonthlyEvent(this,HealthBar, 1, true, 2);
         //TimeSystem.AddMonthlyEvent(ResetValuesSoilGrade, 1, true, 2);
 
         //TimeSystem.AddMonthlyEvent(ChangeinGrade, 1, true, 2);

@@ -17,7 +17,7 @@ public class SeasonUI : MonoBehaviour
     private void Start()
     {
         UpdateSeasonDisplay();
-        TimeSystem.AddMonthlyEvent(UpdateSeasonDisplay);
+        TimeSystem.AddMonthlyEvent(this, UpdateSeasonDisplay);
     }
 
     public void UpdateSeasonDisplay()

@@ -32,7 +32,7 @@ public class WeatherSystem : MonoBehaviour
 
     private void Start()
     {
-        TimeSystem.AddMonthlyEvent(SetWeather, 1, true, 6);
+        TimeSystem.AddMonthlyEvent(this, SetWeather, 1, true, 6);
     }
 
     public void SetWeather()
