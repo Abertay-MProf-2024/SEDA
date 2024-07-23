@@ -3555,7 +3555,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.800000011920929,"g":0.0,"b":0.0,"a":0.0}'
+      m_SerializableObject: '{"r":0.75,"g":0.0,"b":0.0,"a":0.0}'
     m_Space: -1
   m_Property:
     name: Value 0
@@ -3760,7 +3760,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.4000000059604645,"g":0.0,"b":0.0,"a":0.0}'
+      m_SerializableObject: '{"r":0.25,"g":0.0,"b":0.0,"a":0.0}'
     m_Space: -1
   m_Property:
     name: Value 1
@@ -3965,7 +3965,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":-0.4000000059604645,"g":0.0,"b":0.0,"a":0.0}'
+      m_SerializableObject: '{"r":-0.25,"g":0.0,"b":0.0,"a":0.0}'
     m_Space: -1
   m_Property:
     name: Value 2
@@ -4974,7 +4974,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: -1
+      m_SerializableObject: -0.75
     m_Space: -1
   m_Property:
     name: newRangeMin
@@ -5008,7 +5008,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 0.75
     m_Space: -1
   m_Property:
     name: newRangeMax
@@ -5287,7 +5287,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":-0.800000011920929,"g":0.0,"b":0.0,"a":0.0}'
+      m_SerializableObject: '{"r":-0.75,"g":0.0,"b":0.0,"a":0.0}'
     m_Space: -1
   m_Property:
     name: Value 3
@@ -5813,7 +5813,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: -1
+      m_SerializableObject: -0.75
     m_Space: -1
   m_Property:
     name: min
@@ -5847,7 +5847,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 0.75
     m_Space: -1
   m_Property:
     name: max
@@ -6517,7 +6517,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: -1
+      m_SerializableObject: -0.75
     m_Space: -1
   m_Property:
     name: min
@@ -6551,7 +6551,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 0.75
     m_Space: -1
   m_Property:
     name: max
