@@ -14,7 +14,7 @@ public class BuildingCostUI : MonoBehaviour
     { 
         if (buildingTypeSelect.currentBuildingType)
         {
-            BuildingNameDisplay.text = buildingTypeSelect.currentBuildingType.name.ToString();
+            BuildingNameDisplay.text = buildingTypeSelect.currentBuildingType.inGameAsset.name.ToString();
             ReqFoodDisplay.text = buildingTypeSelect.currentBuildingType.buildingCostFood.ToString();
             ReqConstMatDisplay.text = buildingTypeSelect.currentBuildingType.buildingCostMaterial.ToString();
             DescriptionDisplay.text = buildingTypeSelect.currentBuildingType.tileDescription.ToString();
