@@ -131,6 +131,16 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public bool DestroyBuildingOutline()
+    {
+        if (outlineParent)
+        {
+            Destroy(outlineParent);
+            return true;
+        }
+        return false;
+    }
+
     public bool SelectBuilding(Building building)
     {
         if (outlineParent)
