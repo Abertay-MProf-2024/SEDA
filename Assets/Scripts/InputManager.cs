@@ -264,7 +264,11 @@ public class InputManager : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(tapLocationInput.ReadValue<Vector2>());
             RaycastHit hit;
 
-            if (standingStone && Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
+            if (levelManager.DestroyBuildingOutline())
+            {
+                return;
+            }
+            else if (standingStone && Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "StandingStone")
             {
                 standingStone.OpenStandingStone();
             }
