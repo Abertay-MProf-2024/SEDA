@@ -11,7 +11,9 @@ public class StandingStone : MonoBehaviour
 
     [SerializeField] GameObject IslandToChange;
 
-    [SerializeField] StandingStonPrefabPopUp StandingStonePrefab;
+    [SerializeField] StandingStonPrefabPopUp standingStonePrefab;
+
+    [SerializeField] Transform standingStoneTransform;
 
     GameObject standingStoneVFX;
 
@@ -37,14 +39,14 @@ public class StandingStone : MonoBehaviour
             TS1 = hit.transform.gameObject.GetComponent<Terrainsystem>();
         }
 
-        standingStoneVFX = Instantiate(vfxIdle, transform, false);
+        standingStoneVFX = Instantiate(vfxIdle, standingStoneTransform, false);
     }
 
     public void OpenStandingStone()
     {
-        if (StandingStonePrefab)
+        if (standingStonePrefab)
         {
-            StandingStonPrefabPopUp standingStoneUI = Instantiate(StandingStonePrefab.gameObject).GetComponent<StandingStonPrefabPopUp>();
+            StandingStonPrefabPopUp standingStoneUI = Instantiate(standingStonePrefab.gameObject).GetComponent<StandingStonPrefabPopUp>();
             standingStoneUI.SetStandingStoneReference(this);
 
         }
@@ -112,10 +114,10 @@ public class StandingStone : MonoBehaviour
     IEnumerator SwapVFX(GameObject newEffect)
     {
         Destroy(standingStoneVFX);
-        standingStoneVFX = Instantiate(vfxActivate, transform, false);
-        yield return new WaitForSeconds(2f);
+        standingStoneVFX = Instantiate(vfxActivate, standingStoneTransform, false);
+        yield return new WaitForSeconds(1.5f);
 
         Destroy(standingStoneVFX);
-        standingStoneVFX = Instantiate(newEffect, transform, false);
+        standingStoneVFX = Instantiate(newEffect, standingStoneTransform, false);
     }
 }
