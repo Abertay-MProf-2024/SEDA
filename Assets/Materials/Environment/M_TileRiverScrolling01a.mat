@@ -78,7 +78,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RiverTexture:
-        m_Texture: {fileID: 2800000, guid: 02a456deb5c6a5e479e6d12d4ec322b9, type: 3}
+        m_Texture: {fileID: 2800000, guid: aaf5821c486de9048a7a7cac519c3bfd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:

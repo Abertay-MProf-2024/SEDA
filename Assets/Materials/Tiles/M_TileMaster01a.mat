@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CliffTexture:
-        m_Texture: {fileID: 2800000, guid: 3d0601ba5b25b70408794671618988f2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 05c364fe87d67f24a89a939cd5f9d81a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -63,6 +63,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassLandTexture:
+        m_Texture: {fileID: 2800000, guid: af81a55e15ef32848b74d9a26778c733, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HighlandTexture:
+        m_Texture: {fileID: 2800000, guid: db230b62df438e14783220a304faea0e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -120,6 +128,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _EmissionStrength: 0.15
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
