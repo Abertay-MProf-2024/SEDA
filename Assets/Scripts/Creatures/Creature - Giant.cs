@@ -43,7 +43,8 @@ public class Giant : Building
 
                 if (tutorialChecksObject != null)
                 {
-                    tutorialChecksObject.GiantInteracted();
+                    if(TutorialChecks.standingStonedone)
+                        tutorialChecksObject.GiantInteracted();
                 }
             }
         }
