@@ -69,6 +69,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: af81a55e15ef32848b74d9a26778c733, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _GravelTexture:
+        m_Texture: {fileID: 2800000, guid: 544adf02652ffb34e81dd3b1319ed8fc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _HighlandTexture:
         m_Texture: {fileID: 2800000, guid: db230b62df438e14783220a304faea0e, type: 3}
         m_Scale: {x: 1, y: 1}
