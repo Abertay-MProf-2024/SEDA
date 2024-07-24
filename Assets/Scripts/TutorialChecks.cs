@@ -9,14 +9,16 @@ public class TutorialChecks : MonoBehaviour
     //[SerializeField]  GameObject Tutorial5BUTTON;
     [SerializeField] GameObject Tutorial5BUTTON;
     [SerializeField] GameObject Tutorial6BUTTON;
-    [SerializeField]  GameObject Tutorial7;
+    [SerializeField] GameObject Tutorial7;
 
     [SerializeField] GameObject BuildMODE;
-    
+
+    [SerializeField] GameObject tutorialSteps;
 
     public static bool TapandDrag = false;
     public static bool ZoomInZoomOut = false;
     public static bool TutorialMode = false;
+    public static bool GiantTalkedTo = false;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class TutorialChecks : MonoBehaviour
     public void TurnTutorialModeON()
     {
         TutorialMode = true;
+
     }
 
     public void TurnTutorialModeOFF()
@@ -36,7 +39,12 @@ public class TutorialChecks : MonoBehaviour
         TutorialMode = false;
     }
 
-   
+    public void ResetValues()
+    {
+        TutorialMode = false;
+        tutorialSteps.SetActive(false);
+    }
+
 
     public void check()
     {
@@ -64,6 +72,7 @@ public class TutorialChecks : MonoBehaviour
 
     public void GiantInteracted()
     {
+        GiantTalkedTo = true;
         Tutorial7.SetActive(false);
     }
 }
