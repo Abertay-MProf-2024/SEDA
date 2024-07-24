@@ -152,6 +152,13 @@ public class LevelManager : MonoBehaviour
         if (building != null && building.resourceData.impactSource
             && building.GetOwningGridObject())
         {
+            BuildingClickSound clickSound;
+            if (clickSound = building.GetComponent<BuildingClickSound>())
+            {
+                clickSound.PlayClickSound();
+            }
+
+
             int radius = building.resourceData.impactRadiusTiles;
 
             GridPosition gridPos;
