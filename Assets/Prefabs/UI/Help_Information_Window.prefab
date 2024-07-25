@@ -151,7 +151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creature
+  m_text: Creatures
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time
+  m_text: Soil Health
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 8083819906619503166}
   - component: {fileID: 4903467928362923540}
   m_Layer: 5
-  m_Name: Environment_Button
+  m_Name: Buildings_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 314767343842737918}
   - component: {fileID: 4431758960610203525}
   m_Layer: 5
-  m_Name: Basic_gameplay_text
+  m_Name: Buildings_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 630976105593202296}
   - component: {fileID: 1757760494019209177}
   m_Layer: 5
-  m_Name: Basic_gameplay_text
+  m_Name: Creatures_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 4333198570496994512}
   - component: {fileID: 1063285510568234159}
   m_Layer: 5
-  m_Name: Time_Lable
+  m_Name: SH_Lable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1241,7 +1241,7 @@ GameObject:
   - component: {fileID: 7710980087890770723}
   - component: {fileID: 8895760669639533617}
   m_Layer: 5
-  m_Name: Creature_Lable
+  m_Name: Creatures_Lable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1318,7 +1318,7 @@ GameObject:
   - component: {fileID: 712244625647156217}
   - component: {fileID: 1885974866895618173}
   m_Layer: 5
-  m_Name: Environment_Lable
+  m_Name: Buildings_Lable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 7960931019239790949}
   - component: {fileID: 3439532573705806021}
   m_Layer: 5
-  m_Name: Basic_gameplay_text
+  m_Name: SH_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1864,7 +1864,7 @@ GameObject:
   - component: {fileID: 1238179163020315441}
   - component: {fileID: 8256458634185355236}
   m_Layer: 5
-  m_Name: Time_Button
+  m_Name: SH_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Soil Health
+  m_text: Buildings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2935,7 +2935,7 @@ GameObject:
   - component: {fileID: 7723028945418320436}
   - component: {fileID: 4147681672083583154}
   m_Layer: 5
-  m_Name: Creature_Button
+  m_Name: Creatures_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
