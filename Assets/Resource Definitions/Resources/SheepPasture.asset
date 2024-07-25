@@ -15,7 +15,8 @@ MonoBehaviour:
   tileName: Sheep pasture
   tileDescription: "Cost Food: 20\nCost Material: 10\n\nMaintain Food: 10\nMaintain
     Material: 0\n\nOutput Food: 30\nOutput Material: 0\n\nDescription: \nCollect
-    building (Barn) required\nProvide more food than Spring Barley\nBuff soil grade"
+    building (Barn) required\nProvide more food than Spring Barley\nBuff soil grade\nBuff
+    forest nearby"
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: ce9370c9d214ae1498c2ebda693e6169,
     type: 3}
@@ -43,7 +44,7 @@ MonoBehaviour:
   baseOutputMaterial: 10
   buildingOutputMulti: 1
   impactSource: 1
-  impactRadiusTiles: 3
+  impactRadiusTiles: 1
   buffAmount: 3
   nerfAmount: 0.5
   tileImpactBuff:

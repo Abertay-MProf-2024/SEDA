@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: Forest
   tileDescription: "Output Food: 0\nOutput Material: 15\n\nDescription: \nCollect
-    building (Logging Camp) required\nProvide basic materials\nBuff soil grade"
+    building (Logging Camp) required\nProvide basic materials\nBuff soil grade\nBuff
+    animals nearby"
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: bf23c31cc275890418b7c7ce2ee3f100,
     type: 3}
