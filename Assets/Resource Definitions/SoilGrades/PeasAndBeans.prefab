@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 938145542236971866}
   - component: {fileID: 4490454995800507030}
   - component: {fileID: 8636727909791923120}
+  - component: {fileID: 2343153454814408689}
+  - component: {fileID: -2491836364854028047}
   m_Layer: 0
   m_Name: PeasAndBeans
   m_TagString: Untagged
@@ -91,6 +93,32 @@ MonoBehaviour:
   vfxTransform: {fileID: 6812987414611069332}
   vfxPrefab: {fileID: 8729181608774881354, guid: 8c3189da8ff9dc040a5a35615221096e,
     type: 3}
+--- !u!114 &2343153454814408689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 8bb2f9964d70df74e8c8946779e95b3b, type: 3}
+--- !u!114 &-2491836364854028047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeBuildingSound: {fileID: 8300000, guid: 8bb2f9964d70df74e8c8946779e95b3b, type: 3}
 --- !u!1 &7879060307686455689
 GameObject:
   m_ObjectHideFlags: 0
