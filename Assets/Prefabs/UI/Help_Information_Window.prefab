@@ -151,7 +151,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creatures
+  m_text: 'Creatures &
+
+    The Veil'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -665,7 +667,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000061035156}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 1292.8401}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8774318245707872533
 CanvasRenderer:
@@ -695,7 +697,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "The health of the land is incredibly important. The key to a healthy ecosystem
+    is healthy Soil.\n\nOverlay:\nUse the Soil Health Button to toggle the overlay:\n\nGreen
+    = Healthy\n\nOrange = 0\n\nSoil health Changes the output of crops.\nTiles with
+    high Soil Health will grow more crops.\nTiles with low Soil Health will grow
+    less crops.\n\nYour actions can impact the health of the land. If the Soil Health
+    drops too low, you won\u2019t be able to restore balance.\n\nSome buildings and
+    crops can be constructed that change the Soil health.\n\nPeas & Beans:\nProvide
+    a small amount of Food but greatly increases Soil Health, within it\u2019s radius.\n\nConstruction
+    Cost:\nFood\nMaterial\n\nRadius:\nx Tile\n\nArtificial Fertiliser:\nProvide a
+    large bonus to the output of Crops but greatly decreases Soil Health, within
+    it\u2019s radius.\n\nConstruction Cost:\nFood\nMaterial\n\nRadius:\nx Tile\n\nCompost:\nDoes
+    not provide any Food but greatly increases Soil Health, within it\u2019s radius.\n\nConstruction
+    Cost:\nFood\nMaterial\n\nRadius:\nx Tile"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -965,7 +979,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 2
+  m_ScrollSensitivity: 3
   m_Viewport: {fileID: 176439161747927727}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 6897083378106061795}
@@ -1011,9 +1025,9 @@ RectTransform:
   m_Father: {fileID: 5975863938712689836}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1229051014839685007
 CanvasRenderer:
@@ -1098,8 +1112,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 958050506374844893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.16289973}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1158,7 +1172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4998576999111461661
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1250,7 +1264,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4056803945852443893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.42744088}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1390,7 +1404,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 2
+  m_ScrollSensitivity: 3
   m_Viewport: {fileID: 7369398391507214402}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1382733611496146181}
@@ -1473,8 +1487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
+  m_AnchoredPosition: {x: 0, y: -8.5}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &7142248076307361186
 CanvasRenderer:
@@ -1848,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8110927907157646539
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2020,9 +2034,9 @@ RectTransform:
   m_Father: {fileID: 5189977608429462483}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1935512998126935566
 CanvasRenderer:
@@ -2111,8 +2125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
+  m_AnchoredPosition: {x: 0, y: -8.5}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &4163116518646637627
 CanvasRenderer:
@@ -2273,7 +2287,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000061035156}
-  m_SizeDelta: {x: 0, y: -900}
+  m_SizeDelta: {x: 0, y: 671.89}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &7079570234048567487
 CanvasRenderer:
@@ -2303,7 +2317,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Veil Stones:\nThese enigmatic stone circles have become portals to beyond
+    the veil. They are some of the only clues left over from our Pictish ancestors\u2026\n\nReach
+    through the Veil and swap the land type.\nBe careful though, messing with the
+    natural order of things will damage the Soil Health.\n\nGiant:\nAwoken by the
+    fearful thunder that split the sky, Magnus has wandered down from the Cairngorms
+    to find a more peaceful spot to take a nap\u2026\n\nMagnus is blocking some of
+    the tiles, if you bribe him maybe he\u2019ll be a helpful hand in rebuilding
+    the town.\n\nKelpie:\nWith a splash of a tail and an ethereal shriek, a fearsome
+    Kelpie emerges from the depths, it vents its anger at those who dare interfere
+    with its watery domain.\n\nThe Kelpie\u2019s fearsome hunger makes going near
+    any bodies of Water a dangerous idea. While the Kelpie is on the prowl, no Water
+    sources in a level will provide water.\n\nThe Cailleach:\nShe has come! The Veiled
+    One, God of Thunder and Queen of Winter!\nThe Cailleach carved Scotland with
+    blows of her mighty hammer. With her she brings winter and lightning.\n\nAngry
+    at the damage done to the land she has summoned a vengeful thunderstorm to lay
+    low those who have wronged her."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2499,8 +2528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
+  m_AnchoredPosition: {x: 0, y: -8.5}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1452656641026988610
 CanvasRenderer:
@@ -2583,8 +2612,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7424660359839341476}
   m_HandleRect: {fileID: 1210893274084012884}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.41042665
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3029,8 +3058,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2612956285332019289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5895734}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3634,7 +3663,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 2
+  m_ScrollSensitivity: 3
   m_Viewport: {fileID: 7578859565133905577}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 7200299958836250652}
@@ -3742,7 +3771,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 2
+  m_ScrollSensitivity: 3
   m_Viewport: {fileID: 1988020526624530613}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 614268243519673752}
@@ -3923,7 +3952,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000061035156}
-  m_SizeDelta: {x: 0, y: 175.14001}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8521445413917586779
 CanvasRenderer:
@@ -4415,7 +4444,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buildings
+  m_text: 'Buildings &
+
+    Resources'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4654,8 +4685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
+  m_AnchoredPosition: {x: 0, y: -8.5}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &2659702668844035005
 CanvasRenderer:
@@ -4738,8 +4769,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3382037893521042801}
   m_HandleRect: {fileID: 1309640209542445008}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.5725591
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
