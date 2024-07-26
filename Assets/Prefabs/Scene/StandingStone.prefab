@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7862847786385782504}
   - component: {fileID: 237971528444756472}
-  - component: {fileID: 3040026450997285251}
+  - component: {fileID: 913776723954256636}
   m_Layer: 0
   m_Name: StandingStone
   m_TagString: StandingStone
@@ -59,8 +59,8 @@ MonoBehaviour:
     type: 3}
   vfxActivate: {fileID: 1308031498507452829, guid: 8d96ab08773f8154f858d9a0604ce951,
     type: 3}
---- !u!65 &3040026450997285251
-BoxCollider:
+--- !u!64 &913776723954256636
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -77,9 +77,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 2}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &185739282136084328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,6 +159,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: STM_StandingStone03a
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 23cefcef34a34154ca5308cc4d597543,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -185,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 3412361008288957815, guid: 61a68c81e12030e4685c14e576ffbc56,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.252
+      value: -0.25761595
       objectReference: {fileID: 0}
     - target: {fileID: 3412361008288957815, guid: 61a68c81e12030e4685c14e576ffbc56,
         type: 3}
@@ -235,7 +241,7 @@ PrefabInstance:
     - target: {fileID: 8417487460243993300, guid: 61a68c81e12030e4685c14e576ffbc56,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -260,6 +266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FAB_VFX_PictStone_Activated_VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308031498507452829, guid: 8d96ab08773f8154f858d9a0604ce951,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3662664111652245788, guid: 8d96ab08773f8154f858d9a0604ce951,
         type: 3}

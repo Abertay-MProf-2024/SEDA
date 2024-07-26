@@ -14,10 +14,10 @@ public class BuildingTypeSelect : MonoBehaviour
     {
         if (activeButton.GetComponent<Image>().color == Color.white)
         {
-            activeButton.GetComponent<Image>().color = Color.red;
+            activeButton.GetComponent<Image>().color = Color.green;
         }
 
-        else if (activeButton.GetComponent<Image>().color == Color.red)
+        else if (activeButton.GetComponent<Image>().color == Color.green)
         {
             activeButton.GetComponent<Image>().color = Color.white;
         }
