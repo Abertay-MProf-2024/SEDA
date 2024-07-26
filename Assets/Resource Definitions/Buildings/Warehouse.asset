@@ -21,6 +21,7 @@ MonoBehaviour:
   sizeWidthTile: 1
   sizeLengthTile: 1
   structureType: 3
+  hasGravel: 1
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000

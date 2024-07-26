@@ -156,6 +156,7 @@ public class GridObject : MonoBehaviour
             buildingInstance.resourceData = building; 
             buildingInstance.transform.parent = transform;
             buildingInstance.isBuilt = true;
+            terrain.SetTerrainMaterialProperties();
 
             if (TutorialChecks.TutorialMode)
             {
