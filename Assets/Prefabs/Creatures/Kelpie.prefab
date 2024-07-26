@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 8113957161916004281}
   - component: {fileID: 8713817741483937436}
   - component: {fileID: 101555248321236770}
+  - component: {fileID: 2610648903828377543}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -310,6 +311,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+--- !u!114 &2610648903828377543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8348999006726488420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedSound: {fileID: 8300000, guid: 832fc4ab10257204d880437f23254128, type: 3}
+  mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
+    type: 2}
 --- !u!1 &9027393433305129133
 GameObject:
   m_ObjectHideFlags: 0
