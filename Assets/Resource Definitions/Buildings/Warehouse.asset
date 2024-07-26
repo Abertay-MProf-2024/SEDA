@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: Warehouse
   tileDescription: "Cost Food: 60\nCost Material: 10\n \nMaintain Food: 0\nMaintain
-    Material: 0\n\nRadius: 1\nDescription: \nCollect a lot of materials from ruins"
+    Material: 0\n\nRadius: 3\nDescription: \nCollect a lot of materials from ruins"
   icon: {fileID: 0}
   inGameAsset: {fileID: 679268389524347108, guid: 8c96c13045af6d843b686c866995f6f8,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
   structureType: 3
+  hasGravel: 1
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000
@@ -28,8 +29,8 @@ MonoBehaviour:
   bribeCostFood: 15
   bribeCostConstruction: 5
   canBuild: 1
-  buildingCostFood: 0
-  buildingCostMaterial: 5
+  buildingCostFood: 60
+  buildingCostMaterial: 10
   upKeepCostEnergy: 0
   upKeepCostWater: 0
   upKeepCostFood: 0
@@ -39,7 +40,7 @@ MonoBehaviour:
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
-  baseOutputMaterial: 20
+  baseOutputMaterial: 0
   buildingOutputMulti: 1
   impactSource: 1
   impactRadiusTiles: 3

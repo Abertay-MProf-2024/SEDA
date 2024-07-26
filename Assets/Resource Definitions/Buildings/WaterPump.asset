@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: WaterPump
   m_EditorClassIdentifier: 
   tileName: Water Pump
-  tileDescription: "Cost Food: 0\nCost Material: 5\n \nRadius: 1\nDescription: \nProvide
-    water in radius"
+  tileDescription: "Cost Food: 0\nCost Material: 5\n \nRadius: 2\nDescription: \nProvide
+    water"
   icon: {fileID: 0}
   inGameAsset: {fileID: 679268389524347108, guid: 0af38f364f1be8744b08a99f025b1f72,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
   structureType: 2
+  hasGravel: 1
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000
@@ -42,7 +43,7 @@ MonoBehaviour:
   baseOutputMaterial: 0
   buildingOutputMulti: 1
   impactSource: 1
-  impactRadiusTiles: 1
+  impactRadiusTiles: 2
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []

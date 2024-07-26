@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -12,10 +13,6 @@ public class AudioZoomController : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     private AudioSource sfxSource;
 
-    private float minZoom;
-    private float maxZoom;
-    private Coroutine music2FadeCoroutine;
-    private float music2OriginalVolume;
 
     private void Awake()
     {
@@ -24,16 +21,41 @@ public class AudioZoomController : MonoBehaviour
         sfxSource.clip = windSound;
         sfxSource.playOnAwake = false;
         sfxSource.loop = true;
+        sfxSource.volume = 0;
         sfxSource.outputAudioMixerGroup = mixerGroupSFX;
     }
 
     public void PlayWindSound()
     {
-        sfxSource.Play();
+        StopAllCoroutines();
+        StartCoroutine(FadeIn(sfxSource));
     }
 
     public void StopWindSound()
     {
-        sfxSource.Stop();
+        StopAllCoroutines();
+        StartCoroutine(FadeOut(sfxSource));
+    }
+
+    IEnumerator FadeIn(AudioSource audioSource)
+    {
+        audioSource.Play();
+
+        while (audioSource.volume < 1)
+        {
+            audioSource.volume += 0.1f;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }    
+    
+    IEnumerator FadeOut(AudioSource audioSource)
+    {
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= 0.1f;
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        audioSource.Stop();
     }
 }

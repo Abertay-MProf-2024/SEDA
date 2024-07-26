@@ -10,6 +10,8 @@ public class TutorialChecks : MonoBehaviour
     [SerializeField] GameObject Tutorial5BUTTON;
     [SerializeField] GameObject Tutorial6BUTTON;
     [SerializeField] GameObject Tutorial7;
+    [SerializeField] GameObject Tutorial8;
+    [SerializeField] GameObject Tutorial9BUTTON;
 
     [SerializeField] GameObject BuildMODE;
 
@@ -18,7 +20,9 @@ public class TutorialChecks : MonoBehaviour
     public static bool TapandDrag = false;
     public static bool ZoomInZoomOut = false;
     public static bool TutorialMode = false;
+    public static bool standingStonedone = false;
     public static bool GiantTalkedTo = false;
+    public static bool SoilGradeShow = false;
 
     private void Start()
     {
@@ -48,18 +52,36 @@ public class TutorialChecks : MonoBehaviour
 
     public void check()
     {
-        if(TapandDrag)
+        if (TapandDrag)
         {
             Tutorial1BUTTON.SetActive(true);
         }
 
-        if(ZoomInZoomOut)
+        if (ZoomInZoomOut)
         {
             Tutorial2BUTTON.SetActive(true);
         }
+
+        if (standingStonedone)
+        {
+            Tutorial6BUTTON.SetActive(true);
+        }
+
     }
 
-    public  void TryBuildLoggingCamp()
+    public void SoilGrade()
+    {
+        if (TutorialMode)
+        {
+            if (standingStonedone)
+            {
+                SoilGradeShow = true;
+                Tutorial9BUTTON.SetActive(true);
+            }
+        }
+    }
+
+    public void TryBuildLoggingCamp()
     {
         BuildMODE.gameObject.SetActive(false);
         Tutorial5BUTTON.SetActive(true);
@@ -67,12 +89,28 @@ public class TutorialChecks : MonoBehaviour
 
     public void StandingStoneBlur()
     {
+        standingStonedone = true;
         Tutorial6BUTTON.SetActive(true);
     }
 
     public void GiantInteracted()
     {
-        GiantTalkedTo = true;
-        Tutorial7.SetActive(false);
+        if (TutorialMode)
+        {
+            if(standingStonedone && SoilGradeShow)
+                GiantTalkedTo = true;
+
+            Tutorial7.SetActive(false);
+            
+        }
+    }
+
+    public void checkGiantAgain()
+    {
+        if (TutorialMode)
+        {
+            if(GiantTalkedTo)
+                Tutorial8.SetActive(true);
+        }
     }
 }

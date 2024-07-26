@@ -12,14 +12,17 @@ public class Cailleach : Building
 
     private void Start()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(endpoint2.transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
-        {
-            //Debug.DrawLine(transform.position, transform.position + Vector3.down * 100, Color.red, 500);
-            TSC1 = hit.transform.gameObject.GetComponent<Terrainsystem>();
-        }
-        TSC1.creaturetype = CreatureTypes.Cailleach;
-        //cailleachcreature.SetActive(false);
+        
+            RaycastHit hit;
+            if (Physics.Raycast(endpoint2.transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
+            {
+                //Debug.DrawLine(transform.position, transform.position + Vector3.down * 100, Color.red, 500);
+                TSC1 = hit.transform.gameObject.GetComponent<Terrainsystem>();
+            }
+            TSC1.creaturetype = CreatureTypes.Cailleach;
+            //cailleachcreature.SetActive(false);
+        
+
     }
 
     public void StandingStoneCailleachImpact()

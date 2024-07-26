@@ -16,6 +16,9 @@ public class LevelManagerEditor : Editor
     SerializedProperty successConstructionMaterialsAmount;
     SerializedProperty successSoilHealth;
 
+    SerializedProperty  RiverTileBase;
+    //SerializedProperty MountainTileBase;
+
     SerializedProperty waterOutline;
     SerializedProperty energyOutline;
     SerializedProperty extraOutline;
@@ -36,6 +39,9 @@ public class LevelManagerEditor : Editor
         successFoodAmount = serializedObject.FindProperty("successFoodAmount");
         successConstructionMaterialsAmount = serializedObject.FindProperty("successConstructionMaterialsAmount");
         successSoilHealth = serializedObject.FindProperty("successSoilHealth");
+
+        RiverTileBase = serializedObject.FindProperty("RiverTileBase");
+        //MountainTileBase = serializedObject.FindProperty("MountainTileBase");
 
         waterOutline = serializedObject.FindProperty("waterOutline");
         energyOutline = serializedObject.FindProperty("energyOutline");
@@ -62,6 +68,9 @@ public class LevelManagerEditor : Editor
         EditorGUILayout.PropertyField(successFoodAmount);
         EditorGUILayout.PropertyField(successConstructionMaterialsAmount);
         EditorGUILayout.PropertyField(successSoilHealth);
+
+        EditorGUILayout.PropertyField(RiverTileBase);
+        //EditorGUILayout.PropertyField(MountainTileBase);
 
         EditorGUILayout.PropertyField(waterOutline);
         EditorGUILayout.PropertyField(energyOutline);

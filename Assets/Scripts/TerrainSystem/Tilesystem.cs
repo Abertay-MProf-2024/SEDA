@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum TerrainTypes
@@ -156,21 +155,31 @@ public class Terrainsystem : MonoBehaviour
 
         Material[] materialsArray = GetComponent<MeshRenderer>().materials;
 
+        // Set Soil Quality
         float quality;
         if (flood)
             quality = 1;
         else
             quality = health / 100f;
 
+        // Set Land Type
+        bool landType;
+        if (terraintype == TerrainTypes.Highland)
+            landType = false;
+        else
+            landType = false;
+
+        bool hasGravel;
+        if (owningGridObject && owningGridObject.buildingInstance && owningGridObject.buildingInstance.resourceData.hasGravel)
+            hasGravel = true;
+        else
+            hasGravel = false;
+
         foreach (Material mat in materialsArray)
         {
             mat.SetFloat("_SoilQuality", quality);
-            mat.SetFloat("_Hydration", quality);
-
-/*            if (Wenergy)
-                mat.SetFloat("_Hydration", 1);
-            else
-                mat.SetFloat("_Hydration", .8f);*/
+            mat.SetFloat("_LandType(Grass/High)", landType ? 1f : 0f);
+            mat.SetFloat("_GravelBlended", hasGravel ? 1f : 0f);
         }
     }
 
@@ -179,7 +188,11 @@ public class Terrainsystem : MonoBehaviour
         float totalChangeInGrade = buffamount - nerfamount + WeatherSystem.soilGradeWeatherEffect;
         if (impact)
         {
+
             health = (int)CurrentsoilType + (int)totalChangeInGrade;
+            
+            if(health >100)
+                health = 100;
 
             //reference to Building, to reduce it by (health)
 

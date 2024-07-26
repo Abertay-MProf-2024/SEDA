@@ -18,7 +18,7 @@ public class BuildingClickSound : MonoBehaviour
 
     public void PlayClickSound()  
     {
-        if (clickSound != null)
+        if (audioSource && clickSound != null)
         {
             audioSource.PlayOneShot(clickSound);
         }

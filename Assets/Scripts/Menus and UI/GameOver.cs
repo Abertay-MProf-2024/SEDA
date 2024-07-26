@@ -15,6 +15,8 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         TimeSystem.Unpause();
+        WeatherSystem.hasFloodHappened = false;
+        Terrainsystem.tilecount = 0;
         //BuildingTypeSelect.GridOff();
     }
 
