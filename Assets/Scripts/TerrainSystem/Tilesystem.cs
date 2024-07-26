@@ -167,7 +167,7 @@ public class Terrainsystem : MonoBehaviour
         if (terraintype == TerrainTypes.Highland)
             landType = false;
         else
-            landType = false;
+            landType = true;
 
         bool hasGravel;
         if (owningGridObject && owningGridObject.buildingInstance && owningGridObject.buildingInstance.resourceData.hasGravel)
