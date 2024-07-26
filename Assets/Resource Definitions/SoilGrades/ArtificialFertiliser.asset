@@ -20,7 +20,7 @@ MonoBehaviour:
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
-  structureType: 15
+  structureType: 13
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 010000000300000005000000
