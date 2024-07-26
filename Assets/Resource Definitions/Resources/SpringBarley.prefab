@@ -129,6 +129,8 @@ GameObject:
   - component: {fileID: 938145542236971866}
   - component: {fileID: 1162558666057515032}
   - component: {fileID: 5642146764387184265}
+  - component: {fileID: 4780548945926312036}
+  - component: {fileID: -7182755351943688618}
   m_Layer: 0
   m_Name: SpringBarley
   m_TagString: Untagged
@@ -208,6 +210,32 @@ MonoBehaviour:
   vfxTransform: {fileID: 3976001993816318889}
   vfxPrefab: {fileID: 8729181608774881354, guid: 8c3189da8ff9dc040a5a35615221096e,
     type: 3}
+--- !u!114 &4780548945926312036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 40447e8a239654c45a7543a7899113fa, type: 3}
+--- !u!114 &-7182755351943688618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeBuildingSound: {fileID: 8300000, guid: 0092912c3fc3efc45aba9d809492b7fc, type: 3}
 --- !u!1 &8984462855430436649
 GameObject:
   m_ObjectHideFlags: 0

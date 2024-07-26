@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeBuildingSound: {fileID: 8300000, guid: 74425750c26339546ac58419344e9a49, type: 3}
+  placeBuildingSound: {fileID: 8300000, guid: 9e4a8c2a3a614284da9341638b5654e6, type: 3}
 --- !u!114 &1226148935464624350
 MonoBehaviour:
   m_ObjectHideFlags: 0
