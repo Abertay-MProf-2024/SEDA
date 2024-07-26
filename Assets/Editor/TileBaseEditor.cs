@@ -12,6 +12,7 @@ public class TileBaseEditor : Editor
     SerializedProperty sizeWidth;
     SerializedProperty sizeLength;
     SerializedProperty structureType;
+    SerializedProperty hasGravel;
     SerializedProperty tileUnder;
     SerializedProperty biomeTypes;
     SerializedProperty tileTerrainTypes;
@@ -62,6 +63,7 @@ public class TileBaseEditor : Editor
         sizeWidth = serializedObject.FindProperty("sizeWidthTile");
         sizeLength = serializedObject.FindProperty("sizeLengthTile");
         structureType = serializedObject.FindProperty("structureType");
+        hasGravel = serializedObject.FindProperty("hasGravel");
         tileUnder = serializedObject.FindProperty("tileUnder");
         biomeTypes = serializedObject.FindProperty("biomeTypes");
         tileTerrainTypes = serializedObject.FindProperty("tileTerrainTypes");
@@ -112,6 +114,7 @@ public class TileBaseEditor : Editor
         EditorGUILayout.PropertyField(sizeWidth);
         EditorGUILayout.PropertyField(sizeLength);
         EditorGUILayout.PropertyField(structureType);
+        EditorGUILayout.PropertyField(hasGravel);
         EditorGUILayout.PropertyField(tileUnder);
         EditorGUILayout.PropertyField(biomeTypes);
         EditorGUILayout.PropertyField(tileTerrainTypes);

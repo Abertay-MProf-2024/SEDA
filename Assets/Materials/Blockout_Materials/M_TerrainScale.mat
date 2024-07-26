@@ -38,6 +38,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _GravelBlended: 1
     - _Hydration: 0.5
     - _ManualSliders_ForDemo: 0
     - _Smoothness: 0
