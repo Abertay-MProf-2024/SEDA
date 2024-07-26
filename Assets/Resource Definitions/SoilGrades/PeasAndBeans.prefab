@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 5918334348238235545}
   - component: {fileID: 938145542236971866}
   - component: {fileID: 4490454995800507030}
-  - component: {fileID: -7207234631631304659}
-  - component: {fileID: -6326906345718056318}
+  - component: {fileID: 8636727909791923120}
   m_Layer: 0
   m_Name: PeasAndBeans
   m_TagString: Untagged
@@ -35,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 5569891941127493112}
   - {fileID: 4171054598197725794}
+  - {fileID: 6812987414611069332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &938145542236971866
@@ -76,7 +76,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 2}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &-7207234631631304659
+--- !u!114 &8636727909791923120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,23 +85,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 7543974964756465544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Script: {fileID: 11500000, guid: 112ab28e6578ad74bb6cc77b40a75926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 8bb2f9964d70df74e8c8946779e95b3b, type: 3}
---- !u!114 &-6326906345718056318
-MonoBehaviour:
+  vfxTransform: {fileID: 6812987414611069332}
+  vfxPrefab: {fileID: 8729181608774881354, guid: 8c3189da8ff9dc040a5a35615221096e,
+    type: 3}
+--- !u!1 &7879060307686455689
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543974964756465544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placeBuildingSound: {fileID: 8300000, guid: 8bb2f9964d70df74e8c8946779e95b3b, type: 3}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6812987414611069332}
+  m_Layer: 0
+  m_Name: BuildingVFXLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6812987414611069332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7879060307686455689}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.032877803, y: 0.085, z: -0.090788126}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5918334348238235545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5388137253208486419
 PrefabInstance:
   m_ObjectHideFlags: 0

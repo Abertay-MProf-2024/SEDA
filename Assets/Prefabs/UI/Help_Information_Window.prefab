@@ -1169,7 +1169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8110927907157646539
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2443,7 +2443,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Basic_gameplay_text
+  m_text: "Navigation:\nLet\u2019s start with looking around the map.\nTap and drag
+    on the screen to move the camera.\nPinch the screen with two fingers to zoom
+    in and out.\n\nBuilding Menu:\nWe need Materials to Construct buildings.\nTo
+    collect the needed Resources, you must place the correct building on the tiles.\nA
+    Logging Camp collects Materials from Forest tiles and a Barn will collect Food
+    from Cow pastures and Crops.\n\nRelationships:\nBalance between the land and
+    the people is key.\nActions have consequences; be mindful of the relationships
+    between the land, resources and your buildings."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2711,7 +2718,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Environment
+  m_text: Soil Health
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

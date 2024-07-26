@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -18,6 +19,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int successConstructionMaterialsAmount;
     [SerializeField] int successSoilHealth;
 
+    [SerializeField] TileBase RiverTileBase;
+    //[SerializeField] TileBase MountainTileBase;
 
     GameObject outlineParent;
 
@@ -123,8 +126,13 @@ public class LevelManager : MonoBehaviour
                             {
                                 Vector3 worldPosition = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z).transform.position;
                                 Instantiate(waterOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+
                             }
                         }
+                        buildingCostUI.gameObject.SetActive(true);
+
+                        buildingCostUI.BuildingNameDisplay.text = RiverTileBase.name.ToString();
+                        buildingCostUI.DescriptionDisplay.text = RiverTileBase.tileDescription.ToString();
                     }
                 }
             }
@@ -152,6 +160,13 @@ public class LevelManager : MonoBehaviour
         if (building != null && building.resourceData.impactSource
             && building.GetOwningGridObject())
         {
+            BuildingClickSound clickSound;
+            if (clickSound = building.GetComponent<BuildingClickSound>())
+            {
+                clickSound.PlayClickSound();
+            }
+
+
             int radius = building.resourceData.impactRadiusTiles;
 
             GridPosition gridPos;
@@ -176,9 +191,11 @@ public class LevelManager : MonoBehaviour
 
             //to pop up the building details when clicked on a building
             buildingCostUI.gameObject.SetActive(true);
-            buildingCostUI.BuildingNameDisplay.text = building.name.ToString();
-            buildingCostUI.ReqFoodDisplay.text = building.resourceData.buildingCostFood.ToString();
-            buildingCostUI.ReqConstMatDisplay.text = building.resourceData.buildingCostMaterial.ToString();
+            buildingCostUI.BuildingNameDisplay.text = building.resourceData.inGameAsset.name.ToString();
+            buildingCostUI.DescriptionDisplay.text = building.resourceData.tileDescription.ToString();
+            //buildingCostUI.ReqFoodDisplay.text = building.resourceData.buildingCostFood.ToString();
+            //buildingCostUI.ReqConstMatDisplay.text = building.resourceData.buildingCostMaterial.ToString();
+
 
             return true;
         }

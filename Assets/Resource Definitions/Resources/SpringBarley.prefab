@@ -128,8 +128,7 @@ GameObject:
   - component: {fileID: 5918334348238235545}
   - component: {fileID: 938145542236971866}
   - component: {fileID: 1162558666057515032}
-  - component: {fileID: -1201822760880178043}
-  - component: {fileID: 327916538549716737}
+  - component: {fileID: 5642146764387184265}
   m_Layer: 0
   m_Name: SpringBarley
   m_TagString: Untagged
@@ -152,6 +151,7 @@ Transform:
   m_Children:
   - {fileID: 4762039057526574990}
   - {fileID: 6650744477788542568}
+  - {fileID: 3976001993816318889}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &938145542236971866
@@ -193,7 +193,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 2}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &-1201822760880178043
+--- !u!114 &5642146764387184265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,23 +202,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 7543974964756465544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64286fe085f55da49b2ea3ca4cf29fce, type: 3}
+  m_Script: {fileID: 11500000, guid: 112ab28e6578ad74bb6cc77b40a75926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 40447e8a239654c45a7543a7899113fa, type: 3}
---- !u!114 &327916538549716737
-MonoBehaviour:
+  vfxTransform: {fileID: 3976001993816318889}
+  vfxPrefab: {fileID: 8729181608774881354, guid: 8c3189da8ff9dc040a5a35615221096e,
+    type: 3}
+--- !u!1 &8984462855430436649
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7543974964756465544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d8a51efc738705498b482779c7a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placeBuildingSound: {fileID: 8300000, guid: 0092912c3fc3efc45aba9d809492b7fc, type: 3}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3976001993816318889}
+  m_Layer: 0
+  m_Name: BuildingVFXLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3976001993816318889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8984462855430436649}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0016592741, y: 0.126, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5918334348238235545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &272735916098307729
 PrefabInstance:
   m_ObjectHideFlags: 0

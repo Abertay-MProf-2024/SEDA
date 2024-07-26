@@ -314,7 +314,7 @@ public class InputManager : MonoBehaviour
         Release(true);
 
         // Enable Pinch Zoom
-        if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
+        if (primaryFingerPosAction != null && secondaryFingerPosAction != null && !EventSystem.current.IsPointerOverGameObject())
         {
             FindAnyObjectByType<AudioZoomController>().PlayWindSound();
             isSecondFingerBlockingInput = isSecondFingerDown = true;
@@ -331,7 +331,7 @@ public class InputManager : MonoBehaviour
         if (primaryFingerPosAction != null && secondaryFingerPosAction != null)
         {
             AudioZoomController zoomController = FindAnyObjectByType<AudioZoomController>();
-            
+
             if (zoomController)
                 zoomController.StopWindSound();
 
