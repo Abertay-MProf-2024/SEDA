@@ -19,6 +19,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int successConstructionMaterialsAmount;
     [SerializeField] int successSoilHealth;
 
+    [SerializeField] TileBase RiverTileBase;
+    //[SerializeField] TileBase MountainTileBase;
 
     GameObject outlineParent;
 
@@ -124,8 +126,13 @@ public class LevelManager : MonoBehaviour
                             {
                                 Vector3 worldPosition = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z).transform.position;
                                 Instantiate(waterOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+
                             }
                         }
+                        buildingCostUI.gameObject.SetActive(true);
+
+                        buildingCostUI.BuildingNameDisplay.text = RiverTileBase.name.ToString();
+                        buildingCostUI.DescriptionDisplay.text = RiverTileBase.tileDescription.ToString();
                     }
                 }
             }
@@ -188,6 +195,7 @@ public class LevelManager : MonoBehaviour
             buildingCostUI.DescriptionDisplay.text = building.resourceData.tileDescription.ToString();
             //buildingCostUI.ReqFoodDisplay.text = building.resourceData.buildingCostFood.ToString();
             //buildingCostUI.ReqConstMatDisplay.text = building.resourceData.buildingCostMaterial.ToString();
+
 
             return true;
         }
