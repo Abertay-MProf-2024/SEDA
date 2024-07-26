@@ -179,7 +179,11 @@ public class Terrainsystem : MonoBehaviour
         float totalChangeInGrade = buffamount - nerfamount + WeatherSystem.soilGradeWeatherEffect;
         if (impact)
         {
+
             health = (int)CurrentsoilType + (int)totalChangeInGrade;
+            
+            if(health >100)
+                health = 100;
 
             //reference to Building, to reduce it by (health)
 
