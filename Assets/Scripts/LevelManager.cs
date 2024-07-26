@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] int successFoodAmount;
     [SerializeField] int successConstructionMaterialsAmount;
-    [SerializeField] int successSoilHealth;
+    [SerializeField] public int successSoilHealth;
 
     [SerializeField] TileBase RiverTileBase;
     //[SerializeField] TileBase MountainTileBase;
@@ -56,7 +56,10 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(FindSoilHealth());
         TimeSystem.AddMonthlyEvent(this, Inventory.HealthBarChange, 1, true, 3);
         TimeSystem.AddMonthlyEvent(this, Terrainsystem.ResetValuesSoilGrade, 1, true, 4);
+     
     }
+
+    
 
     IEnumerator FindSoilHealth()
     {

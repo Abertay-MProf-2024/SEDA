@@ -58,6 +58,7 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] GameObject winScreenPrefab;
     public GameObject tutorialSystem;
     [SerializeField] BuildingTypeSelect buildingtypeselect;
+    [SerializeField] int MaintainedSoilHealth;
 
     int day = 1;
     float timeElapsed = 0f;
@@ -209,6 +210,9 @@ public class TimeSystem : MonoBehaviour
         dayDisplay.text = day.ToString();
 
         SetMonth();
+
+        //also check if soil health is maintained
+        CheckSoilHealth();
     }
 
     /** Set month based on numofDaysInMonth */
@@ -324,8 +328,28 @@ public class TimeSystem : MonoBehaviour
         {
             // Lose the level
             Instantiate(gameOverPrefab);
+            Inventory.HealthBarChange();
+            Terrainsystem.ResetValuesSoilGrade();
+            Terrainsystem.tilecount = 0;
         }
         // TODO: Stop Countdown
+    }
+
+     void CheckSoilHealth()
+    {
+        StartCoroutine(CheckSoilStep2());
+        
+    }
+
+    IEnumerator CheckSoilStep2()
+    {
+        yield return new  WaitForSeconds(3);
+        if (Inventory.healthBar < MaintainedSoilHealth)
+        {
+            Instantiate(gameOverPrefab);
+            Terrainsystem.tilecount = 0;
+        }
+        
     }
 
     void SetTimeRemainingDisplay()

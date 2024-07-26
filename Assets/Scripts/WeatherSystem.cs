@@ -37,6 +37,7 @@ public class WeatherSystem : MonoBehaviour
 
     public void SetWeather()
     {
+        
         if (currentWeather != WeatherTypes.Thunderstorm)
         {
             if (!hasTornadoHappened && Inventory.numOfLoggingCamps >= 3)
