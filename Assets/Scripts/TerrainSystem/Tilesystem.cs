@@ -165,9 +165,9 @@ public class Terrainsystem : MonoBehaviour
         // Set Land Type
         bool landType;
         if (terraintype == TerrainTypes.Highland)
-            landType = false;
-        else
             landType = true;
+        else
+            landType = false;
 
         bool hasGravel;
         if (owningGridObject && owningGridObject.buildingInstance && owningGridObject.buildingInstance.resourceData.hasGravel)
@@ -178,7 +178,7 @@ public class Terrainsystem : MonoBehaviour
         foreach (Material mat in materialsArray)
         {
             mat.SetFloat("_SoilQuality", quality);
-            mat.SetFloat("_LandType(Grass/High)", landType ? 1f : 0f);
+            mat.SetFloat("_LandType_Grass_High", landType ? 1f : 0f);
             mat.SetFloat("_GravelBlended", hasGravel ? 1f : 0f);
         }
     }
