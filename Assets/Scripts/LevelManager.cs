@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -183,9 +184,10 @@ public class LevelManager : MonoBehaviour
 
             //to pop up the building details when clicked on a building
             buildingCostUI.gameObject.SetActive(true);
-            buildingCostUI.BuildingNameDisplay.text = building.name.ToString();
-            buildingCostUI.ReqFoodDisplay.text = building.resourceData.buildingCostFood.ToString();
-            buildingCostUI.ReqConstMatDisplay.text = building.resourceData.buildingCostMaterial.ToString();
+            buildingCostUI.BuildingNameDisplay.text = building.resourceData.inGameAsset.name.ToString();
+            buildingCostUI.DescriptionDisplay.text = building.resourceData.tileDescription.ToString();
+            //buildingCostUI.ReqFoodDisplay.text = building.resourceData.buildingCostFood.ToString();
+            //buildingCostUI.ReqConstMatDisplay.text = building.resourceData.buildingCostMaterial.ToString();
 
             return true;
         }
