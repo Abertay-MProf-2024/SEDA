@@ -168,12 +168,6 @@ public class GridObject : MonoBehaviour
                 }
             }
 
-            BuildingPlacementVFX vfx;
-            if (vfx = buildingInstance.GetComponent<BuildingPlacementVFX>())
-            {
-                vfx.PlayVFX();
-            }
-
             BuildingPlacementSound buildSound;
             if (buildSound = buildingInstance.GetComponent<BuildingPlacementSound>())
             {
