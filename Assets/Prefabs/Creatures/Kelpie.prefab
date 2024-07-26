@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8113957161916004281}
   - component: {fileID: 8713817741483937436}
   - component: {fileID: 101555248321236770}
-  - component: {fileID: 2610648903828377543}
+  - component: {fileID: 8373460133608516658}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
---- !u!114 &2610648903828377543
+--- !u!114 &8373460133608516658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

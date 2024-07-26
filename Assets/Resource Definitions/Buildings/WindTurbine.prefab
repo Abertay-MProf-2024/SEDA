@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2902156163167931218}
   - component: {fileID: 4505324752129522904}
   - component: {fileID: 4740147241066025157}
+  - component: {fileID: 2282421308386428924}
   m_Layer: 0
   m_Name: WindTurbine
   m_TagString: Untagged
@@ -34,6 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2960008437954531609}
+  - {fileID: 4658211918561314468}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6724467558982403004
@@ -49,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceData: {fileID: 11400000, guid: 8d611b304079c844896e2c81e3c3aada, type: 2}
-  oldresourceData: {fileID: 0}
+  oldResourceData: {fileID: 0}
   newresourceData: {fileID: 0}
   isBuilt: 0
   RequireWaterEnergy: 0
@@ -101,6 +103,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeBuildingSound: {fileID: 8300000, guid: 1bf1c2296d84b2d4cb75e13110dec1d1, type: 3}
+--- !u!114 &2282421308386428924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50886030656341932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112ab28e6578ad74bb6cc77b40a75926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxTransform: {fileID: 4658211918561314468}
+  vfxPrefab: {fileID: 8729181608774881354, guid: 8c3189da8ff9dc040a5a35615221096e,
+    type: 3}
 --- !u!1 &1986917491958043614
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,3 +285,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4212928008508739603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4658211918561314468}
+  m_Layer: 0
+  m_Name: BuildingVFXLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4658211918561314468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212928008508739603}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0016152859, y: 0.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3692431891003340576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
