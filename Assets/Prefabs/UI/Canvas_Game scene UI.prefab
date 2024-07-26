@@ -1574,7 +1574,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491026269343377112}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74178d03551738549a02d457af5dd650, type: 3}
   m_Name: 
@@ -18199,6 +18199,7 @@ MonoBehaviour:
     type: 3}
   tutorialSystem: {fileID: 0}
   buildingtypeselect: {fileID: 6546463509190114180}
+  MaintainedSoilHealth: 0
 --- !u!1 &7690994272511527334
 GameObject:
   m_ObjectHideFlags: 0
