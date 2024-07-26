@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 231863167343026098}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.026}
-  m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
+  m_LocalPosition: {x: 0.044, y: -0.019, z: -0.135}
+  m_LocalScale: {x: 0.73, y: 0.17216927, z: 0.73}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7786991467673890631}
@@ -342,8 +342,8 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 1
+      scalar: 0.8
+      minScalar: 1.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -672,7 +672,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: -0.0000017148222, y: 0.000000039649336, z: 0.22860846}
+    m_Position: {x: -0.15, y: 0.85, z: 0.73}
     m_Rotation: {x: -0, y: 0, z: 0}
     m_Scale: {x: 0.15, y: 0.15, z: 0.15}
     placementMode: 0
@@ -753,7 +753,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3
+      value: 3.43
       mode: 0
       spread: 0
       speed:
@@ -872,7 +872,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 0.7
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4924,7 +4924,7 @@ Transform:
   m_GameObject: {fileID: 5409447928362106337}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.028999535, y: 0.25999993, z: -0.06999969}
+  m_LocalPosition: {x: -0.028999535, y: 0.8, z: 0.192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5648,7 +5648,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.1
+      value: 0.5
       mode: 0
       spread: 0
       speed:

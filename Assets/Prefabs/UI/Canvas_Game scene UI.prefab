@@ -17036,18 +17036,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2752578854571548594}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8498702791626007333}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -19953,8 +19941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BuildingNameDisplay: {fileID: 776987366296430582}
-  ReqFoodDisplay: {fileID: 0}
-  ReqConstMatDisplay: {fileID: 0}
   DescriptionDisplay: {fileID: 2476149019864577868}
   buildingTypeSelect: {fileID: 6546463509190114180}
 --- !u!1 &8300236530328580564
