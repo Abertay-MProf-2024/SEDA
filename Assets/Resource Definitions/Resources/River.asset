@@ -10,43 +10,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c15a7d87bc4ba64478f86a96ca27bff6, type: 3}
-  m_Name: Compost
+  m_Name: River
   m_EditorClassIdentifier: 
-  tileName: Compost
-  tileDescription: "Cost Food: 10\nCost Material: 5 \n\nMaintain Food: 10\nMaintain
-    Material: 5\n\nRadius: 5\nDescription: \nBuff soil grade a lot"
+  tileName: River
+  tileDescription: 'Radius: 1
+
+    Description:
+
+    Provide water
+
+    Natural resource'
   icon: {fileID: 0}
-  inGameAsset: {fileID: 7543974964756465544, guid: 4e4d3707c9096ce4483b3045fe201ad2,
-    type: 3}
+  inGameAsset: {fileID: 0}
   sizeWidthTile: 1
   sizeLengthTile: 1
-  structureType: 15
+  structureType: 2
   tileUnder: {fileID: 0}
-  biomeTypes: 00000000
-  tileTerrainTypes: 0100000003000000
+  biomeTypes: 
+  tileTerrainTypes: 
   CreatureTile: 0
   bribeCostFood: 15
   bribeCostConstruction: 5
-  canBuild: 1
-  buildingCostFood: 10
-  buildingCostMaterial: 5
+  canBuild: 0
+  buildingCostFood: 0
+  buildingCostMaterial: 0
   upKeepCostEnergy: 0
   upKeepCostWater: 0
-  upKeepCostFood: 10
-  upKeepCostMaterial: 5
+  upKeepCostFood: 0
+  upKeepCostMaterial: 0
   isResourceTapped: 0
   collectorBuildings: 
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
   baseOutputMaterial: 0
-  buildingOutputMulti: 1
-  impactSource: 1
-  impactRadiusTiles: 5
+  buildingOutputMulti: 0
+  impactSource: 0
+  impactRadiusTiles: 0
   buffAmount: 0
   nerfAmount: 0
   tileImpactBuff: []
   tileImpactNerf: []
-  isImpactSoilGrade: 1
-  buffSoilGradeAmount: 40
+  isImpactSoilGrade: 0
+  buffSoilGradeAmount: 0
   nerfSoilGradeAmount: 0
