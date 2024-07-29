@@ -18,6 +18,8 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] Button level2Button;
     [SerializeField] Button level3Button;
 
+    [SerializeField] GameObject loadingScreen;
+
     private LevelSelect instance;
 
     int levelToLoad = 1;
@@ -96,6 +98,7 @@ public class LevelSelect : MonoBehaviour
 
     public void LoadLevel()
     {
+        Instantiate(loadingScreen);
         Inventory.overworldTime--;
         Inventory.levelTime += 12;
         Inventory.ClearResources();
