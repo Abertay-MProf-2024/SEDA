@@ -5048,6 +5048,10 @@ MonoBehaviour:
   level1Button: {fileID: 3637331440749907168}
   level2Button: {fileID: 4177271377027480333}
   level3Button: {fileID: 1486615311207333682}
+  loadingScreen: {fileID: 9024405517536408749, guid: 07dc5867dc4049741ac27fdb4baf5c2b,
+    type: 3}
+  loadingHintText:
+  - Now Loading
 --- !u!1 &4247283753814410241
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,10 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] Button level2Button;
     [SerializeField] Button level3Button;
 
+    [SerializeField] GameObject loadingScreen;
+
+    [SerializeField][TextArea] string[] loadingHintText;
+
     private LevelSelect instance;
 
     int levelToLoad = 1;
@@ -96,9 +100,20 @@ public class LevelSelect : MonoBehaviour
 
     public void LoadLevel()
     {
+        Instantiate(loadingScreen);
+        SetRandomHintText();
         Inventory.overworldTime--;
         Inventory.levelTime += 12;
         Inventory.ClearResources();
         SceneManager.LoadSceneAsync(levelToLoad);
+    }
+
+    void SetRandomHintText()
+    {
+        if (loadingHintText.Length > 0)
+        {
+            int hintNumber = Random.Range(0, loadingHintText.Length);
+            loadingScreen.GetComponentInChildren<TextMeshProUGUI>().text = loadingHintText[hintNumber];
+        }
     }
 }
