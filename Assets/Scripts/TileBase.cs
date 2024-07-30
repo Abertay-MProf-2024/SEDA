@@ -36,6 +36,8 @@ public class TileBase : ScriptableObject
     public int sizeLengthTile = 1;
     [Tooltip("Structure Types")]
     public StructureTypes structureType;
+    [Tooltip("Has Gravel")]
+    public bool hasGravel;
     [Description("Structure Types")]
     public enum StructureTypes
     {

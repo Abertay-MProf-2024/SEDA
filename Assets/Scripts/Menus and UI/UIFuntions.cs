@@ -53,7 +53,7 @@ public class UIFuntions : MonoBehaviour
         LevelSelection.enabled = true;
         MapOverview.SetActive(true);
         Level1_Info.SetActive(false);
-        ACInfo.SetActive(false);
+        //ACInfo.SetActive(false);
 
         // Instantiate a new Game Manager (complete with Save Data!)
         Instantiate(gameManager);

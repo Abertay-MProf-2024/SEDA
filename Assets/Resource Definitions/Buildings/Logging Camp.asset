@@ -21,6 +21,7 @@ MonoBehaviour:
   sizeWidthTile: 1
   sizeLengthTile: 1
   structureType: 4
+  hasGravel: 1
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000
@@ -28,18 +29,18 @@ MonoBehaviour:
   bribeCostFood: 15
   bribeCostConstruction: 5
   canBuild: 1
-  buildingCostFood: 3
+  buildingCostFood: 0
   buildingCostMaterial: 5
   upKeepCostEnergy: 0
   upKeepCostWater: 0
-  upKeepCostFood: 0
+  upKeepCostFood: 5
   upKeepCostMaterial: 0
   isResourceTapped: 0
   collectorBuildings: 
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 0
-  baseOutputMaterial: 15
+  baseOutputMaterial: 0
   buildingOutputMulti: 1
   impactSource: 1
   impactRadiusTiles: 1

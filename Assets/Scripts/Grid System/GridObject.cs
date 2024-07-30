@@ -148,15 +148,7 @@ public class GridObject : MonoBehaviour
     // Instantiates a building on top of this tile.
     public bool TryBuild(TileBase building)
     {
-        if(TutorialChecks.TutorialMode)
-        {
-            TutorialChecks tutorialChecksObject = FindAnyObjectByType<TutorialChecks>();
-
-            if (tutorialChecksObject != null)
-            {
-                tutorialChecksObject.TryBuildLoggingCamp();
-            }
-        }
+        
 
         if (CanBuildOnTile(building))
         {
@@ -164,7 +156,23 @@ public class GridObject : MonoBehaviour
             buildingInstance.resourceData = building; 
             buildingInstance.transform.parent = transform;
             buildingInstance.isBuilt = true;
+            terrain.SetTerrainMaterialProperties();
 
+            if (TutorialChecks.TutorialMode)
+            {
+                TutorialChecks tutorialChecksObject = FindAnyObjectByType<TutorialChecks>();
+
+                if (tutorialChecksObject != null)
+                {
+                    tutorialChecksObject.TryBuildLoggingCamp();
+                }
+            }
+
+            BuildingPlacementVFX vfx;
+            if (vfx = buildingInstance.GetComponent<BuildingPlacementVFX>())
+            {
+                vfx.PlayVFX();
+            }
 
             BuildingPlacementSound buildSound;
             if (buildSound = buildingInstance.GetComponent<BuildingPlacementSound>())
@@ -180,23 +188,26 @@ public class GridObject : MonoBehaviour
             }
             
             buildingInstance.SetGridObject(this);
-
-            // Change soil grade in the radius
-            if (buildingInstance.resourceData.isImpactSoilGrade == true)
+            if (!TutorialChecks.TutorialMode)
             {
-                GridPosition pos = GetGridPosition();
-                int radius = buildingInstance.resourceData.impactRadiusTiles;
-
-                for (int x = pos.x - radius; x <= pos.x + radius; x++)
+                // Change soil grade in the radius
+                if (buildingInstance.resourceData.isImpactSoilGrade == true)
                 {
-                    for (int z = pos.z - radius; z <= pos.z + radius; z++)
+
+                    GridPosition pos = GetGridPosition();
+                    int radius = buildingInstance.resourceData.impactRadiusTiles;
+
+                    for (int x = pos.x - radius; x <= pos.x + radius; x++)
                     {
-                        if (x >= 0 && z >= 0 && x < GetOwningGridSystem().GetGridLength() && z < GetOwningGridSystem().GetGridWidth())
+                        for (int z = pos.z - radius; z <= pos.z + radius; z++)
                         {
-                            Terrainsystem terrainInRadius;
-                            if ((terrainInRadius = GetOwningGridSystem().GetGridObject(x, z).terrain))
+                            if (x >= 0 && z >= 0 && x < GetOwningGridSystem().GetGridLength() && z < GetOwningGridSystem().GetGridWidth())
                             {
-                                terrainInRadius.ChangeinGrade(buildingInstance.resourceData.buffSoilGradeAmount, buildingInstance.resourceData.nerfSoilGradeAmount, true);
+                                Terrainsystem terrainInRadius;
+                                if ((terrainInRadius = GetOwningGridSystem().GetGridObject(x, z).terrain))
+                                {
+                                    terrainInRadius.ChangeinGrade(buildingInstance.resourceData.buffSoilGradeAmount, buildingInstance.resourceData.nerfSoilGradeAmount, true);
+                                }
                             }
                         }
                     }
