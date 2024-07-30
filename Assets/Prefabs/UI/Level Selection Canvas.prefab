@@ -4931,6 +4931,7 @@ GameObject:
   - component: {fileID: 832079656783861539}
   - component: {fileID: 2199697768253193222}
   - component: {fileID: 798955350709911060}
+  - component: {fileID: 5293020598332940681}
   m_Layer: 5
   m_Name: Level Selection Canvas
   m_TagString: Untagged
@@ -5052,8 +5053,21 @@ MonoBehaviour:
     type: 3}
   loadingHintText:
   - Now Loading
-  startingMonth: 6
-  startingDay: 30
+--- !u!114 &5293020598332940681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173627645841210842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3517f38204ebfa7409daa4cbed38f2e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Storyboard1: {fileID: 1192201204064544344}
+  Storyboard2: {fileID: 912969458055763095}
+  Storyboard3: {fileID: 6453148212014856499}
 --- !u!1 &4247283753814410241
 GameObject:
   m_ObjectHideFlags: 0
@@ -7984,13 +7998,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 5293020598332940681}
+        m_TargetAssemblyTypeName: StoryBoard, Assembly-CSharp
+        m_MethodName: TurnItOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

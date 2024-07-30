@@ -365,11 +365,16 @@ public class TimeSystem : MonoBehaviour
         pauseMenus++;
     }
 
+    public static void TimePaused()
+    {
+        PauseMenu.gameIsPausedInGame = true; 
+    }
+
     public static void Unpause()
     {
         pauseMenus--;
 
-        if (pauseMenus <= 0)
+        //if (pauseMenus <= 0)
             Time.timeScale = 1f;
     }
 

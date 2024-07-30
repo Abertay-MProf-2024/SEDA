@@ -20,6 +20,6 @@ public class WinMenu : MonoBehaviour
     // Update is called once per frame
     void OnDestroy()
     {
-        TimeSystem.Unpause();
+        //TimeSystem.Unpause();
     }
 }
