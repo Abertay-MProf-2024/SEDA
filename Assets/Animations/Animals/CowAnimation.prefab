@@ -155,3 +155,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 950046855524028128}
+  initialAnimStateName: Cow Feeding
