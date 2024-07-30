@@ -146,6 +146,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5932960003542587765, guid: 31dc3a1f07bddba4198d1348c67f7d2e,
+        type: 3}
+      propertyPath: m_LightCookieSize.x
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932960003542587765, guid: 31dc3a1f07bddba4198d1348c67f7d2e,
+        type: 3}
+      propertyPath: m_LightCookieSize.y
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
