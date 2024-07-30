@@ -156,6 +156,7 @@ public class GridObject : MonoBehaviour
             buildingInstance.resourceData = building; 
             buildingInstance.transform.parent = transform;
             buildingInstance.isBuilt = true;
+            terrain.SetTerrainMaterialProperties();
 
             if (TutorialChecks.TutorialMode)
             {
@@ -165,6 +166,12 @@ public class GridObject : MonoBehaviour
                 {
                     tutorialChecksObject.TryBuildLoggingCamp();
                 }
+            }
+
+            BuildingPlacementVFX vfx;
+            if (vfx = buildingInstance.GetComponent<BuildingPlacementVFX>())
+            {
+                vfx.PlayVFX();
             }
 
             BuildingPlacementSound buildSound;

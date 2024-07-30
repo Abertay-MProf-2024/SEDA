@@ -12,7 +12,7 @@ public class WeatherSystem : MonoBehaviour
 {
     // Weather events status
     static bool hasTornadoHappened = false;
-    static bool hasFloodHappened = false;
+    public static bool hasFloodHappened = false;
 
     public static float cropOutput = 1f;
     public static  int soilGradeWeatherEffect = 0;
@@ -37,6 +37,7 @@ public class WeatherSystem : MonoBehaviour
 
     public void SetWeather()
     {
+        
         if (currentWeather != WeatherTypes.Thunderstorm)
         {
             if (!hasTornadoHappened && Inventory.numOfLoggingCamps >= 3)

@@ -137,8 +137,10 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GravelBlended: 0
     - _GroundHeight: 1
     - _Hydration: 1
+    - _LandType_Grass_High: 0
     - _ManualSliders_ForDemo: 1
     - _Metallic: 0
     - _MountainHeight: 1

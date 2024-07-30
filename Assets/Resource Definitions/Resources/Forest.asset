@@ -15,13 +15,13 @@ MonoBehaviour:
   tileName: Forest
   tileDescription: "Output Food: 0\nOutput Material: 15\n\nDescription: \nCollect
     building (Logging Camp) required\nProvide basic materials\nBuff soil grade\nBuff
-    animals nearby"
+    animals nearby\nNatural resource"
   icon: {fileID: 0}
   inGameAsset: {fileID: 7543974964756465544, guid: bf23c31cc275890418b7c7ce2ee3f100,
     type: 3}
   sizeWidthTile: 1
   sizeLengthTile: 1
-  structureType: 7
+  structureType: 11
   tileUnder: {fileID: 0}
   biomeTypes: 00000000
   tileTerrainTypes: 0100000003000000

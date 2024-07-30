@@ -126,7 +126,7 @@ MonoBehaviour:
       m_FlipV: 0
       m_SwapUV: 0
       m_Fill: 1
-      m_Scale: {x: 1, y: 1}
+      m_Scale: {x: 0.5, y: 0.5}
       m_Offset: {x: 0, y: 0}
       m_Rotation: 0
       m_Anchor: 9
@@ -183,10 +183,10 @@ MonoBehaviour:
   - {x: -2, y: 0}
   - {x: 0, y: 1}
   - {x: -2, y: 1}
-  - {x: 0, y: 2}
-  - {x: 2, y: 2}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
   - {x: 0, y: 0}
-  - {x: 2, y: 0}
+  - {x: 1, y: 0}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2131
+  m_VersionIndex: 2138
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -273,7 +273,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 33170bab44779d245a93fdd02212942b, type: 2}
-  - {fileID: 2100000, guid: 33170bab44779d245a93fdd02212942b, type: 2}
+  - {fileID: 2100000, guid: e71b9409bb2a11f4f981da628ed30b96, type: 2}
   - {fileID: 2100000, guid: 33e2c35de8a15604d8f8d5433effb6e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

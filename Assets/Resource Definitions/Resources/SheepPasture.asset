@@ -41,7 +41,7 @@ MonoBehaviour:
   baseOutputEnergy: 0
   baseOutputWater: 0
   baseOutputFood: 30
-  baseOutputMaterial: 10
+  baseOutputMaterial: 0
   buildingOutputMulti: 1
   impactSource: 1
   impactRadiusTiles: 1
