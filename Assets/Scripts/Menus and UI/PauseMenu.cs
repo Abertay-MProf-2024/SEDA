@@ -8,7 +8,8 @@ public class PauseMenu : MonoBehaviour
     private static PauseMenu instance;
 
     /** The static property GameIsPaused can be accessed by any class to determine whether the game is paused. */
-    private static bool gameIsPaused = false;
+    public static bool gameIsPaused = false;
+    public static bool gameIsPausedInGame = false;
     public static bool GameIsPaused { get { return gameIsPaused; } }
 
     [SerializeField]
@@ -66,8 +67,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (instance == this)
         {
-            gameIsPaused = false;
-            TimeSystem.Unpause();    // Unpause when the pause menu is closed
+            if (!gameIsPausedInGame)
+            {
+                gameIsPaused = false;
+                TimeSystem.Unpause();    // Unpause when the pause menu is closed
+            }
+
         }
     }
 }

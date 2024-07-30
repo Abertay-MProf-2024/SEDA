@@ -842,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2711572537028722093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -970,7 +970,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Your actions can impact the health of the land. If the Soil Health drops
     too low, you won\u2019t be able to restore balance.\r\n\r\nTap on the Soil Icon
-    to view the health of the tiles."
+    above, to view the health of the Land."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2306,7 +2306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41.802612, y: -31.599}
+  m_AnchoredPosition: {x: -41.802612, y: -66.599}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8935930862054718918
@@ -2377,7 +2377,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -3248,8 +3248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.75, y: -91.573}
-  m_SizeDelta: {x: 800, y: 300}
+  m_AnchoredPosition: {x: 22.75, y: -126.57}
+  m_SizeDelta: {x: 800, y: 386.408}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7211770023979494622
 CanvasRenderer:
@@ -3279,8 +3279,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Now tap on the Logging Camp. \r\n\r\nWelcome to Build Mode.\r\n\r\nHere
-    you can see which tiles are available for construction."
+  m_text: "Tap on the <b>Logging Camp</b>. \r\n\r\nBuild mode lets you see which
+    tiles are available for construction."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -3320,7 +3320,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -3570,7 +3570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -760.36646, y: 759.95215}
+  m_AnchoredPosition: {x: -770, y: 734}
   m_SizeDelta: {x: 39.2671, y: 80.0958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &967858795115473634
@@ -4363,7 +4363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -753.6974, y: 766.84875}
+  m_AnchoredPosition: {x: -760.37, y: 740.9}
   m_SizeDelta: {x: 52.6052, y: 66.3025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2078378760733525613
@@ -4516,7 +4516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -794.2543, y: 787.47}
+  m_AnchoredPosition: {x: -800.93, y: 761.52}
   m_SizeDelta: {x: -28.5088, y: 25.056}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6645465745364424928
@@ -4718,7 +4718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5161658272485797917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4734,11 +4734,12 @@ RectTransform:
   - {fileID: 4615745466831065554}
   - {fileID: 5877086556835724227}
   - {fileID: 1111544173833179998}
+  - {fileID: 1201781611869870925}
   m_Father: {fileID: 4928020650524738133}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -760.36646, y: 759.95215}
+  m_AnchoredPosition: {x: -767.04, y: 734}
   m_SizeDelta: {x: 39.2671, y: 80.0958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5784443417151017139
@@ -4957,8 +4958,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 800, y: 300}
+  m_AnchoredPosition: {x: 0, y: 41}
+  m_SizeDelta: {x: 800, y: 367.725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3657502008144806572
 CanvasRenderer:
@@ -4988,12 +4989,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Balance between the land and the people is key.
+  m_text: 'Striking a Balance between the land and the people is key.
 
 
-
-    Actions have consequences;
-    be mindful of the relationships between the land, resources and your buildings.'
+    Actions
+    have consequences; be mindful of the relationships between the land, resources
+    and your buildings.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -5033,7 +5034,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -5097,7 +5098,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.1939697, y: 58}
+  m_AnchoredPosition: {x: 0.0000081062, y: 102}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1481724442131008762
@@ -5128,8 +5129,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Navigation:\nLet\u2019s start with looking around the map.\r\n\r\nTap
-    and drag on the screen to move the camera.\r\n"
+  m_text: "<b>Navigation</b> \n\nLet\u2019s start by looking around.\r\n\rTap and
+    drag on the screen to move the camera.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -5169,7 +5170,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -5193,7 +5194,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -135.45026}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5589,7 +5590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0042725, y: -55.21997}
+  m_AnchoredPosition: {x: -0.000032663, y: -90.22}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &364071803591976668
@@ -5620,8 +5621,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Look! A huge giant is taking a nap by that forest.\r\n\r\nTap on the Icon
-    to talk to the Giant and see what he wants\u2026"
+  m_text: "Look! \nA huge giant is taking a wee nap by the forest to the <b>south</b>.\r\n\r\nTap
+    on the Icon to talk to the giant and see what he wants\u2026"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -5859,7 +5860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0042725, y: -55.21997}
+  m_AnchoredPosition: {x: 2.0042725, y: -77}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4683696105511886153
@@ -5890,7 +5891,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good luck
+  m_text: "Check the Help section for more information on how to play. \nTap the
+    gear icon in the upper left to access the Help menu. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -5930,7 +5932,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -6449,6 +6451,104 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5822859348413738679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201781611869870925}
+  - component: {fileID: 2228706687118673744}
+  - component: {fileID: 458966475691566054}
+  - component: {fileID: 4421399914886462416}
+  m_Layer: 5
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1201781611869870925
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822859348413738679}
+  m_LocalRotation: {x: -0.00000026481985, y: 0.0000002648131, z: 0.70710576, w: -0.70710784}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5161658272485797917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 819, y: 92}
+  m_SizeDelta: {x: 257.661, y: 257.661}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2228706687118673744
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822859348413738679}
+  m_CullTransparentMesh: 1
+--- !u!114 &458966475691566054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822859348413738679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2d4f8cf704971cd4baaa51bae437950e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!95 &4421399914886462416
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822859348413738679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c07e7e5fbe77a104fa9a17dc68bba6a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5927754052339150886
 GameObject:
   m_ObjectHideFlags: 0
@@ -8355,7 +8455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32.634, y: -26.202}
+  m_AnchoredPosition: {x: -32.634, y: -61.202}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1312399899029303554
@@ -8387,7 +8487,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Tap on the standing stone to interact with it, and switch the land type.\r\n\r\nBe
-    warned; meddling with the natural order of things will have consequences\u2026"
+    warned messing with the natural order of things will have consequences\u2026"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -8427,7 +8527,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -9194,8 +9294,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 800, y: 300}
+  m_AnchoredPosition: {x: 0, y: -0.000030518}
+  m_SizeDelta: {x: 800, y: 415.081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6328218347275825915
 CanvasRenderer:
@@ -9225,10 +9325,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "We need Materials to Construct buildings.\r\n\rTo collect the needed Resources,
-    you must place the correct building on the tiles.\r\n\rA Logging Camp collects
-    Materials from Forest tiles and a Barn will collect Food from Cow pastures and
-    Crops.\r\n\r\nTap on the Build Menu below."
+  m_text: 'Gather <b>Materials</b> and <b>Food</b>.<br>
+
+    Collect <b>Materials</b>
+    from <b>Forests</b> with <b>Logging Camps</b>. <br>Use <b>Barns</b> to collect
+    <b>Food</b> from <b>Cow Pastures</b> and <b>Crops.</b>
+
+
+    Tap on the Build
+    Menu below.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -9268,7 +9373,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

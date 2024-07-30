@@ -20,11 +20,13 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] Button level2Button;
     [SerializeField] Button level3Button;
 
+
     [Header("Loading Screen")]
     [SerializeField] GameObject loadingScreen;
     [SerializeField][TextArea] string[] loadingHintText;
 
     private LevelSelect instance;
+
 
     int levelToLoad = 1;
 
@@ -67,8 +69,8 @@ public class LevelSelect : MonoBehaviour
 
     private void Update()
     {
-        timeDisplay.text = "Time Left: " + Inventory.overworldTime.ToString() + " Years";
-        levelProgressionDisplay.text = "Levels Completed: " + GameManager.levelsCompleted.ToString() + " / 3";
+        /*timeDisplay.text = "Time Left: " + Inventory.overworldTime.ToString() + " Years";
+        levelProgressionDisplay.text = "Levels Completed: " + GameManager.levelsCompleted.ToString() + " / 3";*/
     }
 
     /** When the active instance of the level select menu is closed, game time will resume */
@@ -76,7 +78,7 @@ public class LevelSelect : MonoBehaviour
     {
         if (instance == this)
         {
-            TimeSystem.Unpause();   // Unpause when the level selection menu is closed
+            //TimeSystem.Unpause();   // Unpause when the level selection menu is closed
         }
     }
 

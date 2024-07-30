@@ -18,6 +18,6 @@ public class LevelComplete : MonoBehaviour
 
     private void OnDestroy()
     {
-        TimeSystem.Unpause();
+        //TimeSystem.Unpause();
     }
 }
