@@ -37,7 +37,7 @@ public class AudioSlider : MonoBehaviour
     public float GetDecibelLevel(float volume)
     {
         if (volume < 0.1f)
-            return 0;
+            return -80;
 
         return -40 + (10 + 40) * volume;
     }
