@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_UI_Glow
-  m_Shader: {fileID: -6465566751694194690, guid: 19ff33e5c8a00e44baaceb6078b1a432,
+  m_Name: M_UI_Glow_Unmasked
+  m_Shader: {fileID: -6465566751694194690, guid: 3b39c8e64f5b9724f96788874ee0895b,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -18,7 +18,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3005
+  m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Transparent
   disabledShaderPasses:
@@ -29,27 +29,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Glow_texture:
-        m_Texture: {fileID: 2800000, guid: 95a4cc52fb0fe5341b14571f2fd79641, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7fce57d84c1cd43428386ca32c8ddf34, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Lightstreak_Texture:
-        m_Texture: {fileID: 2800000, guid: 664df99d90e8b0b42a4899e2377c5bb9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_92d97cd5404b415fb6a4c793b05f4029_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 95a4cc52fb0fe5341b14571f2fd79641, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_a32e082c86d641a3ba5465106b040ec0_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 95a4cc52fb0fe5341b14571f2fd79641, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_d569b14846f1472084407eaaa412fbf4_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 664df99d90e8b0b42a4899e2377c5bb9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_e813357b4c40452883ecac2016c1b019_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 664df99d90e8b0b42a4899e2377c5bb9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b7592d7d2318b24ab2bf435d15cf1d2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -72,18 +56,17 @@ Material:
     - _CastShadows: 0
     - _Cull: 2
     - _DstBlend: 10
-    - _Float: 0.5
     - _QueueControl: 0
-    - _QueueOffset: 5
+    - _QueueOffset: 0
     - _SrcBlend: 5
     - _Surface: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 0.94509804, g: 0.47757223, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.4198113, b: 0.94619215, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &8549632688668235453
+--- !u!114 &8229009468787780096
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

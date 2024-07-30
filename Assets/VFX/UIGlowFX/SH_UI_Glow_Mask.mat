@@ -20,13 +20,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_SH_UI_Glow
+  m_Name: SH_UI_Glow_Mask
   m_Shader: {fileID: -6465566751694194690, guid: 19ff33e5c8a00e44baaceb6078b1a432,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHATEST_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -43,11 +42,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Glow_texture:
-        m_Texture: {fileID: 2800000, guid: 95a4cc52fb0fe5341b14571f2fd79641, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7fce57d84c1cd43428386ca32c8ddf34, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Lightstreak_Texture:
-        m_Texture: {fileID: 2800000, guid: 664df99d90e8b0b42a4899e2377c5bb9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b7592d7d2318b24ab2bf435d15cf1d2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -64,7 +63,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 1
+    - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
     - _CastShadows: 0
@@ -78,5 +77,5 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9245283, g: 0.3805569, b: 0, a: 1}
   m_BuildTextureStacks: []
