@@ -370,6 +370,11 @@ public class TimeSystem : MonoBehaviour
         PauseMenu.gameIsPausedInGame = true; 
     }
 
+    public static void TimeUnPaused()
+    {
+        PauseMenu.gameIsPausedInGame = false;
+    }
+
     public static void Unpause()
     {
         pauseMenus--;
