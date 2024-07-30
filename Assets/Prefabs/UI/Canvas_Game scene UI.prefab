@@ -19269,6 +19269,8 @@ MonoBehaviour:
   musicPlayer: {fileID: 255528497924722670, guid: bf639752963b4e84ebaeb70a2727c52f,
     type: 3}
   buildingCostUI: {fileID: 3401217716768566351}
+  startingMonth: 0
+  startingDay: 1
 --- !u!114 &4797899846312160927
 MonoBehaviour:
   m_ObjectHideFlags: 0

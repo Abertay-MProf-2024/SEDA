@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour
 {
+    [Header("Audio")]
     [SerializeField] AudioClip levelMenuMusic;
 
+    [Header("User Interface")]
     [SerializeField] TextMeshProUGUI timeDisplay;
     [SerializeField] TextMeshProUGUI levelProgressionDisplay;
     [SerializeField] GameObject infoDisplay1;
@@ -18,8 +20,8 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] Button level2Button;
     [SerializeField] Button level3Button;
 
+    [Header("Loading Screen")]
     [SerializeField] GameObject loadingScreen;
-
     [SerializeField][TextArea] string[] loadingHintText;
 
     private LevelSelect instance;

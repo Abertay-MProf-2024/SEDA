@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -33,6 +32,10 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] BuildingCostUI buildingCostUI;
 
+    [Header("Time")]
+    [SerializeField] Month startingMonth;
+    [SerializeField] int startingDay = 1;
+
     private void Awake()
     {
         if (instance == null)
@@ -54,6 +57,10 @@ public class LevelManager : MonoBehaviour
         Inventory.food = startingFoodAmount;
         Inventory.constructionMaterials = startingConstructionMaterialAmount;
         StartCoroutine(FindSoilHealth());
+
+        if (TimeSystem.instance)
+            TimeSystem.instance.ManuallySetDate(startingMonth, startingDay);
+
         TimeSystem.AddMonthlyEvent(this, Inventory.HealthBarChange, 1, true, 3);
         TimeSystem.AddMonthlyEvent(this, Terrainsystem.ResetValuesSoilGrade, 1, true, 4);
      

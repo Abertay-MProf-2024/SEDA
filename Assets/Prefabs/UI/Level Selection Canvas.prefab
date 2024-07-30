@@ -5052,6 +5052,8 @@ MonoBehaviour:
     type: 3}
   loadingHintText:
   - Now Loading
+  startingMonth: 6
+  startingDay: 30
 --- !u!1 &4247283753814410241
 GameObject:
   m_ObjectHideFlags: 0
