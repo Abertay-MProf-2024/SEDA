@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-enum Month
+public enum Month
 {
     January,
     February,
@@ -41,7 +41,7 @@ class TimedEvent
 public class TimeSystem : MonoBehaviour
 {
     // the active instance of the time system
-    private static TimeSystem instance;
+    public static TimeSystem instance;
 
     // The lists of timed events to be run on ticks
     static List<TimedEvent> dailyEvents = new List<TimedEvent>();
@@ -60,6 +60,7 @@ public class TimeSystem : MonoBehaviour
     [SerializeField] BuildingTypeSelect buildingtypeselect;
     [SerializeField] int MaintainedSoilHealth;
 
+    int startDay = 1;
     int day = 1;
     float timeElapsed = 0f;
     float tickTime = 1f;
@@ -206,7 +207,7 @@ public class TimeSystem : MonoBehaviour
     void SetDay()
     {
         // Set day
-        day = Mathf.FloorToInt(timeElapsed * tickTime) + 1;    // Day starts at 1
+        day = Mathf.FloorToInt(timeElapsed * tickTime) + startDay;    // Day starts at 1
         dayDisplay.text = day.ToString();
 
         SetMonth();
@@ -375,6 +376,12 @@ public class TimeSystem : MonoBehaviour
     public static Season GetCurrentSeason()
     {
         return season;
+    }
+
+    public void ManuallySetDate(Month newMonth, int newDay)
+    {
+        month = newMonth;
+        startDay = newDay;
     }
 
     private void OnDestroy()

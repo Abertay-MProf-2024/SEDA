@@ -26,6 +26,9 @@ public class LevelManagerEditor : Editor
     SerializedProperty musicPlayer;
     SerializedProperty buildingCostUI;
 
+    SerializedProperty startingMonth;
+    SerializedProperty startingDay;
+
 
     private void OnEnable()
     {
@@ -50,6 +53,9 @@ public class LevelManagerEditor : Editor
         musicPlayer = serializedObject.FindProperty("musicPlayer");
 
         buildingCostUI = serializedObject.FindProperty("buildingCostUI");
+
+        startingMonth = serializedObject.FindProperty("startingMonth");
+        startingDay = serializedObject.FindProperty("startingDay");
     }
 
     public override void OnInspectorGUI()
@@ -79,6 +85,9 @@ public class LevelManagerEditor : Editor
         EditorGUILayout.Space();
         EditorGUILayout.PropertyField(musicPlayer);
         EditorGUILayout.PropertyField(buildingCostUI);
+
+        EditorGUILayout.PropertyField(startingMonth);
+        EditorGUILayout.PropertyField(startingDay);
 
         serializedObject.ApplyModifiedProperties();
     }
