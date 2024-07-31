@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] AudioMixer mixer;
 
+    public static bool isTutorialComplete = false;
+
     /*
      * There can only be one Game Manager.
      * It persists throughout a single session of gameplay.
