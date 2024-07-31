@@ -45,17 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12e52d8dbabd76498b5992c6c2b49d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aaa: 0
-  bbb: 0
-  ccc: 
-  ddd: 0
-  aa: 0
-  bb: 0
-  cc: 
-  dd: 0
   check: 0
   isread: 0
   issave: 0
+  mixer: {fileID: 24100000, guid: 431f31701a6ba7f438d79de92b1aeef7, type: 2}
 --- !u!114 &4891062863761641946
 MonoBehaviour:
   m_ObjectHideFlags: 0
