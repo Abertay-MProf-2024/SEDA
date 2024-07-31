@@ -753,7 +753,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3d105571e67972340ac474e10b9f644d,
+      objectReference: {fileID: 21300000, guid: 2bb632c2c7f83b443b7892f93543a404,
         type: 3}
     - target: {fileID: 1966863825060670357, guid: a2ada996c5f6b3440aea834a0d945858,
         type: 3}
@@ -1030,7 +1030,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 62f27468edb9aed4aa8e76b77b303ec6,
+      objectReference: {fileID: 21300000, guid: 7dccefc27a312564c9c8393905d85194,
         type: 3}
     - target: {fileID: 6091997921743072954, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
         type: 3}
@@ -1046,6 +1046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6511381067240055004, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenMainSettingsMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7120236664462729086, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
         type: 3}

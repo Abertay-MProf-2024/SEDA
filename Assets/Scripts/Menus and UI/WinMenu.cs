@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class WinMenu : MonoBehaviour
 {
+    [SerializeField] CreditScreen CreditScreen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +16,12 @@ public class WinMenu : MonoBehaviour
      */
     public void GoToMainMenu()
     {
-        SceneManager.LoadSceneAsync(0);
+        if(CreditScreen)
+            Instantiate (CreditScreen.gameObject);
+        
     }
+
+    
 
     // Update is called once per frame
     void OnDestroy()
