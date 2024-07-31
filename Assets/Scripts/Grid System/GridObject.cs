@@ -86,14 +86,19 @@ public class GridObject : MonoBehaviour
                     break;
             }
         }
+
         else
         {
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-            if(terrain == null)
+            if (terrain == null)
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        }
+            if(terrain != null)
+                if(terrain.specialtype != SpecialTypes.None)
+                    gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 
             gameObject.GetComponentInChildren<MeshRenderer>().material.color = transparentRed;
-        }
+        
     }
     public void SetSoilGradeToggleOn()
     { soilgradeGrid = true; }

@@ -30,7 +30,7 @@ public class Kelpie : Building
 
         foreach (Terrainsystem kelpieTile in FindObjectsByType<Terrainsystem>(FindObjectsSortMode.None))
         {
-            if (kelpieTile.terraintype == TerrainTypes.River)
+            if (kelpieTile.specialtype == SpecialTypes.River)
             {
 
                 kelpieTile.SetWaterEnergy(false);
