@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions: {fileID: -944628639613478452, guid: 67f30afa779e22942afacb4ae4197719, type: 3}
+  orthoCam: {fileID: 2896313026146313298}
   InvertX: 1
   InvertY: 1
   panSpeed: 0.025
