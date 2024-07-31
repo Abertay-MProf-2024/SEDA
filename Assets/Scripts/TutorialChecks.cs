@@ -17,6 +17,8 @@ public class TutorialChecks : MonoBehaviour
 
     [SerializeField] GameObject tutorialSteps;
 
+    [SerializeField] GameObject buildMenuButton;
+
     public static bool TapandDrag = false;
     public static bool ZoomInZoomOut = false;
     public static bool TutorialMode = false;
@@ -26,7 +28,13 @@ public class TutorialChecks : MonoBehaviour
 
     private void Start()
     {
-        TutorialMode = true;
+        TutorialMode = !GameManager.isTutorialComplete;
+
+        if (GameManager.isTutorialComplete)
+        {
+            buildMenuButton.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
     private void Update()
     {
@@ -35,12 +43,12 @@ public class TutorialChecks : MonoBehaviour
     public void TurnTutorialModeON()
     {
         TutorialMode = true;
-
     }
 
     public void TurnTutorialModeOFF()
     {
         TutorialMode = false;
+        GameManager.isTutorialComplete = true;
     }
 
     public void ResetValues()
