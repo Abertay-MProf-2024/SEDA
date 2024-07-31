@@ -56,7 +56,7 @@ public class UIFuntions : MonoBehaviour
         //ACInfo.SetActive(false);
 
         // Instantiate a new Game Manager (complete with Save Data!)
-        Instantiate(gameManager);
+        //Instantiate(gameManager);
     }
 
     public void LoadLevel()
