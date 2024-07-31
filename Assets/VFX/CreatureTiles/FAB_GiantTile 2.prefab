@@ -95,6 +95,11 @@ PrefabInstance:
       propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8689185471459992374, guid: ea034f55164430c409417abcbe93c776,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9079982741865365146, guid: ea034f55164430c409417abcbe93c776,
         type: 3}
       propertyPath: m_Name
