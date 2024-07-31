@@ -113,8 +113,13 @@ public class LevelManager : MonoBehaviour
                         {
                             for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
                             {
-                                Vector3 worldPosition = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z).transform.position;
-                                Instantiate(energyOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                                GridObject currentGridObject = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z);
+                                if (currentGridObject.terrain && 
+                                    (currentGridObject.terrain.terraintype == TerrainTypes.Grassland || currentGridObject.terrain.terraintype == TerrainTypes.Highland))
+                                {
+                                    Vector3 worldPosition = currentGridObject.transform.position;
+                                    Instantiate(energyOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                                }
                             }
                         }
                     }
@@ -134,9 +139,13 @@ public class LevelManager : MonoBehaviour
                         {
                             for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
                             {
-                                Vector3 worldPosition = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z).transform.position;
-                                Instantiate(waterOutline, worldPosition, Quaternion.identity, outlineParent.transform);
-
+                                GridObject currentGridObject = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z);
+                                if (currentGridObject.terrain && 
+                                    (currentGridObject.terrain.terraintype == TerrainTypes.Grassland || currentGridObject.terrain.terraintype == TerrainTypes.Highland))
+                                {
+                                    Vector3 worldPosition = currentGridObject.transform.position;
+                                    Instantiate(waterOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                                }
                             }
                         }
                         buildingCostUI.gameObject.SetActive(true);
@@ -194,8 +203,14 @@ public class LevelManager : MonoBehaviour
             {
                 for (int z = gridPos.z - radius; z <= gridPos.z + radius; z++)
                 {
-                    Vector3 worldPosition = building.GetOwningGridObject().GetOwningGridSystem().GetGridObject(x, z).transform.position;
-                    Instantiate(extraOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                    GridObject currentGridObject = building.GetOwningGridObject().GetOwningGridSystem().GetGridObject(x, z);
+                    if (currentGridObject.terrain && 
+                        (currentGridObject.terrain.terraintype == TerrainTypes.Grassland
+                        || currentGridObject.terrain.terraintype == TerrainTypes.Highland))
+                    {
+                        Vector3 worldPosition = currentGridObject.transform.position;
+                        Instantiate(extraOutline, worldPosition, Quaternion.identity, outlineParent.transform);
+                    }
                 }
             }
 
