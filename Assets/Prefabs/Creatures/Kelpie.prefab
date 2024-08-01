@@ -398,6 +398,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FAB_KelpieTile
       objectReference: {fileID: 0}
+    - target: {fileID: 568939552263912006, guid: ef0098481773313439bda0c5144e1968,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2098174896974652337, guid: ef0098481773313439bda0c5144e1968,
         type: 3}
       propertyPath: m_LocalPosition.x

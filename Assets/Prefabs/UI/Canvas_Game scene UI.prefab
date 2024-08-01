@@ -19882,6 +19882,7 @@ GameObject:
   - component: {fileID: 6927495408820687503}
   - component: {fileID: 4078956342853704000}
   - component: {fileID: 4797899846312160927}
+  - component: {fileID: 1496855462242876138}
   m_Layer: 5
   m_Name: Canvas_Game scene UI
   m_TagString: Untagged
@@ -20042,6 +20043,20 @@ MonoBehaviour:
   thunderstormSound: {fileID: 8300000, guid: 748f4f49dfc5fce4da6ca3538964d019, type: 3}
   floodSound: {fileID: 8300000, guid: ffc47b3bd12bd614aa162d5c1f4545c5, type: 3}
   owningGridSystem: {fileID: 0}
+--- !u!114 &1496855462242876138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7971582688145391426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8937d017fe235a7479ac9460306a6d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodText: {fileID: 0}
+  ConstructionMaterialText: {fileID: 0}
 --- !u!1 &8031963588035566699
 GameObject:
   m_ObjectHideFlags: 0
@@ -20429,7 +20444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 57713236, guid: b9733e6610c95fb48b4a0d31708ffedc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4646f7664d5056441bd0c0ee01e6f8d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21300,7 +21315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 57713236, guid: b9733e6610c95fb48b4a0d31708ffedc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4646f7664d5056441bd0c0ee01e6f8d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
