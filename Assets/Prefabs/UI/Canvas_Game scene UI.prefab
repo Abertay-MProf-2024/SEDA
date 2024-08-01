@@ -1318,7 +1318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4115357078388747887
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8114,7 +8114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5898221586134617430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8631,7 +8631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1002956876733743823
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11096,8 +11096,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -160}
-  m_SizeDelta: {x: 800, y: 160}
+  m_AnchoredPosition: {x: 0, y: -117.5}
+  m_SizeDelta: {x: 800, y: 235}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7418842908590346356
 CanvasRenderer:
@@ -11127,7 +11127,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Construction Materials: 10'
+  m_text: This Icon shows you how many months you have remaing until the end of the
+    current level.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -11155,8 +11156,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12554,7 +12555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &555255843728853391
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12898,7 +12899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2500037139578712829
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15616,7 +15617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2955902156636095451
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16059,7 +16060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1827945147856083908
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17605,7 +17606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &201100075321293594
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19750,7 +19751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5466260166063545374
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22268,8 +22269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: 160}
-  m_SizeDelta: {x: 400, y: 80}
+  m_AnchoredPosition: {x: 90, y: 150}
+  m_SizeDelta: {x: 400, y: 142.3077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1987197984601404005
 CanvasRenderer:
@@ -22299,7 +22300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Construction Materials
+  m_text: <b>Time Remaining
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -22327,8 +22328,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
