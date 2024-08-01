@@ -14,13 +14,7 @@ public class SeasonUI : MonoBehaviour
     [SerializeField] Sprite summerIcon;
     [SerializeField] Sprite autumnIcon;
 
-    private void Start()
-    {
-        UpdateSeasonDisplay();
-        TimeSystem.AddMonthlyEvent(this, UpdateSeasonDisplay);
-    }
-
-    public void UpdateSeasonDisplay()
+    public void Update()
     {
         Season currentSeason = TimeSystem.GetCurrentSeason();
 
