@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public static int levelTime = 36;
     public static int food = 100;
     public static int constructionMaterials = 100;
-    public static int healthBar = 0;
+    public static int healthBar = 100;
     public static int totalhealth = 0;
     public static int count = 0;
 

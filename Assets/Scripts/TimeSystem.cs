@@ -329,9 +329,9 @@ public class TimeSystem : MonoBehaviour
         {
             // Lose the level
             Instantiate(gameOverPrefab);
-            Inventory.HealthBarChange();
-            Terrainsystem.ResetValuesSoilGrade();
-            Terrainsystem.tilecount = 0;
+            /*Inventory.HealthBarChange();
+            Terrainsystem.ResetValuesSoilGrade();*/
+            //Terrainsystem.tilecount = 0;
         }
         // TODO: Stop Countdown
     }

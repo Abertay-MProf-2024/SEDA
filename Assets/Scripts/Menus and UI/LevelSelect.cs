@@ -110,6 +110,7 @@ public class LevelSelect : MonoBehaviour
         Inventory.levelTime += 12;
         Inventory.ClearResources();
         SceneManager.LoadSceneAsync(levelToLoad);
+        Terrainsystem.tilecount = 0;
     }
 
     void SetRandomHintText()

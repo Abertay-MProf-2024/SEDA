@@ -19,6 +19,8 @@ public class TutorialChecks : MonoBehaviour
 
     [SerializeField] GameObject buildMenuButton;
 
+
+
     public static bool TapandDrag = false;
     public static bool ZoomInZoomOut = false;
     public static bool TutorialMode = false;
@@ -78,6 +80,8 @@ public class TutorialChecks : MonoBehaviour
         }
 
     }
+
+    
 
     public void SoilGrade()
     {

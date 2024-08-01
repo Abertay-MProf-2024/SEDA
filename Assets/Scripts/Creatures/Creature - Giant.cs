@@ -35,19 +35,19 @@ public class Giant : Building
 
     public void Interact()
     {
-        if(TutorialChecks.TutorialMode)
+        
+        if (TutorialChecks.TutorialMode)
         {
-            if (TutorialChecks.TutorialMode)
-            {
-                TutorialChecks tutorialChecksObject = FindAnyObjectByType<TutorialChecks>();
+            TutorialChecks tutorialChecksObject = FindAnyObjectByType<TutorialChecks>();
 
-                if (tutorialChecksObject != null)
-                {
-                    if(TutorialChecks.standingStonedone)
-                        tutorialChecksObject.GiantInteracted();
-                }
+            if (tutorialChecksObject != null)
+            {
+                if(TutorialChecks.standingStonedone)
+                    tutorialChecksObject.GiantInteracted();
             }
         }
+
+        
 
         Debug.Log("click works");
 
