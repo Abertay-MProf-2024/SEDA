@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 8113957161916004281}
   - component: {fileID: 8710446004946432998}
   - component: {fileID: 5192705730510256993}
-  - component: {fileID: 6876806822873601732}
+  - component: {fileID: 6148018172325370350}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
---- !u!114 &6876806822873601732
+--- !u!114 &6148018172325370350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,10 +289,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8348999006726488420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d340082af1f8c947ab943b16d34a83f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ddf39753fbd6054c9ee5865172e73e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickedSound: {fileID: 8300000, guid: 66ec1e650f9b09046b5f5315bc3f4a25, type: 3}
+  clickSounds:
+  - {fileID: 8300000, guid: a10de279e90117342b71fdd3fc014e89, type: 3}
+  - {fileID: 8300000, guid: 772442912b8b61e438154fe8866c56cb, type: 3}
+  - {fileID: 8300000, guid: e7b38ef9a6456704cbd3ea0dc51674ab, type: 3}
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
     type: 2}
 --- !u!1 &9027393433305129133
