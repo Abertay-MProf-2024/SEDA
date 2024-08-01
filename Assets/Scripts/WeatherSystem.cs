@@ -48,6 +48,12 @@ public class WeatherSystem : MonoBehaviour
         if (instance == null) // Ensure only one instance exists (A)
         {
             instance = this;
+            hasTornadoHappened = false;
+            hasFloodHappened = false;
+            isFlooding = false;
+            cropOutput = 1f;
+            soilGradeWeatherEffect = 0;
+            currentWeather = WeatherTypes.Fair;
         }
         else
         {
