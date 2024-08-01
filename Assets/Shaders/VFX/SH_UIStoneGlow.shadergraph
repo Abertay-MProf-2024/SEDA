@@ -44,6 +44,9 @@
         },
         {
             "m_Id": "57cea950799b4de8b6a60696398fa18a"
+        },
+        {
+            "m_Id": "e8f5e96c34194b06949614ac2c911d19"
         }
     ],
     "m_GroupDatas": [],
@@ -148,6 +151,9 @@
             },
             {
                 "m_Id": "4045d36ad781497cb02bdc0c5c87c10f"
+            },
+            {
+                "m_Id": "e8f5e96c34194b06949614ac2c911d19"
             }
         ]
     },
@@ -224,7 +230,7 @@
     "m_ActiveSubTarget": {
         "m_Id": "6f06676b2e5247799d418ab0768dff72"
     },
-    "m_AllowMaterialOverride": false,
+    "m_AllowMaterialOverride": true,
     "m_SurfaceType": 1,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
@@ -417,10 +423,10 @@
     "m_Guid": {
         "m_GuidSerialized": "70f0d1d3-d581-4846-9d01-eba3a0c890eb"
     },
-    "m_Name": "PictStoneGlow",
+    "m_Name": "Texture",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "PictStoneGlow",
-    "m_DefaultReferenceName": "_PictStoneGlow",
+    "m_RefNameGeneratedByDisplayName": "Texture",
+    "m_DefaultReferenceName": "_Texture",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -923,6 +929,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "c00321a9e1c047adb173a04a9cf2e95d",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha Clip Threshold",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "AlphaClipThreshold",
+    "m_StageCapability": 2,
+    "m_Value": 0.5,
+    "m_DefaultValue": 0.5,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SamplerStateMaterialSlot",
     "m_ObjectId": "c05cbeb8ed214d1bbfd2a79e25d1dc08",
     "m_Id": 3,
@@ -1015,6 +1036,40 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "e8f5e96c34194b06949614ac2c911d19",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.AlphaClipThreshold",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "c00321a9e1c047adb173a04a9cf2e95d"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.AlphaClipThreshold"
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.ColorRGBMaterialSlot",
     "m_ObjectId": "f5e649afb9954400b3cf1d669f6a6b34",
     "m_Id": 0,
@@ -1048,7 +1103,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "ff14574bab924eacb5d5de20afc0eaaf",
     "m_Id": 0,
-    "m_DisplayName": "PictStoneGlow",
+    "m_DisplayName": "Texture",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
