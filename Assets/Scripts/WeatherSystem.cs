@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public enum WeatherTypes
 {
@@ -20,10 +21,13 @@ public class WeatherSystem : MonoBehaviour
 
     static WeatherTypes currentWeather;
 
+    [Header("VFX")]
     [SerializeField] GameObject tornadoEffectPrefab;
     [SerializeField] GameObject thunderstormEffectPrefab;
     [SerializeField] GameObject floodEffectPrefab;
 
+    [Header("SFX")]
+    [SerializeField] AudioMixerGroup mixerGroup;
     [SerializeField] AudioClip fairWeatherSound; // New audio clip for fair weather (A)
     [SerializeField] AudioClip tornadoSound; // New audio clip for tornado (A)
     [SerializeField] AudioClip thunderstormSound; // New audio clip for thunderstorm (A)
@@ -52,6 +56,7 @@ public class WeatherSystem : MonoBehaviour
         }
 
         audioSource = gameObject.AddComponent<AudioSource>(); // Add AudioSource component (A)
+        audioSource.outputAudioMixerGroup = mixerGroup;
         TimeSystem.AddMonthlyEvent(this, SetWeather, 1, true, 6);
     }
 
