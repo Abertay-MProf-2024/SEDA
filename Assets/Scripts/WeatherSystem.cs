@@ -149,6 +149,7 @@ public class WeatherSystem : MonoBehaviour
         if (audioSource != null && clip != null)
         {
             audioSource.clip = clip;
+            audioSource.loop = true; // Enable looping (A)
             audioSource.Play();
         }
     }
@@ -159,6 +160,7 @@ public class WeatherSystem : MonoBehaviour
         if (instance != null && instance.audioSource != null && clip != null)
         {
             instance.audioSource.clip = clip;
+            instance.audioSource.loop = true; // Enable looping (A)
             instance.audioSource.Play();
         }
     }

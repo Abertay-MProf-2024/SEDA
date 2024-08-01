@@ -19287,6 +19287,10 @@ MonoBehaviour:
     type: 3}
   floodEffectPrefab: {fileID: 2929175920754660482, guid: 67d94e01c739a27489571de721005f30,
     type: 3}
+  fairWeatherSound: {fileID: 8300000, guid: 3d0db80b1109dda47ba0031f126621cc, type: 3}
+  tornadoSound: {fileID: 8300000, guid: 945bc8d8835081d458f7a506bee14078, type: 3}
+  thunderstormSound: {fileID: 8300000, guid: 748f4f49dfc5fce4da6ca3538964d019, type: 3}
+  floodSound: {fileID: 8300000, guid: ffc47b3bd12bd614aa162d5c1f4545c5, type: 3}
   owningGridSystem: {fileID: 0}
 --- !u!1 &8031963588035566699
 GameObject:
