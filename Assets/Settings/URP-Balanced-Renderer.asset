@@ -16,12 +16,12 @@ MonoBehaviour:
   m_Settings:
     AOMethod: 1
     Downsample: 1
-    AfterOpaque: 0
+    AfterOpaque: 1
     Source: 0
     NormalSamples: 0
-    Intensity: 0.5
+    Intensity: 0.67
     DirectLightingStrength: 0.25
-    Radius: 0.25
+    Radius: 0.5
     Samples: 2
     BlurQuality: 2
     Falloff: 100

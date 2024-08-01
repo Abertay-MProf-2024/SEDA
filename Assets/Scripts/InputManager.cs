@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
     InputAction tapInput;
     InputAction tapLocationInput;
     InputAction releaseInput;
-    
+
     // Camera zoom actions
     InputAction mouseWheelAction;
     InputAction touchContactAction;
@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
     InputAction secondaryFingerPosAction;
 
     bool isCursorPosInitialised = false;    // Initialises when the player clicks on the screen
-    Camera orthoCam;
+    [SerializeField] Camera orthoCam;
     float initialOrthoSize;
     Vector2 prevPos;                // Used to determine the direction of the camera's movement
     Vector2 panDistance;
@@ -128,7 +128,7 @@ public class InputManager : MonoBehaviour
         levelManager = FindAnyObjectByType<LevelManager>();
         standingStone = FindAnyObjectByType<StandingStone>();
 
-        if (orthoCam = FindAnyObjectByType<Camera>())
+        if (orthoCam)
         {
             initialOrthoSize = orthoCam.orthographicSize;
         }

@@ -2,8 +2,23 @@ using UnityEngine;
 
 public class StandingStonPrefabPopUp : MonoBehaviour
 {
+    // The active instance of the standing stone menu instance
+    private static StandingStonPrefabPopUp instance;
+
     StandingStone standingStone;
     [SerializeField] GameObject standingStoneBlur;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -39,6 +54,13 @@ public class StandingStonPrefabPopUp : MonoBehaviour
             {
                 tutorialChecksObject.StandingStoneBlur();
             }
+        }
+    }
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            //TimeSystem.Unpause();    // Unpause when the standing stone 
         }
     }
 }

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3904575440500021187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8485292904681220024}
+  m_Layer: 5
+  m_Name: SheepBaaLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8485292904681220024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3904575440500021187}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.024, y: 1, z: -0.214}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5918334348238235545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5021356530089494753
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,6 +103,7 @@ Transform:
   - {fileID: 1270463787283904458}
   - {fileID: 5630278146461191080}
   - {fileID: 6320139781848750963}
+  - {fileID: 8485292904681220024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &938145542236971866
@@ -141,6 +173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSound: {fileID: 8300000, guid: 321ecb386f83031448e94636c1af1db7, type: 3}
+  vfxLocation: {fileID: 8485292904681220024}
+  vfxForSound: {fileID: 5177007756800492103, guid: 13e5df5261db581429fb3f226073f203,
+    type: 3}
 --- !u!114 &-6073279112386959971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +197,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5918334348238235545}
     m_Modifications:
+    - target: {fileID: 211124068195024380, guid: e2cc9bbdbaf889e4992f576b6224722e,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8823074493276168433, guid: d4f798c384183264f9233fb88461d451,
+        type: 2}
     - target: {fileID: 4746471387473873183, guid: e2cc9bbdbaf889e4992f576b6224722e,
         type: 3}
       propertyPath: m_Pivot.x
@@ -262,6 +303,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6475316306713047473, guid: e2cc9bbdbaf889e4992f576b6224722e,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -8823074493276168433, guid: d4f798c384183264f9233fb88461d451,
+        type: 2}
     - target: {fileID: 8742701215798733697, guid: e2cc9bbdbaf889e4992f576b6224722e,
         type: 3}
       propertyPath: m_Name

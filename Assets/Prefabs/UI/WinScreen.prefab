@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e10870e58b17aa41b24ab8f5f36f92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CreditScreen: {fileID: 5593809330057038094, guid: 524580172b8218d4ea7c434f64f290f7,
+    type: 3}
 --- !u!1 &2016749000473408553
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +463,19 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WinMenu, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &5161175725103394548
 MonoBehaviour:

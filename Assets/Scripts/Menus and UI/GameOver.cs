@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        TimeSystem.Unpause();
+        //TimeSystem.Unpause();
         WeatherSystem.hasFloodHappened = false;
         Terrainsystem.tilecount = 0;
         //BuildingTypeSelect.GridOff();
@@ -22,6 +22,6 @@ public class GameOver : MonoBehaviour
 
     private void OnDestroy()
     {
-        TimeSystem.Unpause();
+        //TimeSystem.Unpause();
     }
 }

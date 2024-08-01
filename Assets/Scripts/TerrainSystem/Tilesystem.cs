@@ -15,6 +15,14 @@ public enum TerrainTypes
     Shore
 }
 
+public enum SpecialTypes
+{
+    None,
+    River,
+    Mountain,
+    Shore
+}
+
 public enum CreatureTypes
 {
     None,
@@ -41,6 +49,7 @@ public class Terrainsystem : MonoBehaviour
     public bool ResourceAffect;
 
     [SerializeField] public TerrainTypes terraintype;
+    [SerializeField] public SpecialTypes specialtype;
     [SerializeField] public CreatureTypes creaturetype;
 
 
