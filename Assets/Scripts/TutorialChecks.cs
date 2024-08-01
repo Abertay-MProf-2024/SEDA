@@ -19,6 +19,8 @@ public class TutorialChecks : MonoBehaviour
 
     [SerializeField] GameObject buildMenuButton;
 
+    [SerializeField] GameObject GoalConditionsButton;
+
 
 
     public static bool TapandDrag = false;
@@ -36,6 +38,7 @@ public class TutorialChecks : MonoBehaviour
         {
             buildMenuButton.SetActive(true);
             gameObject.SetActive(false);
+            GoalConditionsButton.SetActive(true);
         }
     }
 
