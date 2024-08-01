@@ -45,7 +45,7 @@ MonoBehaviour:
   baseOutputMaterial: 0
   buildingOutputMulti: 1
   impactSource: 1
-  impactRadiusTiles: 1
+  impactRadiusTiles: 2
   buffAmount: 3
   nerfAmount: 0.5
   tileImpactBuff:
