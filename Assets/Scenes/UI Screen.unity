@@ -173,7 +173,7 @@ MonoBehaviour:
   MapOverview: {fileID: 1563503339}
   Level1_Info: {fileID: 851814587}
   ACInfo: {fileID: 0}
-  timeResource: {fileID: 385475941}
+  timeResource: {fileID: 0}
 --- !u!1 &308442824
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,18 +311,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &385475941 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3386675876517587542, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
-    type: 3}
-  m_PrefabInstance: {fileID: 8342209671794501786}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!223 &579900982 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 7453126377337880681, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
@@ -1014,6 +1002,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6511381067240055004, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenMainSettingsMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 6870555742238859982, guid: 48ac44b5a574f9b4d8033e0774c9dad1,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1215,7 +1208,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4658835257994832784, guid: 48ac44b5a574f9b4d8033e0774c9dad1, type: 3}
+    - {fileID: 6091997921743072954, guid: 48ac44b5a574f9b4d8033e0774c9dad1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48ac44b5a574f9b4d8033e0774c9dad1, type: 3}
