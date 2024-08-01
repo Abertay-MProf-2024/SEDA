@@ -36,10 +36,12 @@ public class TutorialChecks : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
     private void Update()
     {
         check();
     }
+
     public void TurnTutorialModeON()
     {
         TutorialMode = true;
