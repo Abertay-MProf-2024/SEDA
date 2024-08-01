@@ -597,8 +597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 608.25, y: 181}
-  m_SizeDelta: {x: 800, y: 300}
+  m_AnchoredPosition: {x: 608.25, y: 191.49036}
+  m_SizeDelta: {x: 846.1578, y: 320.9807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3528824584945974958
 CanvasRenderer:
@@ -628,13 +628,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b>Standing Stone:</b>
-
-
-    Switches the land from Highland to Barren
-    land.
-
-    However, it will decrease the land health'
+  m_text: "<b>Standing Stone:</b>\n\nThe land is currently <b>GRASSLAND.</b> \nBy
+    reaching through the Veil you will switch the land to <b>HIGHLAND</B>."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
