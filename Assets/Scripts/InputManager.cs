@@ -154,52 +154,55 @@ public class InputManager : MonoBehaviour
     /** Pan the camera when the player taps and drags the screen */
     void PanCamera(InputAction.CallbackContext context)
     {
-        Vector2 currentPos = context.ReadValue<Vector2>();
-
-        if (isCursorPosInitialised)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            Vector3 deltaPos = currentPos - prevPos;
+            Vector2 currentPos = context.ReadValue<Vector2>();
 
-            // Invert controls as needed
-            if (InvertX)
+            if (isCursorPosInitialised)
             {
-                deltaPos.x = prevPos.x - currentPos.x;
+                Vector3 deltaPos = currentPos - prevPos;
+
+                // Invert controls as needed
+                if (InvertX)
+                {
+                    deltaPos.x = prevPos.x - currentPos.x;
+                }
+
+                if (InvertY)
+                {
+                    deltaPos.y = prevPos.y - currentPos.y;
+                }
+
+                // Change Panning Speed based on device
+                float deviceBasedPanSpeed = panSpeed;
+                if (context.control.device.name == "Mouse")
+                    deviceBasedPanSpeed = panSpeedMouse;
+                else if (context.control.device.name == "Touchscreen")
+                    deviceBasedPanSpeed = panSpeedTouch;
+
+                // panning movement is scaled by a device-based speed as well as a ratio of the camera size
+                deltaPos *= deviceBasedPanSpeed * (orthoCam.orthographicSize / initialOrthoSize);
+                deltaPos = ClampedPan(deltaPos);
+
+                // Transform.Translate applies the tranformation to local space by default
+                // Movement along the X direction in screen space translates directly to movement along the X axis in local space
+                transform.Translate(new Vector2(deltaPos.x, 0));
+
+                if (deltaPos.x > 0 || deltaPos.y > 0)
+                {
+                    TutorialChecks.TapandDrag = true;
+                }
+
+                // Apply screen space Y translate
+                transform.Translate(GetMovementAlongPlaneXZ(deltaPos.y), Space.World);
             }
-            
-            if (InvertY)
+            else
             {
-                deltaPos.y = prevPos.y - currentPos.y;
+                isCursorPosInitialised = true;
             }
 
-            // Change Panning Speed based on device
-            float deviceBasedPanSpeed = panSpeed;
-            if (context.control.device.name == "Mouse")
-                deviceBasedPanSpeed = panSpeedMouse;
-            else if (context.control.device.name == "Touchscreen")
-                deviceBasedPanSpeed = panSpeedTouch;
-
-            // panning movement is scaled by a device-based speed as well as a ratio of the camera size
-            deltaPos *= deviceBasedPanSpeed * (orthoCam.orthographicSize / initialOrthoSize);
-            deltaPos = ClampedPan(deltaPos);
-
-            // Transform.Translate applies the tranformation to local space by default
-            // Movement along the X direction in screen space translates directly to movement along the X axis in local space
-            transform.Translate(new Vector2(deltaPos.x, 0));
-            
-            if(deltaPos.x>0 || deltaPos.y>0)
-            {
-                TutorialChecks.TapandDrag = true;
-            }
-
-            // Apply screen space Y translate
-            transform.Translate(GetMovementAlongPlaneXZ(deltaPos.y), Space.World);
+            prevPos = currentPos;
         }
-        else
-        {
-            isCursorPosInitialised = true;
-        }
-
-        prevPos = currentPos;
     }
 
     /** Clamps the camera's panning movement and returns an adjusted deltaPos */
