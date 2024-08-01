@@ -102,6 +102,7 @@ public class TimeSystem : MonoBehaviour
 
         SetDay();
         SetMonth();
+        SetSeason();
         SetTimeRemainingDisplay();
         AddMonthlyEvent(this, CountDownLevelTime, 1, true, 5);
         StartCoroutine(DailyTick());
@@ -280,19 +281,19 @@ public class TimeSystem : MonoBehaviour
     
     void SetSeason()
     {
-        if (month == Month.February)
+        if (month >= Month.March && month <= Month.May)
         {
             season = Season.Spring;
         }
-        else if (month == Month.May)
+        else if (month >= Month.June && month <= Month.August)
         {
             season = Season.Summer;
         }
-        else if (month == Month.August)
+        else if (month >= Month.September && month <= Month.November)
         {
             season = Season.Autumn;
         }
-        else if (month == Month.November)
+        else if (month == Month.December || month == Month.January || month == Month.February)
         {
             season = Season.Winter;
         }
