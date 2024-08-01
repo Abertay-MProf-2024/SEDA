@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 23dbabef11c16c24699e26a632bd39d1
+guid: 15647becf4fb17744a8a947286f5a34d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,12 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_StorageAtlas
-    second: {fileID: 2100000, guid: 2d7cf22b6a66b0742aa26789d2c3c6d1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Wherehouse_02a
-    second: {fileID: 2100000, guid: 2d7cf22b6a66b0742aa26789d2c3c6d1, type: 2}
+    second: {fileID: 2100000, guid: 4ad28cdd47f7f6840b83e95d76c5a1e1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
