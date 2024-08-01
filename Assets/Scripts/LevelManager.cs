@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public int successSoilHealth;
 
     [SerializeField] TileBase RiverTileBase;
-    //[SerializeField] TileBase MountainTileBase;
+   
 
     GameObject outlineParent;
 
@@ -51,6 +51,9 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        Inventory.foodtoComplete = successFoodAmount;
+        Inventory.CMtoComplete = successConstructionMaterialsAmount;
+
         Instantiate(musicPlayer);
         SceneMusic.instance.ChangeMusicTrack(sceneMusic);
        

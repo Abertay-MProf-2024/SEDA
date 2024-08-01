@@ -13,6 +13,8 @@ public class Inventory : MonoBehaviour
     public static int healthBar = 100;
     public static int totalhealth = 0;
     public static int count = 0;
+    public static int foodtoComplete = 0;
+    public static int CMtoComplete = 0;
 
     // Building Types
     public static int numOfLoggingCamps = 0;
