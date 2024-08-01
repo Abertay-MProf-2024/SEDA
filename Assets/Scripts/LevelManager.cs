@@ -66,7 +66,6 @@ public class LevelManager : MonoBehaviour
 
         TimeSystem.AddMonthlyEvent(this, Inventory.HealthBarChange, 1, true, 3);
         TimeSystem.AddMonthlyEvent(this, Terrainsystem.ResetValuesSoilGrade, 1, true, 4);
-     
     }
 
     
