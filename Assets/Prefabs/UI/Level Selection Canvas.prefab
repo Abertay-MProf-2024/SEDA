@@ -854,9 +854,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Flux_Info_Text
+  m_text: "Flux is a natural part of life. \nHowever, these events are are beyond
+    your control. \nHow you react to these events is vital to restoring balance to
+    the land."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -920,7 +922,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &912969458055763095
@@ -2340,10 +2342,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Flux_Creature_Info_Text
+  m_text: 'With a splash of a tail and an ethereal shriek, a fearsome Kelpie emerges
+    from the depths, it vents its anger at those who dare interfere with its watery
+    domain. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
+  m_sharedMaterial: {fileID: -8823074493276168433, guid: d4f798c384183264f9233fb88461d451,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2608,9 +2613,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Flux_Info_Text
+  m_text: "Flux is a natural part of life. \nHowever, these events are are beyond
+    your control. \nHow you react to these events is vital to restoring balance to
+    the land."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2674,7 +2681,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1774742950754233597
@@ -3875,10 +3882,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Flux_Creature_Info_Text
+  m_text: "Awoken by the fearful thunder that split the sky, Magnus has wandered
+    down from the Cairngorms to find a more peaceful spot to take a nap\u2026"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
+  m_sharedMaterial: {fileID: -8823074493276168433, guid: d4f798c384183264f9233fb88461d451,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4675,7 +4684,7 @@ GameObject:
   - component: {fileID: 3722677762000763210}
   - component: {fileID: 4217016660615235814}
   m_Layer: 5
-  m_Name: Fulx_Button
+  m_Name: Flux_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5797,10 +5806,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Flux_Info_Text
+  m_text: "Flux is a natural part of life. \nHowever, these events are are beyond
+    your control. \nHow you react to these events is vital to restoring balance to
+    the land."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
+  m_sharedMaterial: {fileID: -8823074493276168433, guid: d4f798c384183264f9233fb88461d451,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6700,7 +6712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6506407414104773172
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7230,8 +7242,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Flux_Weather_Info_Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
+  m_sharedMaterial: {fileID: -8823074493276168433, guid: d4f798c384183264f9233fb88461d451,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8345,7 +8358,7 @@ GameObject:
   - component: {fileID: 8019949521842652191}
   - component: {fileID: 4728802798178105909}
   m_Layer: 5
-  m_Name: Fulx_Button
+  m_Name: Flux_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8954,10 +8967,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Flux_Creature_Info_Text
+  m_text: 'She has come! The Veiled One, Winter Witch, Queen of the Weather.
+
+
+    Can
+    you weather the storm?'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
+  m_sharedMaterial: {fileID: -8823074493276168433, guid: d4f798c384183264f9233fb88461d451,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9269,8 +9287,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Flux_Weather_Info_Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
+  m_sharedMaterial: {fileID: -8823074493276168433, guid: d4f798c384183264f9233fb88461d451,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13063,7 +13082,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Flux_Weather_Info_Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4f798c384183264f9233fb88461d451, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -13127,7 +13146,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &9063481322499844693
@@ -13482,7 +13501,7 @@ PrefabInstance:
     - target: {fileID: 2741099355631873290, guid: 1a9d34312af278b479764a7a322273b0,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2741099355631873290, guid: 1a9d34312af278b479764a7a322273b0,
         type: 3}
@@ -13592,17 +13611,17 @@ PrefabInstance:
     - target: {fileID: 4625713727284641065, guid: 1a9d34312af278b479764a7a322273b0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4625713727284641065, guid: 1a9d34312af278b479764a7a322273b0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4625713727284641065, guid: 1a9d34312af278b479764a7a322273b0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6048710111418127042, guid: 1a9d34312af278b479764a7a322273b0,
         type: 3}
@@ -14265,6 +14284,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 731806571209074577}
     m_Modifications:
+    - target: {fileID: 1170809552094661303, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170809552094661303, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170809552094661303, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1367892779050441734, guid: 707ddc81f8cd7574cb7f87be30669a4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14315,6 +14349,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1449144157131847111, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449144157131847111, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449144157131847111, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445458975741795392, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2445458975741795392, guid: 707ddc81f8cd7574cb7f87be30669a4f,
         type: 3}
       propertyPath: m_SortingLayer
@@ -14324,6 +14378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FAB_UI_PictStoneCreatureGlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179483058223112895, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9179483058223112895, guid: 707ddc81f8cd7574cb7f87be30669a4f,
         type: 3}
@@ -14433,6 +14492,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2440718107594375606}
     m_Modifications:
+    - target: {fileID: 1170809552094661303, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170809552094661303, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170809552094661303, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1367892779050441734, guid: 707ddc81f8cd7574cb7f87be30669a4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14483,6 +14557,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1449144157131847111, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449144157131847111, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449144157131847111, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445458975741795392, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2445458975741795392, guid: 707ddc81f8cd7574cb7f87be30669a4f,
         type: 3}
       propertyPath: m_SortingLayer
@@ -14492,6 +14586,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FAB_UI_PictStoneCreatureGlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179483058223112895, guid: 707ddc81f8cd7574cb7f87be30669a4f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9179483058223112895, guid: 707ddc81f8cd7574cb7f87be30669a4f,
         type: 3}
@@ -14517,6 +14616,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2817012962624120912}
     m_Modifications:
+    - target: {fileID: 587720478375732688, guid: d1ce17f8029e4384f853873ddf58fd74,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 587720478375732688, guid: d1ce17f8029e4384f853873ddf58fd74,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 587720478375732688, guid: d1ce17f8029e4384f853873ddf58fd74,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502752045372741041, guid: d1ce17f8029e4384f853873ddf58fd74,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502752045372741041, guid: d1ce17f8029e4384f853873ddf58fd74,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502752045372741041, guid: d1ce17f8029e4384f853873ddf58fd74,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3981451657452403920, guid: d1ce17f8029e4384f853873ddf58fd74,
         type: 3}
       propertyPath: m_Name
@@ -14574,8 +14703,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5450777365600954234, guid: d1ce17f8029e4384f853873ddf58fd74,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450777365600954234, guid: d1ce17f8029e4384f853873ddf58fd74,
+        type: 3}
       propertyPath: m_SortingLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757922342386971962, guid: d1ce17f8029e4384f853873ddf58fd74,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5757922342386971962, guid: d1ce17f8029e4384f853873ddf58fd74,
         type: 3}
