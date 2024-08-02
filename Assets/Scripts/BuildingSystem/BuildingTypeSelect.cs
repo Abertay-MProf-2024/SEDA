@@ -84,4 +84,10 @@ public class BuildingTypeSelect : MonoBehaviour
         gridSystem.ToggleBuildMode(currentBuildingType, false);
 
     }
+
+    public void SoilGradeOFF()
+    {
+        currentBuildingType = null;
+        gridSystem.ToggleBuildMode(currentBuildingType, false, true);
+    }
 }
