@@ -101,7 +101,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -748,7 +748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -525}
+  m_AnchoredPosition: {x: -375, y: -553}
   m_SizeDelta: {x: 1600, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5724787032129266488
@@ -772,7 +772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2097,7 +2097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -525}
+  m_AnchoredPosition: {x: -375, y: -553}
   m_SizeDelta: {x: 1600, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5643582258313506245
@@ -2121,7 +2121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3848,8 +3848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -133.47}
-  m_SizeDelta: {x: 1400, y: 129.0542}
+  m_AnchoredPosition: {x: 0, y: -135.35461}
+  m_SizeDelta: {x: 1400, y: 125.285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5194692052637098648
 CanvasRenderer:
@@ -3879,8 +3879,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A tributary of the River Deveron. Local legends talk of people who go missing
-    along the banks of this meandering river.
+  m_text: A terrifying creature stalks the waters on a tributary of the River Deveron.
+    Legends tell of people going missing along the banks of this meandering river,
+    perhaps they are true?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -3908,14 +3909,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4225,7 +4226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -525}
+  m_AnchoredPosition: {x: -375, y: -553}
   m_SizeDelta: {x: 1600, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3186900220953578210
@@ -4249,7 +4250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5498,8 +5499,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -192}
-  m_SizeDelta: {x: 1400, y: 243.8575}
+  m_AnchoredPosition: {x: -0.000044823, y: -130.63}
+  m_SizeDelta: {x: 1560.2389, y: 134.7494}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1482009280045024194
 CanvasRenderer:
@@ -5559,14 +5560,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5595,7 +5596,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -142.19257, y: -7.8996124, z: -144.16766, w: 101.844635}
+  m_margin: {x: -0.6881714, y: 0.6247177, z: 2.451294, w: 1.2572327}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6223,12 +6224,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Flood waters engulf the town, washing away buildings and roads. Swept
-    along the rush of waters are creatures from another world.
-
-
-    Can you face
-    the devestation and creatures and bring balance back to the lands around Bearnock? '
+  m_text: "Flood waters engulf the town, washing away buildings and roads. \nCut-off
+    from the rest of the world, can you help the town of Bearnock restore balamce
+    to the land?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -6263,7 +6261,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -10349,11 +10347,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'After decades misuse and unsustainable practices, the land finally reaches
-    a breaking point.
-
-    A terrible storm tears the sky and weakens the Veil between
-    worlds. Amidst the chaos, Bearnock''s dam is struck by lightning and bursts.'
+  m_text: Decades of misuse has devasted the land causing a global environmental
+    disaster. A terrible storm tears apart the sky, weakening the Veil between worlds
+    and destroying Bearnock's dam.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -10388,7 +10384,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -11423,7 +11419,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: This nature reserves was once a popular spot. All that remains above the
-    floodwaters are a few bedraggled islands.
+    floodwaters are a few bedraggled islands. Dark stormclouds menace the sky above,
+    and cacklling can be heard above the thunder...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -11451,14 +11448,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
