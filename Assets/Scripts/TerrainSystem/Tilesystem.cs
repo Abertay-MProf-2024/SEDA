@@ -179,7 +179,7 @@ public class Terrainsystem : MonoBehaviour
             landType = false;
 
         bool hasGravel;
-        if (owningGridObject && owningGridObject.buildingInstance && owningGridObject.buildingInstance.resourceData.hasGravel)
+        if (owningGridObject && owningGridObject.buildingInstance && owningGridObject.buildingInstance.hasGravel)
             hasGravel = true;
         else
             hasGravel = false;
