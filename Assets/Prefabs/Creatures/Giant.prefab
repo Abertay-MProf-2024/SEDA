@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSounds:
-  - {fileID: 8300000, guid: 5866f7ef81f109f43bc3151df0733bbd, type: 3}
+  - {fileID: 8300000, guid: 3344d2fcb93ab0840bdf2df0ea50af23, type: 3}
   - {fileID: 8300000, guid: 7238e87cd7dfdc243ae72921689a1789, type: 3}
   - {fileID: 8300000, guid: aecc9bb0068315747b5881b308ce007d, type: 3}
   mixerGroup: {fileID: 777363791655524067, guid: 431f31701a6ba7f438d79de92b1aeef7,
