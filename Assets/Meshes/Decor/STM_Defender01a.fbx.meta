@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3431f564cd3555f4fa8fe73b3f915881
+guid: 15647becf4fb17744a8a947286f5a34d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Walls
-    second: {fileID: 2100000, guid: fb5c3a75dacf1264ea51b49275916408, type: 2}
+      name: M_StorageAtlas
+    second: {fileID: 2100000, guid: 4ad28cdd47f7f6840b83e95d76c5a1e1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
