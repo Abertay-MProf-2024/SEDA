@@ -234,13 +234,16 @@ public class GridObject : MonoBehaviour
 
         if (building == null)
         { return false; }
+
+        if (GameManager.isTutorialComplete && terrain.gameObject.tag != "Tutorial Tile")
+            { return false; }
         
         for (int i = 0; i < building.tileTerrainTypes.Count; i++)
         {
             if (terrain && terrain.creaturetype == CreatureTypes.None)
             {
                
-                    if (terrainType == building.tileTerrainTypes[i])
+                    if (terrainType == building.tileTerrainTypes[i] && terrain.specialtype == SpecialTypes.None)
                         canBuild = true;
                 
             }

@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject energyOutline;
     [SerializeField] GameObject extraOutline;
     [SerializeField] GameObject waterSplash;
+    [SerializeField] GameObject tapDust;
 
     [Space(20)]
     [SerializeField] GameObject musicPlayer;
@@ -129,7 +130,7 @@ public class LevelManager : MonoBehaviour
                         }
                     }
                 }
-                if (terrainTile.Wradius != 0)
+                else if (terrainTile.Wradius != 0)
                 {
                     if (terrainTile.GetWaterEnergy())
                     {
@@ -159,6 +160,11 @@ public class LevelManager : MonoBehaviour
                         buildingCostUI.DescriptionDisplay.text = RiverTileBase.tileDescription.ToString();
                     }
                 }
+                else
+                {
+                    GameObject dust = Instantiate(tapDust, hit.point, Quaternion.identity, hit.transform);
+                    Destroy(dust, 2);
+                }
             }
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
             {
@@ -166,7 +172,7 @@ public class LevelManager : MonoBehaviour
             }
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Ocean")))
             {
-                GameObject waterVFX = Instantiate(waterSplash, hit.point + new Vector3(0, 0, 0), Quaternion.identity, hit.transform);
+                GameObject waterVFX = Instantiate(waterSplash, hit.point, Quaternion.identity, hit.transform);
                 Destroy(waterVFX, 2);
             }
         }
