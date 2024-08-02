@@ -116,7 +116,7 @@ public class GridObject : MonoBehaviour
 
         soilgradeGrid = !soilgradeGrid;
 
-        if (soilgradeGrid && terrain)
+        if (soilgradeGrid && terrain && terrain.specialtype == SpecialTypes.None)
         {
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
 

@@ -211,7 +211,6 @@ public class Terrainsystem : MonoBehaviour
                 {
                     CurrentsoilType = SoilType.A;
                 }
-
                 else if (health > 60 && health <= 80)
                 {
                     CurrentsoilType = SoilType.B;

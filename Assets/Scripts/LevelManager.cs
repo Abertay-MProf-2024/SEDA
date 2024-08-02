@@ -121,7 +121,8 @@ public class LevelManager : MonoBehaviour
                             {
                                 GridObject currentGridObject = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z);
                                 if (currentGridObject.terrain && 
-                                    (currentGridObject.terrain.terraintype == TerrainTypes.Grassland || currentGridObject.terrain.terraintype == TerrainTypes.Highland))
+                                    (currentGridObject.terrain.terraintype == TerrainTypes.Grassland || currentGridObject.terrain.terraintype == TerrainTypes.Highland)
+                                    && currentGridObject.terrain.specialtype == SpecialTypes.None)
                                 {
                                     Vector3 worldPosition = currentGridObject.transform.position;
                                     Instantiate(energyOutline, worldPosition, Quaternion.identity, outlineParent.transform);
@@ -147,7 +148,8 @@ public class LevelManager : MonoBehaviour
                             {
                                 GridObject currentGridObject = terrainTile.owningGridObject.GetOwningGridSystem().GetGridObject(x, z);
                                 if (currentGridObject.terrain && 
-                                    (currentGridObject.terrain.terraintype == TerrainTypes.Grassland || currentGridObject.terrain.terraintype == TerrainTypes.Highland))
+                                    (currentGridObject.terrain.terraintype == TerrainTypes.Grassland || currentGridObject.terrain.terraintype == TerrainTypes.Highland)
+                                    && currentGridObject.terrain.specialtype == SpecialTypes.None)
                                 {
                                     Vector3 worldPosition = currentGridObject.transform.position;
                                     Instantiate(waterOutline, worldPosition, Quaternion.identity, outlineParent.transform);
@@ -226,7 +228,8 @@ public class LevelManager : MonoBehaviour
                     GridObject currentGridObject = building.GetOwningGridObject().GetOwningGridSystem().GetGridObject(x, z);
                     if (currentGridObject.terrain && 
                         (currentGridObject.terrain.terraintype == TerrainTypes.Grassland
-                        || currentGridObject.terrain.terraintype == TerrainTypes.Highland))
+                        || currentGridObject.terrain.terraintype == TerrainTypes.Highland)
+                        && currentGridObject.terrain.specialtype == SpecialTypes.None)
                     {
                         Vector3 worldPosition = currentGridObject.transform.position;
                         Instantiate(extraOutline, worldPosition, Quaternion.identity, outlineParent.transform);
