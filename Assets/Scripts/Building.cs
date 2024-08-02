@@ -23,7 +23,15 @@ public class Building : MonoBehaviour
     public bool IsItBasedOnSoilGrade;
 
     float soilGradeModifier = 1f;
-    
+
+    [HideInInspector]
+    public bool hasGravel;
+
+    private void Awake()
+    {
+        hasGravel = resourceData.hasGravel;
+    }
+
     private void Start()
     {
         oldResourceData = resourceData;
@@ -51,7 +59,6 @@ public class Building : MonoBehaviour
 
         TimeSystem.AddMonthlyEvent(this,PayUpkeep, 1, true, 1);
         StartCoroutine(FindGridObject());
-        
     }
 
     IEnumerator FindGridObject()
@@ -215,6 +222,14 @@ public class Building : MonoBehaviour
                 Inventory.numOfForests += changeAmount;
                 break;
         }
+    }
+
+    private void OnDisable()
+    {
+        hasGravel = false;
+
+        if (Terrainsystem)
+            Terrainsystem.SetTerrainMaterialProperties();
     }
 
     private void OnDestroy()
