@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2058544087208166908
 RectTransform:
   m_ObjectHideFlags: 0
@@ -865,7 +865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4863602413835423375
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1340,17 +1340,17 @@ PrefabInstance:
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6923078
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6923078
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.6923078
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
@@ -1365,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
@@ -1415,7 +1415,7 @@ PrefabInstance:
     - target: {fileID: 4335738665861569166, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4335738665861569166, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
@@ -1430,7 +1430,7 @@ PrefabInstance:
     - target: {fileID: 5542025706285762006, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5542025706285762006, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
@@ -1529,17 +1529,17 @@ PrefabInstance:
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
@@ -1604,7 +1604,7 @@ PrefabInstance:
     - target: {fileID: 4335738665861569166, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4335738665861569166, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
