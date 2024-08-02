@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_StorageAtlas
+    second: {fileID: 2100000, guid: 516b3737831a0654ab8280b179411fd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_Wherehouse_02a
     second: {fileID: 2100000, guid: 2d7cf22b6a66b0742aa26789d2c3c6d1, type: 2}
   materials:
@@ -50,7 +55,7 @@ ModelImporter:
     importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
