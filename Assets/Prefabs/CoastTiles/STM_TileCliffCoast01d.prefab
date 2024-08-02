@@ -68,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: STM_TileCliffCoast01d
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b6657db9b61480847b4f6beb65f0c438,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -76,6 +81,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 771327388756718226}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b6657db9b61480847b4f6beb65f0c438,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7974436000422711237}
   m_SourcePrefab: {fileID: 100100000, guid: b6657db9b61480847b4f6beb65f0c438, type: 3}
 --- !u!1 &6574171044084084275 stripped
 GameObject:
@@ -96,14 +105,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentsoilType: 100
-  allowedSoilGrade: 
   ResourceAffect: 0
   terraintype: 9
+  specialtype: 0
   creaturetype: 0
   Lenergy: 0
+  Wenergy: 0
   owningGridObject: {fileID: 0}
   radius: 0
   Wradius: 0
   health: 0
   OldsoilType: 0
   NewSoilType: 0
+--- !u!64 &-7974436000422711237
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6574171044084084275}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1280981744076444615, guid: b6657db9b61480847b4f6beb65f0c438, type: 3}
