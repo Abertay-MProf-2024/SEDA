@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8379206040866847745}
   - component: {fileID: 7798167253308432599}
   - component: {fileID: 1251718958596271071}
+  - component: {fileID: 969464691316633892}
   m_Layer: 0
   m_Name: RuinedBuildings
   m_TagString: Untagged
@@ -88,6 +89,7 @@ MonoBehaviour:
   isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+  hasGravel: 0
 --- !u!65 &8379206040866847745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -139,6 +141,25 @@ MonoBehaviour:
   vfxTransform: {fileID: 8640219526050236439}
   vfxPrefab: {fileID: 8729181608774881354, guid: 8c3189da8ff9dc040a5a35615221096e,
     type: 3}
+--- !u!114 &969464691316633892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543974964756465544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8d61a477003644b914d1428c864ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceData: {fileID: 11400000, guid: 77a2bbd46695b7649b49ac3bc09a8953, type: 2}
+  oldResourceData: {fileID: 0}
+  newresourceData: {fileID: 0}
+  isBuilt: 0
+  RequireWaterEnergy: 0
+  IsItBasedOnSoilGrade: 0
+  hasGravel: 0
 --- !u!1001 &4633823858176494937
 PrefabInstance:
   m_ObjectHideFlags: 0
