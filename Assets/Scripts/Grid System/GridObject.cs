@@ -235,7 +235,7 @@ public class GridObject : MonoBehaviour
         if (building == null)
         { return false; }
 
-        if (GameManager.isTutorialComplete && terrain.gameObject.tag != "Tutorial Tile")
+        if (!GameManager.isTutorialComplete && terrain && terrain.gameObject.tag != "Tutorial Tile")
             { return false; }
         
         for (int i = 0; i < building.tileTerrainTypes.Count; i++)

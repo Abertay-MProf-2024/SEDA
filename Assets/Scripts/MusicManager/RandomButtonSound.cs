@@ -29,15 +29,18 @@ public class RandomButtonSound : MonoBehaviour, IPointerClickHandler
 
     void PlayClickSound(AudioClip clip)
     {
-        GameObject tempAudioSource = new GameObject("TempAudio");
-        AudioSource tempSource = tempAudioSource.AddComponent<AudioSource>();
+        if (clip)
+        {
+            GameObject tempAudioSource = new GameObject("TempAudio");
+            AudioSource tempSource = tempAudioSource.AddComponent<AudioSource>();
 
-        tempSource.outputAudioMixerGroup = mixerGroup;
-        tempSource.clip = clip;
-        tempSource.playOnAwake = false;
-        tempSource.Play();
+            tempSource.outputAudioMixerGroup = mixerGroup;
+            tempSource.clip = clip;
+            tempSource.playOnAwake = false;
+            tempSource.Play();
 
-        // Destroy the temp audio source object after the clip duration
-        Destroy(tempAudioSource, clip.length);
+            // Destroy the temp audio source object after the clip duration
+            Destroy(tempAudioSource, clip.length);
+        }
     }
 }
