@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &106683947860597399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8358397052521139457}
+  m_Layer: 0
+  m_Name: LeafPoof
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8358397052521139457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106683947860597399}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.93, y: -0.080773145, z: -0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5918334348238235545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2457439098613977349
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +98,7 @@ Transform:
   - {fileID: 4641286476648233421}
   - {fileID: 8924591417645847732}
   - {fileID: 5615642723449307720}
+  - {fileID: 8358397052521139457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &938145542236971866
@@ -121,6 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSound: {fileID: 8300000, guid: 2956760f44e4f014a910f0af4a4e5400, type: 3}
+  vfxLocation: {fileID: 8358397052521139457}
+  vfxForSound: {fileID: 3434082878133033595, guid: f46025dbc0de2ac49966f39900f8b822,
+    type: 3}
 --- !u!114 &5641970220032635285
 MonoBehaviour:
   m_ObjectHideFlags: 0
