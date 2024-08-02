@@ -53,16 +53,16 @@ public class LevelSelect : MonoBehaviour
         TimeSystem.Pause();
 
         // Set level buttons based on number of levels completed
-        //if (GameManager.levelsCompleted == 1)
+        if (GameManager.levelsCompleted == 1)
         {
-            //level1Button.interactable = false;
+            level1Button.interactable = false;
             level2Button.interactable = true;
-            //level3Button.interactable = false;
+            level3Button.interactable = false;
         }
-        //else if (GameManager.levelsCompleted == 2)
+        else if (GameManager.levelsCompleted == 2)
         {
-            //level1Button.interactable = false;
-            //level2Button.interactable = false;
+            level1Button.interactable = false;
+            level2Button.interactable = false;
             level3Button.interactable = true;
         }
     }
