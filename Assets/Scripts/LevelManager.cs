@@ -23,11 +23,14 @@ public class LevelManager : MonoBehaviour
 
     GameObject outlineParent;
 
+    [Header("VFX")]
     // radius highlight prefabs
     [SerializeField] GameObject waterOutline;
     [SerializeField] GameObject energyOutline;
     [SerializeField] GameObject extraOutline;
+    [SerializeField] GameObject waterSplash;
 
+    [Space(20)]
     [SerializeField] GameObject musicPlayer;
 
     [SerializeField] BuildingCostUI buildingCostUI;
@@ -156,6 +159,15 @@ public class LevelManager : MonoBehaviour
                         buildingCostUI.DescriptionDisplay.text = RiverTileBase.tileDescription.ToString();
                     }
                 }
+            }
+            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Terrain")))
+            {
+
+            }
+            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Ocean")))
+            {
+                GameObject waterVFX = Instantiate(waterSplash, hit.point + new Vector3(0, 0, 0), Quaternion.identity, hit.transform);
+                Destroy(waterVFX, 2);
             }
         }
     }
