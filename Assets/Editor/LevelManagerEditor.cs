@@ -22,6 +22,7 @@ public class LevelManagerEditor : Editor
     SerializedProperty waterOutline;
     SerializedProperty energyOutline;
     SerializedProperty extraOutline;
+    SerializedProperty waterSplash;
 
     SerializedProperty musicPlayer;
     SerializedProperty buildingCostUI;
@@ -49,6 +50,7 @@ public class LevelManagerEditor : Editor
         waterOutline = serializedObject.FindProperty("waterOutline");
         energyOutline = serializedObject.FindProperty("energyOutline");
         extraOutline = serializedObject.FindProperty("extraOutline");
+        waterSplash = serializedObject.FindProperty("waterSplash");
 
         musicPlayer = serializedObject.FindProperty("musicPlayer");
 
@@ -81,6 +83,7 @@ public class LevelManagerEditor : Editor
         EditorGUILayout.PropertyField(waterOutline);
         EditorGUILayout.PropertyField(energyOutline);
         EditorGUILayout.PropertyField(extraOutline);
+        EditorGUILayout.PropertyField(waterSplash);
 
         EditorGUILayout.Space();
         EditorGUILayout.PropertyField(musicPlayer);
