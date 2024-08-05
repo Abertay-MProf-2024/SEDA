@@ -13,13 +13,15 @@ public class TutorialChecks : MonoBehaviour
     [SerializeField] GameObject Tutorial8;
     [SerializeField] GameObject Tutorial9BUTTON;
 
+
     [SerializeField] GameObject BuildMODE;
 
     [SerializeField] GameObject tutorialSteps;
 
     [SerializeField] GameObject buildMenuButton;
 
-
+    public GameObject GoalConditions;
+    public GameObject timeblocker;
 
 
     public static bool TapandDrag = false;
@@ -33,11 +35,20 @@ public class TutorialChecks : MonoBehaviour
     {
         TutorialMode = !GameManager.isTutorialComplete;
 
+        GoalConditions.SetActive(false);
+        timeblocker.SetActive(true);
+
         if (GameManager.isTutorialComplete)
         {
-            buildMenuButton.SetActive(true);
+            if (GoalConditions != null && timeblocker != null)
+            {
+                GoalConditions.SetActive(true);
+                timeblocker.SetActive(false);
+            }
+
+                buildMenuButton.SetActive(true);
             gameObject.SetActive(false);
-     
+            TimeSystem.Unpause();
         }
     }
 

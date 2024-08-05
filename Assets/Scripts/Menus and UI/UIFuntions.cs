@@ -49,7 +49,7 @@ public class UIFuntions : MonoBehaviour
     public void NewLevel()
     {
         MainMenuCanvas.enabled = false;
-
+        GameManager.levelsCompleted = 0;
         LevelSelection.enabled = true;
         MapOverview.SetActive(true);
         Level1_Info.SetActive(false);
