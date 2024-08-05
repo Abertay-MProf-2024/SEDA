@@ -732,6 +732,7 @@ MonoBehaviour:
   isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+  hasGravel: 0
   satisfybutton: {fileID: 4294266589071040044}
   giantcreature: {fileID: 0}
   endpoint1: {fileID: 0}
@@ -2203,7 +2204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7550945422386705993
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7435,6 +7436,7 @@ MonoBehaviour:
   isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+  hasGravel: 0
   satisfybutton: {fileID: 5679598185520242614}
   cailleachcreature: {fileID: 0}
   endpoint2: {fileID: 0}
@@ -8901,6 +8903,7 @@ MonoBehaviour:
   isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+  hasGravel: 0
   satisfybutton: {fileID: 1328298363562232214}
   kelpiecreature: {fileID: 0}
   endpoint2: {fileID: 0}
@@ -14045,6 +14048,7 @@ MonoBehaviour:
   isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+  hasGravel: 0
   satisfybutton: {fileID: 5679598185520242614}
   cailleachcreature: {fileID: 0}
   endpoint2: {fileID: 0}
@@ -16861,7 +16865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1836123082324898901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19629,6 +19633,7 @@ MonoBehaviour:
   isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+  hasGravel: 0
   satisfybutton: {fileID: 4294266589071040044}
   giantcreature: {fileID: 0}
   endpoint1: {fileID: 0}
@@ -19731,6 +19736,7 @@ MonoBehaviour:
   isBuilt: 0
   RequireWaterEnergy: 0
   IsItBasedOnSoilGrade: 0
+  hasGravel: 0
   satisfybutton: {fileID: 1328298363562232214}
   kelpiecreature: {fileID: 0}
   endpoint2: {fileID: 0}

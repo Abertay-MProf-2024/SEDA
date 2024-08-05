@@ -22,6 +22,7 @@ public class SettingsMenu : MonoBehaviour
     {
         if (MainSettingsMenuPrefab)
         {
+            PauseMenu.MAINsETTING = true;
             Instantiate(MainSettingsMenuPrefab.gameObject);
         }
     }

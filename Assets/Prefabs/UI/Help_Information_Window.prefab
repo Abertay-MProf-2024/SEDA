@@ -701,18 +701,19 @@ MonoBehaviour:
       m_Calls: []
   m_text: "The health of the land is incredibly important. The key to a healthy ecosystem
     is healthy Soil.\n\n<u><b>Overlay:</u></b>\nUse the Soil Health Button to toggle
-    the overlay:\n\nGreen = Healthy\n\nOrange = 0\n\nSoil health Changes the output
-    of crops.\nTiles with high Soil Health will grow more crops.\nTiles with low
-    Soil Health will grow less crops.\n\nYour actions can impact the health of the
-    land. If the Soil Health drops too low, you won\u2019t be able to restore balance.\n\nSome
-    buildings and crops can be constructed that change the Soil health.\n\n<u><b>Peas
-    & Beans:</u></b>\nProvide a small amount of Food but greatly increases Soil Health,
-    within it\u2019s radius.\n\nConstruction Cost:\nFood\nMaterial\n\nRadius:\nx
-    Tile\n\n<u><b>Artificial Fertiliser:</u></b>\nProvide a large bonus to the output
-    of Crops but greatly decreases Soil Health, within it\u2019s radius.\n\nConstruction
-    Cost:\nFood\nMaterial\n\nRadius:\nx Tile\n\n<u><b>Compost:</u></b>\nDoes not
-    provide any Food but greatly increases Soil Health, within it\u2019s radius.\n\nConstruction
-    Cost:\nFood\nMaterial\n\nRadius:\nx Tile"
+    the overlay:\n\nGreen = Healthy\n\nOrange = Un-healthy\n\nSoil health Changes
+    the output of crops.\nTiles with high Soil Health will grow more crops.\nTiles
+    with low Soil Health will grow less crops.\n\nYour actions can impact the health
+    of the land. If the Soil Health drops too low, you won\u2019t be able to restore
+    balance.\n\nSome buildings and crops can be constructed that change the Soil
+    health.\n\n<u><b>Peas & Beans:</u></b>\nProvide a small amount of Food but greatly
+    increases Soil Health, within it\u2019s radius.\n\nConstruction Cost:\nFood:
+    5\nMaterial: 5\n\nRadius:\n3 Tile\n\n<u><b>Artificial Fertiliser:</u></b>\nProvide
+    a large bonus to the output of Crops but greatly decreases Soil Health, within
+    it\u2019s radius.\n\nConstruction Cost:\nFood: 5\nMaterial: 15\n\nRadius:\n5
+    Tile\n\n<u><b>Compost:</u></b>\nDoes not provide any Food but greatly increases
+    Soil Health, within it\u2019s radius.\n\nConstruction Cost:\nFood: 10\nMaterial:
+    5\n\nRadius:\n5 Tile"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
   m_sharedMaterial: {fileID: -8823074493276168433, guid: 9cacf2163abb00d4abdf14411d26ad3b,
@@ -3174,26 +3175,28 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<u><b>Barn:</u></b> \nCollects Food from nearby Spring Barley, Cow and
-    Sheep Pastures.\r\n\r\nConstruction Cost:\r\nFood\r\n\rMaterial\r\n\r\nRadius:\r\n\rx
+    Sheep Pastures.\r\n\r\nConstruction Cost:\r\nFood: 0\r\n\rMaterial: 15\r\n\r\nRadius:\r\n\r2
     Tile\n\n<u><b>Wind Turbine:</u></b> \r\n\rProvides a source of electricity, that
-    can be used to power certain buildings.\r\n\r\nConstruction Cost:\r\n\rFood\r\n\rMaterial\r\n\r\nRadius:\r\n\rx
-    Tile\n\n<u><b>Water Pump:</u></b> \r\n\rProvides a source of water, that can
-    be used to power certain buildings.\r\n\r\nConstruction Cost:\r\n\rFood\r\n\rMaterial\r\n\r\nRadius:\r\n\rx
-    Tile\n\n<u><b>Cow Pasture:</u></b> \r\n\rProvides a source of food, which needs
-    to be collected by a Barn.\r\n\r\nConstruction Cost:\r\n\rFood\r\n\rMaterial\r\n\r\nRadius:\r\n\rx
-    Tile\n\nOutput:\nx\n\n<u><b>Sheep Pasture:</u></b> \r\n\rProvides a source of
-    food, which needs to be collected by a Barn.\r\n\r\nConstruction Cost:\r\n\rFood\r\n\rMaterial\r\n\r\nRadius:\r\n\rx
-    Tile\n\nOutput:\nx\n\n<u><b>Spring Barley:</u></b> \r\n\rProvides a source of
-    food, which needs to be collected by a Barn.\r\n\r\nConstruction Cost:\r\n\rFood\r\n\rMaterial\r\n\r\nRadius:\r\n\rx
-    Tile\n\nOutput:\nx\n\n<u><b>Logging Camp:</u></b> \r\n\rCollects Material from
-    nearby Forests.\r\n\r\nConstruction Cost:\r\n\rFood\r\n\rMaterial\r\n\r\nRadius:\r\n\rx
-    Tile\n\n<u><b>Warehouse:</u></b> \r\n\rCollects Material from nearby Forests.\r\n\r\nConstruction
-    Cost:\r\n\rFood\r\n\rMaterial\r\n\r\nRadius:\r\n\rx Tile\n\n<u><b>Forests:</u></b>
+    can be used to power certain buildings.\r\n\r\nConstruction Cost:\r\n\rFood:
+    0\r\n\rMaterial: 10\r\n\r\nRadius:\r\n\r1 Tile\n\n<u><b>Water Pump:</u></b> \r\n\rProvides
+    a source of water, that can be used to power certain buildings.\r\n\r\nConstruction
+    Cost:\r\n\rFood: 0\r\n\rMaterial: 5\r\n\r\nRadius:\r\n\r2 Tile\n\n<u><b>Cow Pasture:</u></b>
+    \r\n\rProvides a source of food, which needs to be collected by a Barn.\r\n\r\nConstruction
+    Cost:\r\n\rFood: 20\r\n\rMaterial: 10\r\n\r\nRadius:\r\n\r2 Tile\n\nOutput:\n60\n\n<u><b>Sheep
+    Pasture:</u></b> \r\n\rProvides a source of food, which needs to be collected
+    by a Barn.\r\n\r\nConstruction Cost:\r\n\rFood: 10\r\n\rMaterial: 10\r\n\r\nRadius:\r\n\r2
+    Tile\n\nOutput:\n30\n\n<u><b>Spring Barley:</u></b> \r\n\rProvides a source of
+    food, which needs to be collected by a Barn.\r\n\r\nConstruction Cost:\r\n\rFood:
+    5\r\n\rMaterial: 5\r\n\r\nRadius:\r\n\r2 Tile\n\nOutput:\n15\n\n<u><b>Logging
+    Camp:</u></b> \r\n\rCollects Material from nearby Forests.\r\n\r\nConstruction
+    Cost:\r\n\rFood: 0\r\n\rMaterial: 5\r\n\r\nRadius:\r\n\r1 Tile\n\n<u><b>Warehouse:</u></b>
+    \r\n\rCollects Material from nearby Forests.\r\n\r\nConstruction Cost:\r\n\rFood:
+    45\r\n\rMaterial: 10\r\n\r\nRadius:\r\n\r3 Tile\n\n<u><b>Forests:</u></b> \r\n\rProvides
+    a source of Material, which can be collected by a Logging Camp.\r\n\rProvides
+    10 Material a month\r\n\r\nRadius:\r\n\r1 Tile\n\n<u><b>Ruined Buildings:</u></b>
     \r\n\rProvides a source of Material, which can be collected by a Logging Camp.\r\n\rProvides
-    x Material a month\r\n\r\nRadius:\r\n\rx Tile\n\n<u><b>Ruined Buildings:</u></b>
-    \r\n\rProvides a source of Material, which can be collected by a Logging Camp.\r\n\rProvides
-    x Material a month\r\n\r\nRadius:\r\n\rx Tile\n\n<u><b>Rivers:</u></b> \r\n\rProvides
-    a source of water, that can be used to power certain buildings.\r\n\r\nRadius:\r\n\rx
+    50 Material a month\r\n\r\nRadius:\r\n\r3 Tile\n\n<u><b>Rivers:</u></b> \r\n\rProvides
+    a source of water, that can be used to power certain buildings.\r\n\r\nRadius:\r\n\r1
     Tile"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cacf2163abb00d4abdf14411d26ad3b, type: 2}
