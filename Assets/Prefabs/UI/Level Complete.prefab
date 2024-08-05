@@ -1395,6 +1395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_Glow_purple
       objectReference: {fileID: 0}
+    - target: {fileID: 1110229572670715267, guid: e1ab7802e8af12a4785791cee89ea4c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1438,17 +1443,17 @@ PrefabInstance:
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2855163911242536415, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
@@ -1513,7 +1518,7 @@ PrefabInstance:
     - target: {fileID: 4335738665861569166, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4335738665861569166, guid: e1ab7802e8af12a4785791cee89ea4c8,
         type: 3}
