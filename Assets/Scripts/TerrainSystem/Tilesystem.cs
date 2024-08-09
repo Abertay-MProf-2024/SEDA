@@ -100,6 +100,7 @@ public class Terrainsystem : MonoBehaviour
         StartCoroutine(SetEnergyTiles()); 
     }
 
+    //to set the energy to the radius tiles
     public void TriggerEnergy()
     {
         //if the terrain has energy being emitted, then set all the terraintiles' energy bool true.
